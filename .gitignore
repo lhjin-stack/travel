@@ -1,0 +1,26 @@
+# Secrets (never commit API keys)
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Node
+node_modules/
+package-lock.json
+
+# Other project files (not part of the travel app)
+bsa-strategy/
+bsa_commodity_report.html
+credentials.json
+data2-*/
+generate_report.js
+liar-game-server/
+liar-game-vercel/
+liar-game.html
+lotto.html
+make_ppt.js
+market_rate_week10.xlsx
+=0.9
