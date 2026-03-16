@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KMTC 미·이란 전쟁 대응 정책 안내</title>
+  <style>
+    :root {
+      --primary: #003366;
+      --accent: #c00;
+      --bg: #f5f7fa;
+      --card: #fff;
+      --border: #dde2ea;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --badge-new: #fff3cd;
+      --badge-new-border: #d97706;
+      --badge-updated: #fce4ec;
+      --badge-updated-border: #c0392b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', 'Apple SD Gothic Neo', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #002244 0%, #003f7f 100%);
+      color: #fff;
+      padding: 20px 28px 16px;
+    }
+    .header-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+    .header .subtitle { font-size: 12px; opacity: 0.75; margin-top: 4px; }
+    .updated-badge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .updated-badge span { font-weight: 700; color: #ffd700; }
+
+    /* Lang Toggle */
+    .lang-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 8px 28px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .lang-bar .label { font-size: 12px; color: var(--muted); margin-right: 4px; }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .15s;
+      color: var(--text);
+    }
+    .lang-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .lang-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+
+    /* Alert Banner */
+    .alert-banner {
+      margin: 16px 28px 0;
+      background: #fff5f5;
+      border: 1.5px solid #f87171;
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .alert-banner .icon { font-size: 18px; flex-shrink: 0; }
+    .alert-banner .content strong { color: #c00; font-size: 13px; }
+    .alert-banner .content p { font-size: 12px; color: #555; margin-top: 2px; line-height: 1.5; }
+
+    /* Main layout */
+    .main { padding: 16px 28px 40px; max-width: 1100px; margin: 0 auto; }
+
+    /* Card */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .card-header {
+      background: #f0f4f9;
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-header .title { font-weight: 700; font-size: 13px; color: var(--primary); display: flex; align-items: center; gap: 6px; }
+    .card-header .date { font-size: 11px; color: var(--muted); }
+    .card-body { padding: 14px 16px; }
+
+    /* Tabs */
+    .tab-bar {
+      background: #f0f4f9;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0;
+      padding: 0 12px;
+      overflow-x: auto;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: 11px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--muted);
+      white-space: nowrap;
+      transition: all .15s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .tab-btn:hover { color: var(--primary); }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      background: #fff;
+      border-radius: 7px 7px 0 0;
+    }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 4px;
+      padding: 2px 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      vertical-align: middle;
+    }
+    .badge-new { background: var(--badge-new); border: 1px solid var(--badge-new-border); color: #92400e; }
+    .badge-updated { background: var(--badge-updated); border: 1px solid var(--badge-updated-border); color: #7f1d1d; }
+    .badge-critical { background: #fee2e2; border: 1px solid #ef4444; color: #7f1d1d; }
+    .badge-info { background: #e0f2fe; border: 1px solid #0284c7; color: #0c4a6e; }
+
+    /* Change highlight */
+    .change-row {
+      background: #fffbeb;
+      border-left: 3px solid #f59e0b;
+      padding: 8px 12px;
+      margin: 6px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 12.5px;
+      line-height: 1.55;
+    }
+    .change-row.critical { background: #fff1f1; border-left-color: #ef4444; }
+    .change-row strong { color: #92400e; }
+    .change-row.critical strong { color: #b91c1c; }
+    .change-meta { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+    /* Policy table */
+    .policy-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+    .policy-table th {
+      background: #f0f4f9;
+      color: var(--primary);
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #eef1f5;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .policy-table tr:last-child td { border-bottom: none; }
+    .policy-table tr.highlight td { background: #fffbeb; }
+    .policy-table tr.critical td { background: #fff1f1; }
+
+    /* Port status */
+    .port-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+    .port-card {
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+    .port-card .port-name { font-weight: 700; font-size: 13px; color: var(--primary); }
+    .port-card .port-code { font-size: 11px; color: var(--muted); }
+    .port-card .status {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .status-open { background: #dcfce7; color: #166534; }
+    .status-closed { background: #fee2e2; color: #991b1b; }
+    .status-congested { background: #fef9c3; color: #854d0e; }
+    .status-partial { background: #fff7ed; color: #9a3412; }
+    .port-card .note { font-size: 11px; color: #555; margin-top: 4px; line-height: 1.4; }
+
+    /* Route badge */
+    .route-badge { display: inline-block; background: var(--primary); color: #fff; border-radius: 4px; padding: 1px 7px; font-size: 11px; font-weight: 700; }
+
+    /* Service Flow */
+    .flow-wrap { margin-bottom: 20px; }
+    .flow-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      background: #eef2f8;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .flow-path {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      overflow-x: auto;
+      padding: 4px 0 8px;
+    }
+    .flow-step {
+      flex: 1;
+      min-width: 100px;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 10px 8px;
+      text-align: center;
+      font-size: 11.5px;
+    }
+    .flow-step.kmtc { border-color: #2563eb; background: #eff6ff; }
+    .flow-step.truck { border-color: #d97706; background: #fffbeb; }
+    .flow-step.dest { border-color: #059669; background: #ecfdf5; }
+    .flow-step.warn { border-color: #ef4444; background: #fff1f1; }
+    .flow-step .fs-icon { font-size: 18px; margin-bottom: 4px; }
+    .flow-step .fs-label { font-weight: 700; font-size: 12px; color: var(--text); }
+    .flow-step .fs-sub { font-size: 10.5px; color: var(--muted); margin-top: 2px; line-height: 1.4; }
+    .flow-step .fs-badge { margin-top: 5px; }
+    .flow-arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 4px;
+      color: var(--muted);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .flow-note {
+      font-size: 11.5px;
+      color: #555;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 12px;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+    .flow-note.warn { background: #fff5f5; border-color: #fca5a5; }
+    .flow-note.ok { background: #f0fdf4; border-color: #86efac; }
+
+    /* Destination matrix table */
+    .dest-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 12px; }
+    .dest-table th {
+      background: #f0f4f9;
+      color: var(--primary);
+      padding: 7px 10px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 1.5px solid var(--border);
+      white-space: nowrap;
+    }
+    .dest-table td {
+      padding: 7px 10px;
+      border-bottom: 1px solid #eef1f5;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .dest-table tr:last-child td { border-bottom: none; }
+    .dest-table tr.ok td { background: #f0fdf4; }
+    .dest-table tr.truck-row td { background: #fffbeb; }
+    .dest-table tr.warn-row td { background: #fff5f5; }
+    .pill {
+      display: inline-block;
+      border-radius: 10px;
+      padding: 1px 8px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .pill-green { background: #dcfce7; color: #166534; }
+    .pill-yellow { background: #fef9c3; color: #854d0e; }
+    .pill-red { background: #fee2e2; color: #991b1b; }
+    .pill-blue { background: #dbeafe; color: #1e40af; }
+
+    /* Cost box */
+    .cost-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 13px;
+    }
+    .cost-item:last-child { border-bottom: none; }
+    .cost-item .cost-name { color: #333; }
+    .cost-item .cost-val { font-weight: 700; color: var(--accent); text-align: right; }
+    .cost-note { font-size: 11px; color: var(--muted); font-weight: normal; display: block; }
+
+    /* Change log */
+    .changelog { list-style: none; }
+    .changelog li {
+      display: flex;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f4f9;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+    .changelog li:last-child { border-bottom: none; }
+    .changelog .cl-date { color: var(--muted); font-size: 11px; white-space: nowrap; min-width: 70px; padding-top: 1px; }
+    .changelog .cl-content { flex: 1; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Lang visibility */
+    [data-lang] { display: none; }
+    .lang-ko [data-lang="ko"] { display: block; }
+    .lang-en [data-lang="en"] { display: block; }
+    .lang-zh [data-lang="zh"] { display: block; }
+    [data-lang-inline] { display: none; }
+    .lang-ko [data-lang-inline="ko"] { display: inline; }
+    .lang-en [data-lang-inline="en"] { display: inline; }
+    .lang-zh [data-lang-inline="zh"] { display: inline; }
+  </style>
+</head>
+<body class="lang-ko">
+
+<!-- Header -->
+<div class="header">
+  <div class="header-top">
+    <div>
+      <h1>
+        <span data-lang-inline="ko">⚓ KMTC 미·이란 전쟁 대응 정책 현황</span>
+        <span data-lang-inline="en">⚓ KMTC Policy: US-Iran War Response</span>
+        <span data-lang-inline="zh">⚓ KMTC 美伊战争应对政策现况</span>
+      </h1>
+      <div class="subtitle">
+        <span data-lang-inline="ko">내부 영업 기준 정리 | 중동법인 + 본사 정책 통합 안내</span>
+        <span data-lang-inline="en">Internal Sales Reference | Middle East Branch + HQ Policy Summary</span>
+        <span data-lang-inline="zh">内部营业基准整理 | 中东法人 + 总部政策综合指引</span>
+      </div>
+    </div>
+    <div class="updated-badge">
+      <span data-lang-inline="ko">최종 업데이트</span>
+      <span data-lang-inline="en">Last Updated</span>
+      <span data-lang-inline="zh">最终更新</span>:
+      <span>2026년 3월 16일</span>
+    </div>
+  </div>
+</div>
+
+<!-- Lang Toggle -->
+<div class="lang-bar">
+  <span class="label">언어 / Language / 语言:</span>
+  <button class="lang-btn active" onclick="setLang('ko')">한국어</button>
+  <button class="lang-btn" onclick="setLang('en')">English</button>
+  <button class="lang-btn" onclick="setLang('zh')">中文</button>
+</div>
+
+<!-- Alert Banner -->
+<div class="alert-banner">
+  <div class="icon">🚨</div>
+  <div class="content">
+    <div data-lang="ko"><strong>[긴급] 이 페이지는 실시간 정책 변경 내용을 반영합니다. 업무 처리 전 반드시 최신 내용 확인 바랍니다.</strong>
+      <p>2026.02.28 미국(Operation Epic Fury)·이스라엘(Operation Shield of Judah)의 이란 공습으로 시작된 전쟁 관련 KMTC 내부 영업 대응 기준입니다. 이메일 기반 추출 정보 기준.</p>
+    </div>
+    <div data-lang="en"><strong>[URGENT] This page reflects real-time policy changes. Always verify latest content before processing shipments.</strong>
+      <p>KMTC internal operational guidelines in response to the war triggered by US (Operation Epic Fury) &amp; Israel (Operation Shield of Judah) strikes on Iran on 28 Feb 2026. Based on internal email communications.</p>
+    </div>
+    <div data-lang="zh"><strong>【紧急】本页面实时反映最新政策变动，处理业务前请务必确认最新内容。</strong>
+      <p>本文件为KMTC应对2026年2月28日美国（Operation Epic Fury）·以色列（Operation Shield of Judah）对伊朗空袭引发的战争的内部营业对应基准。基于内部邮件信息整理。</p>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ===== 1. 화물 처리 업무 지침 (최상단) ===== -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">
+        📦
+        <span data-lang-inline="ko">화물 처리 업무 지침 <span class="badge badge-updated">3/13 최신</span></span>
+        <span data-lang-inline="en">Cargo Handling Procedures <span class="badge badge-updated">Latest 3/13</span></span>
+        <span data-lang-inline="zh">货物处理业务指引 <span class="badge badge-updated">3/13最新</span></span>
+      </div>
+    </div>
+    <div class="card-body">
+      <!-- Korean -->
+      <div data-lang="ko">
+        <table class="policy-table">
+          <thead><tr><th width="20%">상황</th><th width="40%">처리 방안</th><th width="40%">유의사항</th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td>🔸 JEA향 부킹 접수 시</td>
+              <td>서비스 패턴: <strong>KLF-(TRUCK)-JEA</strong><br>B/L 상에는 JEA 대신 <strong>KLF</strong>로 명기</td>
+              <td>JEA 화물은 KLF 양하 후 IN-TRANSIT으로 보세운송. 별도 세관 통관 없음(샤르자 세관 협의 완료)</td>
+            </tr>
+            <tr>
+              <td>🔸 UAE 내 타 포트향<br>(QIW, ADP, SHJ)</td>
+              <td>JEA와 동일 기준 적용<br>사전 화주 안내 후 요청 시 진행</td>
+              <td>세관 문제 해결 완료. QIW·ADP·SHJ → KLF 통관 없이 보세운송 가능</td>
+            </tr>
+            <tr class="highlight">
+              <td>🔸 AJM, RAK향</td>
+              <td>Hutchison Logistic과 협의 후 처리</td>
+              <td>세관 문제 별도 협의 완료. 비용 정산 방식 확인 필요</td>
+            </tr>
+            <tr>
+              <td>🔸 KLF 도착 후 픽업 안 된 화물</td>
+              <td><strong>3일 이내</strong> 픽업하지 않으면 <strong>SHJ ICD</strong> 강제 이송</td>
+              <td>화주에게 즉시 통보 필요. 스토리지 Day 1부터 청구됨</td>
+            </tr>
+            <tr>
+              <td>🔸 Upper Gulf / 홍해향</td>
+              <td>T/S 신고 후 피더 연결</td>
+              <td>피더 수급 상황 지속 확인 필요. SHJ, KWI, UQR, HMA → 피더사 WRS 별도 부과</td>
+            </tr>
+            <tr class="highlight">
+              <td>🔸 LOI 징구</td>
+              <td>전쟁위험 관련 추가비용 부담 LOI 화주로부터 사전 징구</td>
+              <td>법무법인 검토 완료 양식 사용. 중국발: WRS 항목 2번 삭제된 개정판 사용 (3/10 개정)</td>
+            </tr>
+            <tr>
+              <td>🔸 EOV 선언 화물</td>
+              <td>KLF 양하 후 DLY 포트별 처리 방안 표에 따라 처리</td>
+              <td>비용·이송방법은 현지 상황에 따라 변동 가능함을 화주에게 반드시 안내</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- English -->
+      <div data-lang="en">
+        <table class="policy-table">
+          <thead><tr><th width="20%">Situation</th><th width="40%">Procedure</th><th width="40%">Notes</th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td>🔸 JEA-bound bookings</td>
+              <td>Service pattern: <strong>KLF-(TRUCK)-JEA</strong><br>B/L must show <strong>KLF</strong> (not JEA)</td>
+              <td>KLF discharge, IN-TRANSIT bonded haulage to JEA. No Sharjah customs clearance required (agreed with authorities)</td>
+            </tr>
+            <tr>
+              <td>🔸 Other UAE ports<br>(QIW, ADP, SHJ)</td>
+              <td>Same basis as JEA<br>Proceed only upon customer request after prior notice</td>
+              <td>Customs issues resolved. Bonded haulage available without KLF customs clearance</td>
+            </tr>
+            <tr class="highlight">
+              <td>🔸 AJM, RAK bound</td>
+              <td>Handle after consultation with Hutchison Logistic</td>
+              <td>Customs arrangements confirmed. Billing method to be verified</td>
+            </tr>
+            <tr>
+              <td>🔸 Cargo at KLF unpicked</td>
+              <td>Forced transfer to <strong>SHJ ICD</strong> if not picked up within <strong>3 days</strong></td>
+              <td>Notify consignees immediately. Storage charged from Day 1</td>
+            </tr>
+            <tr>
+              <td>🔸 Upper Gulf / Red Sea</td>
+              <td>T/S declaration then feeder connection</td>
+              <td>Monitor feeder availability. SHJ/KWI/UQR/HMA: Separate feeder WRS applies</td>
+            </tr>
+            <tr class="highlight">
+              <td>🔸 LOI Collection</td>
+              <td>Collect LOI from shipper for war-risk additional cost liability</td>
+              <td>Use legally reviewed form. China-origin: Use revised form with WRS item #2 removed (rev. 3/10)</td>
+            </tr>
+            <tr>
+              <td>🔸 EOV cargo</td>
+              <td>Handle per DLY port procedure table after KLF discharge</td>
+              <td>Inform customer: costs and routing subject to change per local conditions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Chinese -->
+      <div data-lang="zh">
+        <table class="policy-table">
+          <thead><tr><th width="20%">情况</th><th width="40%">处理方案</th><th width="40%">注意事项</th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td>🔸 接受JEA方向订舱</td>
+              <td>服务模式: <strong>KLF-(TRUCK)-JEA</strong><br>提单目的港填写 <strong>KLF</strong>（不得填JEA）</td>
+              <td>KLF卸货后IN-TRANSIT保税运输至JEA。无需沙迦海关清关（已与当局协议）</td>
+            </tr>
+            <tr>
+              <td>🔸 UAE其他港口<br>(QIW, ADP, SHJ)</td>
+              <td>与JEA相同基准<br>提前通知货主，仅接受有需求方</td>
+              <td>海关问题已解决。无需KLF清关即可保税运输</td>
+            </tr>
+            <tr class="highlight">
+              <td>🔸 AJM, RAK方向</td>
+              <td>与Hutchison Logistic协商后处理</td>
+              <td>海关安排已确认，请核实费用结算方式</td>
+            </tr>
+            <tr>
+              <td>🔸 KLF到港后未提货</td>
+              <td><strong>3天内</strong>未提货将强制转运至<strong>SHJ ICD</strong></td>
+              <td>需立即通知收货人。堆存费从第1天起计</td>
+            </tr>
+            <tr>
+              <td>🔸 上湾/红海方向</td>
+              <td>T/S申报后转支线</td>
+              <td>持续关注支线供需。SHJ/KWI/UQR/HMA: 另收支线WRS</td>
+            </tr>
+            <tr class="highlight">
+              <td>🔸 LOI征收</td>
+              <td>提前向货主收取战争风险额外费用承担LOI</td>
+              <td>使用经律师事务所审查的格式。中国发货: 使用删除WRS第2项的修订版（3/10修订）</td>
+            </tr>
+            <tr>
+              <td>🔸 EOV货物</td>
+              <td>KLF卸货后按目的港处理方案表执行</td>
+              <td>必须告知货主: 费用及运输方式可能随现地情况变动</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== 2. 항만 현황 + 항로별 영향 (탭) ===== -->
+  <div class="card" data-tab-group="ports">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'ports','service-flow')">
+        📍
+        <span data-lang-inline="ko">목적지별 구간 처리 흐름 <span class="badge badge-critical">필독</span></span>
+        <span data-lang-inline="en">Segment Flow by Destination <span class="badge badge-critical">KEY</span></span>
+        <span data-lang-inline="zh">目的港区段处理流程 <span class="badge badge-critical">必读</span></span>
+      </button>
+      <button class="tab-btn" onclick="switchTab(this,'ports','port-status')">
+        🏗️
+        <span data-lang-inline="ko">GCC 항만 운영 현황 <span class="badge badge-updated">3/13</span></span>
+        <span data-lang-inline="en">GCC Port Status <span class="badge badge-updated">3/13</span></span>
+        <span data-lang-inline="zh">GCC港口现况 <span class="badge badge-updated">3/13</span></span>
+      </button>
+      <button class="tab-btn" onclick="switchTab(this,'ports','route-impact')">
+        🚢
+        <span data-lang-inline="ko">항로별 서비스 영향</span>
+        <span data-lang-inline="en">Route Service Impact</span>
+        <span data-lang-inline="zh">各航线服务影响</span>
+      </button>
+    </div>
+
+    <!-- Port Status Pane -->
+    <div class="tab-pane" id="ports-port-status">
+      <div class="card-body">
+        <div class="port-grid">
+          <div class="port-card" style="border-color:#ef4444;">
+            <div class="port-name">Jebel Ali</div>
+            <div class="port-code">JEA · UAE</div>
+            <div style="margin-top:4px;">
+              <span class="status status-closed">
+                <span data-lang-inline="ko">직항선 전면 중단</span>
+                <span data-lang-inline="en">Direct Vessel: CLOSED</span>
+                <span data-lang-inline="zh">直航船: 全面停止</span>
+              </span>
+            </div>
+            <div style="margin-top:4px;">
+              <span class="status" style="background:#dcfce7;color:#166534;">
+                <span data-lang-inline="ko">KMTC: KLF경유 운영 중</span>
+                <span data-lang-inline="en">KMTC: Serving via KLF</span>
+                <span data-lang-inline="zh">KMTC: 经KLF运营中</span>
+              </span>
+            </div>
+            <div class="note" style="margin-top:5px; color:#c00; font-weight:600;">
+              <span data-lang-inline="ko">B/L POD = KLF 기재 필수<br>KLF양하 → 보세트럭 → JEA 인도</span>
+              <span data-lang-inline="en">B/L POD must show KLF<br>KLF discharge → Bonded truck → JEA delivery</span>
+              <span data-lang-inline="zh">B/L目的港须填KLF<br>KLF卸货→保税卡车→JEA交货</span>
+            </div>
+          </div>
+          <div class="port-card">
+            <div class="port-name">Khor Fakkan</div>
+            <div class="port-code">KLF · UAE</div>
+            <div><span class="status status-congested">
+              <span data-lang-inline="ko">혼잡 운영</span>
+              <span data-lang-inline="en">CONGESTED</span>
+              <span data-lang-inline="zh">拥挤运营</span>
+            </span></div>
+            <div class="note">
+              <span data-lang-inline="ko">외항 35+ 대기 | 3일 내 미픽업 시 SHJ ICD 이송</span>
+              <span data-lang-inline="en">35+ ships waiting | SHJ ICD transfer if unpicked in 3 days</span>
+              <span data-lang-inline="zh">外锚35+艘等待 | 3天内未提货转SHJ ICD</span>
+            </div>
+          </div>
+          <div class="port-card">
+            <div class="port-name">Sharjah</div>
+            <div class="port-code">SHJ · UAE</div>
+            <div><span class="status status-open">
+              <span data-lang-inline="ko">운영 중</span>
+              <span data-lang-inline="en">OPEN</span>
+              <span data-lang-inline="zh">运营中</span>
+            </span></div>
+          </div>
+          <div class="port-card">
+            <div class="port-name">Dammam</div>
+            <div class="port-code">DMM · SA</div>
+            <div><span class="status status-open">
+              <span data-lang-inline="ko">운영 중</span>
+              <span data-lang-inline="en">OPEN</span>
+              <span data-lang-inline="zh">运营中</span>
+            </span></div>
+          </div>
+          <div class="port-card">
+            <div class="port-name">Salalah</div>
+            <div class="port-code">SOH · OM</div>
+            <div><span class="status status-partial">
+              <span data-lang-inline="ko">LOCAL만</span>
+              <span data-lang-inline="en">LOCAL only</span>
+              <span data-lang-inline="zh">仅LOCAL货</span>
+            </span></div>
+            <div class="note">
+              <span data-lang-inline="ko">LOCAL 화물 외 양하 금지</span>
+              <span data-lang-inline="en">Non-local cargo discharge prohibited</span>
+              <span data-lang-inline="zh">禁止卸载非本地货物</span>
+            </div>
+          </div>
+          <div class="port-card">
+            <div class="port-name">Bahrain</div>
+            <div class="port-code">KSP · BH</div>
+            <div><span class="status status-closed">
+              <span data-lang-inline="ko">작업 중단</span>
+              <span data-lang-inline="en">SUSPENDED</span>
+              <span data-lang-inline="zh">作业暂停</span>
+            </span></div>
+          </div>
+          <div class="port-card">
+            <div class="port-name">Qatar</div>
+            <div class="port-code">HMD · QA</div>
+            <div><span class="status status-partial">
+              <span data-lang-inline="ko">부분 운영</span>
+              <span data-lang-inline="en">PARTIAL</span>
+              <span data-lang-inline="zh">部分运营</span>
+            </span></div>
+          </div>
+          <div class="port-card">
+            <div class="port-name">Kuwait</div>
+            <div class="port-code">KWI · KW</div>
+            <div><span class="status status-open">
+              <span data-lang-inline="ko">운영 중</span>
+              <span data-lang-inline="en">OPEN</span>
+              <span data-lang-inline="zh">运营中</span>
+            </span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Flow Pane -->
+    <div class="tab-pane active" id="ports-service-flow">
+      <div class="card-body">
+
+        <!-- Korean -->
+        <div data-lang="ko">
+          <div style="font-size:12px; color:#c00; font-weight:700; margin-bottom:12px; padding:8px 12px; background:#fff5f5; border-radius:6px; border-left:3px solid #ef4444;">
+            ⚠️ JEA항은 직항 선박이 없으나, <strong>KMTC는 KLF 양하 + 보세 트럭킹으로 JEA향 화물을 정상 접수 중</strong>입니다. 아래 목적지별 구간을 반드시 확인하세요.
+          </div>
+
+          <!-- Flow 1: JEA / UAE 주요 포트 -->
+          <div class="flow-wrap">
+            <div class="flow-title">🔸 JEA · QIW · ADP · SHJ (UAE 내 포트) — KLF 경유 트럭킹</div>
+            <div class="flow-path">
+              <div class="flow-step kmtc">
+                <div class="fs-icon">📋</div>
+                <div class="fs-label">부킹 접수</div>
+                <div class="fs-sub">정상 접수<br><strong>POD: KLF</strong><br>(JEA 아님)</div>
+                <div class="fs-badge"><span class="pill pill-green">✅ 접수 가능</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step kmtc">
+                <div class="fs-icon">🚢</div>
+                <div class="fs-label">해상 운송</div>
+                <div class="fs-sub">Origin<br>↓<br><strong>KLF 양하</strong></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step truck">
+                <div class="fs-icon">🚛</div>
+                <div class="fs-label">보세 트럭킹</div>
+                <div class="fs-sub">KLF → JEA<br>IN-TRANSIT<br><strong>세관 통관 없음</strong></div>
+                <div class="fs-badge"><span class="pill pill-yellow">TRC $900~1,000/VAN</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step dest">
+                <div class="fs-icon">🏭</div>
+                <div class="fs-label">최종 인도</div>
+                <div class="fs-sub">JEA<br>(또는 QIW/<br>ADP/SHJ)</div>
+                <div class="fs-badge"><span class="pill pill-green">인도 가능</span></div>
+              </div>
+            </div>
+            <div class="flow-note warn">
+              <strong>추가 비용 주의:</strong> DVC(ESL EOV 청구, $750~800/TEU) + TRC(보세트럭, $900~1,000/VAN, 2일마다 변동) + PRC(DPW Drop-off, AED700/20' · AED1,070/40') + LFT(KLF 체화, Day1부터) — 화주에게 사전 안내 후 LOI 징구 필수
+            </div>
+            <div class="flow-note" style="margin-top:4px;">
+              <strong>B/L 기재 원칙:</strong> POD란에 <strong>KLF</strong> 기재. JEA 기재 금지. KLF 도착 후 <strong>3일 이내 미픽업 시 SHJ ICD 강제 이송</strong> → 화주에게 즉시 통보 필요
+            </div>
+          </div>
+
+          <!-- Flow 2: AJM / RAK -->
+          <div class="flow-wrap">
+            <div class="flow-title">🔸 AJM · RAK — Hutchison Logistic 협의 경유</div>
+            <div class="flow-path">
+              <div class="flow-step kmtc">
+                <div class="fs-icon">📋</div>
+                <div class="fs-label">부킹 접수</div>
+                <div class="fs-sub"><strong>POD: KLF</strong></div>
+                <div class="fs-badge"><span class="pill pill-yellow">협의 후 접수</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step kmtc">
+                <div class="fs-icon">🚢</div>
+                <div class="fs-label">해상 운송</div>
+                <div class="fs-sub">Origin → KLF 양하</div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step truck">
+                <div class="fs-icon">🚛</div>
+                <div class="fs-label">Hutchison<br>Logistic</div>
+                <div class="fs-sub">세관 협의 완료<br>비용 정산 확인 필요</div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step dest">
+                <div class="fs-icon">🏭</div>
+                <div class="fs-label">AJM / RAK<br>인도</div>
+                <div class="fs-sub">비용 별도 협의</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flow 3: DMM / KWI / SHJ 직항 -->
+          <div class="flow-wrap">
+            <div class="flow-title">🔸 DMM · KWI · SHJ — 직항 정상 운항</div>
+            <div class="flow-path">
+              <div class="flow-step kmtc">
+                <div class="fs-icon">📋</div>
+                <div class="fs-label">부킹 접수</div>
+                <div class="fs-sub"><strong>POD: 목적항</strong><br>정상 기재</div>
+                <div class="fs-badge"><span class="pill pill-green">✅ 정상 접수</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step kmtc">
+                <div class="fs-icon">🚢</div>
+                <div class="fs-label">해상 운송</div>
+                <div class="fs-sub">Origin → 직항</div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step dest">
+                <div class="fs-icon">🏭</div>
+                <div class="fs-label">직접 양하<br>인도</div>
+                <div class="fs-sub">육상 운송 없음</div>
+                <div class="fs-badge"><span class="pill pill-green">정상</span></div>
+              </div>
+            </div>
+            <div class="flow-note ok">WRS는 부과되나, 별도 트럭킹/체화 비용 없음. 정상 업무 프로세스 유지.</div>
+          </div>
+
+          <!-- Flow 4: Upper Gulf / 홍해 -->
+          <div class="flow-wrap">
+            <div class="flow-title">🔸 Upper Gulf · 홍해 (KWI·UQR·HMA·SHJ 피더 연결)</div>
+            <div class="flow-path">
+              <div class="flow-step kmtc">
+                <div class="fs-icon">📋</div>
+                <div class="fs-label">부킹 접수</div>
+                <div class="fs-sub">T/S 신고<br>피더 연결</div>
+                <div class="fs-badge"><span class="pill pill-blue">T/S 처리</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step kmtc">
+                <div class="fs-icon">🚢</div>
+                <div class="fs-label">모선 운송</div>
+                <div class="fs-sub">Origin → KLF/SHJ</div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step truck">
+                <div class="fs-icon">⛵</div>
+                <div class="fs-label">피더 환적</div>
+                <div class="fs-sub">피더사 WRS<br>별도 부과</div>
+                <div class="fs-badge"><span class="pill pill-yellow">피더 WRS 확인</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step dest">
+                <div class="fs-icon">🏭</div>
+                <div class="fs-label">최종항 인도</div>
+                <div class="fs-sub">피더 수급<br>지속 모니터링</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Matrix table -->
+          <div style="margin-top:8px; font-size:12px; font-weight:700; color:var(--primary); margin-bottom:6px;">목적지별 요약표</div>
+          <table class="dest-table">
+            <thead><tr><th>목적지</th><th>KMTC 접수</th><th>B/L POD 기재</th><th>양하항</th><th>최종 구간</th><th>추가 비용</th></tr></thead>
+            <tbody>
+              <tr class="truck-row"><td><strong>JEA</strong></td><td><span class="pill pill-green">✅ 접수</span></td><td><strong style="color:#c00;">KLF</strong></td><td>KLF</td><td>🚛 보세트럭킹</td><td>DVC+TRC+PRC+LFT</td></tr>
+              <tr class="truck-row"><td>QIW · ADP · SHJ</td><td><span class="pill pill-yellow">요청 시</span></td><td><strong style="color:#c00;">KLF</strong></td><td>KLF</td><td>🚛 보세트럭킹</td><td>TRC+PRC</td></tr>
+              <tr class="truck-row"><td>AJM · RAK</td><td><span class="pill pill-yellow">협의 후</span></td><td>KLF</td><td>KLF</td><td>🚛 Hutchison</td><td>미정</td></tr>
+              <tr class="ok"><td><strong>DMM</strong></td><td><span class="pill pill-green">✅ 정상</span></td><td>DMM</td><td>DMM 직항</td><td>없음</td><td>WRS만</td></tr>
+              <tr class="ok"><td><strong>KWI</strong></td><td><span class="pill pill-green">✅ 정상</span></td><td>KWI</td><td>KWI 직항</td><td>없음</td><td>WRS만</td></tr>
+              <tr class="ok"><td><strong>SHJ</strong></td><td><span class="pill pill-green">✅ 정상</span></td><td>SHJ</td><td>SHJ 직항</td><td>없음</td><td>WRS만</td></tr>
+              <tr><td>Upper Gulf · 홍해</td><td><span class="pill pill-blue">T/S</span></td><td>T/S 신고</td><td>KLF/SHJ</td><td>⛵ 피더 환적</td><td>피더 WRS 별도</td></tr>
+              <tr class="warn-row"><td>KSP (Bahrain)</td><td><span class="pill pill-red">⚠️ 제한</span></td><td>확인 필요</td><td>제한적</td><td>별도 확인</td><td>-</td></tr>
+              <tr class="warn-row"><td>HMD (Qatar)</td><td><span class="pill pill-yellow">부분</span></td><td>확인 필요</td><td>부분 운영</td><td>별도 확인</td><td>-</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- English -->
+        <div data-lang="en">
+          <div style="font-size:12px; color:#c00; font-weight:700; margin-bottom:12px; padding:8px 12px; background:#fff5f5; border-radius:6px; border-left:3px solid #ef4444;">
+            ⚠️ JEA port has NO direct vessel calls, but <strong>KMTC is accepting JEA-bound cargo normally via KLF discharge + bonded trucking</strong>. Review the segment flow below by destination.
+          </div>
+
+          <div class="flow-wrap">
+            <div class="flow-title">🔸 JEA · QIW · ADP · SHJ (UAE Ports) — Via KLF + Trucking</div>
+            <div class="flow-path">
+              <div class="flow-step kmtc">
+                <div class="fs-icon">📋</div>
+                <div class="fs-label">Booking</div>
+                <div class="fs-sub">Accept normally<br><strong>POD: KLF</strong><br>(NOT JEA)</div>
+                <div class="fs-badge"><span class="pill pill-green">✅ Bookable</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step kmtc">
+                <div class="fs-icon">🚢</div>
+                <div class="fs-label">Ocean Leg</div>
+                <div class="fs-sub">Origin<br>↓<br><strong>KLF Discharge</strong></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step truck">
+                <div class="fs-icon">🚛</div>
+                <div class="fs-label">Bonded Haulage</div>
+                <div class="fs-sub">KLF → JEA<br>IN-TRANSIT<br><strong>No customs clearance</strong></div>
+                <div class="fs-badge"><span class="pill pill-yellow">TRC $900~1,000/VAN</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step dest">
+                <div class="fs-icon">🏭</div>
+                <div class="fs-label">Final Delivery</div>
+                <div class="fs-sub">JEA<br>(or QIW/ADP/SHJ)</div>
+                <div class="fs-badge"><span class="pill pill-green">Deliverable</span></div>
+              </div>
+            </div>
+            <div class="flow-note warn">
+              <strong>Cost alert:</strong> DVC (ESL EOV charge, $750~800/TEU) + TRC (bonded truck, $900~1,000/VAN, variable every 2 days) + PRC (DPW Drop-off, AED700/20'·AED1,070/40') + LFT (KLF storage from Day 1) — must notify customer in advance and collect LOI
+            </div>
+            <div class="flow-note" style="margin-top:4px;">
+              <strong>B/L rule:</strong> POD field must show <strong>KLF</strong>. Never enter JEA. Cargo not picked up within <strong>3 days of KLF arrival → forced transfer to SHJ ICD</strong> — notify consignee immediately
+            </div>
+          </div>
+
+          <div class="flow-wrap">
+            <div class="flow-title">🔸 DMM · KWI · SHJ — Direct Call, Normal Operation</div>
+            <div class="flow-path">
+              <div class="flow-step kmtc">
+                <div class="fs-icon">📋</div>
+                <div class="fs-label">Booking</div>
+                <div class="fs-sub"><strong>POD: Destination</strong><br>Normal entry</div>
+                <div class="fs-badge"><span class="pill pill-green">✅ Normal</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step kmtc">
+                <div class="fs-icon">🚢</div>
+                <div class="fs-label">Ocean Leg</div>
+                <div class="fs-sub">Origin → Direct</div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step dest">
+                <div class="fs-icon">🏭</div>
+                <div class="fs-label">Direct Discharge<br>&amp; Delivery</div>
+                <div class="fs-sub">No land leg</div>
+                <div class="fs-badge"><span class="pill pill-green">Normal</span></div>
+              </div>
+            </div>
+            <div class="flow-note ok">WRS applies, but no additional trucking/storage costs. Normal operation flow maintained.</div>
+          </div>
+
+          <div style="margin-top:8px; font-size:12px; font-weight:700; color:var(--primary); margin-bottom:6px;">Destination Summary Matrix</div>
+          <table class="dest-table">
+            <thead><tr><th>Destination</th><th>KMTC Booking</th><th>B/L POD</th><th>Discharge Port</th><th>Last Leg</th><th>Extra Costs</th></tr></thead>
+            <tbody>
+              <tr class="truck-row"><td><strong>JEA</strong></td><td><span class="pill pill-green">✅ Accept</span></td><td><strong style="color:#c00;">KLF</strong></td><td>KLF</td><td>🚛 Bonded truck</td><td>DVC+TRC+PRC+LFT</td></tr>
+              <tr class="truck-row"><td>QIW · ADP · SHJ</td><td><span class="pill pill-yellow">On request</span></td><td><strong style="color:#c00;">KLF</strong></td><td>KLF</td><td>🚛 Bonded truck</td><td>TRC+PRC</td></tr>
+              <tr class="truck-row"><td>AJM · RAK</td><td><span class="pill pill-yellow">After consult</span></td><td>KLF</td><td>KLF</td><td>🚛 Hutchison</td><td>TBD</td></tr>
+              <tr class="ok"><td><strong>DMM</strong></td><td><span class="pill pill-green">✅ Normal</span></td><td>DMM</td><td>DMM direct</td><td>None</td><td>WRS only</td></tr>
+              <tr class="ok"><td><strong>KWI</strong></td><td><span class="pill pill-green">✅ Normal</span></td><td>KWI</td><td>KWI direct</td><td>None</td><td>WRS only</td></tr>
+              <tr class="ok"><td><strong>SHJ</strong></td><td><span class="pill pill-green">✅ Normal</span></td><td>SHJ</td><td>SHJ direct</td><td>None</td><td>WRS only</td></tr>
+              <tr><td>Upper Gulf/Red Sea</td><td><span class="pill pill-blue">T/S</span></td><td>T/S declared</td><td>KLF/SHJ</td><td>⛵ Feeder T/S</td><td>Feeder WRS sep.</td></tr>
+              <tr class="warn-row"><td>KSP (Bahrain)</td><td><span class="pill pill-red">⚠️ Limited</span></td><td>Confirm</td><td>Limited</td><td>Confirm</td><td>-</td></tr>
+              <tr class="warn-row"><td>HMD (Qatar)</td><td><span class="pill pill-yellow">Partial</span></td><td>Confirm</td><td>Partial ops</td><td>Confirm</td><td>-</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Chinese -->
+        <div data-lang="zh">
+          <div style="font-size:12px; color:#c00; font-weight:700; margin-bottom:12px; padding:8px 12px; background:#fff5f5; border-radius:6px; border-left:3px solid #ef4444;">
+            ⚠️ JEA港虽无直航船挂靠，但<strong>KMTC通过KLF卸货+保税卡车运输，正常接受JEA方向订舱</strong>。请务必按目的港确认以下区段处理方式。
+          </div>
+
+          <div class="flow-wrap">
+            <div class="flow-title">🔸 JEA · QIW · ADP · SHJ（UAE各港）— 经KLF转卡车</div>
+            <div class="flow-path">
+              <div class="flow-step kmtc">
+                <div class="fs-icon">📋</div>
+                <div class="fs-label">接受订舱</div>
+                <div class="fs-sub">正常接受<br><strong>目的港: KLF</strong><br>（非JEA）</div>
+                <div class="fs-badge"><span class="pill pill-green">✅ 可接受</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step kmtc">
+                <div class="fs-icon">🚢</div>
+                <div class="fs-label">海运段</div>
+                <div class="fs-sub">起运港<br>↓<br><strong>KLF卸货</strong></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step truck">
+                <div class="fs-icon">🚛</div>
+                <div class="fs-label">保税卡车运输</div>
+                <div class="fs-sub">KLF→JEA<br>IN-TRANSIT<br><strong>无需清关</strong></div>
+                <div class="fs-badge"><span class="pill pill-yellow">TRC $900~1,000/VAN</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step dest">
+                <div class="fs-icon">🏭</div>
+                <div class="fs-label">最终交货</div>
+                <div class="fs-sub">JEA<br>（或QIW/ADP/SHJ）</div>
+                <div class="fs-badge"><span class="pill pill-green">可交货</span></div>
+              </div>
+            </div>
+            <div class="flow-note warn">
+              <strong>额外费用提醒：</strong>DVC（ESL宣布EOV后收取，$750~800/TEU）+ TRC（保税卡车，$900~1,000/VAN，每2天变动）+ PRC（DPW Drop-off费，AED700/20'·AED1,070/40'）+ LFT（KLF堆存，第1天起计）— 须提前告知货主并收取LOI
+            </div>
+            <div class="flow-note" style="margin-top:4px;">
+              <strong>提单规则：</strong>目的港栏须填写<strong>KLF</strong>，禁填JEA。KLF到港后<strong>3天内未提货将强制转运至SHJ ICD</strong> — 须立即通知收货人
+            </div>
+          </div>
+
+          <div class="flow-wrap">
+            <div class="flow-title">🔸 DMM · KWI · SHJ — 直航，正常运营</div>
+            <div class="flow-path">
+              <div class="flow-step kmtc">
+                <div class="fs-icon">📋</div>
+                <div class="fs-label">接受订舱</div>
+                <div class="fs-sub"><strong>目的港: 正常填写</strong></div>
+                <div class="fs-badge"><span class="pill pill-green">✅ 正常</span></div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step kmtc">
+                <div class="fs-icon">🚢</div>
+                <div class="fs-label">海运段</div>
+                <div class="fs-sub">起运港 → 直航</div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-step dest">
+                <div class="fs-icon">🏭</div>
+                <div class="fs-label">直接卸货<br>交货</div>
+                <div class="fs-sub">无陆运段</div>
+                <div class="fs-badge"><span class="pill pill-green">正常</span></div>
+              </div>
+            </div>
+            <div class="flow-note ok">征收WRS，但无额外卡车/堆存费用。维持正常业务流程。</div>
+          </div>
+
+          <div style="margin-top:8px; font-size:12px; font-weight:700; color:var(--primary); margin-bottom:6px;">目的港汇总表</div>
+          <table class="dest-table">
+            <thead><tr><th>目的港</th><th>KMTC接受</th><th>提单目的港</th><th>卸货港</th><th>最终区段</th><th>额外费用</th></tr></thead>
+            <tbody>
+              <tr class="truck-row"><td><strong>JEA</strong></td><td><span class="pill pill-green">✅ 接受</span></td><td><strong style="color:#c00;">KLF</strong></td><td>KLF</td><td>🚛 保税卡车</td><td>DVC+TRC+PRC+LFT</td></tr>
+              <tr class="truck-row"><td>QIW · ADP · SHJ</td><td><span class="pill pill-yellow">按需求</span></td><td><strong style="color:#c00;">KLF</strong></td><td>KLF</td><td>🚛 保税卡车</td><td>TRC+PRC</td></tr>
+              <tr class="truck-row"><td>AJM · RAK</td><td><span class="pill pill-yellow">协商后</span></td><td>KLF</td><td>KLF</td><td>🚛 Hutchison</td><td>待定</td></tr>
+              <tr class="ok"><td><strong>DMM</strong></td><td><span class="pill pill-green">✅ 正常</span></td><td>DMM</td><td>DMM直航</td><td>无</td><td>仅WRS</td></tr>
+              <tr class="ok"><td><strong>KWI</strong></td><td><span class="pill pill-green">✅ 正常</span></td><td>KWI</td><td>KWI直航</td><td>无</td><td>仅WRS</td></tr>
+              <tr class="ok"><td><strong>SHJ</strong></td><td><span class="pill pill-green">✅ 正常</span></td><td>SHJ</td><td>SHJ直航</td><td>无</td><td>仅WRS</td></tr>
+              <tr><td>上湾/红海</td><td><span class="pill pill-blue">T/S</span></td><td>T/S申报</td><td>KLF/SHJ</td><td>⛵ 支线换装</td><td>支线WRS另收</td></tr>
+              <tr class="warn-row"><td>KSP（巴林）</td><td><span class="pill pill-red">⚠️ 受限</span></td><td>确认</td><td>受限</td><td>确认</td><td>-</td></tr>
+              <tr class="warn-row"><td>HMD（卡塔尔）</td><td><span class="pill pill-yellow">部分</span></td><td>确认</td><td>部分运营</td><td>确认</td><td>-</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Route Impact Pane -->
+    <div class="tab-pane" id="ports-route-impact">
+      <div class="card-body">
+        <div data-lang="ko">
+          <table class="policy-table">
+            <thead><tr><th>항로</th><th>현황</th><th>비고</th></tr></thead>
+            <tbody>
+              <tr class="critical">
+                <td><span class="route-badge">AIM</span></td>
+                <td>⚠️ KLF 우회 양하</td>
+                <td>ESL WAFA 02605E — KSP(바레인) SKIP → KLF 양하. AIM2 정규 선석 활용</td>
+              </tr>
+              <tr class="critical">
+                <td><span class="route-badge">VGI</span></td>
+                <td>⚠️ DMM SKIP</td>
+                <td>HELLA 02606E — JEA 양하 후 DMM SKIP → MUN 항해. KMTC MUMBAI호 호르무즈 통과 완료</td>
+              </tr>
+              <tr class="critical">
+                <td><span class="route-badge">JJS</span></td>
+                <td>🚫 JEA OMIT</td>
+                <td>JJS·JYS·JRS 전면 JEA 스킵. 대안 포트 검토 중</td>
+              </tr>
+              <tr class="highlight">
+                <td><span class="route-badge">IRX2</span></td>
+                <td>⚠️ WRS 부과</td>
+                <td>전쟁 개시 후 선적분부터 WRS 부과. XPRESS측과 협의 완료, 시점 정리 중</td>
+              </tr>
+              <tr>
+                <td><span class="route-badge">DAMMAM</span><br><small>2601W</small></td>
+                <td>📌 JEA 3/20~22</td>
+                <td>JEA 기항 예정 유지 중. 상황 악화 시 KLF 우회 대응</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-lang="en">
+          <table class="policy-table">
+            <thead><tr><th>Route</th><th>Status</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr class="critical">
+                <td><span class="route-badge">AIM</span></td>
+                <td>⚠️ KLF Diversion</td>
+                <td>ESL WAFA 02605E — KSP(Bahrain) SKIP → KLF discharge. Regular berth at AIM2 available</td>
+              </tr>
+              <tr class="critical">
+                <td><span class="route-badge">VGI</span></td>
+                <td>⚠️ DMM SKIP</td>
+                <td>HELLA 02606E — Discharged at JEA, DMM SKIP → MUN. KMTC MUMBAI cleared Hormuz</td>
+              </tr>
+              <tr class="critical">
+                <td><span class="route-badge">JJS</span></td>
+                <td>🚫 JEA OMIT</td>
+                <td>JJS/JYS/JRS services fully omitting JEA. Alternative port under review</td>
+              </tr>
+              <tr class="highlight">
+                <td><span class="route-badge">IRX2</span></td>
+                <td>⚠️ WRS Applied</td>
+                <td>WRS charged from cargo loaded after war start. Timeline coordination with XPRESS ongoing</td>
+              </tr>
+              <tr>
+                <td><span class="route-badge">DAMMAM</span><br><small>2601W</small></td>
+                <td>📌 JEA 3/20~22</td>
+                <td>JEA call maintained. KLF diversion plan ready if situation escalates</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-lang="zh">
+          <table class="policy-table">
+            <thead><tr><th>航线</th><th>现状</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr class="critical">
+                <td><span class="route-badge">AIM</span></td>
+                <td>⚠️ 绕KLF卸货</td>
+                <td>ESL WAFA 02605E — 跳KSP(巴林) → KLF卸货。利用AIM2固定泊位</td>
+              </tr>
+              <tr class="critical">
+                <td><span class="route-badge">VGI</span></td>
+                <td>⚠️ 跳DMM</td>
+                <td>HELLA 02606E — JEA卸货后跳DMM → 驶往MUN。KMTC MUMBAI已通过霍尔木兹</td>
+              </tr>
+              <tr class="critical">
+                <td><span class="route-badge">JJS</span></td>
+                <td>🚫 JEA停靠取消</td>
+                <td>JJS·JYS·JRS服务全面跳过JEA，替代港口研讨中</td>
+              </tr>
+              <tr class="highlight">
+                <td><span class="route-badge">IRX2</span></td>
+                <td>⚠️ 征收WRS</td>
+                <td>战争开始后装船货起征WRS。与XPRESS就时间节点协商中</td>
+              </tr>
+              <tr>
+                <td><span class="route-badge">DAMMAM</span><br><small>2601W</small></td>
+                <td>📌 JEA 3/20~22</td>
+                <td>维持JEA挂靠计划。情况恶化时启动KLF绕行预案</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== 3. WRS/WRP 비용 + 추가 비용 항목 (탭) ===== -->
+  <div class="card" data-tab-group="costs">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'costs','wrs-policy')">
+        💰
+        <span data-lang-inline="ko">WRS / WRP 비용 정책 <span class="badge badge-updated">3/12</span></span>
+        <span data-lang-inline="en">WRS / WRP Surcharge Policy <span class="badge badge-updated">3/12</span></span>
+        <span data-lang-inline="zh">WRS / WRP 附加费政策 <span class="badge badge-updated">3/12</span></span>
+      </button>
+      <button class="tab-btn" onclick="switchTab(this,'costs','add-costs')">
+        📋
+        <span data-lang-inline="ko">추가 발생 비용 항목 <span class="badge badge-new">3/12 신규</span></span>
+        <span data-lang-inline="en">Additional Cost Items <span class="badge badge-new">New 3/12</span></span>
+        <span data-lang-inline="zh">额外发生费用项目 <span class="badge badge-new">3/12新增</span></span>
+      </button>
+    </div>
+
+    <!-- WRS/WRP Pane -->
+    <div class="tab-pane active" id="costs-wrs-policy">
+      <div class="card-body">
+        <div data-lang="ko">
+          <div class="cost-item">
+            <div class="cost-name">WRS/WRP 기준 금액</div>
+            <div class="cost-val">20': $2,000 / 40': $3,500<span class="cost-note">중동법인 기준</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">WRS 적용 기준일</div>
+            <div class="cost-val">2026.02.28 (개전일)<span class="cost-note">호르무즈 통항 중단 시점 이후 선적분</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">WRS 면제 기준</div>
+            <div class="cost-val">2/28 이전 입항 건<span class="cost-note">예: KMTC MUMBAI 2601W — 2/28 DMM 입항 → 면제</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">EFS (긴급 연료 할증)</div>
+            <div class="cost-val">📋 내부 협의 중<span class="cost-note">경영진 논의 후 공지 예정 (3/13 기준 미확정)</span></div>
+          </div>
+        </div>
+        <div data-lang="en">
+          <div class="cost-item">
+            <div class="cost-name">WRS/WRP Standard Rate</div>
+            <div class="cost-val">20': $2,000 / 40': $3,500<span class="cost-note">ME Branch standard</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">WRS Effective Date</div>
+            <div class="cost-val">Feb 28, 2026<span class="cost-note">From cargo shipped after Hormuz suspension</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">WRS Waiver Criteria</div>
+            <div class="cost-val">Berth before Feb 28<span class="cost-note">e.g., KMTC MUMBAI 2601W berthed 2/28 at DMM → waived</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">EFS (Emergency Fuel Surcharge)</div>
+            <div class="cost-val">📋 Under Discussion<span class="cost-note">Management review in progress. TBA (as of 3/13)</span></div>
+          </div>
+        </div>
+        <div data-lang="zh">
+          <div class="cost-item">
+            <div class="cost-name">WRS/WRP 基准金额</div>
+            <div class="cost-val">20': $2,000 / 40': $3,500<span class="cost-note">中东法人基准</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">WRS 适用基准日</div>
+            <div class="cost-val">2026.02.28（开战日）<span class="cost-note">霍尔木兹封锁后装船货物起征</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">WRS 豁免基准</div>
+            <div class="cost-val">2/28前靠港货物<span class="cost-note">例: KMTC MUMBAI 2601W — 2/28进DMM → 豁免</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name">EFS（紧急燃油附加费）</div>
+            <div class="cost-val">📋 内部协商中<span class="cost-note">管理层讨论后公告（3/13现状：未确定）</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Costs Pane -->
+    <div class="tab-pane" id="costs-add-costs">
+      <div class="card-body">
+        <div class="change-row" style="margin-bottom:10px;">
+          <div data-lang="ko">⬆️ <strong>KLF 경유 JEA 이송 시 아래 실비용 발생. 데이터분석팀 코드 등록 완료 (3/12)</strong></div>
+          <div data-lang="en">⬆️ <strong>Below actual costs incurred for KLF→JEA bonded haulage. Codes registered by Data Analysis Team (3/12)</strong></div>
+          <div data-lang="zh">⬆️ <strong>KLF经由JEA运输时产生以下实际费用。数据分析团队已完成代码注册（3/12）</strong></div>
+        </div>
+        <div data-lang="ko">
+          <div class="cost-item">
+            <div class="cost-name"><strong>DVC</strong> — Deviation Surcharge</div>
+            <div class="cost-val">$750~800/TEU<span class="cost-note">ESL의 EOV 선언에 따른 청구 비용</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>TRC</strong> — Trucking (보세운송)</div>
+            <div class="cost-val">$900~$1,000/VAN<span class="cost-note">KLF→JEA. 2일마다 변동. 가변적</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>PRC</strong> — Port Receive Charge</div>
+            <div class="cost-val">AED 700(20') / AED 1,070(40')<span class="cost-note">DPW DROP OFF CHARGE. 면제 협의 중</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>LFT</strong> — Lifting Charge (KLF Storage)</div>
+            <div class="cost-val">Day 1부터 청구<span class="cost-note">KLF 체화 즉시 시작. 조기 픽업 필수</span></div>
+          </div>
+        </div>
+        <div data-lang="en">
+          <div class="cost-item">
+            <div class="cost-name"><strong>DVC</strong> — Deviation Surcharge</div>
+            <div class="cost-val">$750~800/TEU<span class="cost-note">Charged by ESL upon End of Voyage declaration</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>TRC</strong> — Trucking (Bonded Haulage)</div>
+            <div class="cost-val">$900~$1,000/VAN<span class="cost-note">KLF→JEA. Changes every 2 days. Variable</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>PRC</strong> — Port Receive Charge</div>
+            <div class="cost-val">AED 700(20') / AED 1,070(40')<span class="cost-note">DPW Drop-off Charge. Waiver under negotiation</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>LFT</strong> — Lifting Charge (KLF Storage)</div>
+            <div class="cost-val">From Day 1<span class="cost-note">Starts immediately upon KLF discharge. Early pickup required</span></div>
+          </div>
+        </div>
+        <div data-lang="zh">
+          <div class="cost-item">
+            <div class="cost-name"><strong>DVC</strong> — 绕航附加费</div>
+            <div class="cost-val">$750~800/TEU<span class="cost-note">ESL宣布EOV后向KMTC收取</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>TRC</strong> — 卡车费（保税运输）</div>
+            <div class="cost-val">$900~$1,000/VAN<span class="cost-note">KLF→JEA。每2天变动，费用浮动</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>PRC</strong> — 港口收取费</div>
+            <div class="cost-val">AED 700(20') / AED 1,070(40')<span class="cost-note">DPW Drop-off费用，正在协商豁免</span></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-name"><strong>LFT</strong> — 装卸费（KLF堆存）</div>
+            <div class="cost-val">从第1天起征<span class="cost-note">KLF卸货即开始计费，请及时提货</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== 4. WRS 면제 기준 + EFS/기타 공지 (탭) ===== -->
+  <div class="card" data-tab-group="policy">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'policy','wrs-waiver')">
+        ⚖️
+        <span data-lang-inline="ko">WRS 면제 / 할인 기준</span>
+        <span data-lang-inline="en">WRS Waiver / Discount</span>
+        <span data-lang-inline="zh">WRS 豁免/折扣基准</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab(this,'policy','efs-notice')">
+        📢
+        <span data-lang-inline="ko">EFS / LSS 및 기타 공지</span>
+        <span data-lang-inline="en">EFS / LSS &amp; Other Notices</span>
+        <span data-lang-inline="zh">EFS / LSS 及其他公告</span>
+      </button>
+    </div>
+
+    <!-- WRS Waiver Pane -->
+    <div class="tab-pane active" id="policy-wrs-waiver">
+      <div class="card-body">
+        <div data-lang="ko">
+          <div class="change-row">⚡ 화주들의 WRS 면제 요청이 쇄도 중이나, <strong>현재 원칙은 예외 없이 Full Tariff 징수</strong> (단, 아래 명확한 예외 사유 존재)</div>
+          <table class="policy-table" style="margin-top:10px;">
+            <thead><tr><th>구분</th><th>면제/할인 여부</th></tr></thead>
+            <tbody>
+              <tr class="highlight"><td>2/28 <strong>이전</strong> 입항(접안 완료) 선박 선적 화물</td><td>✅ WRS 면제 가능</td></tr>
+              <tr class="critical"><td>3/1 이후 접안 선박 선적 화물</td><td>❌ WRS 부과 원칙 (Full Tariff)</td></tr>
+              <tr class="critical"><td>HELLA 02606W 3/5 DMM 도착분</td><td>❌ 면제 불가 (Not Acceptable)</td></tr>
+              <tr><td>화주 "전쟁 영향 없다" 주장</td><td>⚠️ 피더 WRS 적용 시점 기준으로 개별 판단</td></tr>
+              <tr><td>동일 항차 공동운항사 면제 주장</td><td>⚠️ 당사 독자 판단. 일관 적용 원칙 유지</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-lang="en">
+          <div class="change-row">⚡ Waiver requests flooding in from customers, but <strong>current policy: Full Tariff, no exceptions</strong> (except clear criteria below)</div>
+          <table class="policy-table" style="margin-top:10px;">
+            <thead><tr><th>Case</th><th>Waiver/Discount</th></tr></thead>
+            <tbody>
+              <tr class="highlight"><td>Cargo on vessels that berthed <strong>before</strong> 2/28</td><td>✅ WRS Waiver possible</td></tr>
+              <tr class="critical"><td>Cargo on vessels berthing after 3/1</td><td>❌ WRS applies (Full Tariff)</td></tr>
+              <tr class="critical"><td>HELLA 02606W arrived DMM 3/5</td><td>❌ Not acceptable</td></tr>
+              <tr><td>Customer claims "not affected by war"</td><td>⚠️ Judge individually per feeder WRS timeline</td></tr>
+              <tr><td>Slot-charter partner waived</td><td>⚠️ KMTC's own decision. Maintain consistent application</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-lang="zh">
+          <div class="change-row">⚡ 货主豁免申请激增，但<strong>当前原则：不设例外，全额征收</strong>（以下明确例外情况除外）</div>
+          <table class="policy-table" style="margin-top:10px;">
+            <thead><tr><th>情况</th><th>豁免/折扣</th></tr></thead>
+            <tbody>
+              <tr class="highlight"><td><strong>2/28前</strong>已靠港船舶的货物</td><td>✅ 可豁免WRS</td></tr>
+              <tr class="critical"><td>3/1后靠港船舶货物</td><td>❌ 须征WRS（全额）</td></tr>
+              <tr class="critical"><td>HELLA 02606W 3/5到DMM货物</td><td>❌ 不可豁免</td></tr>
+              <tr><td>货主主张"未受战争影响"</td><td>⚠️ 参照支线WRS适用时间点逐票判断</td></tr>
+              <tr><td>同航次共同运营商已豁免</td><td>⚠️ KMTC独立判断，坚持一致适用原则</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- EFS / LSS Notice Pane -->
+    <div class="tab-pane" id="policy-efs-notice">
+      <div class="card-body">
+        <div data-lang="ko">
+          <div class="change-row critical">
+            <strong>⚠️ EFS (Emergency Fuel Surcharge)</strong>: 경영진 논의 중. 현재 확정되지 않음.<br>
+            <span class="change-meta">화주 문의 시: "현재 내부 논의 중이며, 결정되면 즉시 안내드리겠습니다." (3/13 기준)</span>
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>📌 LSS (Low Sulphur Surcharge) / Q2 2026</strong>: 아직 공지 미발령. Geodis 측에서 Q2 LSS Trade Notice 요청 중.
+            <span class="change-meta">발신: Reon WONG / Geodis (3/10 문의)</span>
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>🌐 Customer Advisory</strong>: 추후 분쟁 회피를 위해 CUSTOMER ADVISORY 작성 후 화주 배포 필요. (중동법인 요청)
+            <span class="change-meta">선복운영팀에서 초안 준비 중</span>
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>🏴 Middle East Surcharge 안내 문구</strong>: Geodis 등 포워더 이메일에 자동 문구 포함됨<br>
+            <em style="font-size:11px; color:#666;">"Current Middle East conditions may necessitate additional surcharges and impact transit schedules. All such costs are for the shipper's account."</em>
+          </div>
+        </div>
+        <div data-lang="en">
+          <div class="change-row critical">
+            <strong>⚠️ EFS (Emergency Fuel Surcharge)</strong>: Under management review. Not yet confirmed.<br>
+            <span class="change-meta">Customer inquiry response: "Under internal discussion, will notify once decided." (as of 3/13)</span>
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>📌 LSS (Low Sulphur Surcharge) / Q2 2026</strong>: Not yet announced. Geodis requesting Q2 LSS Trade Notice.
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>🌐 Customer Advisory</strong>: Official Customer Advisory being prepared and will be distributed to prevent future disputes. (ME Branch request)
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>🏴 ME Surcharge Notice</strong>: Standard notice included in forwarder emails:<br>
+            <em style="font-size:11px; color:#666;">"Current Middle East conditions may necessitate additional surcharges and impact transit schedules. All such costs are for the shipper's account."</em>
+          </div>
+        </div>
+        <div data-lang="zh">
+          <div class="change-row critical">
+            <strong>⚠️ EFS（紧急燃油附加费）</strong>: 管理层讨论中，尚未确定。<br>
+            <span class="change-meta">货主询价回复参考: "目前正在内部讨论，决定后将立即通知。"（3/13现状）</span>
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>📌 LSS（低硫附加费）/ 2026年Q2</strong>: 尚未公告。Geodis正在请求Q2 LSS贸易通知。
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>🌐 客户公告</strong>: 为防止未来纠纷，正在准备并将向货主分发正式客户公告。（中东法人请求）
+          </div>
+          <div class="change-row" style="margin-top:8px;">
+            <strong>🏴 中东附加费标准通知文</strong>:<br>
+            <em style="font-size:11px; color:#666;">"Current Middle East conditions may necessitate additional surcharges and impact transit schedules. All such costs are for the shipper's account."</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== 5. 변경 이력 (최하단, 오래된 순 → 최신 순) ===== -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">
+        🔄
+        <span data-lang-inline="ko">정책 변경 이력 <span class="badge badge-updated">UPDATED</span></span>
+        <span data-lang-inline="en">Policy Change Log <span class="badge badge-updated">UPDATED</span></span>
+        <span data-lang-inline="zh">政策变更历史 <span class="badge badge-updated">UPDATED</span></span>
+      </div>
+      <div class="date">
+        <span data-lang-inline="ko">오래된 순 → 최신 순</span>
+        <span data-lang-inline="en">Oldest → Latest</span>
+        <span data-lang-inline="zh">按时间正序排列</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <!-- Korean -->
+      <div data-lang="ko">
+        <ul class="changelog">
+          <li>
+            <div class="cl-date">2월 28일</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">개전</span>
+              <strong>미·이란 전쟁 발발</strong> — 미국(Operation Epic Fury)·이스라엘(Operation Shield of Judah) 이란 대규모 공습 개시. JEA 항 전면 작업 중단, 호르무즈 해협 통항 중단 가능성 대두.
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3월 3일</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">긴급</span>
+              <strong>LOI 양식 법무법인 검토 완료</strong> — 선복운영팀 준비 LOI 양식에 대해 법무법인 선율 승인. 화주 징구분 LOI 즉시 사용 가능.
+              <div class="cl-date">발신: 기획팀 → 법무법인 검토 통과</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3월 4일</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">긴급</span>
+              <strong>WRS 최초 부과 결정</strong> — 중동법인 의견: 20' $2,000 / 40' $3,500. 머스크·CMA·하팍·ESL 및 대다수 피더사 동시 부과.
+              <div class="cl-date">발신: 이광희 중동법인장</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3월 6일</div>
+            <div class="cl-content">
+              <span class="badge badge-new">신규</span>
+              <strong>JJS 항로 JEA OMISSION 공지</strong> — JJS(Global Feeder Shipping)의 JJS·JYS·JRS 서비스 JEA 전면 스킵. 대안 포트 검토 중. 재개 시 즉시 공지 예정.
+              <div class="cl-date">발신: 선복운영팀 이승기 (sklee@ekmtc.com)</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3월 10일</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">변경</span>
+              <strong>LOI 양식 개정 (WRS 항목 2번 삭제)</strong> — 중국 주재원 배포용 LOI 양식에서 WRS 항목 2번 삭제본으로 교체. 중국 관련 부킹에 즉시 적용.
+              <div class="cl-date">발신: 해외영업팀 김대수 (kimds@ekmtc.com)</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3월 12일</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">변경</span>
+              <strong>WRS 적용 기준 재정리</strong> — IRX2·JJS 전쟁 개시 이후 기 선적 화물부터 WRS 부과 개시. SHJ·KWI·UQR·HMA는 피더사 WRS(2.28 호르무즈 통항 중단 시점)부터 적용.
+              <div class="cl-date">발신: 이광희 중동법인장 (leekh@ekmtc.com)</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3월 12일</div>
+            <div class="cl-content">
+              <span class="badge badge-new">신규</span>
+              <strong>추가 Freight Code 생성</strong> — DVC(Deviation Charge), LFT(Lifting Charge), PRC(Port Receive Charge), TRC(Trucking Charges) 시스템 등록 완료. Additional Freight로 징수 처리.
+              <div class="cl-date">발신: 데이터분석팀 이선영 (sylee@ekmtc.com)</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3월 13일</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">변경</span>
+              <strong>중동향 화물 처리 방안 최종 확정</strong> — EOV 후 KLF 양하 화물 및 NSA 양하 화물의 최종 DLY 포트별 처리 방안 정리 완료. 비용·이송방법은 현지 상황에 따라 추후 변동 가능.
+              <div class="cl-date">발신: 이광희 중동법인장 (leekh@ekmtc.com)</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- English -->
+      <div data-lang="en">
+        <ul class="changelog">
+          <li>
+            <div class="cl-date">Feb 28</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">WAR START</span>
+              <strong>US-Iran war commenced</strong> — US (Operation Epic Fury) &amp; Israel (Operation Shield of Judah) launched large-scale strikes on Iran. JEA operations suspended, Hormuz Strait closure risk emerged.
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">Mar 3</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">URGENT</span>
+              <strong>LOI form legally approved</strong> — LOI form prepared by Space Control Team approved by law firm Seonnyul. Immediately usable for shipper collection.
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">Mar 4</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">URGENT</span>
+              <strong>WRS surcharge first announced</strong> — ME Branch recommendation: 20' $2,000 / 40' $3,500. Maersk, CMA, Hapag, ESL, most feeders implementing simultaneously.
+              <div class="cl-date">From: KH Lee, MD, KMTC Middle East</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">Mar 6</div>
+            <div class="cl-content">
+              <span class="badge badge-new">NEW</span>
+              <strong>JJS service JEA omission announced</strong> — Global Feeder Shipping: JJS, JYS, JRS services skipping JEA until further notice. Alternative port under review.
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">Mar 10</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">CHANGED</span>
+              <strong>LOI form revised (WRS item #2 removed)</strong> — Updated LOI form for China-origin bookings distributed with WRS clause #2 deleted.
+              <div class="cl-date">From: OBT, DS Kim (kimds@ekmtc.com)</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">Mar 12</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">CHANGED</span>
+              <strong>WRS application timeline clarified</strong> — WRS applicable from cargo loaded on vessels departing after war started (IRX2/JJS routes). SHJ/KWI/UQR/HMA: feeder WRS from Feb 28 Hormuz closure.
+              <div class="cl-date">From: KH Lee, MD, KMTC Middle East</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">Mar 12</div>
+            <div class="cl-content">
+              <span class="badge badge-new">NEW</span>
+              <strong>New freight codes created</strong> — DVC (Deviation Charge), LFT (Lifting Charge), PRC (Port Receive Charge), TRC (Trucking Charges) registered in system as Additional Freight.
+              <div class="cl-date">From: Data Analysis Team, SY Lee (sylee@ekmtc.com)</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">Mar 13</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">CHANGED</span>
+              <strong>Final cargo handling procedure confirmed for ME-bound</strong> — DLY port-by-port procedures finalized for EOV→KLF discharge and NSA discharge cargo. Costs and routing subject to change per local conditions.
+              <div class="cl-date">From: KH Lee, MD, KMTC Middle East (leekh@ekmtc.com)</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Chinese -->
+      <div data-lang="zh">
+        <ul class="changelog">
+          <li>
+            <div class="cl-date">2月28日</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">开战</span>
+              <strong>美伊战争爆发</strong> — 美国(Operation Epic Fury)·以色列(Operation Shield of Judah)对伊朗发动大规模空袭。JEA港全面停止作业，霍尔木兹海峡封锁风险上升。
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3月3日</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">紧急</span>
+              <strong>LOI格式通过律师事务所审查</strong> — 船位运营团队准备的LOI格式经律师事务所审查批准，可立即用于向货主收取。
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3月4日</div>
+            <div class="cl-content">
+              <span class="badge badge-critical">紧急</span>
+              <strong>WRS首次征收决定</strong> — 中东法人意见: 20' $2,000 / 40' $3,500。马士基、达飞、赫伯罗特、ESL及大多数支线公司同步征收。
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3月6日</div>
+            <div class="cl-content">
+              <span class="badge badge-new">新增</span>
+              <strong>JJS航线 JEA停靠公告</strong> — Global Feeder Shipping: JJS·JYS·JRS服务暂停挂靠JEA，替代港口研讨中，恢复后即时通知。
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3月10日</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">变更</span>
+              <strong>LOI格式修订（删除WRS第2条）</strong> — 面向中国代表处分发的LOI格式已删除WRS第2项，请立即使用新版本。
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3月12日</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">变更</span>
+              <strong>WRS适用基准重新确认</strong> — IRX2·JJS航线: 战争开始后已装船货物起征WRS。SHJ·KWI·UQR·HMA: 从2.28霍尔木兹海峡封锁时间点起征支线WRS。
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3月12日</div>
+            <div class="cl-content">
+              <span class="badge badge-new">新增</span>
+              <strong>新增运费代码</strong> — DVC(绕航附加费), LFT(装卸费), PRC(港口收取费), TRC(卡车费) 已在系统注册，作为Additional Freight征收。
+              <div class="cl-date">发件人: 数据分析团队 李善英 (sylee@ekmtc.com)</div>
+            </div>
+          </li>
+          <li>
+            <div class="cl-date">3月13日</div>
+            <div class="cl-content">
+              <span class="badge badge-updated">变更</span>
+              <strong>中东方向货物处理方案最终确定</strong> — EOV后KLF卸货及NSA卸货货物的目的港处理方案完成整理。费用及运输方式可能随现地情况变动。
+              <div class="cl-date">发件人: 李光熙 中东法人长 (leekh@ekmtc.com)</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div data-lang="ko">본 페이지는 KMTC 내부 이메일 기반으로 작성되었습니다. 최신 공식 지침은 반드시 본사 또는 중동법인에 확인하시기 바랍니다. | 마지막 이메일 수집 기준: 2026년 3월 16일 | lhjin@ekmtc.com</div>
+    <div data-lang="en">This page is compiled from KMTC internal emails. Always verify with HQ or ME Branch for the latest official directives. | Email data collected as of: March 16, 2026 | lhjin@ekmtc.com</div>
+    <div data-lang="zh">本页面基于KMTC内部邮件整理。最新官方指示请务必向总部或中东法人确认。| 邮件数据截至: 2026年3月16日 | lhjin@ekmtc.com</div>
+  </div>
+
+</div><!-- end main -->
+
+<script>
+  function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+  }
+
+  function switchTab(btn, group, paneId) {
+    var card = btn.closest('[data-tab-group="' + group + '"]');
+    card.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    card.querySelectorAll('.tab-pane').forEach(function(p) { p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById(group + '-' + paneId).classList.add('active');
+  }
+</script>
+</body>
+</html>
