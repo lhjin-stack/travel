@@ -24,6 +24,7 @@ function detectLang(req) {
 }
 
 const app = express();
+app.set('trust proxy', 1); // Render/cloud reverse proxy 뒤에서 HTTPS 세션 쿠키 정상 작동
 const PORT = process.env.PORT || 3000;
 const ALLOWED_DOMAIN = 'ekmtc.com';
 
