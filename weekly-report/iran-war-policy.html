@@ -334,6 +334,16 @@
     .changelog li:last-child { border-bottom: none; }
     .changelog .cl-date { color: var(--muted); font-size: 11px; white-space: nowrap; min-width: 70px; padding-top: 1px; }
     .changelog .cl-content { flex: 1; }
+    .cl-pager {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; padding: 12px 0 2px; font-size: 12px; color: var(--muted);
+    }
+    .cl-page-btn {
+      background: none; border: 1px solid var(--border); border-radius: 5px;
+      padding: 4px 11px; cursor: pointer; font-size: 12px; color: #003366; transition: all .15s;
+    }
+    .cl-page-btn:hover:not(:disabled) { background: #003366; color: #fff; }
+    .cl-page-btn:disabled { opacity: 0.3; cursor: default; }
 
     /* Footer */
     .footer {
@@ -1416,9 +1426,9 @@
         <span data-lang-inline="zh">政策变更历史 <span class="badge badge-updated">UPDATED</span></span>
       </div>
       <div class="date">
-        <span data-lang-inline="ko">오래된 순 → 최신 순</span>
-        <span data-lang-inline="en">Oldest → Latest</span>
-        <span data-lang-inline="zh">按时间正序排列</span>
+        <span data-lang-inline="ko">최신 순 → 오래된 순</span>
+        <span data-lang-inline="en">Latest → Oldest</span>
+        <span data-lang-inline="zh">按时间倒序排列</span>
       </div>
     </div>
       <div id="changelog-render">
@@ -1464,30 +1474,59 @@
     document.getElementById('user-name').textContent = user.name + ' (' + user.email + ')';
   });
 
-  // ── 변경 이력 렌더링 ────────────────────────────────────
+  // ── 변경 이력 렌더링 (페이지네이션) ─────────────────────
   var badgeClass = { new: 'badge-new', updated: 'badge-updated', critical: 'badge-critical' };
+  var ITEMS_PER_PAGE = 15;
+  var allChangelog = [];
+  var clCurrentPage = 1;
 
-  function renderChangelog(changelog) {
+  function renderChangelogPage(page) {
     var langs = ['ko', 'en', 'zh'];
-    return langs.map(function(lang) {
-      var items = changelog.map(function(e) {
+    var reversed = allChangelog.slice().reverse();
+    var totalPages = Math.max(1, Math.ceil(reversed.length / ITEMS_PER_PAGE));
+    page = Math.min(Math.max(page, 1), totalPages);
+    clCurrentPage = page;
+    var pageItems = reversed.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+
+    var pagerLabels = {
+      ko: page + ' / ' + totalPages + ' 페이지',
+      en: 'Page ' + page + ' of ' + totalPages,
+      zh: '第 ' + page + ' / ' + totalPages + ' 页'
+    };
+
+    var html = langs.map(function(lang) {
+      var items = pageItems.map(function(e) {
         return '<li>' +
           '<div class="cl-date">' + e.date[lang] + '</div>' +
           '<div class="cl-content">' +
             '<span class="badge ' + (badgeClass[e.badgeType] || 'badge-updated') + '">' + e.badgeLabel[lang] + '</span> ' +
             '<strong>' + e.title[lang] + '</strong> — ' + e.body[lang] +
-            (e.source ? '<div class="cl-date">' + e.source + '</div>' : '') +
+            (e.source ? '<div class="cl-date" style="margin-top:3px">📧 ' + e.source + '</div>' : '') +
           '</div>' +
         '</li>';
       }).join('');
-      return '<div data-lang="' + lang + '"><ul class="changelog">' + items + '</ul></div>';
+      var pager = totalPages > 1
+        ? '<div class="cl-pager">' +
+            '<button class="cl-page-btn" onclick="clChangePage(' + (page - 1) + ')"' + (page <= 1 ? ' disabled' : '') + '>◀</button>' +
+            '<span>' + pagerLabels[lang] + '</span>' +
+            '<button class="cl-page-btn" onclick="clChangePage(' + (page + 1) + ')"' + (page >= totalPages ? ' disabled' : '') + '>▶</button>' +
+          '</div>'
+        : '';
+      return '<div data-lang="' + lang + '"><ul class="changelog">' + items + '</ul>' + pager + '</div>';
     }).join('');
+
+    document.getElementById('changelog-render').innerHTML = html;
+  }
+
+  function clChangePage(page) {
+    renderChangelogPage(page);
+    document.getElementById('changelog-render').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function loadChangelog() {
     fetch('/api/policy-content').then(r => r.json()).then(function(data) {
-      document.getElementById('changelog-render').innerHTML = renderChangelog(data.changelog);
-      // 마지막 업데이트 날짜 갱신
+      allChangelog = data.changelog;
+      renderChangelogPage(1);
       var badge = document.querySelector('.updated-badge span:last-child');
       if (badge) badge.textContent = data.lastUpdated;
     });
