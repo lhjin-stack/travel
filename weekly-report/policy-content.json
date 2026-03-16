@@ -1,6 +1,57 @@
 {
-  "lastUpdated": "2026-03-16",
+  "lastUpdated": "2026-03-17",
   "changelog": [
+    {
+      "dateIso": "2026-03-16",
+      "date": { "ko": "3월 16일", "en": "Mar 16", "zh": "3月16日" },
+      "badgeType": "new",
+      "badgeLabel": { "ko": "신규", "en": "NEW", "zh": "新规" },
+      "title": {
+        "ko": "KLF T/S 서비스 패턴 가이드라인 개정 — AIM/AIM2/VGI 전항로 즉시 적용",
+        "en": "KLF T/S Service Pattern Guideline Updated — AIM/AIM2/VGI All Routes",
+        "zh": "KLF中转服务模式指南更新——AIM/AIM2/VGI全航线即时生效"
+      },
+      "body": {
+        "ko": "최종 목적지 기준 3개 카테고리로 부킹 레그 배정 즉시 적용. ① JEA 목적지: POD=KLF / DLY=KLF. ② UAE(JEA 제외, AJM/RAK/QIW/SHJ): POD=KLF → 트럭 운송 → 최종지. ③ DMM/JED/AQJ/SKN 등 비UAE 걸프·홍해: KLF→JEA 더블 T/S(피더) 적용.",
+        "en": "Three-category booking leg assignment based on final destination, effective immediately. ① JEA: POD=KLF/DLY=KLF. ② UAE excl. JEA (AJM/RAK/QIW/SHJ): POD=KLF → truck to final port. ③ Non-UAE Gulf & Red Sea (DMM/JED/AQJ/SKN): Double T/S via KLF→JEA feeder.",
+        "zh": "按最终目的地分3类立即执行订舱腿安排。①JEA目的地：POD=KLF/DLY=KLF。②UAE除JEA外(AJM/RAK/QIW/SHJ)：POD=KLF→卡车→最终目的地。③非UAE海湾/红海(DMM/JED/AQJ/SKN等)：KLF→JEA双中转(支线)。"
+      },
+      "source": "선복운영팀 곽윤철 (yckwak@ekmtc.com) | 메일: (NEW GUIDELINE 3/16) : Important !! [AIM/AIM2/VGI] KLF T/S Service Pattern Creation Guideline (Until Further Notice)"
+    },
+    {
+      "dateIso": "2026-03-16",
+      "date": { "ko": "3월 16일", "en": "Mar 16", "zh": "3月16日" },
+      "badgeType": "updated",
+      "badgeLabel": { "ko": "변경", "en": "UPDATED", "zh": "更新" },
+      "title": {
+        "ko": "AIM2·VGI EOV 선언 — NSA 양하 결정, B/L 처리 방안 법무 검토 중",
+        "en": "AIM2/VGI EOV declared — NSA discharge confirmed, B/L handling under legal review",
+        "zh": "AIM2/VGI宣布EOV——确认NSA卸货，提单处理方案法律审查中"
+      },
+      "body": {
+        "ko": "AIM2(1척)·VGI(3척) 중동향 화물 전량 NSA 양하 결정, 2척 금일 기준 완료. NSA EOV 후 기존 B/L 유지(최종 POD D/O 정리) 또는 2차 피더 연결을 별도 재계약으로 처리하는 방안 법무 검토 중. COD·쉽백·피더 연결 4개 옵션 병행 검토.",
+        "en": "All ME-bound cargo on AIM2 (1 vessel) and VGI (3 vessels) decided for NSA discharge; 2 vessels completed. Legal review ongoing: whether to maintain original B/L through final POD or treat feeder re-connection as new contract. Four options reviewed: COD, ship-back, 3 feeder alternatives.",
+        "zh": "AIM2(1艘)·VGI(3艘)中东向货物全部决定在NSA卸货，2艘已完成。正就EOV后是否维持原提单至最终POD或将支线连接作为单独再合同进行法律审查。同时审查COD·返船·支线连接4个选项。"
+      },
+      "source": "토탈하버서비스 김정훈 (jhkim@ekmtc.com) | 메일: Re: [중동법인] END OF VOYAGE 선언 관련 검토 요청"
+    },
+    {
+      "dateIso": "2026-03-16",
+      "date": { "ko": "3월 16일", "en": "Mar 16", "zh": "3月16日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "JEA·MUN T/S 적체 경보 — JJS·IRX2 홍해 항로 (SKN·AQJ·JED)",
+        "en": "JEA/MUN T/S Idling Alert — JJS·IRX2 Red Sea (SKN/AQJ/JED)",
+        "zh": "JEA/MUN中转积压警报——JJS·IRX2红海航线(SKN/AQJ/JED)"
+      },
+      "body": {
+        "ko": "SCT 자동 경보 발령. JJS/W·IRX2/W 항로 T/S 화물이 JEA·MUN 환적항에서 적체 중 (POD: SKN·AQJ·JED). TEU 기준 W11~W15 주간 초과 발생. 관련 부킹 즉시 조치 및 적체 방지 필요.",
+        "en": "SCT automated alert issued. T/S cargo on JJS/W & IRX2/W idling at JEA and MUN T/S ports (POD: SKN/AQJ/JED). TEU threshold exceeded for weeks W11–W15. Immediate action required to prevent further T/S idling.",
+        "zh": "SCT自动警报发出。JJS/W·IRX2/W航线中转货物在JEA·MUN中转港积压（POD：SKN/AQJ/JED），W11~W15周超过TEU限额。需立即采取措施防止中转积压。"
+      },
+      "source": "SCT 시스템 (webmaster@kmtc.co.kr) | 메일: (SCT) JEA, MUN T/S Cargo Idling Alert [ 홍해 (JJS & IRX2) ]"
+    },
     {
       "dateIso": "2026-02-28",
       "date": { "ko": "2월 28일", "en": "Feb 28", "zh": "2月28日" },
