@@ -370,6 +370,65 @@
     .user-bar a { color: var(--muted); text-decoration: none; }
     .user-bar a:hover { color: #c00; }
 
+    /* Main Nav */
+    .main-nav {
+      display: flex; gap: 4px; background: #fff;
+      border: 1px solid var(--border); border-radius: 10px;
+      padding: 6px; margin-bottom: 16px; overflow-x: auto;
+    }
+    .main-nav-btn {
+      flex: 1; min-width: 110px; background: none; border: none;
+      border-radius: 7px; padding: 10px 10px; font-size: 12.5px;
+      font-weight: 700; cursor: pointer; color: var(--muted);
+      transition: all .15s; white-space: nowrap; text-align: center;
+    }
+    .main-nav-btn:hover { background: #f0f4f9; color: var(--primary); }
+    .main-nav-btn.active { background: var(--primary); color: #fff; }
+    .main-sec { display: none; }
+    .main-sec.active { display: block; }
+
+    /* Vessel schedule table */
+    .vsl-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+    .vsl-table th {
+      background: #003366; color: #fff; padding: 7px 8px;
+      text-align: left; font-weight: 600; white-space: nowrap;
+    }
+    .vsl-table td {
+      padding: 6px 8px; border-bottom: 1px solid #eef1f5;
+      vertical-align: top; line-height: 1.4;
+    }
+    .vsl-table tr.vsl-active td { background: #f0fdf4; }
+    .vsl-table tr.vsl-last td { background: #fff7ed; border-left: 3px solid #f59e0b; }
+    .vsl-table tr.vsl-suspended td { background: #f9fafb; color: #9ca3af; }
+    .vsl-table tr.vsl-kmtc td { background: #eff6ff; font-weight: 600; }
+    .vsl-section-title {
+      background: #eef2f8; padding: 7px 12px;
+      font-weight: 700; font-size: 12.5px; color: var(--primary);
+      border-radius: 6px; margin: 14px 0 6px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .vsl-badge {
+      display: inline-block; border-radius: 3px; padding: 1px 6px;
+      font-size: 10px; font-weight: 700; white-space: nowrap;
+    }
+    .vsl-b-active { background: #dcfce7; color: #166534; }
+    .vsl-b-last { background: #fef3c7; color: #92400e; }
+    .vsl-b-suspended { background: #f3f4f6; color: #6b7280; }
+    .vsl-b-kmtc { background: #dbeafe; color: #1e40af; }
+    .vsl-b-adhoc { background: #ede9fe; color: #5b21b6; }
+
+    /* Meeting section */
+    .mtg-section { margin-bottom: 18px; }
+    .mtg-title {
+      font-size: 12.5px; font-weight: 700; color: var(--primary);
+      padding: 7px 12px; background: #eef2f8; border-radius: 6px;
+      margin-bottom: 8px;
+    }
+    .mtg-note {
+      font-size: 11.5px; background: #fffbeb; border: 1px solid #fcd34d;
+      border-radius: 6px; padding: 8px 12px; margin-bottom: 10px; line-height: 1.5;
+    }
+
     /* EOV port block */
     .eov-port-block {
       border: 1px solid var(--border);
@@ -520,6 +579,18 @@
 </div>
 
 <div class="main">
+
+  <!-- ===== Main Navigation ===== -->
+  <div class="main-nav">
+    <button class="main-nav-btn active" onclick="switchMainSec('ops', this)">📋 업무 지침</button>
+    <button class="main-nav-btn" onclick="switchMainSec('routes', this)">🗺️ 항로 운영</button>
+    <button class="main-nav-btn" onclick="switchMainSec('costs', this)">💰 비용·WRS</button>
+    <button class="main-nav-btn" onclick="switchMainSec('notices', this)">📢 공지·회의</button>
+    <button class="main-nav-btn" onclick="switchMainSec('history', this)">🔄 변경 이력</button>
+  </div>
+
+  <!-- ===== SEC: 업무지침 ===== -->
+  <div class="main-sec active" id="mainsec-ops">
 
   <!-- ===== 1. 화물 처리 업무 지침 (최상단) ===== -->
   <div class="card">
@@ -1129,6 +1200,177 @@
   </div>
 
 
+  </div><!-- end mainsec-ops -->
+
+  <!-- ===== SEC: 항로운영 ===== -->
+  <div class="main-sec" id="mainsec-routes">
+
+  <!-- ===== 2-A. 선박 운영 현황 (NEW) ===== -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">🚢 선박 운영 현황 &amp; 항로 결정 사항 <span class="badge badge-updated">3/16 팀장회의</span></div>
+    </div>
+    <div class="card-body">
+
+      <!-- 공동사 협의 결정사항 -->
+      <div class="mtg-section">
+        <div class="mtg-title">① 중동항로 공동사 협의 결과 &amp; 당사 모선 운영 방안</div>
+        <div class="mtg-note">
+          ⚠️ AIM·AIM2 모두 Cycle 내 마지막 항차 이후 <strong>Suspension</strong> 결정. 이후 <strong>Ad-Hoc(SPCME) 개념</strong>으로 전환 운영. 당사 KDM·KMU·KMB호 배치 계획 3월 중순 수립 예정.
+        </div>
+        <table class="vsl-table">
+          <thead><tr><th>항로</th><th>공동운항사</th><th>기존 Rotation</th><th>변경 Rotation</th><th>항로 운영 협의 결과</th><th>당사 모선 운영 방안</th></tr></thead>
+          <tbody>
+            <tr class="vsl-active">
+              <td><strong>AIM</strong></td>
+              <td>KMTC, ESL, GFS, HMM</td>
+              <td style="font-size:10.5px;">PNC-TAO-XMN-DCB-PKW-JEA-DMM-KSP</td>
+              <td style="font-size:10.5px;color:#c00;"><strong>RVSD: PNC-TAO-XMN-DCB-PKW-KLF</strong></td>
+              <td>JEA·DMM Drop 운영(Cycle 75)<br>HMM 모선부터 Suspension → 이후 Ad-Hoc 운영</td>
+              <td><span class="vsl-badge vsl-b-kmtc">KDM호</span> KLF 기항 예정 (ETA 3/23)<br>선박 배치 계획 수립 예정(3월 중순)</td>
+            </tr>
+            <tr class="vsl-active">
+              <td><strong>AIM2</strong></td>
+              <td>KMTC, ESL, ONE</td>
+              <td style="font-size:10.5px;">SHA-NBO-SHK-SIN-JEA-KLF-SOH-PKW</td>
+              <td style="font-size:10.5px;color:#c00;"><strong>RVSD: SHA-NBO-SHK-SIN-NSA-KLF-PKW</strong></td>
+              <td>16 Cycle 항차 모두 수행 후 Suspension<br>ONE 중동권역 불기항 선언 → ROB IN NSA 양하</td>
+              <td><span class="vsl-badge vsl-b-kmtc">KMU호</span> KLF 기항 예정 (ETA 4/5)<br>선박 배치 계획 수립 예정(3월 중순)</td>
+            </tr>
+            <tr class="vsl-active">
+              <td><strong>VGI</strong></td>
+              <td>KMTC, RCL, GFS, ESL</td>
+              <td style="font-size:10.5px;">CMP-LCH-PKW-NSA-JEA-DMM-MUN-PKW</td>
+              <td style="font-size:10.5px;color:#c00;"><strong>RVSD: CMP-LCH-PKW-NSA-MUN-PKW</strong></td>
+              <td>5개 항차 모두 ME Skip 동의<br>(기존 ME ROB → NSA 양하)</td>
+              <td><span class="vsl-badge vsl-b-kmtc">KMB호</span> VGI 항로 계속 수행 예정</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- AIM 선박 현황 -->
+      <div class="mtg-section">
+        <div class="mtg-title">② AIM 항로 선박별 현황 (Cycle 75 → 76)</div>
+        <div class="vsl-section-title">🔹 AIM — Cycle 75 (진행 중)</div>
+        <table class="vsl-table">
+          <thead><tr><th>OPR</th><th>선박명</th><th>항차</th><th>PFS ETA(PNC)</th><th>BSA</th><th>현재 위치</th><th>항로 운영</th><th>비고</th></tr></thead>
+          <tbody>
+            <tr class="vsl-active"><td>GFS</td><td>GFS Galaxy</td><td>02604</td><td>2026-01-20</td><td>5,400</td><td>KSP → PNC</td><td>현재 E/B 수행 중</td><td></td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL Wafa</td><td>02605</td><td>2026-01-27</td><td>5,750</td><td>KLF → PNC</td><td>Gulf 만 내 대기 중</td><td></td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL Busan</td><td>02606</td><td>2026-02-03</td><td>5,400</td><td>PKW → KLF</td><td>KLF 기항 추진 예상</td><td>JEA향 521TEU, DMM향 243TEU</td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL Dana</td><td>02607</td><td>2026-02-10</td><td>5,750</td><td>PKW → KLF</td><td>KLF 기항 추진 예상</td><td></td></tr>
+            <tr class="vsl-kmtc"><td>KMTC</td><td>KMTC DAMMAM</td><td>2601</td><td>2026-02-17</td><td>5,500</td><td>DCB → PKW</td><td>KLF, SOH 기항 추진</td><td><span class="vsl-badge vsl-b-last">Last Vessel</span> ETA KLF 3/23, Slow Steaming</td></tr>
+            <tr class="vsl-suspended"><td colspan="2" style="font-style:italic;">1WK SLIDING</td><td></td><td>2026-02-24</td><td></td><td></td><td></td><td></td></tr>
+            <tr class="vsl-suspended"><td>HMM</td><td>Blank (HMM BANGKOK)</td><td>0128</td><td>2026-03-03</td><td>5,200</td><td></td><td><span class="vsl-badge vsl-b-suspended">항차 취소</span></td><td>HMM Blank — AIM 공동운항 Suspension</td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>TS Shanghai → ESL Nhava Sheva</td><td>026011</td><td>2026-03-10</td><td>5,750</td><td>KSP → PNC</td><td>KLF 양하 추진</td><td><span class="vsl-badge vsl-b-adhoc">Ad-Hoc</span> 당사 45 TEU 사용</td></tr>
+          </tbody>
+        </table>
+
+        <div class="vsl-section-title">🔹 AIM — Cycle 76 (Suspension 예정)</div>
+        <table class="vsl-table">
+          <thead><tr><th>OPR</th><th>선박명</th><th>항차</th><th>PFS ETA(PNC)</th><th>BSA</th><th>항로 운영</th><th>비고</th></tr></thead>
+          <tbody>
+            <tr class="vsl-suspended"><td>GFS</td><td>GFS Galaxy</td><td>02612</td><td>2026-03-17</td><td>5,400</td><td><span class="vsl-badge vsl-b-adhoc">Ad-Hoc 전환</span> 수요 확인 중</td><td>AIM 스케줄 Skip 처리</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>ESL Wafa</td><td>02613</td><td>2026-03-24</td><td>5,750</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>AIM 스케줄 Skip 처리</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>ESL Busan</td><td>02614</td><td>2026-03-31</td><td>5,400</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>AIM 스케줄 Skip 처리</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>ESL Dana</td><td>02615</td><td>2026-04-07</td><td>5,750</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>AIM 스케줄 Skip 처리</td></tr>
+            <tr class="vsl-suspended"><td>KMTC</td><td>KMTC Dammam</td><td>2602</td><td>2026-04-14</td><td>5,500</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>AIM 스케줄 Skip 처리</td></tr>
+            <tr class="vsl-suspended"><td>HMM</td><td>Blank</td><td>0129</td><td>2026-04-21</td><td>5,200</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>AIM 스케줄 Skip 처리</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>TS Shanghai</td><td>02618</td><td>2026-04-28</td><td>5,750</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>AIM 스케줄 Skip 처리</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- AIM2 선박 현황 -->
+      <div class="mtg-section">
+        <div class="mtg-title">③ AIM2 항로 선박별 현황 (Cycle 16 → 17)</div>
+        <div class="vsl-section-title">🔹 AIM2 — Cycle 16 (진행 중)</div>
+        <table class="vsl-table">
+          <thead><tr><th>OPR</th><th>선박명</th><th>항차</th><th>PFS ETA(SHA)</th><th>BSA</th><th>현재 위치</th><th>항로 운영</th><th>비고</th></tr></thead>
+          <tbody>
+            <tr class="vsl-active"><td>ESL</td><td>ESL NHAVA SHEVA</td><td>2604</td><td>2026-01-20</td><td>5,000</td><td>PKW → SHA</td><td>다음항차 Blank</td><td></td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL SANA</td><td>2605</td><td>2026-01-27</td><td>5,800</td><td>KLF 접안 완</td><td>JEA SKIP</td><td>JEA향 화물 SOH or KLF 양하</td></tr>
+            <tr class="vsl-suspended"><td colspan="2" style="font-style:italic;">ESL BLANK</td><td></td><td>2026-02-03</td><td>5,400</td><td></td><td><span class="vsl-badge vsl-b-suspended">구조적 BLANK</span></td><td></td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL WASL</td><td>2607</td><td>2026-02-10</td><td>5,700</td><td>SIN → KLF</td><td>SOH·KLF 기항 추진</td><td>JEA향 화물 SOH or KLF 양하</td></tr>
+            <tr class="vsl-active"><td>ONE</td><td>ONE REASSURANCE</td><td>252</td><td>2026-02-17</td><td>5,000</td><td>SHK → SIN</td><td>NSA, MUN 양하</td><td>선주 반대로 ME 항해 불가, FM 선언 후 NSA 양하</td></tr>
+            <tr class="vsl-suspended"><td colspan="2" style="font-style:italic;">CNY Sliding</td><td></td><td>2026-02-24</td><td></td><td></td><td></td><td></td></tr>
+            <tr class="vsl-kmtc"><td>KMTC</td><td>KMTC MUNDRA</td><td>2602</td><td>2026-03-03</td><td>5,200</td><td>SHK → SHA</td><td>AIM2 로테이션 수행 예정</td><td><span class="vsl-badge vsl-b-kmtc">KMU호</span> ETA KLF 4/5, NSA·MUN 추가 기항</td></tr>
+          </tbody>
+        </table>
+
+        <div class="vsl-section-title">🔹 AIM2 — Cycle 17 (Suspension 예정)</div>
+        <table class="vsl-table">
+          <thead><tr><th>OPR</th><th>선박명</th><th>항차</th><th>PFS ETA(SHA)</th><th>BSA</th><th>항로 운영</th><th>비고</th></tr></thead>
+          <tbody>
+            <tr class="vsl-suspended"><td>ESL</td><td>-</td><td>2611</td><td>2026-03-10</td><td>5,000</td><td><span class="vsl-badge vsl-b-suspended">Blank</span></td><td>중동 상황 감안 Blank, 17 Cycle Suspension</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>ESL SANA</td><td>2612</td><td>2026-03-17</td><td>5,800</td><td><span class="vsl-badge vsl-b-suspended">추후 결정</span></td><td>17 Cycle Suspension</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>ESL WASL</td><td>2613</td><td>2026-03-24</td><td>5,400</td><td><span class="vsl-badge vsl-b-suspended">추후 결정</span></td><td>17 Cycle Suspension</td></tr>
+            <tr class="vsl-suspended"><td>ONE</td><td>ONE REASSURANCE</td><td>253</td><td>2026-03-31</td><td>5,700</td><td><span class="vsl-badge vsl-b-suspended">추후 결정</span></td><td>17 Cycle Suspension</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>ESL MUNDRA</td><td>2615</td><td>2026-04-07</td><td>5,000</td><td><span class="vsl-badge vsl-b-suspended">추후 결정</span></td><td>17 Cycle Suspension</td></tr>
+            <tr class="vsl-suspended"><td>KMTC</td><td>KMTC MUNDRA</td><td>2603</td><td>2026-04-14</td><td>5,200</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>17 Cycle Suspension</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- VGI 선박 현황 -->
+      <div class="mtg-section">
+        <div class="mtg-title">④ VGI 항로 선박별 현황 (Cycle 34 → 35)</div>
+        <table class="vsl-table">
+          <thead><tr><th>OPR</th><th>선박명</th><th>항차</th><th>PFS ETA(CMP)</th><th>BSA</th><th>현재 위치</th><th>ETA JEA</th><th>항로 운영</th><th>비고</th></tr></thead>
+          <tbody>
+            <tr class="vsl-suspended"><td>ESL</td><td>Blank</td><td>02602</td><td>2026-01-06</td><td>4,200</td><td></td><td></td><td><span class="vsl-badge vsl-b-suspended">Blank</span></td><td></td></tr>
+            <tr class="vsl-suspended"><td>GFS</td><td>ZHONG GU SHEN YANG</td><td>02603</td><td>2026-01-13</td><td>4,200</td><td></td><td></td><td></td><td></td></tr>
+            <tr class="vsl-suspended"><td>CMA</td><td>Blank</td><td></td><td>2026-01-20</td><td>4,500</td><td></td><td></td><td><span class="vsl-badge vsl-b-suspended">Blank</span></td><td></td></tr>
+            <tr class="vsl-kmtc"><td>KMTC</td><td>KMTC MUMBAI</td><td>2601</td><td>2026-01-27</td><td>4,200</td><td>MUN → CMP</td><td></td><td>현재 E/B 수행 중</td><td><span class="vsl-badge vsl-b-kmtc">KMB호</span></td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>HELLA</td><td>02606</td><td>2026-02-03</td><td>4,200</td><td>JEA → MUN</td><td></td><td>Gulf 만 내 대기 중</td><td></td></tr>
+            <tr class="vsl-last"><td>RCL</td><td>ARAYA BHUM</td><td>02607</td><td>2026-02-10</td><td>4,500</td><td>PKW → NSA</td><td>2026-03-17</td><td>NSA 접안 예정</td><td>컨소시엄 합의: NSA(W/B) 후 E/B</td></tr>
+            <tr class="vsl-last"><td colspan="2" style="font-style:italic;">Structural Blank</td><td></td><td>2026-02-17</td><td>4,200</td><td></td><td></td><td></td><td>컨소시엄 합의: NSA(W/B) 후 E/B</td></tr>
+            <tr class="vsl-last"><td>GFS</td><td>ZHONG GU SHEN YANG</td><td>02609</td><td>2026-02-24</td><td>4,200</td><td>LCH → PKW</td><td>2026-03-16</td><td>Sailing</td><td>컨소시엄 합의: NSA(W/B) 후 E/B</td></tr>
+            <tr class="vsl-last"><td>ESL</td><td>APOLLON D</td><td>02608</td><td>2026-03-03</td><td>4,200</td><td>CMP → LCH</td><td>2026-03-22</td><td>Sailing</td><td>컨소시엄 합의: NSA(W/B) 후 E/B</td></tr>
+            <tr class="vsl-kmtc"><td>KMTC</td><td>KMTC MUMBAI</td><td>2602</td><td>2026-03-10</td><td>4,200</td><td>MUN → CMP</td><td>2026-04-03</td><td>ME 기항 추후결정</td><td><span class="vsl-badge vsl-b-kmtc">KMB호</span> 컨소시엄 합의: NSA(W/B) 후 E/B</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>Blank</td><td>02612</td><td>2026-03-17</td><td>4,200</td><td></td><td>2026-04-08</td><td><span class="vsl-badge vsl-b-suspended">미확정</span></td><td>선박 투입 미확정</td></tr>
+            <tr class="vsl-suspended"><td>RCL</td><td>ARAYA BHUM</td><td>02613</td><td>2026-03-24</td><td>4,500</td><td></td><td></td><td><span class="vsl-badge vsl-b-suspended">미확정</span></td><td>선박 투입 미확정</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 항로별 화물 처리 요약 -->
+      <div class="mtg-section">
+        <div class="mtg-title">⑤ 항로/Cycle 기준 선박 상황 &amp; 화물 처리 방안 요약 <span class="badge badge-updated">3/16</span></div>
+        <div class="mtg-note">※ NSA 양하된 ROB 화물(대체 양하 물량) 처리: 1) 피더 선복 구매 2) 당사 Ad-Hoc Rescue 항차 검토 (Vessel from AIS5)</div>
+        <table class="vsl-table">
+          <thead><tr><th>항로(Cycle)</th><th>OPR</th><th>모선</th><th>항차</th><th>PFS ETA</th><th>현재위치</th><th>당사 BSA</th><th>중동향<br>(Original)</th><th>대체 양하<br>(NSA)</th><th>비고</th></tr></thead>
+          <tbody>
+            <tr class="vsl-active"><td rowspan="8" style="font-weight:700;">AIM<br>(75 Cycle)</td><td>GFS</td><td>GFS GALAXY</td><td>02604WE</td><td>2026-01-20</td><td>KSP → PNC</td><td>766</td><td>-</td><td>-</td><td>PNC ETA 3/18</td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL WAFA</td><td>02605WE</td><td>2026-01-27</td><td>페르시안만</td><td>816</td><td>-</td><td>-</td><td>공선 Idling 중</td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL BUSAN</td><td>02606WE</td><td>2026-02-03</td><td>PKW → KLF</td><td>766</td><td>752</td><td>-</td><td>4월 서비스 가능성 有</td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL DANA</td><td>02607WE</td><td>2026-02-10</td><td>PKW → KLF</td><td>816</td><td>786</td><td>-</td><td>4월 서비스 가능성 有</td></tr>
+            <tr class="vsl-kmtc"><td>KMTC</td><td>KMTC DAMMAM</td><td>02601WE</td><td>2026-02-17</td><td>DCB → PKW</td><td>781</td><td>865</td><td>-</td><td><span class="vsl-badge vsl-b-last">Last Vessel</span> KLF ETA 3/23</td></tr>
+            <tr class="vsl-suspended"><td colspan="2">CNY Blank</td><td></td><td>2026-02-24</td><td></td><td>-</td><td>-</td><td>-</td><td></td></tr>
+            <tr class="vsl-suspended"><td>HMM 📍</td><td>AIM 공동운항 Suspension</td><td></td><td>2026-03-03</td><td></td><td>738</td><td>-</td><td>-</td><td>No calling 선언, ROB PNC 양하 完</td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>-</td><td></td><td>2026-03-10</td><td></td><td>817</td><td>-</td><td>-</td><td></td></tr>
+            <tr class="vsl-active"><td rowspan="7" style="font-weight:700;">AIM2<br>(16 Cycle)</td><td>ESL</td><td>ESL NHAVA SHEVA</td><td>02604WE</td><td>2026-01-20</td><td>PKW → SHA</td><td>810</td><td>-</td><td>-</td><td></td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL SANA</td><td>02605WE</td><td>2026-01-27</td><td>SOH → KLF</td><td>940</td><td>864</td><td>-</td><td></td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>BLANK</td><td></td><td>2026-02-03</td><td></td><td>810</td><td>-</td><td>-</td><td>선복 보상 예정</td></tr>
+            <tr class="vsl-active"><td>ESL</td><td>ESL WASL</td><td>02607WE</td><td>2026-02-10</td><td>SIN → KLF</td><td>875</td><td>805</td><td>-</td><td>4월 서비스 가능성 有</td></tr>
+            <tr class="vsl-active"><td>ONE 📍</td><td>ONE REASSURANCE</td><td>252WE</td><td>2026-02-17</td><td>SHK → SIN</td><td>923</td><td>-</td><td>1,136</td><td>NSA까지만 수행</td></tr>
+            <tr class="vsl-suspended"><td colspan="2">CNY Blank</td><td></td><td>2026-02-24</td><td></td><td>-</td><td>-</td><td>-</td><td></td></tr>
+            <tr class="vsl-kmtc"><td>KMTC</td><td>KMTC MUNDRA</td><td>2602WE</td><td>2026-03-03</td><td>SHA 접안 예정</td><td>842</td><td>473</td><td>-</td><td><span class="vsl-badge vsl-b-kmtc">KMU호</span> W/B NSA Ad-Hoc, KLF ETA 4/5</td></tr>
+            <tr class="vsl-last"><td rowspan="6" style="font-weight:700;">VGI<br>(34,35 Cycle)</td><td>RCL</td><td>ARAYA BHUM</td><td>02607</td><td>2026-02-10</td><td>NSA 접안 예정</td><td>881</td><td>-</td><td>545</td><td>기존 ROB 화물 NSA 양하</td></tr>
+            <tr class="vsl-last"><td colspan="2">Structural Blank</td><td></td><td>2026-02-17</td><td></td><td>-</td><td>-</td><td>-</td><td></td></tr>
+            <tr class="vsl-last"><td>GFS</td><td>ZHONG GU SHEN YANG</td><td>02609</td><td>2026-02-24</td><td>PKW → NSA</td><td>828</td><td>-</td><td>218</td><td>기존 ROB 화물 NSA 양하</td></tr>
+            <tr class="vsl-last"><td>ESL</td><td>APOLLON D</td><td>02608</td><td>2026-03-03</td><td>PKW → NSA</td><td>667</td><td>-</td><td>151</td><td>기존 ROB 화물 NSA 양하</td></tr>
+            <tr class="vsl-kmtc"><td>KMTC</td><td>KMTC MUMBAI</td><td>2602</td><td>2026-03-10</td><td>MUN → CMP</td><td>883</td><td>-</td><td>-</td><td><span class="vsl-badge vsl-b-kmtc">KMB호</span></td></tr>
+            <tr class="vsl-suspended"><td>ESL</td><td>Blank</td><td>02612</td><td>2026-03-17</td><td></td><td>941</td><td>-</td><td>-</td><td>페르시안만 공선 Idling 중</td></tr>
+            <tr style="background:#f0f9ff; font-weight:700;"><td colspan="7" style="text-align:right; padding-right:12px;">합계 BSA</td><td style="color:#003366;">4,545 TEU</td><td style="color:#c00;">2,050 TEU</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
   <!-- ===== 2. 항만 현황 + 항로별 영향 (탭) ===== -->
   <div class="card" data-tab-group="ports">
     <div class="tab-bar">
@@ -1694,6 +1936,11 @@
   </div>
 
 
+  </div><!-- end mainsec-routes -->
+
+  <!-- ===== SEC: 비용·WRS ===== -->
+  <div class="main-sec" id="mainsec-costs">
+
   <!-- ===== 3. WRS/WRP 비용 + 추가 비용 항목 (탭) ===== -->
   <div class="card" data-tab-group="costs">
     <div class="tab-bar">
@@ -1838,6 +2085,32 @@
   </div>
 
 
+  <!-- ===== 3-B. SPCME 특별배선 채산 분석 ===== -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">🚢 SPCME 특별배선 BSA · 선복료 · 예상 채산 <span class="badge badge-new">3/16 신규</span></div>
+    </div>
+    <div class="card-body">
+      <div class="mtg-note">
+        📌 AIM·AIM2 Suspension 이후 각 선사별 <strong>Ad-Hoc(SPCME) 운영 및 선복 판매 형태</strong>로 전환. 매 항차 영업부서 사전 수요 확인 要. Rotation은 항차마다 상이, AIM+AIM2 POL 커버하면서 KLF 기항 구조.<br>
+        ⚠️ GFS 모선 이후 약 <strong>2주간 항차 없음</strong> (KLF 대기로 인한 스케줄 지연). KLF 대기 Bunching 가능성 → 유관팀과 BSA 사전 협의 필요.
+      </div>
+      <table class="vsl-table">
+        <thead>
+          <tr><th>항로</th><th>선사</th><th>모선</th><th>PNC 예상 ETA</th><th>당사 BSA(예상)</th><th>선복료(/TEU)</th><th>예상 채산(RV)<br>*운임 $2,500 가정</th><th>비고</th></tr>
+        </thead>
+        <tbody>
+          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL NHAVA SHEVA</td><td>2026-03-17</td><td>60 TEU</td><td>$1,400</td><td style="color:#166534;font-weight:700;">$66,000</td><td></td></tr>
+          <tr class="vsl-active"><td>SPCME</td><td>GFS</td><td>GFS GALAXY</td><td>2026-03-18</td><td>300 TEU</td><td>$2,000</td><td style="color:#166534;font-weight:700;">$150,000</td><td></td></tr>
+          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL SANA</td><td>2026-03-31</td><td>300 TEU</td><td>$2,000</td><td style="color:#166534;font-weight:700;">$150,000</td><td></td></tr>
+          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL BUSAN</td><td>2026-04-12</td><td>300 TEU</td><td>$2,200</td><td style="color:#d97706;font-weight:700;">$90,000</td><td>확정 스케줄 아님, FE-ME 수요 있을 경우 ESL 투입 예상</td></tr>
+          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL DANA</td><td>2026-04-15</td><td>300 TEU</td><td>$2,200</td><td style="color:#d97706;font-weight:700;">$90,000</td><td></td></tr>
+          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL WASL</td><td>2026-04-20</td><td>300 TEU</td><td>$2,200</td><td style="color:#d97706;font-weight:700;">$90,000</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <!-- ===== 4. WRS 면제 기준 + EFS/기타 공지 (탭) ===== -->
   <div class="card" data-tab-group="policy">
     <div class="tab-bar">
@@ -1958,6 +2231,87 @@
   </div>
 
 
+  </div><!-- end mainsec-costs -->
+
+  <!-- ===== SEC: 공지·회의 ===== -->
+  <div class="main-sec" id="mainsec-notices">
+
+  <!-- 팀장회의 결정사항 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">🏢 팀장회의 결정사항 <span class="badge badge-updated">2026-03-16</span></div>
+    </div>
+    <div class="card-body">
+      <div class="mtg-section">
+        <div class="mtg-title">1. 중동항로 공동사 협의 &amp; 모선 운영 방안</div>
+        <table class="policy-table">
+          <thead><tr><th width="10%">항로</th><th width="15%">공동운항사</th><th width="20%">기존/변경 Rotation</th><th width="30%">운영 협의 결정</th><th width="25%">당사 모선 방안</th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td><strong>AIM</strong></td>
+              <td>KMTC, ESL, GFS, HMM</td>
+              <td><small>RVSD: PNC-TAO-XMN-DCB-PKW-<strong style="color:#c00;">KLF</strong></small></td>
+              <td>JEA·DMM Drop 운영(Cycle 75) → HMM 모선부터 Suspension → 이후 Ad-Hoc 개념 운영</td>
+              <td>KDM호 KLF 기항 예정(ETA 3/23) / 선박 배치 계획 수립 예정(3월 중순)</td>
+            </tr>
+            <tr class="highlight">
+              <td><strong>AIM2</strong></td>
+              <td>KMTC, ESL, ONE</td>
+              <td><small>RVSD: SHA-NBO-SHK-SIN-<strong style="color:#c00;">NSA-KLF</strong>-PKW</small></td>
+              <td>16 Cycle 항차 모두 수행 후 Suspension / ONE 중동권역 불기항 선언, ROB IN NSA 양하</td>
+              <td>KMU호 KLF 기항 예정(ETA 4/5) / 선박 배치 계획 수립 예정(3월 중순)</td>
+            </tr>
+            <tr>
+              <td><strong>VGI</strong></td>
+              <td>KMTC, RCL, GFS, ESL</td>
+              <td><small>RVSD: CMP-LCH-PKW-<strong style="color:#c00;">NSA-MUN</strong>-PKW</small></td>
+              <td>5개 항차 모두 ME Skip 동의 (기존 ME ROB → NSA 양하)</td>
+              <td>KMB호 VGI 항로 계속 수행 예정</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mtg-section">
+        <div class="mtg-title">2. 항로/Cycle 기준 화물 처리 방안 핵심 포인트</div>
+        <div class="mtg-note">
+          📊 <strong>전체 잔존 화물 현황:</strong> 중동향 원래 목적지 BSA 합계 <strong>4,545 TEU</strong> / NSA 대체 양하 <strong>2,050 TEU</strong><br>
+          🔴 AIM (75 Cycle) Last Vessel = KMTC DAMMAM 2601W (KLF ETA 3/23)<br>
+          🔴 AIM2 (16 Cycle) Last Vessel = KMTC MUNDRA 2602W (KLF ETA 4/5, NSA Ad-Hoc 경유)<br>
+          🟡 VGI: ARAYA BHUM·ZHONG GU SHEN YANG·APOLLON D 모두 NSA 양하 처리 중
+        </div>
+      </div>
+
+      <div class="mtg-section">
+        <div class="mtg-title">3. SPCME (Ad-Hoc) 운영 방향 &amp; NSA ROB 화물 처리</div>
+        <div class="change-row">
+          📌 <strong>NSA 양하된 ROB 화물 처리 방안:</strong><br>
+          <span style="display:inline-block; margin-top:4px;">① 피더 선복 구매 → KLF/JEA로 피더 이송 후 상기 DLY 포트별 처리 방안 적용</span><br>
+          <span style="display:inline-block; margin-top:2px;">② 당사 Ad-Hoc Rescue 항차 검토 (Vessel from AIS5) → 매 항차 영업부서 사전 수요 확인 要</span>
+        </div>
+        <div class="change-row" style="margin-top:8px;">
+          📌 <strong>SPCME 특별배선 채산 (운임 $2,500 가정):</strong> ESL Nhava Sheva $66K · GFS Galaxy $150K · ESL Sana $150K · ESL Busan/Dana/Wasl 각 $90K<br>
+          <span class="change-meta">→ 상세 내용은 [비용·WRS] 탭 → SPCME 특별배선 채산 섹션 참조</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EFS/LSS 카드는 기존 policy 카드에서 EFS 탭만 여기로 래핑 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">📢 EFS / LSS 및 기타 공지</div>
+    </div>
+    <div id="notices-efs-inject" class="card-body">
+      <!-- JS로 policy-efs-notice 내용 복제 삽입 -->
+    </div>
+  </div>
+
+  </div><!-- end mainsec-notices -->
+
+  <!-- ===== SEC: 변경이력 ===== -->
+  <div class="main-sec" id="mainsec-history">
+
   <!-- ===== 5. 변경 이력 (최하단, 오래된 순 → 최신 순) ===== -->
   <div class="card">
     <div class="card-header">
@@ -1983,6 +2337,8 @@
     </div>
   </div>
 
+  </div><!-- end mainsec-history -->
+
   <div class="footer">
     <div data-lang="ko">본 페이지는 KMTC 내부 이메일 기반으로 작성되었습니다. 최신 공식 지침은 반드시 본사 또는 중동법인에 확인하시기 바랍니다. | 마지막 이메일 수집 기준: 2026년 3월 16일 | lhjin@ekmtc.com</div>
     <div data-lang="en">This page is compiled from KMTC internal emails. Always verify with HQ or ME Branch for the latest official directives. | Email data collected as of: March 16, 2026 | lhjin@ekmtc.com</div>
@@ -1992,6 +2348,23 @@
 </div><!-- end main -->
 
 <script>
+  // ── Main Section Nav ─────────────────────────────────────
+  function switchMainSec(secId, btn) {
+    document.querySelectorAll('.main-sec').forEach(function(s) { s.classList.remove('active'); });
+    document.querySelectorAll('.main-nav-btn').forEach(function(b) { b.classList.remove('active'); });
+    document.getElementById('mainsec-' + secId).classList.add('active');
+    btn.classList.add('active');
+    // EFS 내용 복제 (공지 탭)
+    if (secId === 'notices') {
+      var src = document.getElementById('policy-efs-notice');
+      var dst = document.getElementById('notices-efs-inject');
+      if (src && dst && !dst.dataset.loaded) {
+        dst.innerHTML = src.innerHTML;
+        dst.dataset.loaded = '1';
+      }
+    }
+  }
+
   var currentLang = 'ko';
 
   function setLang(lang) {
