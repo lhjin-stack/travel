@@ -16,7 +16,7 @@
         "en": "US (Operation Epic Fury) & Israel (Operation Shield of Judah) launched large-scale strikes on Iran. JEA operations suspended, Hormuz Strait closure risk emerged.",
         "zh": "美国(Operation Epic Fury)·以色列(Operation Shield of Judah)对伊朗发动大规模空袭。JEA港全面停止作业，霍尔木兹海峡封锁风险上升。"
       },
-      "source": ""
+      "source": "이광희 중동법인장 (leekh@ekmtc.com) | 메일: 중요! [중동법인] 이스라엘의 이란 공습 관련 보고"
     },
     {
       "dateIso": "2026-03-03",
@@ -50,7 +50,7 @@
         "en": "ME Branch recommendation: 20' $2,000 / 40' $3,500. Maersk, CMA, Hapag, ESL, most feeders implementing simultaneously.",
         "zh": "中东法人意见: 20' $2,000 / 40' $3,500。马士基、达飞、赫伯罗特、ESL及大多数支线公司同步征收。"
       },
-      "source": "이광희 중동법인장"
+      "source": "이광희 중동법인장 (leekh@ekmtc.com) | 메일: [중동법인] 중동향 KLF양하 관련 도착지 비용"
     },
     {
       "dateIso": "2026-03-06",
@@ -70,6 +70,40 @@
       "source": "선복운영팀 이승기 (sklee@ekmtc.com)"
     },
     {
+      "dateIso": "2026-03-06",
+      "date": { "ko": "3월 6일", "en": "Mar 6", "zh": "3月6日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "ESL SANA 2605W END OF VOYAGE 선언",
+        "en": "ESL SANA 2605W End of Voyage declared",
+        "zh": "ESL SANA 2605W 航次终止声明"
+      },
+      "body": {
+        "ko": "3월 8~9일 KLF 접안 예정인 ESL SANA 2605W에 대해 ESL이 END OF VOYAGE 선언. 당사도 해당 모선 EOV 선언 및 화주 사전 안내 필요. KLF 양하 후 화주별 포트 이송 처리.",
+        "en": "ESL declared End of Voyage for ESL SANA 2605W (scheduled KLF berthing Mar 8-9). KMTC to issue corresponding EOV notice and pre-advise shippers. Cargo to be handled per shipper post-KLF discharge.",
+        "zh": "ESL就ESL SANA 2605W（预计3月8-9日靠泊KLF）宣布航次终止。本公司亦需发布EOV公告并提前通知货主，KLF卸货后按货主要求分别处理。"
+      },
+      "source": "이광희 중동법인장 (leekh@ekmtc.com) | 메일: [중동법인] END OF VOYAGE 선언 관련 검토 요청"
+    },
+    {
+      "dateIso": "2026-03-09",
+      "date": { "ko": "3월 9일", "en": "Mar 9", "zh": "3月9日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "KLF 터미널 극심한 혼잡 및 WRP 비용 정리",
+        "en": "KLF severe congestion & WRP cost structure",
+        "zh": "KLF码头严重拥堵及WRP费用整理"
+      },
+      "body": {
+        "ko": "KLF 외항 35척 대기 중. HMM 접안 포기 후 인도 회항(중동향 화물 전량 양하). 장금상선도 오만 회항 중. 3일 내 미픽업 시 전량 SHJ ICD 이송. WRS/WRP 실징수 UAE 사례 아직 드물며 CMA 청구 중이나 반발 심함. 당사 WRP $2,000/3,500에 Deviation($750~800), 보세운송($900~$1,000/VAN), PRC(AED700/1,070), KLF Storage 포함 예정.",
+        "en": "35 vessels waiting at KLF anchorage. HMM abandoned berthing and diverted to India (all ME cargo to be discharged). Sinokor diverted to Oman. Unpicked cargo within 3 days to be transferred to SHJ ICD. WRS/WRP actual collection in UAE still rare; CMA charging but facing backlash. KMTC WRP $2,000/3,500 to include Deviation ($750~800), bonded trucking ($900~$1,000/VAN), PRC (AED700/1,070), and KLF storage.",
+        "zh": "KLF锚地等待船舶35艘。HMM放弃靠泊，驶往印度（中东全部货物卸船）。长锦商船驶往阿曼，靠泊计划不确定。3日内未提取货物将全部转运至SHJ ICD。WRS/WRP在UAE实际征收案例仍少，达飞在征收但阻力较大。本公司WRP $2,000/3,500将包含绕航费($750~800)、保税运输($900~1,000/VAN)、PRC(AED700/1,070)及KLF存储费。"
+      },
+      "source": "이광희 중동법인장 (leekh@ekmtc.com) | 메일: [중동법인] UAE양하 화물 처리 방안 관련 보고"
+    },
+    {
       "dateIso": "2026-03-10",
       "date": { "ko": "3월 10일", "en": "Mar 10", "zh": "3月10日" },
       "badgeType": "updated",
@@ -87,6 +121,23 @@
       "source": "해외영업팀 김대수 (kimds@ekmtc.com)"
     },
     {
+      "dateIso": "2026-03-11",
+      "date": { "ko": "3월 11일", "en": "Mar 11", "zh": "3月11日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "JJS 항로 JEA 기항 완전 종료",
+        "en": "JJS route: JEA calls permanently suspended",
+        "zh": "JJS航线JEA挂靠完全终止"
+      },
+      "body": {
+        "ko": "JJS 항로 기항지 변경 확정: JEA 기항 완전 중단(NO MORE CALLING JEA). 신규 기항 순서: Jeddah → King Abdullah → Sokhna → Aqaba → King Abdullah 순환. JEA향 화물은 JED 또는 KLF 대체 처리.",
+        "en": "JJS route port rotation officially changed: NO MORE CALLING JEA. New rotation: Jeddah → King Abdullah → Sokhna → Aqaba → King Abdullah loop. JEA-bound cargo to be handled via JED or KLF.",
+        "zh": "JJS航线港口顺序正式变更：完全停止挂靠JEA。新港序：吉达→阿卜杜拉国王港→苏赫纳→亚喀巴→阿卜杜拉国王港循环。JEA目的地货物改经JED或KLF处理。"
+      },
+      "source": "선복운영팀 이승기 (sklee@ekmtc.com) | 메일: [JJS_SCT] Notice of port rotation change on JJS, NO MORE CALLING JEAs"
+    },
+    {
       "dateIso": "2026-03-12",
       "date": { "ko": "3월 12일", "en": "Mar 12", "zh": "3月12日" },
       "badgeType": "updated",
@@ -101,7 +152,7 @@
         "en": "WRS applicable from cargo loaded on vessels departing after war started (IRX2/JJS routes). SHJ/KWI/UQR/HMA: feeder WRS from Feb 28 Hormuz closure.",
         "zh": "IRX2·JJS航线: 战争开始后已装船货物起征WRS。SHJ·KWI·UQR·HMA: 从2.28霍尔木兹海峡封锁时间点起征支线WRS。"
       },
-      "source": "이광희 중동법인장 (leekh@ekmtc.com)"
+      "source": "이광희 중동법인장 (leekh@ekmtc.com) | 메일: Re: WRS 도착지 징수 관련 문의 (3/3~3/5 입항 대상 관련)"
     },
     {
       "dateIso": "2026-03-12",
@@ -135,7 +186,75 @@
         "en": "DLY port-by-port procedures finalized for EOV→KLF discharge and NSA discharge cargo. Costs and routing subject to change per local conditions.",
         "zh": "EOV后KLF卸货及NSA卸货货物的目的港处理方案完成整理。费用及运输方式可能随现地情况变动。"
       },
-      "source": "이광희 중동법인장 (leekh@ekmtc.com)"
+      "source": "이광희 중동법인장 (leekh@ekmtc.com) | 메일: [중동법인] 중동향 화물 처리 방안 관련 보고"
+    },
+    {
+      "dateIso": "2026-03-13",
+      "date": { "ko": "3월 13일", "en": "Mar 13", "zh": "3月13日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "IRX2 SM MAHI 26003W JEA → JED 스킵",
+        "en": "IRX2 SM MAHI 26003W skips JEA, calls JED",
+        "zh": "IRX2 SM MAHI 26003W 跳过JEA改靠JED"
+      },
+      "body": {
+        "ko": "SM MAHI 26003W JEA 스킵 결정. JEA향 컨테이너 전량 JED 양하 후 다음 IRX2 선박 JEA 기항 시 연결 처리. 부킹 어레인지 즉시 조정 필요.",
+        "en": "SM MAHI 26003W to skip JEA; all JEA-bound containers discharged at JED and transferred to next IRX2 vessel when JEA is called again. Immediate booking adjustment required.",
+        "zh": "SM MAHI 26003W决定跳过JEA，所有JEA目的地货物在JED卸货，等下一班IRX2船挂靠JEA时转运。需立即调整相关订舱安排。"
+      },
+      "source": "선복운영팀 이승기 (sklee@ekmtc.com) | 메일: [IRX2_SCT] Notice of skipping JEA and calling JED: - SM MAHI 26003 W"
+    },
+    {
+      "dateIso": "2026-03-16",
+      "date": { "ko": "3월 16일", "en": "Mar 16", "zh": "3月16日" },
+      "badgeType": "updated",
+      "badgeLabel": { "ko": "변경", "en": "CHANGED", "zh": "变更" },
+      "title": {
+        "ko": "중동향 화물 처리 방안 2차 보고 (CARRIER HAULAGE 이송 중)",
+        "en": "ME cargo handling 2nd report: carrier haulage in progress",
+        "zh": "中东货物处理方案第2次报告（承运人运输进行中）"
+      },
+      "body": {
+        "ko": "EOV 선언 시 KLF 양하 기본 방향 유지. 화주 편의를 위해 CARRIER HAULAGE 방식으로 추가 비용 청구 조건으로 각 포트 이송 진행 중. JEA 제외 타포트 DLY KLF 지정 시 혼선 방지를 위해 목적지별 ICC 코드 및 LEG 처리 기준 재배포.",
+        "en": "KLF discharge upon EOV remains the default. Cargo being forwarded to each port via Carrier Haulage with additional charges for shipper convenience. ICC codes and LEG standards by destination redistributed to prevent confusion for non-JEA ports with DLY KLF designation.",
+        "zh": "EOV声明时KLF卸货的基本方向不变。为方便货主，通过承运人运输方式附加费条件向各港口转运中。为防止JEA以外目的地指定DLY KLF时产生混乱，重新下发各目的地ICC代码及LEG处理基准。"
+      },
+      "source": "이광희 중동법인장 (leekh@ekmtc.com) | 메일: [중동법인] 중동향 화물 처리 방안 관련 2차 보고"
+    },
+    {
+      "dateIso": "2026-03-16",
+      "date": { "ko": "3월 16일", "en": "Mar 16", "zh": "3月16日" },
+      "badgeType": "new",
+      "badgeLabel": { "ko": "신규", "en": "NEW", "zh": "新增" },
+      "title": {
+        "ko": "EFS(긴급 유류 할증료) 부과 결정 미완 — 당일~익일 확정 예정",
+        "en": "EFS (Emergency Fuel Surcharge) decision pending — expected today or tomorrow",
+        "zh": "EFS（紧急燃油附加费）征收决定待定——预计当日或次日确定"
+      },
+      "body": {
+        "ko": "화주 KWE(Kintetsu World Express)에서 FAK/NAC 모두 EFS 부과 여부 확인 요청. 해외영업팀 답변: 아직 결정되지 않음, 당일 또는 익일 결정 후 즉시 안내 예정. 부과 확정 시 별도 공지.",
+        "en": "KWE (Kintetsu World Express) requested confirmation of EFS on FAK & NAC. OBT reply: not yet decided, decision expected today or tomorrow; will notify immediately upon confirmation.",
+        "zh": "货主KWE（近铁世界快运）就FAK/NAC是否征收EFS请求确认。海外营业团队回复：尚未决定，预计当日或次日确定，确认后立即通知。"
+      },
+      "source": "해외영업팀 전윤경 (ykjeon@ekmtc.com) | 메일: Re: KMTC - IA/Asia-ME - Emergency Fuel Surcharge"
+    },
+    {
+      "dateIso": "2026-03-16",
+      "date": { "ko": "3월 16일", "en": "Mar 16", "zh": "3月16日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "AIM2 ESL SANA 2605E DG 화물 — KLF 양하 불가, NSA(GTI) 대체 양하",
+        "en": "AIM2 ESL SANA 2605E DG cargo: KLF discharge refused, diverted to NSA (GTI)",
+        "zh": "AIM2 ESL SANA 2605E危险品货物——KLF拒绝卸货，改靠NSA(GTI)"
+      },
+      "body": {
+        "ko": "ESL SANA 2605E 선상 KMTC 위험물 컨테이너(SHA·SHK발, Class 2.2·3·8·9 등) KLF 터미널 제한으로 양하 불가 통보. 전량 NSA(GTI 터미널) 대체 양하로 변경. 관련 부킹 즉시 어레인지 및 인도 NSA 측 매니페스트 신고 필요.",
+        "en": "KMTC DG containers (ex-SHA/SHK, Class 2.2/3/8/9 etc.) aboard ESL SANA 2605E refused discharge at KLF due to terminal restrictions. All DG boxes diverted to NSA (GTI terminal). Immediate booking re-arrangement and India NSA manifest declaration required.",
+        "zh": "ESL SANA 2605E船上KMTC危险品箱（SHA/SHK出发，Class 2.2/3/8/9等）因KLF码头限制被拒绝卸货。全部改至NSA（GTI码头）卸货。需立即重新安排相关订舱并向印度NSA申报舱单。"
+      },
+      "source": "선복운영팀 곽윤철 (yckwak@ekmtc.com) | 메일: (AIM2) JESN 02605E - Fwd: <CMX/AIM2/AG3> DG cargoes onboard ESL SANA v2605E"
     }
   ]
 }
