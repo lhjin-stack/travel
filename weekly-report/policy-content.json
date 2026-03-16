@@ -1,0 +1,141 @@
+{
+  "lastUpdated": "2026-03-16",
+  "changelog": [
+    {
+      "dateIso": "2026-02-28",
+      "date": { "ko": "2월 28일", "en": "Feb 28", "zh": "2月28日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "개전", "en": "WAR START", "zh": "开战" },
+      "title": {
+        "ko": "미·이란 전쟁 발발",
+        "en": "US-Iran war commenced",
+        "zh": "美伊战争爆发"
+      },
+      "body": {
+        "ko": "미국(Operation Epic Fury)·이스라엘(Operation Shield of Judah) 이란 대규모 공습 개시. JEA 항 전면 작업 중단, 호르무즈 해협 통항 중단 가능성 대두.",
+        "en": "US (Operation Epic Fury) & Israel (Operation Shield of Judah) launched large-scale strikes on Iran. JEA operations suspended, Hormuz Strait closure risk emerged.",
+        "zh": "美国(Operation Epic Fury)·以色列(Operation Shield of Judah)对伊朗发动大规模空袭。JEA港全面停止作业，霍尔木兹海峡封锁风险上升。"
+      },
+      "source": ""
+    },
+    {
+      "dateIso": "2026-03-03",
+      "date": { "ko": "3월 3일", "en": "Mar 3", "zh": "3月3日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "LOI 양식 법무법인 검토 완료",
+        "en": "LOI form legally approved",
+        "zh": "LOI格式通过律师事务所审查"
+      },
+      "body": {
+        "ko": "선복운영팀 준비 LOI 양식에 대해 법무법인 선율 승인. 화주 징구분 LOI 즉시 사용 가능.",
+        "en": "LOI form prepared by Space Control Team approved by law firm Seonnyul. Immediately usable for shipper collection.",
+        "zh": "船位运营团队准备的LOI格式经律师事务所审查批准，可立即用于向货主收取。"
+      },
+      "source": "기획팀 → 법무법인 검토 통과"
+    },
+    {
+      "dateIso": "2026-03-04",
+      "date": { "ko": "3월 4일", "en": "Mar 4", "zh": "3月4日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "WRS 최초 부과 결정",
+        "en": "WRS surcharge first announced",
+        "zh": "WRS首次征收决定"
+      },
+      "body": {
+        "ko": "중동법인 의견: 20' $2,000 / 40' $3,500. 머스크·CMA·하팍·ESL 및 대다수 피더사 동시 부과.",
+        "en": "ME Branch recommendation: 20' $2,000 / 40' $3,500. Maersk, CMA, Hapag, ESL, most feeders implementing simultaneously.",
+        "zh": "中东法人意见: 20' $2,000 / 40' $3,500。马士基、达飞、赫伯罗特、ESL及大多数支线公司同步征收。"
+      },
+      "source": "이광희 중동법인장"
+    },
+    {
+      "dateIso": "2026-03-06",
+      "date": { "ko": "3월 6일", "en": "Mar 6", "zh": "3月6日" },
+      "badgeType": "new",
+      "badgeLabel": { "ko": "신규", "en": "NEW", "zh": "新增" },
+      "title": {
+        "ko": "JJS 항로 JEA OMISSION 공지",
+        "en": "JJS service JEA omission announced",
+        "zh": "JJS航线 JEA停靠公告"
+      },
+      "body": {
+        "ko": "JJS(Global Feeder Shipping)의 JJS·JYS·JRS 서비스 JEA 전면 스킵. 대안 포트 검토 중. 재개 시 즉시 공지 예정.",
+        "en": "Global Feeder Shipping: JJS, JYS, JRS services skipping JEA until further notice. Alternative port under review.",
+        "zh": "Global Feeder Shipping: JJS·JYS·JRS服务暂停挂靠JEA，替代港口研讨中，恢复后即时通知。"
+      },
+      "source": "선복운영팀 이승기 (sklee@ekmtc.com)"
+    },
+    {
+      "dateIso": "2026-03-10",
+      "date": { "ko": "3월 10일", "en": "Mar 10", "zh": "3月10日" },
+      "badgeType": "updated",
+      "badgeLabel": { "ko": "변경", "en": "CHANGED", "zh": "变更" },
+      "title": {
+        "ko": "LOI 양식 개정 (WRS 항목 2번 삭제)",
+        "en": "LOI form revised (WRS item #2 removed)",
+        "zh": "LOI格式修订（删除WRS第2条）"
+      },
+      "body": {
+        "ko": "중국 주재원 배포용 LOI 양식에서 WRS 항목 2번 삭제본으로 교체. 중국 관련 부킹에 즉시 적용.",
+        "en": "Updated LOI form for China-origin bookings distributed with WRS clause #2 deleted.",
+        "zh": "面向中国代表处分发的LOI格式已删除WRS第2项，请立即使用新版本。"
+      },
+      "source": "해외영업팀 김대수 (kimds@ekmtc.com)"
+    },
+    {
+      "dateIso": "2026-03-12",
+      "date": { "ko": "3월 12일", "en": "Mar 12", "zh": "3月12日" },
+      "badgeType": "updated",
+      "badgeLabel": { "ko": "변경", "en": "CHANGED", "zh": "变更" },
+      "title": {
+        "ko": "WRS 적용 기준 재정리",
+        "en": "WRS application timeline clarified",
+        "zh": "WRS适用基准重新确认"
+      },
+      "body": {
+        "ko": "IRX2·JJS 전쟁 개시 이후 기 선적 화물부터 WRS 부과 개시. SHJ·KWI·UQR·HMA는 피더사 WRS(2.28 호르무즈 통항 중단 시점)부터 적용.",
+        "en": "WRS applicable from cargo loaded on vessels departing after war started (IRX2/JJS routes). SHJ/KWI/UQR/HMA: feeder WRS from Feb 28 Hormuz closure.",
+        "zh": "IRX2·JJS航线: 战争开始后已装船货物起征WRS。SHJ·KWI·UQR·HMA: 从2.28霍尔木兹海峡封锁时间点起征支线WRS。"
+      },
+      "source": "이광희 중동법인장 (leekh@ekmtc.com)"
+    },
+    {
+      "dateIso": "2026-03-12",
+      "date": { "ko": "3월 12일", "en": "Mar 12", "zh": "3月12日" },
+      "badgeType": "new",
+      "badgeLabel": { "ko": "신규", "en": "NEW", "zh": "新增" },
+      "title": {
+        "ko": "추가 Freight Code 생성",
+        "en": "New freight codes created",
+        "zh": "新增运费代码"
+      },
+      "body": {
+        "ko": "DVC(Deviation Charge), LFT(Lifting Charge), PRC(Port Receive Charge), TRC(Trucking Charges) 시스템 등록 완료. Additional Freight로 징수 처리.",
+        "en": "DVC (Deviation Charge), LFT (Lifting Charge), PRC (Port Receive Charge), TRC (Trucking Charges) registered in system as Additional Freight.",
+        "zh": "DVC(绕航附加费), LFT(装卸费), PRC(港口收取费), TRC(卡车费) 已在系统注册，作为Additional Freight征收。"
+      },
+      "source": "데이터분석팀 이선영 (sylee@ekmtc.com)"
+    },
+    {
+      "dateIso": "2026-03-13",
+      "date": { "ko": "3월 13일", "en": "Mar 13", "zh": "3月13日" },
+      "badgeType": "updated",
+      "badgeLabel": { "ko": "변경", "en": "CHANGED", "zh": "变更" },
+      "title": {
+        "ko": "중동향 화물 처리 방안 최종 확정",
+        "en": "Final cargo handling procedure confirmed for ME-bound",
+        "zh": "中东方向货物处理方案最终确定"
+      },
+      "body": {
+        "ko": "EOV 후 KLF 양하 화물 및 NSA 양하 화물의 최종 DLY 포트별 처리 방안 정리 완료. 비용·이송방법은 현지 상황에 따라 추후 변동 가능.",
+        "en": "DLY port-by-port procedures finalized for EOV→KLF discharge and NSA discharge cargo. Costs and routing subject to change per local conditions.",
+        "zh": "EOV后KLF卸货及NSA卸货货物的目的港处理方案完成整理。费用及运输方式可能随现地情况变动。"
+      },
+      "source": "이광희 중동법인장 (leekh@ekmtc.com)"
+    }
+  ]
+}

@@ -345,6 +345,21 @@
       border-top: 1px solid var(--border);
     }
 
+    /* User bar */
+    .user-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 5px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .user-bar a { color: var(--muted); text-decoration: none; }
+    .user-bar a:hover { color: #c00; }
+
     /* Lang visibility */
     [data-lang] { display: none; }
     .lang-ko [data-lang="ko"] { display: block; }
@@ -380,6 +395,16 @@
       <span>2026년 3월 16일</span>
     </div>
   </div>
+</div>
+
+<!-- User Bar -->
+<div class="user-bar" id="user-bar">
+  <span id="user-name"></span>
+  <a href="/logout">
+    <span data-lang-inline="ko">로그아웃</span>
+    <span data-lang-inline="en">Logout</span>
+    <span data-lang-inline="zh">退出登录</span>
+  </a>
 </div>
 
 <!-- Lang Toggle -->
@@ -1396,203 +1421,12 @@
         <span data-lang-inline="zh">按时间正序排列</span>
       </div>
     </div>
-    <div class="card-body">
-      <!-- Korean -->
-      <div data-lang="ko">
-        <ul class="changelog">
-          <li>
-            <div class="cl-date">2월 28일</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">개전</span>
-              <strong>미·이란 전쟁 발발</strong> — 미국(Operation Epic Fury)·이스라엘(Operation Shield of Judah) 이란 대규모 공습 개시. JEA 항 전면 작업 중단, 호르무즈 해협 통항 중단 가능성 대두.
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3월 3일</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">긴급</span>
-              <strong>LOI 양식 법무법인 검토 완료</strong> — 선복운영팀 준비 LOI 양식에 대해 법무법인 선율 승인. 화주 징구분 LOI 즉시 사용 가능.
-              <div class="cl-date">발신: 기획팀 → 법무법인 검토 통과</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3월 4일</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">긴급</span>
-              <strong>WRS 최초 부과 결정</strong> — 중동법인 의견: 20' $2,000 / 40' $3,500. 머스크·CMA·하팍·ESL 및 대다수 피더사 동시 부과.
-              <div class="cl-date">발신: 이광희 중동법인장</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3월 6일</div>
-            <div class="cl-content">
-              <span class="badge badge-new">신규</span>
-              <strong>JJS 항로 JEA OMISSION 공지</strong> — JJS(Global Feeder Shipping)의 JJS·JYS·JRS 서비스 JEA 전면 스킵. 대안 포트 검토 중. 재개 시 즉시 공지 예정.
-              <div class="cl-date">발신: 선복운영팀 이승기 (sklee@ekmtc.com)</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3월 10일</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">변경</span>
-              <strong>LOI 양식 개정 (WRS 항목 2번 삭제)</strong> — 중국 주재원 배포용 LOI 양식에서 WRS 항목 2번 삭제본으로 교체. 중국 관련 부킹에 즉시 적용.
-              <div class="cl-date">발신: 해외영업팀 김대수 (kimds@ekmtc.com)</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3월 12일</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">변경</span>
-              <strong>WRS 적용 기준 재정리</strong> — IRX2·JJS 전쟁 개시 이후 기 선적 화물부터 WRS 부과 개시. SHJ·KWI·UQR·HMA는 피더사 WRS(2.28 호르무즈 통항 중단 시점)부터 적용.
-              <div class="cl-date">발신: 이광희 중동법인장 (leekh@ekmtc.com)</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3월 12일</div>
-            <div class="cl-content">
-              <span class="badge badge-new">신규</span>
-              <strong>추가 Freight Code 생성</strong> — DVC(Deviation Charge), LFT(Lifting Charge), PRC(Port Receive Charge), TRC(Trucking Charges) 시스템 등록 완료. Additional Freight로 징수 처리.
-              <div class="cl-date">발신: 데이터분석팀 이선영 (sylee@ekmtc.com)</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3월 13일</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">변경</span>
-              <strong>중동향 화물 처리 방안 최종 확정</strong> — EOV 후 KLF 양하 화물 및 NSA 양하 화물의 최종 DLY 포트별 처리 방안 정리 완료. 비용·이송방법은 현지 상황에 따라 추후 변동 가능.
-              <div class="cl-date">발신: 이광희 중동법인장 (leekh@ekmtc.com)</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- English -->
-      <div data-lang="en">
-        <ul class="changelog">
-          <li>
-            <div class="cl-date">Feb 28</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">WAR START</span>
-              <strong>US-Iran war commenced</strong> — US (Operation Epic Fury) &amp; Israel (Operation Shield of Judah) launched large-scale strikes on Iran. JEA operations suspended, Hormuz Strait closure risk emerged.
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">Mar 3</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">URGENT</span>
-              <strong>LOI form legally approved</strong> — LOI form prepared by Space Control Team approved by law firm Seonnyul. Immediately usable for shipper collection.
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">Mar 4</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">URGENT</span>
-              <strong>WRS surcharge first announced</strong> — ME Branch recommendation: 20' $2,000 / 40' $3,500. Maersk, CMA, Hapag, ESL, most feeders implementing simultaneously.
-              <div class="cl-date">From: KH Lee, MD, KMTC Middle East</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">Mar 6</div>
-            <div class="cl-content">
-              <span class="badge badge-new">NEW</span>
-              <strong>JJS service JEA omission announced</strong> — Global Feeder Shipping: JJS, JYS, JRS services skipping JEA until further notice. Alternative port under review.
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">Mar 10</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">CHANGED</span>
-              <strong>LOI form revised (WRS item #2 removed)</strong> — Updated LOI form for China-origin bookings distributed with WRS clause #2 deleted.
-              <div class="cl-date">From: OBT, DS Kim (kimds@ekmtc.com)</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">Mar 12</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">CHANGED</span>
-              <strong>WRS application timeline clarified</strong> — WRS applicable from cargo loaded on vessels departing after war started (IRX2/JJS routes). SHJ/KWI/UQR/HMA: feeder WRS from Feb 28 Hormuz closure.
-              <div class="cl-date">From: KH Lee, MD, KMTC Middle East</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">Mar 12</div>
-            <div class="cl-content">
-              <span class="badge badge-new">NEW</span>
-              <strong>New freight codes created</strong> — DVC (Deviation Charge), LFT (Lifting Charge), PRC (Port Receive Charge), TRC (Trucking Charges) registered in system as Additional Freight.
-              <div class="cl-date">From: Data Analysis Team, SY Lee (sylee@ekmtc.com)</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">Mar 13</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">CHANGED</span>
-              <strong>Final cargo handling procedure confirmed for ME-bound</strong> — DLY port-by-port procedures finalized for EOV→KLF discharge and NSA discharge cargo. Costs and routing subject to change per local conditions.
-              <div class="cl-date">From: KH Lee, MD, KMTC Middle East (leekh@ekmtc.com)</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- Chinese -->
-      <div data-lang="zh">
-        <ul class="changelog">
-          <li>
-            <div class="cl-date">2月28日</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">开战</span>
-              <strong>美伊战争爆发</strong> — 美国(Operation Epic Fury)·以色列(Operation Shield of Judah)对伊朗发动大规模空袭。JEA港全面停止作业，霍尔木兹海峡封锁风险上升。
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3月3日</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">紧急</span>
-              <strong>LOI格式通过律师事务所审查</strong> — 船位运营团队准备的LOI格式经律师事务所审查批准，可立即用于向货主收取。
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3月4日</div>
-            <div class="cl-content">
-              <span class="badge badge-critical">紧急</span>
-              <strong>WRS首次征收决定</strong> — 中东法人意见: 20' $2,000 / 40' $3,500。马士基、达飞、赫伯罗特、ESL及大多数支线公司同步征收。
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3月6日</div>
-            <div class="cl-content">
-              <span class="badge badge-new">新增</span>
-              <strong>JJS航线 JEA停靠公告</strong> — Global Feeder Shipping: JJS·JYS·JRS服务暂停挂靠JEA，替代港口研讨中，恢复后即时通知。
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3月10日</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">变更</span>
-              <strong>LOI格式修订（删除WRS第2条）</strong> — 面向中国代表处分发的LOI格式已删除WRS第2项，请立即使用新版本。
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3月12日</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">变更</span>
-              <strong>WRS适用基准重新确认</strong> — IRX2·JJS航线: 战争开始后已装船货物起征WRS。SHJ·KWI·UQR·HMA: 从2.28霍尔木兹海峡封锁时间点起征支线WRS。
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3月12日</div>
-            <div class="cl-content">
-              <span class="badge badge-new">新增</span>
-              <strong>新增运费代码</strong> — DVC(绕航附加费), LFT(装卸费), PRC(港口收取费), TRC(卡车费) 已在系统注册，作为Additional Freight征收。
-              <div class="cl-date">发件人: 数据分析团队 李善英 (sylee@ekmtc.com)</div>
-            </div>
-          </li>
-          <li>
-            <div class="cl-date">3月13日</div>
-            <div class="cl-content">
-              <span class="badge badge-updated">变更</span>
-              <strong>中东方向货物处理方案最终确定</strong> — EOV后KLF卸货及NSA卸货货物的目的港处理方案完成整理。费用及运输方式可能随现地情况变动。
-              <div class="cl-date">发件人: 李光熙 中东法人长 (leekh@ekmtc.com)</div>
-            </div>
-          </li>
-        </ul>
+      <div id="changelog-render">
+        <div class="modal-spinner">
+          <span data-lang-inline="ko">변경 이력 불러오는 중...</span>
+          <span data-lang-inline="en">Loading changelog...</span>
+          <span data-lang-inline="zh">加载中...</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1606,7 +1440,10 @@
 </div><!-- end main -->
 
 <script>
+  var currentLang = 'ko';
+
   function setLang(lang) {
+    currentLang = lang;
     document.body.className = 'lang-' + lang;
     document.querySelectorAll('.lang-btn').forEach(function(btn) {
       btn.classList.remove('active');
@@ -1621,6 +1458,42 @@
     btn.classList.add('active');
     document.getElementById(group + '-' + paneId).classList.add('active');
   }
+
+  // ── 사용자 정보 로드 ────────────────────────────────────
+  fetch('/api/me').then(r => r.json()).then(function(user) {
+    document.getElementById('user-name').textContent = user.name + ' (' + user.email + ')';
+  });
+
+  // ── 변경 이력 렌더링 ────────────────────────────────────
+  var badgeClass = { new: 'badge-new', updated: 'badge-updated', critical: 'badge-critical' };
+
+  function renderChangelog(changelog) {
+    var langs = ['ko', 'en', 'zh'];
+    return langs.map(function(lang) {
+      var items = changelog.map(function(e) {
+        return '<li>' +
+          '<div class="cl-date">' + e.date[lang] + '</div>' +
+          '<div class="cl-content">' +
+            '<span class="badge ' + (badgeClass[e.badgeType] || 'badge-updated') + '">' + e.badgeLabel[lang] + '</span> ' +
+            '<strong>' + e.title[lang] + '</strong> — ' + e.body[lang] +
+            (e.source ? '<div class="cl-date">' + e.source + '</div>' : '') +
+          '</div>' +
+        '</li>';
+      }).join('');
+      return '<div data-lang="' + lang + '"><ul class="changelog">' + items + '</ul></div>';
+    }).join('');
+  }
+
+  function loadChangelog() {
+    fetch('/api/policy-content').then(r => r.json()).then(function(data) {
+      document.getElementById('changelog-render').innerHTML = renderChangelog(data.changelog);
+      // 마지막 업데이트 날짜 갱신
+      var badge = document.querySelector('.updated-badge span:last-child');
+      if (badge) badge.textContent = data.lastUpdated;
+    });
+  }
+
+  loadChangelog();
 </script>
 </body>
 </html>

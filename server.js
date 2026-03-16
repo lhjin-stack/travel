@@ -4,7 +4,10 @@ const session = require('express-session');
 const passport = require('passport');
 const { Strategy: GoogleStrategy } = require('passport-google-oauth20');
 const path = require('path');
+const fs = require('fs');
 const geoip = require('geoip-lite');
+
+const POLICY_PATH = path.join(__dirname, 'weekly-report', 'policy-content.json');
 
 function detectLang(req) {
   const ip = req.headers['x-forwarded-for']?.split(',')[0].trim() || req.socket.remoteAddress || '';
@@ -206,7 +209,7 @@ app.get('/login', (req, res) => {
 
 app.get('/auth/google', passport.authenticate('google', {
   scope: ['profile', 'email'],
-  hd: ALLOWED_DOMAIN,   // Google 계정 선택 화면에서 ekmtc.com만 표시
+  hd: ALLOWED_DOMAIN,
   prompt: 'select_account',
 }));
 
@@ -231,6 +234,17 @@ app.get('/logout', (req, res) => {
 // ── Protected: 메인 정책 페이지 ──────────────────────────
 app.get('/', requireAuth, (req, res) => {
   res.sendFile(path.join(__dirname, 'weekly-report', 'iran-war-policy.html'));
+});
+
+// ── API: 현재 정책 데이터 ─────────────────────────────────
+app.get('/api/policy-content', requireAuth, (req, res) => {
+  const data = JSON.parse(fs.readFileSync(POLICY_PATH, 'utf-8'));
+  res.json(data);
+});
+
+// ── API: 현재 로그인 사용자 정보 ──────────────────────────
+app.get('/api/me', requireAuth, (req, res) => {
+  res.json({ name: req.user.name, email: req.user.email });
 });
 
 // ── 404 ───────────────────────────────────────────────────
