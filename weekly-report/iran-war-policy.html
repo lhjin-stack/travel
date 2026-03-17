@@ -689,7 +689,7 @@
         <div class="general-alert ga-warning">🟡 <strong>EOV 화물 비용 변동</strong> — 비용·이송방법은 현지 상황에 따라 변동 가능. 화주에게 반드시 사전 안내 필요.</div>
         <div class="general-alert ga-warning">🟡 <strong>피더 WRS 별도 부과</strong> — Upper Gulf(SHJ, KWI, UQR, HMA) 및 홍해항 향 피더 사용 시 피더사 WRS 별도 부과. 피더 비용 기하급수적 상승 중.</div>
         <div class="general-alert ga-info">🔵 <strong>보세운송 세관 해결 완료</strong> — JEA, QIW, ADP, SHJ → KLF 통관 없이 IN-TRANSIT 보세운송 가능 (샤르자 세관 협의 완료).</div>
-        <div class="general-alert ga-critical">🔴 <strong>KLF DG(위험물) 양하 전면 불가</strong> — 장치장 이슈로 KLF DG 양하 불가. 신규 DG 부킹 접수 중단. 기 선적 ROB 화물은 운항선사가 차항지(NSA 등) 양하 후 통보 예상. 화주에게 COD / SHIPBACK / EOV(도착지 화주 자체 처리) 옵션 안내 필요.</div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF DG(위험물) 양하 전면 불가</strong> — 장치장 이슈로 KLF DG 양하 불가 (총 179 TEU ROB). 신규 DG 부킹 접수 중단. 당사 KDM 2601W: PKW 출항→KLF향, 차항지 PNC 양하 예상. 기 ROB 화물은 운항선사가 차항지 양하 후 통보 예상. 화주에게 COD / SHIPBACK / EOV 옵션 안내 필요.</div>
       </div>
       <div data-lang="en">
         <div class="general-alert ga-critical">🔴 <strong>LOI Collection Mandatory</strong> — Collect LOI for war-risk additional costs from all shippers. Use legally reviewed form. <strong>China-origin: Use revised form with WRS item #2 removed (rev. 3/10)</strong></div>
@@ -697,7 +697,7 @@
         <div class="general-alert ga-warning">🟡 <strong>EOV Cargo Cost Variability</strong> — Costs and routing subject to change per local conditions. Mandatory prior notice to customers.</div>
         <div class="general-alert ga-warning">🟡 <strong>Separate Feeder WRS</strong> — Feeder WRS charged separately for Upper Gulf (SHJ/KWI/UQR/HMA) and Red Sea. Feeder costs rising exponentially.</div>
         <div class="general-alert ga-info">🔵 <strong>Bonded Transport Cleared</strong> — JEA, QIW, ADP, SHJ → IN-TRANSIT bonded haulage via KLF without customs clearance (agreed with Sharjah customs).</div>
-        <div class="general-alert ga-critical">🔴 <strong>KLF DG (Dangerous Goods) Discharge Suspended</strong> — DG discharge at KLF impossible due to storage yard issue. New DG bookings suspended. ROB cargo expected to be discharged at next port (e.g. NSA) by operating carrier. Advise shippers: COD / SHIPBACK / EOV (consignee self-arrange at destination).</div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF DG (Dangerous Goods) Discharge Suspended</strong> — DG discharge at KLF impossible due to storage yard issue (179 TEU ROB total). New DG bookings suspended. KMTC vessel KDM 2601W: departed PKW → KLF, next port PNC discharge expected. ROB cargo to be discharged at next port by carrier. Advise shippers: COD / SHIPBACK / EOV.</div>
       </div>
       <div data-lang="zh">
         <div class="general-alert ga-critical">🔴 <strong>必须征收LOI</strong> — 须向所有货主事前征收战争风险额外费用LOI。使用经律师事务所审查的格式。<strong>中国发货: 使用删除WRS第2项的修订版（3/10修订）</strong></div>
@@ -705,7 +705,7 @@
         <div class="general-alert ga-warning">🟡 <strong>EOV货物费用变动</strong> — 费用及运输方式可能随现地情况变动。须事先通知货主。</div>
         <div class="general-alert ga-warning">🟡 <strong>支线WRS另收</strong> — 上湾(SHJ/KWI/UQR/HMA)及红海港方向使用支线时另收支线WRS。支线费用急剧上涨中。</div>
         <div class="general-alert ga-info">🔵 <strong>保税运输海关已解决</strong> — JEA、QIW、ADP、SHJ → 经KLF无需清关IN-TRANSIT保税运输（已与沙迦海关协议）。</div>
-        <div class="general-alert ga-critical">🔴 <strong>KLF危险品(DG)卸货全面暂停</strong> — 因堆场问题KLF无法卸载危险品。新DG订舱暂停接收。已装船ROB货物预计由运营船公司在下一港（如NSA）卸货后通知。请告知货主：COD / 退运 / EOV（目的地货主自行处理）。</div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF危险品(DG)卸货全面暂停</strong> — 因堆场问题KLF无法卸载危险品（共179 TEU滞留船上）。新DG订舱暂停接收。KMTC自营船KDM 2601W已从PKW出港驶向KLF，下一港PNC卸货预计。已装船ROB货物预计由船公司在下一港卸后通知。请告知货主：COD / 退运 / EOV。</div>
       </div>
     </div>
   </div>
@@ -2499,7 +2499,7 @@
   // ── Dashboard alerts ────────────────────────────────────
   function renderDashboardAlerts(changelog) {
     var reversed = changelog.slice().reverse();
-    var latest = reversed.slice(0, 5);
+    var latest = reversed.slice(0, 3);
     var langs = ['ko', 'en', 'zh'];
     var html = langs.map(function(lang) {
       var items = latest.map(function(e) {
