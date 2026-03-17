@@ -651,6 +651,16 @@
   </div>
 </div>
 
+<!-- NSA EOV Customer Response Spreadsheet Link -->
+<div style="margin:10px 28px 0;background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:10px;">
+  <div style="font-size:18px;flex-shrink:0;">📋</div>
+  <div style="flex:1;">
+    <div data-lang="ko"><strong>NSA EOV 화주 응답 관리 스프레드시트</strong> — <a href="https://docs.google.com/spreadsheets/d/1Hct0VSH9TXtcuPsnzvOGScDiqys5HGmmqoEgRPGAw98/edit?gid=0#gid=0" target="_blank" rel="noopener" style="color:#1d4ed8;text-decoration:underline;">Google Sheets 열기</a></div>
+    <div data-lang="en"><strong>NSA EOV Customer Response Tracking Sheet</strong> — <a href="https://docs.google.com/spreadsheets/d/1Hct0VSH9TXtcuPsnzvOGScDiqys5HGmmqoEgRPGAw98/edit?gid=0#gid=0" target="_blank" rel="noopener" style="color:#1d4ed8;text-decoration:underline;">Open Google Sheets</a></div>
+    <div data-lang="zh"><strong>NSA EOV 客户响应管理表</strong> — <a href="https://docs.google.com/spreadsheets/d/1Hct0VSH9TXtcuPsnzvOGScDiqys5HGmmqoEgRPGAw98/edit?gid=0#gid=0" target="_blank" rel="noopener" style="color:#1d4ed8;text-decoration:underline;">打开 Google Sheets</a></div>
+  </div>
+</div>
+
 <div class="main">
 
   <!-- ===== Main Navigation ===== -->
@@ -658,6 +668,7 @@
     <button class="main-nav-btn active" onclick="switchMainSec('dashboard', this)">📊 <span data-lang-inline="ko">현황</span><span data-lang-inline="en">Status</span><span data-lang-inline="zh">现况</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('routes', this)">🚢 <span data-lang-inline="ko">선박·항로</span><span data-lang-inline="en">Vessels</span><span data-lang-inline="zh">船舶·航线</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('costs', this)">💰 <span data-lang-inline="ko">비용·WRS</span><span data-lang-inline="en">Costs·WRS</span><span data-lang-inline="zh">费用·WRS</span></button>
+    <button class="main-nav-btn" onclick="switchMainSec('eov-guide', this)">📋 <span data-lang-inline="ko">NSA EOV 가이드</span><span data-lang-inline="en">NSA EOV Guide</span><span data-lang-inline="zh">NSA EOV指南</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('notices', this)">📢 <span data-lang-inline="ko">공지·회의</span><span data-lang-inline="en">Notices</span><span data-lang-inline="zh">公告·会议</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('history', this)">🔄 <span data-lang-inline="ko">이력</span><span data-lang-inline="en">Log</span><span data-lang-inline="zh">历史</span></button>
   </div>
@@ -2371,6 +2382,340 @@
 
   </div><!-- end mainsec-notices -->
 
+  <!-- ===== SEC: NSA EOV 가이드 ===== -->
+  <div class="main-sec" id="mainsec-eov-guide">
+
+  <!-- 대상 선복 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">📋
+        <span data-lang-inline="ko">NSA EOV 임시 운영 가이드라인 <span class="badge badge-critical">NEW 3/17</span></span>
+        <span data-lang-inline="en">Interim GCS Operational Guidance – NSA EOV Cases <span class="badge badge-critical">NEW 3/17</span></span>
+        <span data-lang-inline="zh">NSA EOV临时运营指南 <span class="badge badge-critical">NEW 3/17</span></span>
+      </div>
+      <div class="date">GCS JHKIM | 2026-03-17</div>
+    </div>
+    <div class="card-body">
+
+      <!-- 대상 선복 -->
+      <div data-lang="ko">
+        <div style="background:#fee2e2;border:1px solid #ef4444;border-radius:6px;padding:10px 14px;margin-bottom:14px;">
+          <strong style="color:#991b1b;">NSA(Nhava Sheva) 양하 + EOV 대상 선복:</strong><br>
+          <span class="route-badge">AIM2</span> JORS 0252W &nbsp;|&nbsp;
+          <span class="route-badge">VGI</span> JAYB 02607W &nbsp;/&nbsp; JZSY 02609W &nbsp;/&nbsp; JAPL 02610W
+        </div>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">1. 기본 처리 원칙</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>화물은 <strong>NSA(Nhava Sheva)에서 EOV 양하</strong></li>
+          <li>NSA 양하 이후 처리(픽업·통관·운송 등)는 <strong>별도 후속 조치</strong>로 취급, 현지 가용성 및 추가 비용 별도</li>
+        </ul>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">2. 화주 안내 옵션 (4가지)</h3>
+        <div class="eov-options" style="margin-bottom:14px;">
+          <div class="eov-option opt1">
+            <div class="eov-option-label">Option 1 — NSA 직접 픽업 / Ship-back / COD</div>
+            <div class="eov-option-body">NSA 현지 통관 후 픽업, 선적항 반송, 또는 다른 목적지 COD. <strong>Ship-back/COD 시 송하인·수하인 양측 서면 동의 필수.</strong></div>
+          </div>
+          <div class="eov-option opt2">
+            <div class="eov-option-label">Option 2 — NSA → KLF 이송 후 최종 목적지 처리</div>
+            <div class="eov-option-body">NSA에서 KLF로 이송 후 최종 목적지별 후속 처리. <strong>현재 가장 실현 가능한 대안.</strong></div>
+          </div>
+          <div class="eov-option opt3">
+            <div class="eov-option-label">Option 3 — Upper Gulf 별도 연결 (DMM / KWI / UQR)</div>
+            <div class="eov-option-body">피더 선복·현지 운송·통관 가능성·비용에 따라 별도 검토.</div>
+          </div>
+          <div class="eov-option opt4">
+            <div class="eov-option-label">Option 4 — Red Sea 별도 연결 (JED / SKN / AQJ)</div>
+            <div class="eov-option-body">피더 연결 별도 검토. 추가 비용 및 운송 지연 예상.</div>
+          </div>
+        </div>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. 화주 안내 필수 사항</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>NSA 양하 이후 발생 비용(양하·보관·통관·운송 등)은 <strong>원칙적으로 화주 부담</strong></li>
+          <li>추가 비용은 <strong>반드시 본사 재확인 후</strong> 화주에게 안내</li>
+          <li>Ship-back/COD 시 <strong>송하인+수하인 서면 동의 필수</strong> (소유권·결제·서류 분쟁 방지)</li>
+          <li>최종 목적지 D/O 발급 원활화를 위해 <strong>Surrender B/L 또는 Sea Waybill 권장</strong></li>
+          <li>OBL 사용 시 대체 양하지에서 <strong>화물 인도 지연 가능성</strong></li>
+        </ul>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">4. 화주 응답 추적</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>NSA 직접 픽업 가능 여부</li>
+          <li>Ship-back / COD 검토 필요 여부</li>
+          <li>최종 목적지 연결 운송 필요 여부</li>
+          <li>추가 비용 및 스케줄 변경 수용 가능 여부</li>
+        </ul>
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:6px;padding:10px 14px;margin:10px 0;">
+          📋 <strong>화주 응답 관리 스프레드시트:</strong> <a href="https://docs.google.com/spreadsheets/d/1Hct0VSH9TXtcuPsnzvOGScDiqys5HGmmqoEgRPGAw98/edit?gid=0#gid=0" target="_blank" rel="noopener" style="color:#1d4ed8;text-decoration:underline;">Google Sheets 열기</a>
+        </div>
+        <p style="font-size:12px;color:#6b7280;margin-top:6px;">※ B/L 처리 방안 별도 안내 예정 / 화주 통지 템플릿 별도 배포 예정</p>
+
+        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ KLF DG(위험물) 양하 불가 안내 (3/17 추가)</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>KLF 장치장 이슈로 <strong>DG 양하 전면 불가</strong></li>
+          <li>중동향 DG 화물 옵션: <strong>COD / Ship-back / EOV(대체항 양하, 화주 자체 후속 처리)</strong></li>
+          <li>선례: JESN 02605W — ESL이 KLF 대신 <strong>NSA에서 DG 7 TEU 양하</strong></li>
+          <li><strong>신규 DG 부킹 접수 불가</strong> (추후 공지 시까지)</li>
+          <li>기 ROB DG 화물은 실제 양하항 확정 전까지 최종 처리 방안 확인 불가</li>
+        </ul>
+      </div>
+
+      <!-- English -->
+      <div data-lang="en">
+        <div style="background:#fee2e2;border:1px solid #ef4444;border-radius:6px;padding:10px 14px;margin-bottom:14px;">
+          <strong style="color:#991b1b;">NSA (Nhava Sheva) Discharge + EOV Target Vessels:</strong><br>
+          <span class="route-badge">AIM2</span> JORS 0252W &nbsp;|&nbsp;
+          <span class="route-badge">VGI</span> JAYB 02607W &nbsp;/&nbsp; JZSY 02609W &nbsp;/&nbsp; JAPL 02610W
+        </div>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">1. Basic Handling Principle</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>Cargo will be discharged at <strong>NSA (Nhava Sheva) under EOV</strong></li>
+          <li>Any handling after NSA discharge (pickup, customs, onward movement) = <strong>separate follow-up arrangement</strong>, subject to local feasibility and additional cost</li>
+        </ul>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">2. Handling Options (4 Options)</h3>
+        <div class="eov-options" style="margin-bottom:14px;">
+          <div class="eov-option opt1">
+            <div class="eov-option-label">Option 1 — Direct Pickup at NSA / Ship-back / COD</div>
+            <div class="eov-option-body">Customer may review direct pickup at NSA, ship-back, or COD. <strong>Ship-back/COD requires written consent from both shipper and consignee.</strong></div>
+          </div>
+          <div class="eov-option opt2">
+            <div class="eov-option-label">Option 2 — NSA → KLF Transfer, Then Onward Handling</div>
+            <div class="eov-option-body">Cargo moved from NSA to KLF, then handled onward per final destination. <strong>Currently the most practical alternative.</strong></div>
+          </div>
+          <div class="eov-option opt3">
+            <div class="eov-option-label">Option 3 — Upper Gulf (DMM / KWI / UQR)</div>
+            <div class="eov-option-body">Reviewed separately. Depends on feeder space, local transport, customs feasibility, and cost.</div>
+          </div>
+          <div class="eov-option opt4">
+            <div class="eov-option-label">Option 4 — Red Sea (JED / SKN / AQJ)</div>
+            <div class="eov-option-body">Separate feeder connection review. Additional cost and transit delay expected.</div>
+          </div>
+        </div>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. Important Points for Customers</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>Charges after NSA discharge (discharge, storage, customs, transport) are <strong>in principle for cargo interest's account</strong></li>
+          <li>Additional charges must be <strong>reconfirmed with HQ</strong> before customer notice</li>
+          <li>Ship-back/COD requires <strong>written consent from both shipper and consignee</strong></li>
+          <li>Recommend <strong>Surrender B/L or Sea Waybill</strong> for smoother D/O issuance</li>
+          <li>OBL may cause <strong>delay in release procedures</strong> at alternative discharge point</li>
+        </ul>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">4. Customer Response Tracking</h3>
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:6px;padding:10px 14px;margin:10px 0;">
+          📋 <strong>Customer Response Excel List:</strong> <a href="https://docs.google.com/spreadsheets/d/1Hct0VSH9TXtcuPsnzvOGScDiqys5HGmmqoEgRPGAw98/edit?gid=0#gid=0" target="_blank" rel="noopener" style="color:#1d4ed8;text-decoration:underline;">Open Google Sheets</a>
+        </div>
+        <p style="font-size:12px;color:#6b7280;margin-top:6px;">※ B/L handling guidance to follow / Customer notice template to be circulated</p>
+
+        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ KLF DG Discharge Not Possible (Updated 3/17)</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>KLF DG discharge <strong>fully suspended</strong> due to storage yard issue</li>
+          <li>ME-bound DG options: <strong>COD / Ship-back / EOV (alternative discharge, cargo interest arranges onward)</strong></li>
+          <li>Precedent: JESN 02605W — ESL discharged <strong>7 TEU DG at NSA</strong> instead of KLF</li>
+          <li><strong>New DG bookings cannot be accepted</strong> until further notice</li>
+          <li>ROB DG cargo final handling TBD until actual discharge port confirmed</li>
+        </ul>
+      </div>
+
+      <!-- Chinese -->
+      <div data-lang="zh">
+        <div style="background:#fee2e2;border:1px solid #ef4444;border-radius:6px;padding:10px 14px;margin-bottom:14px;">
+          <strong style="color:#991b1b;">NSA(纳瓦舍瓦)卸货 + EOV目标船舶：</strong><br>
+          <span class="route-badge">AIM2</span> JORS 0252W &nbsp;|&nbsp;
+          <span class="route-badge">VGI</span> JAYB 02607W &nbsp;/&nbsp; JZSY 02609W &nbsp;/&nbsp; JAPL 02610W
+        </div>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">1. 基本处理原则</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>货物在<strong>NSA(纳瓦舍瓦)以EOV方式卸货</strong></li>
+          <li>NSA卸货后的所有处理（提货、清关、转运等）属于<strong>另行安排</strong>，视当地可行性及附加费用而定</li>
+        </ul>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">2. 货主可选方案（4种）</h3>
+        <div class="eov-options" style="margin-bottom:14px;">
+          <div class="eov-option opt1">
+            <div class="eov-option-label">方案1 — NSA直接提货 / 退运 / COD</div>
+            <div class="eov-option-body">客户可选择NSA直接提货、退运或COD。<strong>退运/COD需发货人和收货人双方书面同意。</strong></div>
+          </div>
+          <div class="eov-option opt2">
+            <div class="eov-option-label">方案2 — NSA → KLF转运后继续处理</div>
+            <div class="eov-option-body">从NSA转运至KLF后按最终目的地处理。<strong>目前最可行的替代方案。</strong></div>
+          </div>
+          <div class="eov-option opt3">
+            <div class="eov-option-label">方案3 — 上湾别途安排 (DMM / KWI / UQR)</div>
+            <div class="eov-option-body">视支线船位、当地运输、清关可行性及费用另行审查。</div>
+          </div>
+          <div class="eov-option opt4">
+            <div class="eov-option-label">方案4 — 红海别途安排 (JED / SKN / AQJ)</div>
+            <div class="eov-option-body">另行审查支线连接。预计产生附加费用及运输延迟。</div>
+          </div>
+        </div>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. 须向客户说明事项</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>NSA卸货后产生的费用（卸货、仓储、清关、运输等）<strong>原则上由货方承担</strong></li>
+          <li>附加费用须<strong>先与总部确认</strong>后再通知客户</li>
+          <li>退运/COD需<strong>发货人和收货人双方书面同意</strong></li>
+          <li>建议使用<strong>电放提单或海运单</strong>以便D/O签发</li>
+          <li>使用正本提单可能导致替代卸货港<strong>放货延迟</strong></li>
+        </ul>
+
+        <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">4. 客户响应追踪</h3>
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:6px;padding:10px 14px;margin:10px 0;">
+          📋 <strong>客户响应管理表：</strong> <a href="https://docs.google.com/spreadsheets/d/1Hct0VSH9TXtcuPsnzvOGScDiqys5HGmmqoEgRPGAw98/edit?gid=0#gid=0" target="_blank" rel="noopener" style="color:#1d4ed8;text-decoration:underline;">打开 Google Sheets</a>
+        </div>
+        <p style="font-size:12px;color:#6b7280;margin-top:6px;">※ 提单处理方案另行通知 / 客户通知模板即将下发</p>
+
+        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ KLF危险品卸货不可（3/17更新）</h3>
+        <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li>因堆场问题KLF <strong>DG卸货全面暂停</strong></li>
+          <li>中东方向DG选项：<strong>COD / 退运 / EOV（替代港卸货，货方自行安排后续）</strong></li>
+          <li>先例：JESN 02605W — ESL在KLF未卸，改在<strong>NSA卸载DG 7 TEU</strong></li>
+          <li><strong>新DG订舱暂停接收</strong>（另行通知前）</li>
+          <li>已装船ROB DG货物最终处理方案须待实际卸货港确定</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JEA 현지 운영 참고 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">🏗
+        <span data-lang-inline="ko">JEA 현지 운영 참고사항 (Shiny Seraphine, JEA Office)</span>
+        <span data-lang-inline="en">JEA Local Operations Reference (Shiny Seraphine, JEA Office)</span>
+        <span data-lang-inline="zh">JEA当地运营参考（Shiny Seraphine, JEA办事处）</span>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div data-lang="ko">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">🚛 트럭 운송</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>DPW Logistics와 계약하여 KLF → JEA 운송</li>
+              <li>KLF 통관 희망 시 선박 도착 <strong>2일 전</strong> 사전 통보 필수</li>
+              <li>미통보 시 <strong>JEA로 자동 이송</strong></li>
+            </ul>
+          </div>
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">⚠ KLF 유의사항</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>양하 후 <strong>5-6일 지연</strong> (야적장 공간 부족)</li>
+              <li>3일 경과 시 <strong>ICD 야드로 이동</strong> (B/L별 분리보관 불가)</li>
+              <li>ICD 이동 후 <strong>포탈 추적 불가</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">🧊 리퍼·특수 컨테이너</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li><strong>리퍼(RF)</strong>: 양하 즉시 Genset 연결하여 JEA 이송 (JEA에서만 수령)</li>
+              <li><strong>DG(위험물)</strong>: <span style="color:#c00;font-weight:700;">접수 불가 (Restricted)</span></li>
+              <li><strong>OOG</strong>: 터미널 상황별 case by case</li>
+              <li><strong>Flexi bag</strong>: 접수 가능</li>
+            </ul>
+          </div>
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">📄 D/O 수령</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>JEA 반입(gate-in) 완료 후 <strong>일반 절차대로 수령 가능</strong></li>
+              <li>POL에서 WRP 결제 시 ICC에 반영 필요</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div data-lang="en">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">🚛 Truck Movement</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>DPW Logistics contracted for KLF → JEA transport</li>
+              <li>Clearance at KLF: notify <strong>2 days before</strong> vessel arrival</li>
+              <li>Default: <strong>auto-transfer to JEA</strong> if not notified</li>
+            </ul>
+          </div>
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">⚠ KLF Drawbacks</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>Discharge <strong>5-6 day delay</strong> (yard space constraints)</li>
+              <li>After 3 days → <strong>shifted to ICD yards</strong> (no B/L segregation)</li>
+              <li>Container tracking <strong>unavailable</strong> after ICD transfer</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">🧊 Reefer &amp; Special Containers</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li><strong>Reefer (RF)</strong>: Moved to JEA immediately with genset (collection at JEA only)</li>
+              <li><strong>DG</strong>: <span style="color:#c00;font-weight:700;">RESTRICTED</span></li>
+              <li><strong>OOG</strong>: Case-by-case per terminal capability</li>
+              <li><strong>Flexi bag</strong>: Accepted</li>
+            </ul>
+          </div>
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">📄 D/O Collection</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>Once containers gate in at JEA, <strong>normal D/O procedure</strong></li>
+              <li>If WRP settled at POL, receipt in ICC accordingly</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div data-lang="zh">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">🚛 卡车运输</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>与DPW Logistics签约 KLF → JEA运输</li>
+              <li>KLF清关须在船舶到达<strong>前2天</strong>通知</li>
+              <li>未通知则<strong>默认转运至JEA</strong></li>
+            </ul>
+          </div>
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">⚠ KLF注意事项</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>卸货后<strong>延迟5-6天</strong>（堆场空间不足）</li>
+              <li>3天后<strong>移至ICD堆场</strong>（不按提单分开存放）</li>
+              <li>ICD转移后<strong>无法通过系统追踪</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">🧊 冷藏·特殊集装箱</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li><strong>冷藏柜(RF)</strong>：卸船后立即连接发电机运至JEA（仅JEA提柜）</li>
+              <li><strong>DG(危险品)</strong>：<span style="color:#c00;font-weight:700;">限制接收</span></li>
+              <li><strong>OOG</strong>：视码头能力逐案审核</li>
+              <li><strong>Flexi bag</strong>：可接收</li>
+            </ul>
+          </div>
+          <div style="border:1px solid #dde2ea;border-radius:7px;padding:10px 12px;">
+            <strong style="color:#003366;">📄 D/O领取</strong>
+            <ul style="font-size:12px;line-height:1.6;padding-left:16px;margin-top:6px;">
+              <li>集装箱进入JEA后<strong>按正常程序领取</strong></li>
+              <li>POL已结算WRP的请在ICC中相应录入</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div><!-- end mainsec-eov-guide -->
+
   <!-- ===== SEC: 변경이력 ===== -->
   <div class="main-sec" id="mainsec-history">
 
@@ -2401,9 +2746,9 @@
   </div><!-- end mainsec-history -->
 
   <div class="footer">
-    <div data-lang="ko">본 페이지는 KMTC 내부 이메일 기반으로 작성되었습니다. 최신 공식 지침은 반드시 본사 또는 중동법인에 확인하시기 바랍니다. | 마지막 이메일 수집 기준: 2026년 3월 16일 | lhjin@ekmtc.com</div>
-    <div data-lang="en">This page is compiled from KMTC internal emails. Always verify with HQ or ME Branch for the latest official directives. | Email data collected as of: March 16, 2026 | lhjin@ekmtc.com</div>
-    <div data-lang="zh">本页面基于KMTC内部邮件整理。最新官方指示请务必向总部或中东法人确认。| 邮件数据截至: 2026年3月16日 | lhjin@ekmtc.com</div>
+    <div data-lang="ko">본 페이지는 KMTC 내부 이메일 기반으로 작성되었습니다. 최신 공식 지침은 반드시 본사 또는 중동법인에 확인하시기 바랍니다. | 마지막 이메일 수집 기준: 2026년 3월 17일 | lhjin@ekmtc.com</div>
+    <div data-lang="en">This page is compiled from KMTC internal emails. Always verify with HQ or ME Branch for the latest official directives. | Email data collected as of: March 17, 2026 | lhjin@ekmtc.com</div>
+    <div data-lang="zh">本页面基于KMTC内部邮件整理。最新官方指示请务必向总部或中东法人确认。| 邮件数据截至: 2026年3月17日 | lhjin@ekmtc.com</div>
   </div>
 
 </div><!-- end main -->

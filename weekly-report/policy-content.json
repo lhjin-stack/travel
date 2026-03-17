@@ -7,6 +7,74 @@
       "badgeType": "critical",
       "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
       "title": {
+        "ko": "NSA EOV 임시 운영 가이드라인 발령 — AIM2·VGI 4척 NSA 양하 확정",
+        "en": "Interim GCS Operational Guidance Issued — NSA EOV for AIM2/VGI 4 Vessels",
+        "zh": "NSA EOV临时运营指南发布——AIM2·VGI 4艘确认NSA卸货"
+      },
+      "body": {
+        "ko": "AIM2 JORS 0252W, VGI JAYB 02607W / JZSY 02609W / JAPL 02610W — NSA 양하 + EOV 확정. 화주 4가지 옵션 안내: ① NSA 픽업/Ship-back/COD ② NSA→KLF 이송(가장 현실적) ③ Upper Gulf(DMM/KWI/UQR) 별도 연결 ④ Red Sea(JED/SKN/AQJ) 별도 연결. Ship-back/COD 시 송하인+수하인 서면 동의 필수. Surrender B/L 또는 Sea Waybill 권장. 화주 응답 Google Sheets로 관리.",
+        "en": "AIM2 JORS 0252W, VGI JAYB 02607W / JZSY 02609W / JAPL 02610W — NSA discharge + EOV confirmed. Four options for customers: ① Direct pickup at NSA / Ship-back / COD ② NSA→KLF transfer (most practical) ③ Upper Gulf separate arrangement (DMM/KWI/UQR) ④ Red Sea separate arrangement (JED/SKN/AQJ). Ship-back/COD requires written consent from both shipper and consignee. Surrender B/L or Sea Waybill recommended. Customer responses tracked via Google Sheets.",
+        "zh": "AIM2 JORS 0252W, VGI JAYB 02607W / JZSY 02609W / JAPL 02610W——确认NSA卸货+EOV。向客户说明4种方案：①NSA直接提货/退运/COD ②NSA→KLF转运（最可行）③上湾单独安排(DMM/KWI/UQR) ④红海单独安排(JED/SKN/AQJ)。退运/COD需发货人和收货人双方书面同意。建议使用电放提单或海运单。客户响应通过Google Sheets管理。"
+      },
+      "source": "GCS 김정훈 (jhkim@ekmtc.com) | 메일: [KMTC GCS]Interim GCS Operational Guidance – NSA EOV Cases"
+    },
+    {
+      "dateIso": "2026-03-17",
+      "date": { "ko": "3월 17일", "en": "Mar 17", "zh": "3月17日" },
+      "badgeType": "updated",
+      "badgeLabel": { "ko": "변경", "en": "UPDATED", "zh": "更新" },
+      "title": {
+        "ko": "KLF DG 양하 불가 후속 — JESN DG 화물 NSA 양하, 중국발 DG 대안 문의",
+        "en": "KLF DG Follow-up — JESN DG Discharged at NSA, China-origin DG Options Queried",
+        "zh": "KLF DG后续——JESN DG货物在NSA卸货，中国出发DG替代方案咨询"
+      },
+      "body": {
+        "ko": "상해(SHA) Nina Xu — JESN DG 센터 정보 기반 NSA 양하 DG 화물 목록 추가 요청 + Ship-back 외 대안 문의. GCS 김정훈 답변: KLF DG 장치장 이슈로 DG 양하 당분간 불가. 각 선박 ROB DG 물량 긴급 확인 요청. 중동향 DG 옵션은 COD / Ship-back / EOV 대체 양하로 제한. 신규 DG 부킹 접수 불가.",
+        "en": "SHA Nina Xu requested adding JESN DG cargo list discharged at NSA based on DG center info + asked for alternatives besides ship-back. GCS JHKIM reply: KLF DG discharge not possible for the time being due to yard/storage issue. Urgent check of ROB DG volume per vessel requested. ME-bound DG options limited to COD / Ship-back / EOV alternative discharge. New DG bookings suspended.",
+        "zh": "上海Nina Xu根据DG中心信息要求添加JESN在NSA卸货的DG货物清单+询问退运以外的替代方案。GCS金正勋回复：因堆场问题KLF DG卸货暂时不可能。紧急确认各船ROB DG数量。中东方向DG选项仅限COD/退运/EOV替代卸货。新DG订舱暂停。"
+      },
+      "source": "上海 Nina Xu (ninaxu@ekmtc.com) / GCS 김정훈 (jhkim@ekmtc.com) | 메일: Re: [KMTC GCS]Interim GCS Operational Guidance – NSA EOV Cases"
+    },
+    {
+      "dateIso": "2026-03-17",
+      "date": { "ko": "3월 17일", "en": "Mar 17", "zh": "3月17日" },
+      "badgeType": "new",
+      "badgeLabel": { "ko": "신규", "en": "NEW", "zh": "新规" },
+      "title": {
+        "ko": "PKG JEPU 02606W F/DEST AEJEA → AEKLF 변경 완료 — KLF T/S 가이드라인 적용",
+        "en": "PKG JEPU 02606W F/DEST Changed AEJEA → AEKLF — KLF T/S Guideline Applied",
+        "zh": "PKG JEPU 02606W最终目的地AEJEA→AEKLF变更完成——KLF中转指南适用"
+      },
+      "body": {
+        "ko": "PKG Penny Loh — 3/16 가이드라인에 따라 JEPU 02606W 부킹 4건 F/DEST를 AEJEA→AEKLF로 변경 완료. JEA 현지에 CNEE 연락 요청(KLF 또는 JEA 수령 선택). HKG Ricky Kwok — HKG→SHK→PKW→NSA→KLF→SHJ 등 신규 서비스 패턴 3건 추가 생성 완료.",
+        "en": "PKG Penny Loh amended 4 bookings on JEPU 02606W, changing F/DEST from AEJEA to AEKLF per 3/16 guideline. Requested JEA office to contact CNEE for KLF or JEA collection choice. HKG Ricky Kwok created 3 new service patterns including HKG→SHK→PKW→NSA→KLF→SHJ.",
+        "zh": "PKG Penny Loh根据3/16指南将JEPU 02606W的4个订舱最终目的地从AEJEA变更为AEKLF。请求JEA办事处联系收货人选择KLF或JEA提货。HKG Ricky Kwok新建3条服务模式（含HKG→SHK→PKW→NSA→KLF→SHJ）。"
+      },
+      "source": "PKG Penny Loh (pennyloh@ekmtc.com) / HKG Ricky Kwok (rickykwok@ekmtc.com) | 메일: Fwd: (NEW GUIDELINE 3/16) KLF T/S Service Pattern"
+    },
+    {
+      "dateIso": "2026-03-17",
+      "date": { "ko": "3월 17일", "en": "Mar 17", "zh": "3月17日" },
+      "badgeType": "updated",
+      "badgeLabel": { "ko": "변경", "en": "UPDATED", "zh": "更新" },
+      "title": {
+        "ko": "KLF 항비(Port Tariff) 2019년 이후 변동 없음 확인 — ICC 최신 반영 완료",
+        "en": "KLF Port Tariff Unchanged Since 2019 — ICC Updated with Latest Tariff",
+        "zh": "KLF港口费自2019年以来无变动——ICC已更新最新费率"
+      },
+      "body": {
+        "ko": "운항팀 우대한 — 데이터분석팀 요청 건 회신: KLF항 2019년 이후 항비 변동 없음. ICC 상 최신 Tariff 반영 확인 완료.",
+        "en": "LOT Woo Daehan confirmed: KLF port tariff unchanged since 2019. Latest tariff reflected in ICC confirmed.",
+        "zh": "运航团队禹大韩确认：KLF港口费自2019年以来无变动。ICC已确认反映最新费率。"
+      },
+      "source": "운항팀 우대한 (woodaehan@ekmtc.com) | 메일: Re: [데이터분석팀] KLF 기항 관련 비용 업데이트 요청"
+    },
+    {
+      "dateIso": "2026-03-17",
+      "date": { "ko": "3월 17일", "en": "Mar 17", "zh": "3月17日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
         "ko": "KLF DG(위험물) 양하 전면 불가 — 신규 DG 부킹 접수 중단",
         "en": "KLF DG Discharge Fully Suspended — New DG Bookings Halted",
         "zh": "KLF危险品卸货全面暂停——新DG订舱停止接收"
