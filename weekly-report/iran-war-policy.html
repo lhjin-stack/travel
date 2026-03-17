@@ -507,6 +507,79 @@
     .eov-cost-label.kr { background: #1e40af; }
     .eov-cost-label.intl { background: #065f46; }
 
+    /* === Dashboard === */
+    .dash-alerts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+    .dash-alert {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 14px; border-radius: 8px; border-left: 4px solid #94a3b8;
+      background: #fff; font-size: 12.5px; line-height: 1.5;
+    }
+    .dash-alert.critical { border-color: #ef4444; background: #fef2f2; }
+    .dash-alert.updated { border-color: #f59e0b; background: #fffbeb; }
+    .dash-alert.new { border-color: #3b82f6; background: #eff6ff; }
+    .dash-alert-date { font-size: 11px; color: var(--muted); white-space: nowrap; min-width: 50px; padding-top: 1px; }
+    .dash-alert-text { flex: 1; }
+
+    .kpi-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+      gap: 10px; margin-bottom: 4px;
+    }
+    .kpi-card {
+      background: #f8fafc; border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px; text-align: center;
+    }
+    .kpi-label { font-size: 10px; color: var(--muted); margin-bottom: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; }
+    .kpi-val { font-size: 22px; font-weight: 800; color: var(--primary); }
+    .kpi-val small { font-size: 12px; font-weight: 600; }
+    .kpi-sub { font-size: 10.5px; color: var(--muted); margin-top: 2px; }
+    .kpi-card.kpi-danger { border-color: #fca5a5; background: #fef2f2; }
+    .kpi-card.kpi-danger .kpi-val { color: #dc2626; }
+    .kpi-card.kpi-warn { border-color: #fcd34d; background: #fffbeb; }
+    .kpi-card.kpi-warn .kpi-val { color: #d97706; }
+
+    /* Port Lookup */
+    .port-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .port-btn {
+      padding: 7px 16px; border: 2px solid var(--border); border-radius: 20px;
+      background: #fff; cursor: pointer; font-size: 12.5px; font-weight: 700;
+      color: var(--primary); transition: all .15s;
+    }
+    .port-btn:hover, .port-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .port-card { display: none; border: 1px solid var(--border); border-radius: 10px; padding: 16px; background: #fff; margin-bottom: 12px; animation: fadeIn .2s; }
+    .port-card.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+    .port-card-header {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #eef1f5;
+    }
+    .port-card-name { font-size: 16px; font-weight: 800; color: var(--primary); }
+    .port-card-status { padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; }
+    .st-closed { background: #fef2f2; color: #dc2626; }
+    .st-limited { background: #fffbeb; color: #d97706; }
+    .port-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 600px) { .port-card-grid { grid-template-columns: 1fr; } }
+    .port-info-item { padding: 10px 12px; background: #f8fafc; border-radius: 8px; }
+    .port-info-label { font-size: 10px; color: var(--muted); margin-bottom: 3px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+    .port-info-val { font-size: 12.5px; color: var(--text); line-height: 1.5; }
+    .port-info-note { grid-column: 1 / -1; padding: 10px 12px; background: #fffbeb; border-radius: 8px; font-size: 12px; border-left: 3px solid #f59e0b; line-height: 1.5; }
+
+    /* Accordion (collapsible vessel tables) */
+    .acc-toggle { cursor: pointer; user-select: none; }
+    .acc-toggle:hover { background: #dce6f2; }
+    .acc-arrow { display: inline-block; transition: transform .2s; font-size: 10px; color: var(--muted); margin-right: 4px; }
+    .acc-toggle.open .acc-arrow { transform: rotate(90deg); }
+    .acc-summary { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+    .acc-body { padding-top: 8px; }
+    .port-guide { grid-column: 1 / -1; padding: 10px 12px; background: #f0f4f9; border-radius: 8px; font-size: 12px; border-left: 3px solid #3b82f6; line-height: 1.6; }
+    .port-guide strong { color: #1e40af; }
+    .port-eov-toggle { padding: 8px 14px; background: #f0f4f9; border-top: 1px solid #e5e7eb; font-size: 12.5px; font-weight: 600; color: #1e40af; border-radius: 0 0 10px 10px; }
+    .port-eov-toggle:hover { background: #dce6f2; }
+    .port-card .acc-body { padding: 10px 14px; background: #fafbfc; border-top: 1px solid #e5e7eb; border-radius: 0 0 10px 10px; }
+    .general-alert { display: flex; align-items: flex-start; gap: 8px; padding: 10px 14px; border-radius: 8px; font-size: 12.5px; line-height: 1.7; margin-bottom: 6px; }
+    .general-alert.ga-critical { background: #fef2f2; border-left: 3px solid #ef4444; }
+    .general-alert.ga-warning { background: #fffbeb; border-left: 3px solid #f59e0b; }
+    .general-alert.ga-info { background: #f0f9ff; border-left: 3px solid #3b82f6; }
+
     /* Lang visibility */
     [data-lang] { display: none; }
     .lang-ko [data-lang="ko"] { display: block; }
@@ -582,382 +655,442 @@
 
   <!-- ===== Main Navigation ===== -->
   <div class="main-nav">
-    <button class="main-nav-btn active" onclick="switchMainSec('ops', this)">📋 <span data-lang-inline="ko">업무 지침</span><span data-lang-inline="en">Guidelines</span><span data-lang-inline="zh">业务指引</span></button>
-    <button class="main-nav-btn" onclick="switchMainSec('routes', this)">🗺️ <span data-lang-inline="ko">항로 운영</span><span data-lang-inline="en">Route Ops</span><span data-lang-inline="zh">航线运营</span></button>
+    <button class="main-nav-btn active" onclick="switchMainSec('dashboard', this)">📊 <span data-lang-inline="ko">현황</span><span data-lang-inline="en">Status</span><span data-lang-inline="zh">现况</span></button>
+    <button class="main-nav-btn" onclick="switchMainSec('routes', this)">🚢 <span data-lang-inline="ko">선박·항로</span><span data-lang-inline="en">Vessels</span><span data-lang-inline="zh">船舶·航线</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('costs', this)">💰 <span data-lang-inline="ko">비용·WRS</span><span data-lang-inline="en">Costs·WRS</span><span data-lang-inline="zh">费用·WRS</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('notices', this)">📢 <span data-lang-inline="ko">공지·회의</span><span data-lang-inline="en">Notices</span><span data-lang-inline="zh">公告·会议</span></button>
-    <button class="main-nav-btn" onclick="switchMainSec('history', this)">🔄 <span data-lang-inline="ko">변경 이력</span><span data-lang-inline="en">Changelog</span><span data-lang-inline="zh">变更历史</span></button>
+    <button class="main-nav-btn" onclick="switchMainSec('history', this)">🔄 <span data-lang-inline="ko">이력</span><span data-lang-inline="en">Log</span><span data-lang-inline="zh">历史</span></button>
   </div>
 
-  <!-- ===== SEC: 업무지침 ===== -->
-  <div class="main-sec active" id="mainsec-ops">
+  <!-- ===== SEC: 현황 대시보드 (NEW) ===== -->
+  <div class="main-sec active" id="mainsec-dashboard">
 
-  <!-- ===== 1. 화물 처리 업무 지침 (최상단) ===== -->
+  <!-- 최근 변경사항 -->
   <div class="card">
     <div class="card-header">
-      <div class="title">
-        📦
-        <span data-lang-inline="ko">화물 처리 업무 지침 <span class="badge badge-updated">3/13 최신</span></span>
-        <span data-lang-inline="en">Cargo Handling Procedures <span class="badge badge-updated">Latest 3/13</span></span>
-        <span data-lang-inline="zh">货物处理业务指引 <span class="badge badge-updated">3/13最新</span></span>
-      </div>
+      <div class="title">📌 <span data-lang-inline="ko">최근 변경사항</span><span data-lang-inline="en">Recent Changes</span><span data-lang-inline="zh">最新变更</span> <span class="badge badge-updated" id="dash-date-badge"></span></div>
     </div>
     <div class="card-body">
-      <!-- Korean -->
-      <div data-lang="ko">
-        <table class="policy-table">
-          <thead><tr><th width="20%">상황</th><th width="40%">처리 방안</th><th width="40%">유의사항</th></tr></thead>
-          <tbody>
-            <tr class="highlight">
-              <td>🔸 JEA향 부킹 접수 시</td>
-              <td>서비스 패턴: <strong>KLF-(TRUCK)-JEA</strong><br>B/L 상에는 JEA 대신 <strong>KLF</strong>로 명기</td>
-              <td>JEA 화물은 KLF 양하 후 IN-TRANSIT으로 보세운송. 별도 세관 통관 없음(샤르자 세관 협의 완료)</td>
-            </tr>
-            <tr>
-              <td>🔸 UAE 내 타 포트향<br>(QIW, ADP, SHJ)</td>
-              <td>JEA와 동일 기준 적용<br>사전 화주 안내 후 요청 시 진행</td>
-              <td>세관 문제 해결 완료. QIW·ADP·SHJ → KLF 통관 없이 보세운송 가능</td>
-            </tr>
-            <tr class="highlight">
-              <td>🔸 AJM, RAK향</td>
-              <td>Hutchison Logistic과 협의 후 처리</td>
-              <td>세관 문제 별도 협의 완료. 비용 정산 방식 확인 필요</td>
-            </tr>
-            <tr>
-              <td>🔸 KLF 도착 후 픽업 안 된 화물</td>
-              <td><strong>3일 이내</strong> 픽업하지 않으면 <strong>SHJ ICD</strong> 강제 이송</td>
-              <td>화주에게 즉시 통보 필요. 스토리지 Day 1부터 청구됨</td>
-            </tr>
-            <tr>
-              <td>🔸 Upper Gulf / 홍해향</td>
-              <td>T/S 신고 후 피더 연결</td>
-              <td>피더 수급 상황 지속 확인 필요. SHJ, KWI, UQR, HMA → 피더사 WRS 별도 부과</td>
-            </tr>
-            <tr class="highlight">
-              <td>🔸 LOI 징구</td>
-              <td>전쟁위험 관련 추가비용 부담 LOI 화주로부터 사전 징구</td>
-              <td>법무법인 검토 완료 양식 사용. 중국발: WRS 항목 2번 삭제된 개정판 사용 (3/10 개정)</td>
-            </tr>
-            <tr>
-              <td>🔸 EOV 선언 화물</td>
-              <td>KLF 양하 후 DLY 포트별 처리 방안 표에 따라 처리</td>
-              <td>비용·이송방법은 현지 상황에 따라 변동 가능함을 화주에게 반드시 안내</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- English -->
-      <div data-lang="en">
-        <table class="policy-table">
-          <thead><tr><th width="20%">Situation</th><th width="40%">Procedure</th><th width="40%">Notes</th></tr></thead>
-          <tbody>
-            <tr class="highlight">
-              <td>🔸 JEA-bound bookings</td>
-              <td>Service pattern: <strong>KLF-(TRUCK)-JEA</strong><br>B/L must show <strong>KLF</strong> (not JEA)</td>
-              <td>KLF discharge, IN-TRANSIT bonded haulage to JEA. No Sharjah customs clearance required (agreed with authorities)</td>
-            </tr>
-            <tr>
-              <td>🔸 Other UAE ports<br>(QIW, ADP, SHJ)</td>
-              <td>Same basis as JEA<br>Proceed only upon customer request after prior notice</td>
-              <td>Customs issues resolved. Bonded haulage available without KLF customs clearance</td>
-            </tr>
-            <tr class="highlight">
-              <td>🔸 AJM, RAK bound</td>
-              <td>Handle after consultation with Hutchison Logistic</td>
-              <td>Customs arrangements confirmed. Billing method to be verified</td>
-            </tr>
-            <tr>
-              <td>🔸 Cargo at KLF unpicked</td>
-              <td>Forced transfer to <strong>SHJ ICD</strong> if not picked up within <strong>3 days</strong></td>
-              <td>Notify consignees immediately. Storage charged from Day 1</td>
-            </tr>
-            <tr>
-              <td>🔸 Upper Gulf / Red Sea</td>
-              <td>T/S declaration then feeder connection</td>
-              <td>Monitor feeder availability. SHJ/KWI/UQR/HMA: Separate feeder WRS applies</td>
-            </tr>
-            <tr class="highlight">
-              <td>🔸 LOI Collection</td>
-              <td>Collect LOI from shipper for war-risk additional cost liability</td>
-              <td>Use legally reviewed form. China-origin: Use revised form with WRS item #2 removed (rev. 3/10)</td>
-            </tr>
-            <tr>
-              <td>🔸 EOV cargo</td>
-              <td>Handle per DLY port procedure table after KLF discharge</td>
-              <td>Inform customer: costs and routing subject to change per local conditions</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- Chinese -->
-      <div data-lang="zh">
-        <table class="policy-table">
-          <thead><tr><th width="20%">情况</th><th width="40%">处理方案</th><th width="40%">注意事项</th></tr></thead>
-          <tbody>
-            <tr class="highlight">
-              <td>🔸 接受JEA方向订舱</td>
-              <td>服务模式: <strong>KLF-(TRUCK)-JEA</strong><br>提单目的港填写 <strong>KLF</strong>（不得填JEA）</td>
-              <td>KLF卸货后IN-TRANSIT保税运输至JEA。无需沙迦海关清关（已与当局协议）</td>
-            </tr>
-            <tr>
-              <td>🔸 UAE其他港口<br>(QIW, ADP, SHJ)</td>
-              <td>与JEA相同基准<br>提前通知货主，仅接受有需求方</td>
-              <td>海关问题已解决。无需KLF清关即可保税运输</td>
-            </tr>
-            <tr class="highlight">
-              <td>🔸 AJM, RAK方向</td>
-              <td>与Hutchison Logistic协商后处理</td>
-              <td>海关安排已确认，请核实费用结算方式</td>
-            </tr>
-            <tr>
-              <td>🔸 KLF到港后未提货</td>
-              <td><strong>3天内</strong>未提货将强制转运至<strong>SHJ ICD</strong></td>
-              <td>需立即通知收货人。堆存费从第1天起计</td>
-            </tr>
-            <tr>
-              <td>🔸 上湾/红海方向</td>
-              <td>T/S申报后转支线</td>
-              <td>持续关注支线供需。SHJ/KWI/UQR/HMA: 另收支线WRS</td>
-            </tr>
-            <tr class="highlight">
-              <td>🔸 LOI征收</td>
-              <td>提前向货主收取战争风险额外费用承担LOI</td>
-              <td>使用经律师事务所审查的格式。中国发货: 使用删除WRS第2项的修订版（3/10修订）</td>
-            </tr>
-            <tr>
-              <td>🔸 EOV货物</td>
-              <td>KLF卸货后按目的港处理方案表执行</td>
-              <td>必须告知货主: 费用及运输方式可能随现地情况变动</td>
-            </tr>
-          </tbody>
-        </table>
+      <div id="dash-alerts-render" class="dash-alerts">
+        <div class="modal-spinner"><span data-lang-inline="ko">최신 변경사항 불러오는 중...</span><span data-lang-inline="en">Loading latest changes...</span><span data-lang-inline="zh">加载中...</span></div>
       </div>
     </div>
   </div>
 
-
-  <!-- ===== 1-B. EOV 선언 후 DLY 포트별 처리 방안 ===== -->
-  <div class="card" data-tab-group="eov">
-    <div class="tab-bar">
-      <button class="tab-btn active" onclick="switchTab(this,'eov','klf-discharge')">
-        📦
-        <span data-lang-inline="ko">KLF 양하 건 <span class="badge badge-critical">EOV</span></span>
-        <span data-lang-inline="en">KLF Discharge <span class="badge badge-critical">EOV</span></span>
-        <span data-lang-inline="zh">KLF卸货件 <span class="badge badge-critical">EOV</span></span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'eov','nsa-discharge')">
-        🚢
-        <span data-lang-inline="ko">NSA 양하 건</span>
-        <span data-lang-inline="en">NSA Discharge</span>
-        <span data-lang-inline="zh">NSA卸货件</span>
-      </button>
+  <!-- 공통 유의사항 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">⚠️ <span data-lang-inline="ko">공통 유의사항</span><span data-lang-inline="en">General Guidelines</span><span data-lang-inline="zh">通用注意事项</span></div>
     </div>
+    <div class="card-body">
+      <div data-lang="ko">
+        <div class="general-alert ga-critical">🔴 <strong>LOI 징구 필수</strong> — 전쟁위험 관련 추가비용 부담 LOI를 화주로부터 반드시 사전 징구. 법무법인 검토 완료 양식 사용. <strong>중국발: WRS 항목 2번 삭제된 개정판 사용 (3/10 개정)</strong></div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF 3일 미픽업 → SHJ ICD 강제이송</strong> — 도착 후 3일 이내 미픽업 시 SHJ ICD로 강제 이송. 스토리지 Day 1부터 청구. 화주 즉시 통보 필수.</div>
+        <div class="general-alert ga-warning">🟡 <strong>EOV 화물 비용 변동</strong> — 비용·이송방법은 현지 상황에 따라 변동 가능. 화주에게 반드시 사전 안내 필요.</div>
+        <div class="general-alert ga-warning">🟡 <strong>피더 WRS 별도 부과</strong> — Upper Gulf(SHJ, KWI, UQR, HMA) 및 홍해항 향 피더 사용 시 피더사 WRS 별도 부과. 피더 비용 기하급수적 상승 중.</div>
+        <div class="general-alert ga-info">🔵 <strong>보세운송 세관 해결 완료</strong> — JEA, QIW, ADP, SHJ → KLF 통관 없이 IN-TRANSIT 보세운송 가능 (샤르자 세관 협의 완료).</div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF DG(위험물) 양하 전면 불가</strong> — 장치장 이슈로 KLF DG 양하 불가. 신규 DG 부킹 접수 중단. 기 선적 ROB 화물은 운항선사가 차항지(NSA 등) 양하 후 통보 예상. 화주에게 COD / SHIPBACK / EOV(도착지 화주 자체 처리) 옵션 안내 필요.</div>
+      </div>
+      <div data-lang="en">
+        <div class="general-alert ga-critical">🔴 <strong>LOI Collection Mandatory</strong> — Collect LOI for war-risk additional costs from all shippers. Use legally reviewed form. <strong>China-origin: Use revised form with WRS item #2 removed (rev. 3/10)</strong></div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF 3-Day Pickup Rule → SHJ ICD Forced Transfer</strong> — If not picked up within 3 days, cargo forcibly transferred to SHJ ICD. Storage charged from Day 1. Immediate consignee notification required.</div>
+        <div class="general-alert ga-warning">🟡 <strong>EOV Cargo Cost Variability</strong> — Costs and routing subject to change per local conditions. Mandatory prior notice to customers.</div>
+        <div class="general-alert ga-warning">🟡 <strong>Separate Feeder WRS</strong> — Feeder WRS charged separately for Upper Gulf (SHJ/KWI/UQR/HMA) and Red Sea. Feeder costs rising exponentially.</div>
+        <div class="general-alert ga-info">🔵 <strong>Bonded Transport Cleared</strong> — JEA, QIW, ADP, SHJ → IN-TRANSIT bonded haulage via KLF without customs clearance (agreed with Sharjah customs).</div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF DG (Dangerous Goods) Discharge Suspended</strong> — DG discharge at KLF impossible due to storage yard issue. New DG bookings suspended. ROB cargo expected to be discharged at next port (e.g. NSA) by operating carrier. Advise shippers: COD / SHIPBACK / EOV (consignee self-arrange at destination).</div>
+      </div>
+      <div data-lang="zh">
+        <div class="general-alert ga-critical">🔴 <strong>必须征收LOI</strong> — 须向所有货主事前征收战争风险额外费用LOI。使用经律师事务所审查的格式。<strong>中国发货: 使用删除WRS第2项的修订版（3/10修订）</strong></div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF 3日未提货 → 强制转移至SHJ ICD</strong> — 到港3日内未提货将强制转运至SHJ ICD。堆存费从第1天起计。须立即通知收货人。</div>
+        <div class="general-alert ga-warning">🟡 <strong>EOV货物费用变动</strong> — 费用及运输方式可能随现地情况变动。须事先通知货主。</div>
+        <div class="general-alert ga-warning">🟡 <strong>支线WRS另收</strong> — 上湾(SHJ/KWI/UQR/HMA)及红海港方向使用支线时另收支线WRS。支线费用急剧上涨中。</div>
+        <div class="general-alert ga-info">🔵 <strong>保税运输海关已解决</strong> — JEA、QIW、ADP、SHJ → 经KLF无需清关IN-TRANSIT保税运输（已与沙迦海关协议）。</div>
+        <div class="general-alert ga-critical">🔴 <strong>KLF危险品(DG)卸货全面暂停</strong> — 因堆场问题KLF无法卸载危险品。新DG订舱暂停接收。已装船ROB货物预计由运营船公司在下一港（如NSA）卸货后通知。请告知货主：COD / 退运 / EOV（目的地货主自行处理）。</div>
+      </div>
+    </div>
+  </div>
 
-    <!-- KLF 양하 건 Pane -->
-    <div class="tab-pane active" id="eov-klf-discharge">
-      <div class="card-body">
+  <!-- 목적지별 빠른 조회 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">🔍 <span data-lang-inline="ko">목적지별 빠른 조회</span><span data-lang-inline="en">Quick Lookup by Destination</span><span data-lang-inline="zh">按目的地快速查询</span></div>
+    </div>
+    <div class="card-body">
+      <div class="port-btns">
+        <button class="port-btn" onclick="showPort('JEA',this)">JEA</button>
+        <button class="port-btn" onclick="showPort('DMM',this)">Upper Gulf</button>
+        <button class="port-btn" onclick="showPort('SHJ',this)">SHJ/AJM/RAK</button>
+        <button class="port-btn" onclick="showPort('RED',this)">AQJ/JED/SKN</button>
+        <button class="port-btn" onclick="showPort('NSA',this)">NSA</button>
+      </div>
 
-        <!-- Korean -->
-        <div data-lang="ko">
-          <div class="change-row critical" style="margin-bottom:14px;">
-            ⚠️ <strong>EOV(End of Voyage) 선언 화물 — KLF 양하 기준</strong>: 비용·이송방법은 현지 상황에 따라 변동 가능하므로 화주에게 반드시 사전 안내 및 LOI 징구 필수.
+      <!-- JEA -->
+      <div class="port-card" id="port-JEA">
+        <div class="port-card-header">
+          <span class="port-card-name">JEA (Jebel Ali)</span>
+          <span class="port-card-status st-closed"><span data-lang-inline="ko">직항 불가 — KLF 경유</span><span data-lang-inline="en">No Direct — via KLF</span><span data-lang-inline="zh">无法直达 — 经KLF</span></span>
+        </div>
+        <div class="port-card-grid">
+          <div class="port-info-item">
+            <div class="port-info-label">ROUTING</div>
+            <div class="port-info-val">PKW → <strong>KLF</strong> → (truck) → JEA</div>
           </div>
-
-          <!-- JEA -->
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 JEA (Jebel Ali)</div>
-            <div class="eov-icc">📋 ICC상 표기: <strong>POD KLF / DLY KLF</strong></div>
+          <div class="port-info-item">
+            <div class="port-info-label">B/L (ICC)</div>
+            <div class="port-info-val">POD: <strong>KLF</strong> / DLY: <strong>KLF</strong></div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label">WRS</div>
+            <div class="port-info-val">20': <strong>$2,000</strong> / 40': <strong>$3,500</strong></div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label"><span data-lang-inline="ko">다음 선박</span><span data-lang-inline="en">Next Vessel</span><span data-lang-inline="zh">下一艘船</span></div>
+            <div class="port-info-val">KDM호 KLF ETA 3/23</div>
+          </div>
+          <div class="port-guide">
+            <span data-lang-inline="ko">📋 <strong>부킹 가이드:</strong> 서비스 패턴 <strong>KLF-(TRUCK)-JEA</strong> | B/L에 JEA 아닌 <strong>KLF</strong> 표기 | KLF 양하 후 IN-TRANSIT 보세운송, 별도 세관통관 없음 (샤르자 세관 협의 완료)</span>
+            <span data-lang-inline="en">📋 <strong>Booking Guide:</strong> Pattern <strong>KLF-(TRUCK)-JEA</strong> | B/L shows <strong>KLF</strong> not JEA | IN-TRANSIT bonded haulage after KLF discharge, no customs (Sharjah agreed)</span>
+            <span data-lang-inline="zh">📋 <strong>订舱指引:</strong> 服务模式 <strong>KLF-(TRUCK)-JEA</strong> | 提单填 <strong>KLF</strong>（非JEA）| KLF卸货后IN-TRANSIT保税运输，无需清关（沙迦海关已协议）</span>
+          </div>
+          <div class="port-info-note">
+            <span data-lang-inline="ko">⚠️ LOI 징구 필수 | KLF 3일 내 미픽업 시 SHJ ICD 강제이송</span>
+            <span data-lang-inline="en">⚠️ LOI required | Forced transfer to SHJ ICD if not picked up within 3 days</span>
+            <span data-lang-inline="zh">⚠️ 须收取LOI | 3日内未提取强制转移至SHJ ICD</span>
+          </div>
+        </div>
+        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 EOV 처리 방안 상세</span><span data-lang-inline="en">📋 EOV Handling Details</span><span data-lang-inline="zh">📋 EOV处理方案详情</span></div>
+        <div class="acc-body" style="display:none;">
+          <div data-lang="ko">
             <div class="eov-options">
               <div class="eov-option opt1">
                 <div class="eov-option-label">1안 — DPW LOGISTIC 경유 JEA 운송</div>
-                <div class="eov-option-body">화주 요청 시 JEA항 DPW LOGISTIC과 협의 통해서 JEA까지 운송 및 JEA 반출, 엠티반납 가능으로 변경</div>
+                <div class="eov-option-body">화주 요청 시 DPW LOGISTIC과 협의하여 JEA까지 운송, JEA 반출·엠티반납</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">한국발</span> 코파칸 THC + 코파칸 LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 운송료 + JEA LOCAL(DCF 및 기타) + KLF 스토리지</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">한국외</span> 코파칸 THC + 코파칸 LIFTING ON + WRP (USD 2,000/3,500) + JEA LOCAL(DCF 및 기타) + KLF 스토리지</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">한국발</span> 코파칸 THC + LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 운송료 + JEA LOCAL(DCF 등) + KLF 스토리지</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">한국외</span> 코파칸 THC + LIFTING ON + WRP (USD 2,000/3,500) + JEA LOCAL(DCF 등) + KLF 스토리지</div>
                 </div>
               </div>
               <div class="eov-option opt2">
                 <div class="eov-option-label">2안 — KLF에서 화물 직접 반출</div>
-                <div class="eov-option-body">KLF 양하 전 EOV 선언, KLF에서 화물 반출 가이드</div>
+                <div class="eov-option-body">KLF 양하 전 EOV 선언, KLF에서 화물 직접 반출</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> 코파칸 THC + 코파칸 LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + JEA DROP OFF (AED 900/1,200) + JEA LOCAL(DCF 및 기타)</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> 코파칸 THC + LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + JEA DROP OFF (AED 900/1,200) + JEA LOCAL(DCF 등)</div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- SHJ -->
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 SHJ (Sharjah)</div>
-            <div class="eov-icc">📋 ICC상 표기: <strong>POD KLF (TRUCK) - DLY SHJ</strong></div>
-            <div class="eov-leg">⚙️ LEG DATA: 기존 JEA T/S SHJ 대신, KLF에서 SHJ ICD 픽업으로 변경. 셀프테이너가 운송 후 당사 청구</div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">한국발</span> 코파칸 THC + 코파칸 LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 운송료 + SHJ LOCAL(DCF 및 기타) + KLF 스토리지</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">한국외</span> 코파칸 THC + 코파칸 LIFTING ON + WRP (USD 2,000/3,500) + SHJ LOCAL(DCF 및 기타) + KLF 스토리지</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- AJM, RAK, QIW -->
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 AJM · RAK · QIW</div>
-            <div class="eov-icc">📋 ICC상 표기: <strong>POD KLF (TRUCK) - DLY AJM, RAK, QIW</strong></div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">1안 — HUCHISON LOGISTICS 경유</div>
-                <div class="eov-option-body">화주 요청 시 AJM, RAK, QIW 항 HUCHISON LOGISTICS와 협의 통해서 해당 포트로 반출 및 엠티 반납 가능으로 변경</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">한국발</span> 코파칸 THC + 코파칸 LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 운송료 + 각 포트 LOCAL(DCF 및 기타) + KLF 스토리지</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">한국외</span> 코파칸 THC + 코파칸 LIFTING ON + WRP (USD 2,000/3,500) + 각 포트 LOCAL(DCF 및 기타) + KLF 스토리지</div>
-                </div>
-              </div>
-              <div class="eov-option opt2">
-                <div class="eov-option-label">2안 — FM 선언 후 KLF에서 화물 직접 반출</div>
-                <div class="eov-option-body">KLF 양하 후 FM 선언, KLF에서 화물 반출 가이드</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> 코파칸 THC + 코파칸 LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 각포트 DROP OFF (AED 900/1,200) + 각포트 LOCAL(DCF 및 기타)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- UPPER GULF -->
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 UPPER GULF — DMM · KSP · HMA · KWI · UQR</div>
-            <div class="eov-icc">📋 ICC상 표기: <strong>POD KLF (TRUCK) - JEA (FEEDER) - DLY (DMM, KSP, HMA, KWI, UQR)</strong></div>
-            <div class="eov-leg">⚙️ LEG DATA: FM로 인한 EOV 선언 후 전항 KLF에서 JEA로 이송(화주 비용 청구). KLF(TRUCK)–JEA(T/S)–UPPER GULF 형태로 진행. <strong style="color:#c00;">단, 피더 비용이 기하급수적으로 상승한 상황</strong>이라 사전에 JEA 대기 화물들에 대해서 수화주측 피더 사용 및 비용 부담 여부 확인 후 진행.</div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> DEVIATION CHARGE (USD 800/1,600) + (코파칸 JEA 운송료 + 코파칸 하역료 + LIFTING ON)(AED 6,000/7,000) + 피더료 (USD 2,000~2,500/TEU) + 도착지 로컬</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 홍해항 -->
-          <div class="eov-port-block" style="border-color:#ef4444;">
-            <div class="eov-port-title" style="background:#fff5f5; color:#991b1b;">🔸 홍해항 — JED · SKN · AQJ &nbsp;<span class="badge badge-critical">고비용 / 피더 제한적</span></div>
-            <div class="eov-icc">📋 ICC상 표기: <strong>POD KLF (TRUCK) - JEA (FEEDER) - DLY JED, SKN, AQJ</strong></div>
-            <div class="eov-leg" style="background:#fff5f5; color:#7f1d1d;">⚙️ LEG DATA: FM로 인한 EOV 선언 후 전항 KLF에서 JEA로 이송(화주 비용 청구). 기본적으로 <strong>현재 상황에서 비용이 매우 높고 피더가 현재로선 불가능한 상황</strong>. 당사 요청 시 두가지 옵션 검토.</div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">1안 — JEA → JED 육상운송 후 IRX2 선적</div>
-                <div class="eov-option-body">긴급 화물, JEA에서 JED까지 육상 운송(육상 운송 가능 여부 및 요율은 현재 협의 중) 후 JED → SKN, AQJ는 IRX2 선적</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> DEVIATION CHARGE (USD 800/1,600) + (KLF-JEA 운송료 + 코파칸 하역료 + LIFTING ON-OFF + 하역료 + JEA-KLF 운송료)(AED 9,000/10,000) + 피더료(확인 중, 추후 업데이트) + 도착지 로컬</div>
-                </div>
-              </div>
-              <div class="eov-option opt2">
-                <div class="eov-option-label">2안 — KLF/FJA 피더 개설 시 셔틀 후 피더 이용</div>
-                <div class="eov-option-body">KLF, FJA에 홍해항 피더 개설 및 선적 가능 시 JEA에서 KLF, FJA로 셔틀 후 피더 이용</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> DEVIATION CHARGE (USD 800/1,600) + (KLF-JEA 운송료 + 코파칸 하역료 + LIFTING ON-OFF)(AED 6,000/7,000) + 도착지 로컬</div>
-                </div>
-              </div>
-              <div class="eov-option opt3">
-                <div class="eov-option-label">3안 — 전쟁 종료 시까지 대기</div>
-                <div class="eov-option-body">전쟁 종료 시점까지 대기 후 서비스 재개</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> 해당 없음</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- end ko -->
-
-        <!-- English -->
-        <div data-lang="en">
-          <div class="change-row critical" style="margin-bottom:14px;">
-            ⚠️ <strong>EOV (End of Voyage) Declared Cargo — KLF Discharge Basis</strong>: Costs and routing subject to change per local conditions. Prior customer notice and LOI collection mandatory.
-          </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 JEA (Jebel Ali)</div>
-            <div class="eov-icc">📋 ICC Notation: <strong>POD KLF / DLY KLF</strong></div>
+          <div data-lang="en">
             <div class="eov-options">
               <div class="eov-option opt1">
                 <div class="eov-option-label">Option 1 — Haulage to JEA via DPW LOGISTIC</div>
                 <div class="eov-option-body">On customer request, coordinate with DPW LOGISTIC for JEA delivery and empty return</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">Korea</span> Khor Fakkan THC + KLF LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + Haulage + JEA LOCAL(DCF etc.) + KLF Storage</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">Non-KR</span> Khor Fakkan THC + KLF LIFTING ON + WRP (USD 2,000/3,500) + JEA LOCAL(DCF etc.) + KLF Storage</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">Korea</span> KLF THC + LIFTING ON + DEVIATION (USD 800/1,600) + Haulage + JEA LOCAL(DCF etc.) + KLF Storage</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">Non-KR</span> KLF THC + LIFTING ON + WRP (USD 2,000/3,500) + JEA LOCAL(DCF etc.) + KLF Storage</div>
                 </div>
               </div>
               <div class="eov-option opt2">
                 <div class="eov-option-label">Option 2 — Cargo release at KLF</div>
                 <div class="eov-option-body">EOV declared before KLF discharge; cargo released at KLF</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> KLF THC + KLF LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + JEA DROP OFF (AED 900/1,200) + JEA LOCAL(DCF etc.)</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> KLF THC + LIFTING ON + DEVIATION (USD 800/1,600) + JEA DROP OFF (AED 900/1,200) + JEA LOCAL</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 SHJ (Sharjah)</div>
-            <div class="eov-icc">📋 ICC Notation: <strong>POD KLF (TRUCK) - DLY SHJ</strong></div>
-            <div class="eov-leg">⚙️ LEG DATA: Changed from JEA T/S SHJ to KLF → SHJ ICD pickup by self-container; charged to KMTC account</div>
+          <div data-lang="zh">
             <div class="eov-options">
               <div class="eov-option opt1">
+                <div class="eov-option-label">方案1 — 经DPW LOGISTIC运至JEA</div>
+                <div class="eov-option-body">应货主要求，与DPW LOGISTIC协商后运至JEA，完成空箱还箱</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">Korea</span> KLF THC + KLF LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + Haulage + SHJ LOCAL(DCF etc.) + KLF Storage</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">Non-KR</span> KLF THC + KLF LIFTING ON + WRP (USD 2,000/3,500) + SHJ LOCAL(DCF etc.) + KLF Storage</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 AJM · RAK · QIW</div>
-            <div class="eov-icc">📋 ICC Notation: <strong>POD KLF (TRUCK) - DLY AJM, RAK, QIW</strong></div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">Option 1 — Via HUCHISON LOGISTICS</div>
-                <div class="eov-option-body">On customer request, coordinate with HUCHISON LOGISTICS for delivery and empty return to AJM/RAK/QIW</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">Korea</span> KLF THC + KLF LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + Haulage + Each Port LOCAL(DCF etc.) + KLF Storage</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">Non-KR</span> KLF THC + KLF LIFTING ON + WRP (USD 2,000/3,500) + Each Port LOCAL(DCF etc.) + KLF Storage</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">韩国发</span> 科尔法坎THC + 装卸费 + 偏航附加费(USD 800/1,600) + 运费 + JEA LOCAL + KLF堆存</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">非韩国</span> 科尔法坎THC + 装卸费 + WRP(USD 2,000/3,500) + JEA LOCAL + KLF堆存</div>
                 </div>
               </div>
               <div class="eov-option opt2">
-                <div class="eov-option-label">Option 2 — Cargo release at KLF after FM declaration</div>
-                <div class="eov-option-body">FM declared after KLF discharge; cargo released at KLF</div>
+                <div class="eov-option-label">方案2 — 在KLF直接提货</div>
+                <div class="eov-option-body">KLF卸货前宣布EOV，在KLF直接提货</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> KLF THC + KLF LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + Each Port DROP OFF (AED 900/1,200) + Each Port LOCAL(DCF etc.)</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> KLF THC + 装卸费 + 偏航附加费(USD 800/1,600) + JEA DROP OFF(AED 900/1,200) + JEA LOCAL</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 UPPER GULF — DMM · KSP · HMA · KWI · UQR</div>
-            <div class="eov-icc">📋 ICC Notation: <strong>POD KLF (TRUCK) - JEA (FEEDER) - DLY (DMM, KSP, HMA, KWI, UQR)</strong></div>
-            <div class="eov-leg">⚙️ LEG DATA: After FM-triggered EOV, all cargo transferred from KLF to JEA (at shipper's cost). Proceeds as KLF(TRUCK)–JEA(T/S)–UPPER GULF. <strong style="color:#c00;">Feeder costs have risen exponentially</strong> — confirm with consignees on feeder use and cost liability before proceeding.</div>
+        </div>
+      </div>
+
+      <!-- DMM (Upper Gulf) -->
+      <div class="port-card" id="port-DMM">
+        <div class="port-card-header">
+          <span class="port-card-name">DMM / KSP / HMA / KWI / UQR (<span data-lang-inline="ko">Upper Gulf</span><span data-lang-inline="en">Upper Gulf</span><span data-lang-inline="zh">上湾</span>)</span>
+          <span class="port-card-status st-closed"><span data-lang-inline="ko">서비스 중단 — 더블 T/S</span><span data-lang-inline="en">Suspended — Double T/S</span><span data-lang-inline="zh">服务中断 — 双中转</span></span>
+        </div>
+        <div class="port-card-grid">
+          <div class="port-info-item">
+            <div class="port-info-label">ROUTING</div>
+            <div class="port-info-val">PKW → <strong>KLF</strong> → (truck) → <strong>JEA</strong> → (feeder) → DMM/KSP/HMA/KWI/UQR</div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label">B/L (ICC)</div>
+            <div class="port-info-val">POD: KLF (TRUCK) - JEA (FEEDER) - DLY</div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label">WRS</div>
+            <div class="port-info-val">20': <strong>$2,000</strong> / 40': <strong>$3,500</strong> + <span data-lang-inline="ko">피더비 별도</span><span data-lang-inline="en">feeder extra</span><span data-lang-inline="zh">支线费另计</span></div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label">STATUS</div>
+            <div class="port-info-val"><span data-lang-inline="ko">AIM Cycle 75 DMM Drop → 피더 연결 검토 중</span><span data-lang-inline="en">AIM Cycle 75 DMM Drop → feeder under review</span><span data-lang-inline="zh">AIM Cycle 75 DMM取消 → 支线连接审查中</span></div>
+          </div>
+          <div class="port-guide">
+            <span data-lang-inline="ko">📋 <strong>부킹 가이드:</strong> T/S 신고 후 피더 연결 | 피더사 WRS 별도 부과 | <strong style="color:#c00;">피더 비용 기하급수적 상승</strong> — 수화주 피더 사용·비용 부담 여부 사전 확인 필수</span>
+            <span data-lang-inline="en">📋 <strong>Booking Guide:</strong> T/S declaration then feeder connection | Separate feeder WRS | <strong style="color:#c00;">Feeder costs rising exponentially</strong> — Confirm consignee acceptance first</span>
+            <span data-lang-inline="zh">📋 <strong>订舱指引:</strong> T/S申报后转支线 | 另收支线WRS | <strong style="color:#c00;">支线费用急剧上涨</strong> — 须事先确认收货方是否承担支线费用</span>
+          </div>
+          <div class="port-info-note">
+            <span data-lang-inline="ko">⚠️ LOI 필수 | 카고 의사결정 필요 (피더 vs COD) | 비용 확정 전 화주 사전 안내</span>
+            <span data-lang-inline="en">⚠️ LOI required | Cargo decision needed (feeder vs COD) | Advise shipper before cost confirmation</span>
+            <span data-lang-inline="zh">⚠️ 须收取LOI | 需货物决策（支线 vs COD）| 费用确定前须通知货主</span>
+          </div>
+        </div>
+        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 EOV 처리 방안 상세</span><span data-lang-inline="en">📋 EOV Handling Details</span><span data-lang-inline="zh">📋 EOV处理方案详情</span></div>
+        <div class="acc-body" style="display:none;">
+          <div data-lang="ko">
             <div class="eov-options">
               <div class="eov-option opt1">
+                <div class="eov-option-label">KLF → JEA 이송 후 피더</div>
+                <div class="eov-option-body">FM로 인한 EOV 선언 후 KLF에서 JEA로 이송(화주 비용). KLF(TRUCK)–JEA(T/S)–Upper Gulf 형태. <strong style="color:#c00;">피더 비용 기하급수적 상승</strong>이므로 사전 수화주 확인 필수.</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> DEVIATION CHARGE (USD 800/1,600) + (KLF-JEA haulage + KLF unloading + LIFTING ON)(AED 6,000/7,000) + Feeder (USD 2,000~2,500/TEU) + Dest. Local</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> DEVIATION CHARGE (USD 800/1,600) + (코파칸 JEA 운송료 + 하역료 + LIFTING ON)(AED 6,000/7,000) + 피더료 (USD 2,000~2,500/TEU) + 도착지 로컬</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="eov-port-block" style="border-color:#ef4444;">
-            <div class="eov-port-title" style="background:#fff5f5; color:#991b1b;">🔸 Red Sea — JED · SKN · AQJ &nbsp;<span class="badge badge-critical">High Cost / Limited Feeder</span></div>
-            <div class="eov-icc">📋 ICC Notation: <strong>POD KLF (TRUCK) - JEA (FEEDER) - DLY JED, SKN, AQJ</strong></div>
-            <div class="eov-leg" style="background:#fff5f5; color:#7f1d1d;">⚙️ LEG DATA: After FM-triggered EOV, cargo transferred KLF→JEA (at shipper's cost). <strong>Current situation: very high costs and feeder currently unavailable.</strong></div>
+          <div data-lang="en">
             <div class="eov-options">
               <div class="eov-option opt1">
-                <div class="eov-option-label">Option 1 — Overland JEA→JED then IRX2 loading</div>
-                <div class="eov-option-body">Urgent cargo: overland transport JEA→JED (rates under negotiation), then JED→SKN/AQJ via IRX2</div>
+                <div class="eov-option-label">Transfer KLF → JEA then Feeder</div>
+                <div class="eov-option-body">After FM-triggered EOV, cargo transferred KLF→JEA (at shipper's cost). KLF(TRUCK)–JEA(T/S)–Upper Gulf. <strong style="color:#c00;">Feeder costs risen exponentially</strong> — confirm with consignees first.</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> DEVIATION CHARGE (USD 800/1,600) + (KLF-JEA haulage + KLF unloading + LIFTING ON-OFF + unloading + JEA-KLF haulage)(AED 9,000/10,000) + Feeder (TBD) + Dest. Local</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> DEVIATION (USD 800/1,600) + (KLF-JEA haulage + unloading + LIFTING ON)(AED 6,000/7,000) + Feeder (USD 2,000~2,500/TEU) + Dest. Local</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-lang="zh">
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-option-label">KLF→JEA转运后支线</div>
+                <div class="eov-option-body">FM触发EOV后，货物从KLF转运至JEA（费用由货主承担）。按KLF(TRUCK)–JEA(T/S)–上湾港形式。<strong style="color:#c00;">支线费用急剧上涨</strong>，须事先与收货方确认。</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 偏航附加费(USD 800/1,600) + (KLF-JEA运费+卸货费+LIFTING ON)(AED 6,000/7,000) + 支线费(USD 2,000~2,500/TEU) + 目的港本地费</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHJ/AJM/RAK -->
+      <div class="port-card" id="port-SHJ">
+        <div class="port-card-header">
+          <span class="port-card-name">SHJ / AJM / RAK / QIW</span>
+          <span class="port-card-status st-limited"><span data-lang-inline="ko">KLF 경유 트럭</span><span data-lang-inline="en">KLF via Truck</span><span data-lang-inline="zh">经KLF卡车运输</span></span>
+        </div>
+        <div class="port-card-grid">
+          <div class="port-info-item">
+            <div class="port-info-label">ROUTING</div>
+            <div class="port-info-val">PKW → <strong>KLF</strong> → (truck) → SHJ / AJM / RAK / QIW</div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label">B/L (ICC)</div>
+            <div class="port-info-val">POD: <strong>KLF (TRUCK)</strong> / DLY: SHJ (or AJM/RAK/QIW)</div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label">WRS</div>
+            <div class="port-info-val">20': <strong>$2,000</strong> / 40': <strong>$3,500</strong> + <span data-lang-inline="ko">트럭비 별도</span><span data-lang-inline="en">truck cost</span><span data-lang-inline="zh">卡车费另计</span></div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label"><span data-lang-inline="ko">다음 선박</span><span data-lang-inline="en">Next Vessel</span><span data-lang-inline="zh">下一艘船</span></div>
+            <div class="port-info-val">KDM호 KLF ETA 3/23</div>
+          </div>
+          <div class="port-guide">
+            <span data-lang-inline="ko">📋 <strong>부킹 가이드:</strong> JEA와 동일 기준 적용 | 사전 화주 안내 후 요청 시 진행 | <strong>AJM·RAK:</strong> Hutchison Logistic 협의 후 처리 (비용 정산 방식 확인 필요) | 세관 문제 해결 완료 — 보세운송 가능</span>
+            <span data-lang-inline="en">📋 <strong>Booking Guide:</strong> Same basis as JEA | Proceed after customer notice | <strong>AJM/RAK:</strong> via Hutchison Logistic (billing method TBC) | Customs cleared — bonded haulage OK</span>
+            <span data-lang-inline="zh">📋 <strong>订舱指引:</strong> 与JEA相同基准 | 事前通知货主后进行 | <strong>AJM·RAK:</strong> 与Hutchison Logistic协商处理（费用结算待确认）| 海关已解决 — 可保税运输</span>
+          </div>
+          <div class="port-info-note">
+            <span data-lang-inline="ko">⚠️ LOI 필수 | KLF 3일 내 미픽업 시 SHJ ICD 강제이송</span>
+            <span data-lang-inline="en">⚠️ LOI required | Forced transfer to SHJ ICD if not picked up within 3 days</span>
+            <span data-lang-inline="zh">⚠️ 须收取LOI | 3日内未提取强制转移至SHJ ICD</span>
+          </div>
+        </div>
+        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 EOV 처리 방안 상세</span><span data-lang-inline="en">📋 EOV Handling Details</span><span data-lang-inline="zh">📋 EOV处理方案详情</span></div>
+        <div class="acc-body" style="display:none;">
+          <div data-lang="ko">
+            <div class="eov-port-title" style="font-size:12px;padding:6px 10px;">🔸 SHJ (Sharjah)</div>
+            <div class="eov-leg" style="font-size:11.5px;">기존 JEA T/S SHJ 대신, KLF에서 SHJ ICD 픽업으로 변경. 셀프테이너가 운송 후 당사 청구</div>
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">한국발</span> 코파칸 THC + LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 운송료 + SHJ LOCAL + KLF 스토리지</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">한국외</span> 코파칸 THC + LIFTING ON + WRP (USD 2,000/3,500) + SHJ LOCAL + KLF 스토리지</div>
+                </div>
+              </div>
+            </div>
+            <div class="eov-port-title" style="font-size:12px;padding:6px 10px;margin-top:8px;">🔸 AJM · RAK · QIW</div>
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-option-label">1안 — HUTCHISON LOGISTICS 경유</div>
+                <div class="eov-option-body">화주 요청 시 HUTCHISON LOGISTICS와 협의, 해당 포트로 반출·엠티반납</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">한국발</span> 코파칸 THC + LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 운송료 + 각 포트 LOCAL + KLF 스토리지</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">한국외</span> 코파칸 THC + LIFTING ON + WRP (USD 2,000/3,500) + 각 포트 LOCAL + KLF 스토리지</div>
+                </div>
+              </div>
+              <div class="eov-option opt2">
+                <div class="eov-option-label">2안 — FM 선언 후 KLF 직접 반출</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> 코파칸 THC + LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 각 포트 DROP OFF (AED 900/1,200) + 각 포트 LOCAL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-lang="en">
+            <div class="eov-port-title" style="font-size:12px;padding:6px 10px;">🔸 SHJ (Sharjah)</div>
+            <div class="eov-leg" style="font-size:11.5px;">Changed from JEA T/S to KLF → SHJ ICD pickup; self-container transport charged to KMTC</div>
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">Korea</span> KLF THC + LIFTING ON + DEVIATION (USD 800/1,600) + Haulage + SHJ LOCAL + KLF Storage</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">Non-KR</span> KLF THC + LIFTING ON + WRP (USD 2,000/3,500) + SHJ LOCAL + KLF Storage</div>
+                </div>
+              </div>
+            </div>
+            <div class="eov-port-title" style="font-size:12px;padding:6px 10px;margin-top:8px;">🔸 AJM · RAK · QIW</div>
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-option-label">Option 1 — Via HUTCHISON LOGISTICS</div>
+                <div class="eov-option-body">On customer request, coordinate with HUTCHISON LOGISTICS for delivery and empty return</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">Korea</span> KLF THC + LIFTING ON + DEVIATION (USD 800/1,600) + Haulage + Each Port LOCAL + KLF Storage</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">Non-KR</span> KLF THC + LIFTING ON + WRP (USD 2,000/3,500) + Each Port LOCAL + KLF Storage</div>
+                </div>
+              </div>
+              <div class="eov-option opt2">
+                <div class="eov-option-label">Option 2 — Cargo release at KLF after FM</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> KLF THC + LIFTING ON + DEVIATION (USD 800/1,600) + Each Port DROP OFF (AED 900/1,200) + Each Port LOCAL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-lang="zh">
+            <div class="eov-port-title" style="font-size:12px;padding:6px 10px;">🔸 SHJ（沙迦）</div>
+            <div class="eov-leg" style="font-size:11.5px;">原JEA T/S SHJ改为KLF→SHJ ICD自提，自提集装箱运输后向KMTC计费</div>
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">韩国发</span> KLF THC + 装卸费 + 偏航附加费(USD 800/1,600) + 运费 + SHJ LOCAL + KLF堆存</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">非韩国</span> KLF THC + 装卸费 + WRP(USD 2,000/3,500) + SHJ LOCAL + KLF堆存</div>
+                </div>
+              </div>
+            </div>
+            <div class="eov-port-title" style="font-size:12px;padding:6px 10px;margin-top:8px;">🔸 AJM · RAK · QIW</div>
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-option-label">方案1 — 经HUTCHISON LOGISTICS</div>
+                <div class="eov-option-body">应货主要求，与HUTCHISON LOGISTICS协商后运至各港，完成空箱还箱</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label kr">韩国发</span> KLF THC + 装卸费 + 偏航附加费(USD 800/1,600) + 运费 + 各港LOCAL + KLF堆存</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label intl">非韩国</span> KLF THC + 装卸费 + WRP(USD 2,000/3,500) + 各港LOCAL + KLF堆存</div>
+                </div>
+              </div>
+              <div class="eov-option opt2">
+                <div class="eov-option-label">方案2 — FM申报后在KLF直接提货</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> KLF THC + 装卸费 + 偏航附加费(USD 800/1,600) + 各港DROP OFF(AED 900/1,200) + 各港LOCAL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AQJ/JED/SKN (Red Sea) -->
+      <div class="port-card" id="port-RED" style="border-color:#ef4444;">
+        <div class="port-card-header" style="background:#fff5f5;">
+          <span class="port-card-name">AQJ / JED / SKN (<span data-lang-inline="ko">홍해</span><span data-lang-inline="en">Red Sea</span><span data-lang-inline="zh">红海</span>)</span>
+          <span class="port-card-status st-closed"><span data-lang-inline="ko">더블 T/S — 적체 경보</span><span data-lang-inline="en">Double T/S — Idling Alert</span><span data-lang-inline="zh">双中转 — 积压警报</span></span>
+        </div>
+        <div class="port-card-grid">
+          <div class="port-info-item">
+            <div class="port-info-label">ROUTING</div>
+            <div class="port-info-val">PKW → <strong>KLF</strong> → (truck) → <strong>JEA</strong> → (feeder JJS/IRX2) → AQJ/JED/SKN</div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label">B/L (ICC)</div>
+            <div class="port-info-val">POD: KLF (TRUCK) - JEA (FEEDER) - DLY</div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label">WRS</div>
+            <div class="port-info-val">20': <strong>$2,000</strong> / 40': <strong>$3,500</strong> + <span data-lang-inline="ko">피더비 별도</span><span data-lang-inline="en">feeder cost</span><span data-lang-inline="zh">支线费另计</span></div>
+          </div>
+          <div class="port-info-item">
+            <div class="port-info-label"><span data-lang-inline="ko">피더</span><span data-lang-inline="en">Feeder</span><span data-lang-inline="zh">支线</span></div>
+            <div class="port-info-val">JJS/W · IRX2/W (JEA T/S)</div>
+          </div>
+          <div class="port-guide">
+            <span data-lang-inline="ko">📋 <strong>부킹 가이드:</strong> T/S 신고 후 피더 연결 | 피더사 WRS 별도 부과 | <strong style="color:#c00;">현재 비용 매우 높고 피더 현실적 불가</strong> — 화주에게 상황 반드시 사전 안내</span>
+            <span data-lang-inline="en">📋 <strong>Booking Guide:</strong> T/S declaration then feeder | Separate feeder WRS | <strong style="color:#c00;">Currently very high cost, feeder practically unavailable</strong> — Mandatory prior notice to shipper</span>
+            <span data-lang-inline="zh">📋 <strong>订舱指引:</strong> T/S申报后转支线 | 另收支线WRS | <strong style="color:#c00;">目前费用极高，支线实际不可用</strong> — 须事先通知货主</span>
+          </div>
+          <div class="port-info-note" style="background:#fef2f2;border-left-color:#ef4444;">
+            <span data-lang-inline="ko">🔴 JEA·MUN T/S 적체 경보 발령 중 (W11~W15) | LOI 필수 | 더블 T/S로 운송 기간 대폭 연장</span>
+            <span data-lang-inline="en">🔴 JEA/MUN T/S idling alert (W11–W15) | LOI required | Transit time significantly extended</span>
+            <span data-lang-inline="zh">🔴 JEA/MUN中转积压警报(W11~W15) | 须收取LOI | 运输时间大幅延长</span>
+          </div>
+        </div>
+        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)" style="background:#fff5f5;color:#991b1b;"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 EOV 처리 방안 상세 <span class="badge badge-critical">고비용 / 피더 제한</span></span><span data-lang-inline="en">📋 EOV Handling Details <span class="badge badge-critical">High Cost / Limited Feeder</span></span><span data-lang-inline="zh">📋 EOV处理方案详情 <span class="badge badge-critical">高费用 / 支线受限</span></span></div>
+        <div class="acc-body" style="display:none;">
+          <div data-lang="ko">
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-option-label">1안 — JEA → JED 육상운송 후 IRX2 선적</div>
+                <div class="eov-option-body">긴급 화물: JEA에서 JED까지 육상 운송(요율 협의 중) 후 JED → SKN, AQJ는 IRX2 선적</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> DEVIATION CHARGE (USD 800/1,600) + (KLF-JEA 운송료 + 하역료 + LIFTING ON-OFF + JEA-KLF 운송료)(AED 9,000/10,000) + 피더료(확인 중) + 도착지 로컬</div>
+                </div>
+              </div>
+              <div class="eov-option opt2">
+                <div class="eov-option-label">2안 — KLF/FJA 피더 개설 시 셔틀 후 피더 이용</div>
+                <div class="eov-option-body">KLF, FJA에 홍해항 피더 개설·선적 가능 시 JEA에서 KLF/FJA로 셔틀 후 피더 이용</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> DEVIATION CHARGE (USD 800/1,600) + (KLF-JEA 운송료 + 하역료 + LIFTING ON-OFF)(AED 6,000/7,000) + 도착지 로컬</div>
+                </div>
+              </div>
+              <div class="eov-option opt3">
+                <div class="eov-option-label">3안 — 전쟁 종료 시까지 대기</div>
+                <div class="eov-option-body">전쟁 종료 시점까지 대기 후 서비스 재개</div>
+                <div class="eov-cost"><div class="eov-cost-row"><span class="eov-cost-label">비용</span> 해당 없음</div></div>
+              </div>
+            </div>
+          </div>
+          <div data-lang="en">
+            <div class="eov-options">
+              <div class="eov-option opt1">
+                <div class="eov-option-label">Option 1 — Overland JEA→JED then IRX2</div>
+                <div class="eov-option-body">Urgent cargo: overland JEA→JED (rates under negotiation), JED→SKN/AQJ via IRX2</div>
+                <div class="eov-cost">
+                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> DEVIATION (USD 800/1,600) + (KLF-JEA haulage + unloading + LIFTING ON-OFF + JEA-KLF haulage)(AED 9,000/10,000) + Feeder (TBD) + Dest. Local</div>
                 </div>
               </div>
               <div class="eov-option opt2">
                 <div class="eov-option-label">Option 2 — Feeder via KLF/FJA when available</div>
                 <div class="eov-option-body">When Red Sea feeder from KLF/FJA available: shuttle JEA→KLF/FJA then feeder</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> DEVIATION CHARGE (USD 800/1,600) + (KLF-JEA haulage + KLF unloading + LIFTING ON-OFF)(AED 6,000/7,000) + Dest. Local</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> DEVIATION (USD 800/1,600) + (KLF-JEA haulage + unloading + LIFTING ON-OFF)(AED 6,000/7,000) + Dest. Local</div>
                 </div>
               </div>
               <div class="eov-option opt3">
@@ -967,97 +1100,20 @@
               </div>
             </div>
           </div>
-        </div><!-- end en -->
-
-        <!-- Chinese -->
-        <div data-lang="zh">
-          <div class="change-row critical" style="margin-bottom:14px;">
-            ⚠️ <strong>EOV（航次终止）申报货物 — KLF卸货基准</strong>：费用及运输方式可能随现地情况变动，须事先通知货主并征收LOI。
-          </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 JEA（杰贝阿里）</div>
-            <div class="eov-icc">📋 ICC标注: <strong>POD KLF / DLY KLF</strong></div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">方案1 — 经DPW LOGISTIC运至JEA</div>
-                <div class="eov-option-body">应货主要求，与DPW LOGISTIC协商后运至JEA并完成空箱还箱</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">韩国发</span> 科尔法坎THC + KLF装卸费 + 偏航附加费(USD 800/1,600) + 运费 + JEA LOCAL费用 + KLF堆存</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">非韩国</span> 科尔法坎THC + KLF装卸费 + WRP(USD 2,000/3,500) + JEA LOCAL费用 + KLF堆存</div>
-                </div>
-              </div>
-              <div class="eov-option opt2">
-                <div class="eov-option-label">方案2 — 在KLF直接提货</div>
-                <div class="eov-option-body">KLF卸货前宣布EOV，在KLF提货</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> KLF THC + KLF装卸费 + 偏航附加费(USD 800/1,600) + JEA DROP OFF(AED 900/1,200) + JEA LOCAL费用</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 SHJ（沙迦）</div>
-            <div class="eov-icc">📋 ICC标注: <strong>POD KLF (TRUCK) - DLY SHJ</strong></div>
-            <div class="eov-leg">⚙️ LEG DATA: 原JEA T/S SHJ改为KLF→SHJ ICD自提，自提集装箱运输后向KMTC计费</div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">韩国发</span> KLF THC + KLF装卸费 + 偏航附加费(USD 800/1,600) + 运费 + SHJ LOCAL费用 + KLF堆存</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">非韩国</span> KLF THC + KLF装卸费 + WRP(USD 2,000/3,500) + SHJ LOCAL费用 + KLF堆存</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 AJM · RAK · QIW</div>
-            <div class="eov-icc">📋 ICC标注: <strong>POD KLF (TRUCK) - DLY AJM, RAK, QIW</strong></div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">方案1 — 经HUCHISON LOGISTICS</div>
-                <div class="eov-option-body">应货主要求，与HUCHISON LOGISTICS协商后运至AJM/RAK/QIW并完成空箱还箱</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">韩国发</span> KLF THC + KLF装卸费 + 偏航附加费(USD 800/1,600) + 运费 + 各港LOCAL费用 + KLF堆存</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">非韩国</span> KLF THC + KLF装卸费 + WRP(USD 2,000/3,500) + 各港LOCAL费用 + KLF堆存</div>
-                </div>
-              </div>
-              <div class="eov-option opt2">
-                <div class="eov-option-label">方案2 — FM申报后在KLF直接提货</div>
-                <div class="eov-option-body">KLF卸货后宣布FM，在KLF提货</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> KLF THC + KLF装卸费 + 偏航附加费(USD 800/1,600) + 各港DROP OFF(AED 900/1,200) + 各港LOCAL费用</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">🔸 上湾 — DMM · KSP · HMA · KWI · UQR</div>
-            <div class="eov-icc">📋 ICC标注: <strong>POD KLF (TRUCK) - JEA (FEEDER) - DLY (DMM, KSP, HMA, KWI, UQR)</strong></div>
-            <div class="eov-leg">⚙️ LEG DATA: FM触发EOV宣布后，货物从KLF转运至JEA（费用由货主承担）。按KLF(TRUCK)–JEA(T/S)–上湾港形式进行。<strong style="color:#c00;">支线费用急剧上涨</strong>，须事先与收货方确认是否承担支线费用。</div>
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 偏航附加费(USD 800/1,600) + (KLF-JEA运费 + KLF卸货费 + LIFTING ON)(AED 6,000/7,000) + 支线费(USD 2,000~2,500/TEU) + 目的港本地费</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="eov-port-block" style="border-color:#ef4444;">
-            <div class="eov-port-title" style="background:#fff5f5; color:#991b1b;">🔸 红海港口 — JED · SKN · AQJ &nbsp;<span class="badge badge-critical">高费用 / 支线受限</span></div>
-            <div class="eov-icc">📋 ICC标注: <strong>POD KLF (TRUCK) - JEA (FEEDER) - DLY JED, SKN, AQJ</strong></div>
-            <div class="eov-leg" style="background:#fff5f5; color:#7f1d1d;">⚙️ LEG DATA: FM触发EOV后货物KLF→JEA转运（费用由货主承担）。<strong>目前费用极高，支线目前不可用。</strong></div>
+          <div data-lang="zh">
             <div class="eov-options">
               <div class="eov-option opt1">
                 <div class="eov-option-label">方案1 — JEA→JED陆运后IRX2装船</div>
                 <div class="eov-option-body">紧急货物：JEA至JED陆运（运价协商中），JED→SKN/AQJ经IRX2装船</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 偏航附加费(USD 800/1,600) + (KLF-JEA运费+KLF卸货+LIFTING ON-OFF+卸货+JEA-KLF运费)(AED 9,000/10,000) + 支线费(待确认) + 目的港本地费</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 偏航附加费(USD 800/1,600) + (KLF-JEA运费+卸货+LIFTING ON-OFF+JEA-KLF运费)(AED 9,000/10,000) + 支线费(待确认) + 目的港本地费</div>
                 </div>
               </div>
               <div class="eov-option opt2">
-                <div class="eov-option-label">方案2 — KLF/FJA开通支线后利用支线</div>
+                <div class="eov-option-label">方案2 — KLF/FJA开通支线后利用</div>
                 <div class="eov-option-body">KLF/FJA红海支线开通时，JEA→KLF/FJA穿梭后利用支线</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 偏航附加费(USD 800/1,600) + (KLF-JEA运费+KLF卸货+LIFTING ON-OFF)(AED 6,000/7,000) + 目的港本地费</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 偏航附加费(USD 800/1,600) + (KLF-JEA运费+卸货+LIFTING ON-OFF)(AED 6,000/7,000) + 目的港本地费</div>
                 </div>
               </div>
               <div class="eov-option opt3">
@@ -1067,140 +1123,137 @@
               </div>
             </div>
           </div>
-        </div><!-- end zh -->
-
+        </div>
       </div>
-    </div>
 
-    <!-- NSA 양하 건 Pane -->
-    <div class="tab-pane" id="eov-nsa-discharge">
-      <div class="card-body">
-
-        <!-- Korean -->
-        <div data-lang="ko">
-          <div class="change-row" style="margin-bottom:14px;">
-            📌 <strong>NSA 양하 건</strong> — UPPER GULF 및 홍해항을 제외하고, KLF 도착 이후 각 DLY 포트별 처리 방안은 위 KLF 양하 건과 동일하게 적용.
-            <div class="change-meta">대상: UPPER GULF 및 홍해항을 제외한 KLF 이후 각 DLY 포트 (JEA, SHJ, AJM, RAK, QIW 등)</div>
+      <!-- NSA -->
+      <div class="port-card" id="port-NSA">
+        <div class="port-card-header">
+          <span class="port-card-name">NSA (Nhava Sheva)</span>
+          <span class="port-card-status st-limited"><span data-lang-inline="ko">대체 양하항 (EOV)</span><span data-lang-inline="en">Alternate Discharge (EOV)</span><span data-lang-inline="zh">替代卸货港(EOV)</span></span>
+        </div>
+        <div class="port-card-grid">
+          <div class="port-info-item">
+            <div class="port-info-label">STATUS</div>
+            <div class="port-info-val"><span data-lang-inline="ko">AIM2·VGI 중동향 ROB 전량 NSA 양하 결정</span><span data-lang-inline="en">AIM2/VGI all ME-bound ROB discharged at NSA</span><span data-lang-inline="zh">AIM2·VGI中东向ROB全部NSA卸货</span></div>
           </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">NSA 화물 단계별 처리 방안</div>
+          <div class="port-info-item">
+            <div class="port-info-label"><span data-lang-inline="ko">양하량</span><span data-lang-inline="en">Volume</span><span data-lang-inline="zh">卸货量</span></div>
+            <div class="port-info-val"><strong>2,050 TEU</strong></div>
+          </div>
+          <div class="port-guide">
+            <span data-lang-inline="ko">📋 <strong>처리 가이드:</strong> EOV 선언 화물 대체 양하항 | KLF 도착 이후 처리는 각 DLY 포트별 방안과 동일 적용 | EOV 후 B/L 처리 법무 검토 중 (기존 B/L 유지 vs 2차 재계약)</span>
+            <span data-lang-inline="en">📋 <strong>Handling Guide:</strong> EOV-declared alternate discharge port | Post-KLF handling follows same DLY port procedures | B/L post-EOV under legal review (maintain vs re-contract)</span>
+            <span data-lang-inline="zh">📋 <strong>处理指引:</strong> EOV申报货物替代卸货港 | KLF到达后处理与各目的港方案相同 | EOV后提单处理法律审查中（维持原提单 vs 新合同）</span>
+          </div>
+          <div class="port-info-note">
+            <span data-lang-inline="ko">⚠️ LOI 필수 | 화주 사전 합의 필요 | 비용·이송방법 현지 상황에 따라 변동 가능</span>
+            <span data-lang-inline="en">⚠️ LOI required | Shipper pre-agreement needed | Costs and routing subject to change per local conditions</span>
+            <span data-lang-inline="zh">⚠️ 须收取LOI | 须与货主事前协议 | 费用及运输方式可能随现地情况变动</span>
+          </div>
+        </div>
+        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 NSA 화물 처리 방안 상세</span><span data-lang-inline="en">📋 NSA Cargo Handling Details</span><span data-lang-inline="zh">📋 NSA货物处理方案详情</span></div>
+        <div class="acc-body" style="display:none;">
+          <div data-lang="ko">
+            <div class="change-row" style="margin-bottom:10px;font-size:12px;">📌 UPPER GULF·홍해항 제외 시, KLF 도착 이후 각 DLY 포트별 처리 방안은 위 KLF 양하 건과 동일 적용.</div>
             <div class="eov-options">
               <div class="eov-option opt1">
                 <div class="eov-option-label">1안 — POL 반송 또는 COD 매각</div>
-                <div class="eov-option-body">선적지 화주 측에 EOV 안내 후 POL 반송 혹은 COD 후 다른 곳으로 화물 매각 가능한지 여부 확인</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> 도착지 화주 청구 없음</div>
-                </div>
+                <div class="eov-option-body">선적지 화주 측에 EOV 안내 후 POL 반송 혹은 COD 후 다른 곳으로 화물 매각 가능한지 확인</div>
+                <div class="eov-cost"><div class="eov-cost-row"><span class="eov-cost-label">비용</span> 도착지 화주 청구 없음</div></div>
               </div>
               <div class="eov-option opt2">
                 <div class="eov-option-label">2안 — 피더 이용 KLF 이송 후 DLY 포트 처리</div>
-                <div class="eov-option-body">중동항 화물 이송이 필요한 경우 피더를 이용해서 KLF 이송 후 상기 DLY 포트별 화물 처리 방안과 동일하게 처리</div>
+                <div class="eov-option-body">중동항 화물 이송이 필요한 경우 피더를 이용해서 KLF 이송 후 상기 DLY 포트별 처리와 동일</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> KLF까지 비용 (당사 모선 2ND 혹은 공동사 모선 이용시에도 당사에서 추가 비용 부담이 필요하므로 마켓 피더 운임 청구 필요) + 상기 케이스별 청구 비용</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> KLF까지 마켓 피더 운임 + 상기 케이스별 비용</div>
                 </div>
               </div>
               <div class="eov-option opt3">
                 <div class="eov-option-label">3안 — UPPER GULF: JED에서 각 포트 육상운송</div>
-                <div class="eov-option-body">UPPER GULF항(DMM, KSP, HMA, KWI, UQR) — 수화주 측과 확인 후 JED에서 각 포트까지 육송 가능 시 NSA → 각 DLY 피더 이용하여 선적</div>
+                <div class="eov-option-body">DMM, KSP, HMA, KWI, UQR — 수화주 확인 후 JED에서 각 포트까지 육송, NSA → 각 DLY 피더 이용 선적</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> JED에서 DMM, KSP, HMA까지 육상운송 하겠다는 화주에 대해선 WRP US$ 2,000/3,500 청구 후 육상 운송은 화주가 직접 수배. 컨테이너 반납은 각 포트</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> WRP US$ 2,000/3,500 청구 후 육상 운송은 화주가 직접 수배. 컨테이너 반납은 각 포트</div>
                 </div>
               </div>
-              <div class="eov-option opt4">
-                <div class="eov-option-label">4안 — 홍해항: NSA → JED/SKN/AQJ 피더 이용</div>
-                <div class="eov-option-body">홍해항의 경우 NSA - JED, SKN, AQJ항 피더 이용 선적</div>
+              <div class="eov-option opt4" style="border-left-color:#7c3aed;">
+                <div class="eov-option-label">4안 — 홍해항: NSA → JED/SKN/AQJ 피더</div>
+                <div class="eov-option-body">NSA에서 JED, SKN, AQJ항 피더 이용 선적</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> WRP US$ 2,000/3,500 징수 시 피더운임 별도 청구하지 않음. IRX2 선박료($1,500~1,700/TEU)와 비슷한 수준 예상.</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> WRP US$ 2,000/3,500 징수 시 피더운임 별도 청구 없음. IRX2 선박료($1,500~1,700/TEU) 수준 예상</div>
                 </div>
               </div>
             </div>
           </div>
-        </div><!-- end ko -->
-
-        <!-- English -->
-        <div data-lang="en">
-          <div class="change-row" style="margin-bottom:14px;">
-            📌 <strong>NSA Discharge Cargo</strong> — Except UPPER GULF & Red Sea ports, post-KLF handling follows the same procedures as KLF discharge above.
-            <div class="change-meta">Applies to: All DLY ports after KLF except UPPER GULF and Red Sea (JEA, SHJ, AJM, RAK, QIW, etc.)</div>
-          </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">NSA Cargo Step-by-Step Handling</div>
+          <div data-lang="en">
+            <div class="change-row" style="margin-bottom:10px;font-size:12px;">📌 Except UPPER GULF & Red Sea, post-KLF handling follows same procedures as KLF discharge ports above.</div>
             <div class="eov-options">
               <div class="eov-option opt1">
                 <div class="eov-option-label">Option 1 — Return to POL or COD Sale</div>
-                <div class="eov-option-body">Notify shipper of EOV; confirm whether cargo can be returned to POL or sold via COD at another location</div>
+                <div class="eov-option-body">Notify shipper of EOV; confirm whether cargo can be returned to POL or sold via COD</div>
                 <div class="eov-cost"><div class="eov-cost-row"><span class="eov-cost-label">Cost</span> No charge to consignee</div></div>
               </div>
               <div class="eov-option opt2">
-                <div class="eov-option-label">Option 2 — Transfer to KLF via feeder then handle per DLY port</div>
-                <div class="eov-option-body">If Middle East delivery required, transfer to KLF via feeder then apply same DLY port procedures above</div>
+                <div class="eov-option-label">Option 2 — Transfer to KLF via feeder then DLY port</div>
+                <div class="eov-option-body">If ME delivery required, transfer to KLF via feeder then apply same DLY port procedures</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> Cost to KLF (market feeder rate required even if KMTC or partner vessel used — KMTC bears additional cost) + Case-by-case charges above</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> Market feeder rate to KLF + case-by-case charges</div>
                 </div>
               </div>
               <div class="eov-option opt3">
-                <div class="eov-option-label">Option 3 — UPPER GULF: Overland from JED to each port</div>
-                <div class="eov-option-body">For UPPER GULF (DMM, KSP, HMA, KWI, UQR): confirm with consignee if overland from JED is possible; load NSA onto each DLY feeder</div>
+                <div class="eov-option-label">Option 3 — UPPER GULF: Overland from JED</div>
+                <div class="eov-option-body">DMM/KSP/HMA/KWI/UQR — confirm with consignee, overland JED to each port via feeder</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> Charge WRP US$ 2,000/3,500 for overland JED→DMM/KSP/HMA; consignee arranges own haulage; empty return at each port</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> Charge WRP US$ 2,000/3,500; consignee arranges haulage; empty return at each port</div>
                 </div>
               </div>
-              <div class="eov-option opt4">
+              <div class="eov-option opt4" style="border-left-color:#7c3aed;">
                 <div class="eov-option-label">Option 4 — Red Sea: NSA → JED/SKN/AQJ feeder</div>
-                <div class="eov-option-body">For Red Sea ports: NSA loading via JED, SKN, AQJ feeder</div>
+                <div class="eov-option-body">NSA loading via JED/SKN/AQJ feeder</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> When WRP US$ 2,000/3,500 collected, no separate feeder charge. Expected similar to IRX2 vessel rate ($1,500~1,700/TEU).</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> When WRP US$ 2,000/3,500 collected, no separate feeder charge. Expected ~IRX2 rate ($1,500~1,700/TEU)</div>
                 </div>
               </div>
             </div>
           </div>
-        </div><!-- end en -->
-
-        <!-- Chinese -->
-        <div data-lang="zh">
-          <div class="change-row" style="margin-bottom:14px;">
-            📌 <strong>NSA卸货货物</strong> — 除上湾及红海港口外，KLF到达后各目的港处理方案与上方KLF卸货方案相同。
-            <div class="change-meta">适用范围：KLF之后除上湾及红海以外的各目的港（JEA, SHJ, AJM, RAK, QIW等）</div>
-          </div>
-          <div class="eov-port-block">
-            <div class="eov-port-title">NSA货物分步处理方案</div>
+          <div data-lang="zh">
+            <div class="change-row" style="margin-bottom:10px;font-size:12px;">📌 除上湾及红海港口外，KLF到达后各目的港处理方案与上方KLF卸货方案相同。</div>
             <div class="eov-options">
               <div class="eov-option opt1">
                 <div class="eov-option-label">方案1 — 返回装港或COD转售</div>
-                <div class="eov-option-body">通知发货方EOV情况，确认货物能否返回装港或在其他地方COD转售</div>
-                <div class="eov-cost"><div class="eov-cost-row"><span class="eov-cost-label">费用</span> 不向目的港收货方收取</div></div>
+                <div class="eov-option-body">通知发货方EOV情况，确认货物能否返回装港或COD转售</div>
+                <div class="eov-cost"><div class="eov-cost-row"><span class="eov-cost-label">费用</span> 不向收货方收取</div></div>
               </div>
               <div class="eov-option opt2">
                 <div class="eov-option-label">方案2 — 经支线运至KLF后按目的港处理</div>
-                <div class="eov-option-body">若需转运至中东港口，经支线运至KLF后按上方各目的港方案处理</div>
+                <div class="eov-option-body">需转运至中东港口时，经支线运至KLF后按上方各目的港方案处理</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 运至KLF费用（即使使用KMTC母船或合作伙伴船也需额外承担支线市场运费）+ 上方各案例费用</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 运至KLF市场支线运费 + 上方各案例费用</div>
                 </div>
               </div>
               <div class="eov-option opt3">
                 <div class="eov-option-label">方案3 — 上湾：JED至各港陆运</div>
-                <div class="eov-option-body">上湾港口(DMM, KSP, HMA, KWI, UQR)：与收货方确认后，若可从JED陆运至各港，NSA经各DLY支线装船</div>
+                <div class="eov-option-body">DMM/KSP/HMA/KWI/UQR — 与收货方确认后JED至各港陆运，NSA经各DLY支线装船</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 向选择JED→DMM/KSP/HMA陆运的货主征收WRP US$2,000/3,500，陆运由货主自行安排，空箱在各港还箱</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 征收WRP US$2,000/3,500，陆运由货主自行安排，空箱在各港还箱</div>
                 </div>
               </div>
-              <div class="eov-option opt4">
+              <div class="eov-option opt4" style="border-left-color:#7c3aed;">
                 <div class="eov-option-label">方案4 — 红海港：NSA→JED/SKN/AQJ支线</div>
-                <div class="eov-option-body">红海港口：NSA经JED、SKN、AQJ支线装船</div>
+                <div class="eov-option-body">NSA经JED、SKN、AQJ支线装船</div>
                 <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 征收WRP US$2,000/3,500后不另收支线运费，预计与IRX2船费($1,500~1,700/TEU)水平相当。</div>
+                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 征收WRP US$2,000/3,500后不另收支线运费，预计与IRX2船费($1,500~1,700/TEU)相当</div>
                 </div>
               </div>
             </div>
           </div>
-        </div><!-- end zh -->
-
+        </div>
       </div>
+
     </div>
   </div>
 
-
-  </div><!-- end mainsec-ops -->
+  </div><!-- end mainsec-dashboard -->
 
   <!-- ===== SEC: 항로운영 ===== -->
   <div class="main-sec" id="mainsec-routes">
@@ -1214,7 +1267,8 @@
 
       <!-- 공동사 협의 결정사항 -->
       <div class="mtg-section">
-        <div class="mtg-title"><span data-lang-inline="ko">① 중동항로 공동사 협의 결과 &amp; 당사 모선 운영 방안</span><span data-lang-inline="en">① ME Route Consortium Results &amp; Our Vessel Plan</span><span data-lang-inline="zh">① 中东航线共同运营方协商结果 &amp; 本司船舶运营方案</span></div>
+        <div class="mtg-title acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">① 중동항로 공동사 협의 결과 &amp; 당사 모선 운영 방안</span><span data-lang-inline="en">① ME Route Consortium Results &amp; Our Vessel Plan</span><span data-lang-inline="zh">① 中东航线共同运营方协商结果 &amp; 本司船舶运营方案</span><span class="acc-summary">AIM/AIM2/VGI → Suspension → Ad-Hoc</span></div>
+        <div class="acc-body" style="display:none;">
         <div class="mtg-note">
           <span data-lang-inline="ko">⚠️ AIM·AIM2 모두 Cycle 내 마지막 항차 이후 <strong>Suspension</strong> 결정. 이후 <strong>Ad-Hoc(SPCME) 개념</strong>으로 전환 운영. 당사 KDM·KMU·KMB호 배치 계획 3월 중순 수립 예정.</span>
           <span data-lang-inline="en">⚠️ Both AIM &amp; AIM2 decided <strong>Suspension</strong> after the last voyage in each Cycle. To be operated as <strong>Ad-Hoc (SPCME)</strong> thereafter. KDM/KMU/KMB deployment plans to be set mid-March.</span>
@@ -1249,11 +1303,13 @@
             </tr>
           </tbody>
         </table>
+      </div><!-- acc-body -->
       </div>
 
       <!-- AIM 선박 현황 -->
       <div class="mtg-section">
-        <div class="mtg-title"><span data-lang-inline="ko">② AIM 항로 선박별 현황 (Cycle 75 → 76)</span><span data-lang-inline="en">② AIM Route Vessel Status (Cycle 75 → 76)</span><span data-lang-inline="zh">② AIM航线各船现况（Cycle 75→76）</span></div>
+        <div class="mtg-title acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">② AIM 항로 선박별 현황 (Cycle 75 → 76)</span><span data-lang-inline="en">② AIM Route Vessel Status (Cycle 75 → 76)</span><span data-lang-inline="zh">② AIM航线各船现况（Cycle 75→76）</span><span class="acc-summary">Last: KDM ETA 3/23 | 7+7 voy</span></div>
+        <div class="acc-body" style="display:none;">
         <div class="vsl-section-title">🔹 AIM — Cycle 75 (진행 중)</div>
         <table class="vsl-table">
           <thead><tr><th>OPR</th><th><span data-lang-inline="ko">선박명</span><span data-lang-inline="en">Vessel</span><span data-lang-inline="zh">船名</span></th><th><span data-lang-inline="ko">항차</span><span data-lang-inline="en">Voy</span><span data-lang-inline="zh">航次</span></th><th>PFS ETA(PNC)</th><th>BSA</th><th><span data-lang-inline="ko">현재 위치</span><span data-lang-inline="en">Position</span><span data-lang-inline="zh">当前位置</span></th><th><span data-lang-inline="ko">항로 운영</span><span data-lang-inline="en">Operation</span><span data-lang-inline="zh">运营状况</span></th><th><span data-lang-inline="ko">비고</span><span data-lang-inline="en">Remarks</span><span data-lang-inline="zh">备注</span></th></tr></thead>
@@ -1282,11 +1338,13 @@
             <tr class="vsl-suspended"><td>ESL</td><td>TS Shanghai</td><td>02618</td><td>2026-04-28</td><td>5,750</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>AIM 스케줄 Skip 처리</td></tr>
           </tbody>
         </table>
+      </div><!-- acc-body -->
       </div>
 
       <!-- AIM2 선박 현황 -->
       <div class="mtg-section">
-        <div class="mtg-title"><span data-lang-inline="ko">③ AIM2 항로 선박별 현황 (Cycle 16 → 17)</span><span data-lang-inline="en">③ AIM2 Route Vessel Status (Cycle 16 → 17)</span><span data-lang-inline="zh">③ AIM2航线各船现况（Cycle 16→17）</span></div>
+        <div class="mtg-title acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">③ AIM2 항로 선박별 현황 (Cycle 16 → 17)</span><span data-lang-inline="en">③ AIM2 Route Vessel Status (Cycle 16 → 17)</span><span data-lang-inline="zh">③ AIM2航线各船现况（Cycle 16→17）</span><span class="acc-summary">Last: KMU ETA 4/5 | 7 voy</span></div>
+        <div class="acc-body" style="display:none;">
         <div class="vsl-section-title">🔹 AIM2 — Cycle 16 (진행 중)</div>
         <table class="vsl-table">
           <thead><tr><th>OPR</th><th><span data-lang-inline="ko">선박명</span><span data-lang-inline="en">Vessel</span><span data-lang-inline="zh">船名</span></th><th><span data-lang-inline="ko">항차</span><span data-lang-inline="en">Voy</span><span data-lang-inline="zh">航次</span></th><th>PFS ETA(SHA)</th><th>BSA</th><th><span data-lang-inline="ko">현재 위치</span><span data-lang-inline="en">Position</span><span data-lang-inline="zh">当前位置</span></th><th><span data-lang-inline="ko">항로 운영</span><span data-lang-inline="en">Operation</span><span data-lang-inline="zh">运营状况</span></th><th><span data-lang-inline="ko">비고</span><span data-lang-inline="en">Remarks</span><span data-lang-inline="zh">备注</span></th></tr></thead>
@@ -1313,11 +1371,13 @@
             <tr class="vsl-suspended"><td>KMTC</td><td>KMTC MUNDRA</td><td>2603</td><td>2026-04-14</td><td>5,200</td><td><span class="vsl-badge vsl-b-suspended">Suspension</span></td><td>17 Cycle Suspension</td></tr>
           </tbody>
         </table>
+      </div><!-- acc-body -->
       </div>
 
       <!-- VGI 선박 현황 -->
       <div class="mtg-section">
-        <div class="mtg-title"><span data-lang-inline="ko">④ VGI 항로 선박별 현황 (Cycle 34 → 35)</span><span data-lang-inline="en">④ VGI Route Vessel Status (Cycle 34 → 35)</span><span data-lang-inline="zh">④ VGI航线各船现况（Cycle 34→35）</span></div>
+        <div class="mtg-title acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">④ VGI 항로 선박별 현황 (Cycle 34 → 35)</span><span data-lang-inline="en">④ VGI Route Vessel Status (Cycle 34 → 35)</span><span data-lang-inline="zh">④ VGI航线各船现况（Cycle 34→35）</span><span class="acc-summary">KMB | 13 voy</span></div>
+        <div class="acc-body" style="display:none;">
         <table class="vsl-table">
           <thead><tr><th>OPR</th><th><span data-lang-inline="ko">선박명</span><span data-lang-inline="en">Vessel</span><span data-lang-inline="zh">船名</span></th><th><span data-lang-inline="ko">항차</span><span data-lang-inline="en">Voy</span><span data-lang-inline="zh">航次</span></th><th>PFS ETA(CMP)</th><th>BSA</th><th><span data-lang-inline="ko">현재 위치</span><span data-lang-inline="en">Position</span><span data-lang-inline="zh">当前位置</span></th><th>ETA JEA</th><th><span data-lang-inline="ko">항로 운영</span><span data-lang-inline="en">Operation</span><span data-lang-inline="zh">运营状况</span></th><th><span data-lang-inline="ko">비고</span><span data-lang-inline="en">Remarks</span><span data-lang-inline="zh">备注</span></th></tr></thead>
           <tbody>
@@ -1335,11 +1395,13 @@
             <tr class="vsl-suspended"><td>RCL</td><td>ARAYA BHUM</td><td>02613</td><td>2026-03-24</td><td>4,500</td><td></td><td></td><td><span class="vsl-badge vsl-b-suspended">미확정</span></td><td>선박 투입 미확정</td></tr>
           </tbody>
         </table>
+      </div><!-- acc-body -->
       </div>
 
       <!-- 항로별 화물 처리 요약 -->
       <div class="mtg-section">
-        <div class="mtg-title"><span data-lang-inline="ko">⑤ 항로/Cycle 기준 선박 상황 &amp; 화물 처리 방안 요약</span><span data-lang-inline="en">⑤ Vessel Status &amp; Cargo Handling Summary by Route/Cycle</span><span data-lang-inline="zh">⑤ 按航线/Cycle的船舶状况 &amp; 货物处理方案汇总</span> <span class="badge badge-updated">3/16</span></div>
+        <div class="mtg-title acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">⑤ 항로/Cycle 기준 선박 상황 &amp; 화물 처리 방안 요약</span><span data-lang-inline="en">⑤ Vessel Status &amp; Cargo Handling Summary by Route/Cycle</span><span data-lang-inline="zh">⑤ 按航线/Cycle的船舶状况 &amp; 货物处理方案汇总</span> <span class="badge badge-updated">3/16</span><span class="acc-summary">BSA 4,545 TEU / NSA 2,050 TEU</span></div>
+        <div class="acc-body" style="display:none;">
         <div class="mtg-note">
           <span data-lang-inline="ko">※ NSA 양하된 ROB 화물(대체 양하 물량) 처리: 1) 피더 선복 구매 2) 당사 Ad-Hoc Rescue 항차 검토 (Vessel from AIS5)</span>
           <span data-lang-inline="en">※ NSA-discharged ROB cargo handling: 1) Purchase feeder space 2) Consider company Ad-Hoc Rescue voyage (Vessel from AIS5)</span>
@@ -1372,6 +1434,7 @@
             <tr style="background:#f0f9ff; font-weight:700;"><td colspan="7" style="text-align:right; padding-right:12px;">합계 BSA</td><td style="color:#003366;">4,545 TEU</td><td style="color:#c00;">2,050 TEU</td><td></td></tr>
           </tbody>
         </table>
+      </div><!-- acc-body -->
       </div>
 
     </div>
@@ -1386,122 +1449,12 @@
         <span data-lang-inline="en">Segment Flow by Destination <span class="badge badge-critical">KEY</span></span>
         <span data-lang-inline="zh">目的港区段处理流程 <span class="badge badge-critical">必读</span></span>
       </button>
-      <button class="tab-btn" onclick="switchTab(this,'ports','port-status')">
-        🏗️
-        <span data-lang-inline="ko">GCC 항만 운영 현황 <span class="badge badge-updated">3/13</span></span>
-        <span data-lang-inline="en">GCC Port Status <span class="badge badge-updated">3/13</span></span>
-        <span data-lang-inline="zh">GCC港口现况 <span class="badge badge-updated">3/13</span></span>
-      </button>
       <button class="tab-btn" onclick="switchTab(this,'ports','route-impact')">
         🚢
         <span data-lang-inline="ko">항로별 서비스 영향</span>
         <span data-lang-inline="en">Route Service Impact</span>
         <span data-lang-inline="zh">各航线服务影响</span>
       </button>
-    </div>
-
-    <!-- Port Status Pane -->
-    <div class="tab-pane" id="ports-port-status">
-      <div class="card-body">
-        <div class="port-grid">
-          <div class="port-card" style="border-color:#ef4444;">
-            <div class="port-name">Jebel Ali</div>
-            <div class="port-code">JEA · UAE</div>
-            <div style="margin-top:4px;">
-              <span class="status status-closed">
-                <span data-lang-inline="ko">직항선 전면 중단</span>
-                <span data-lang-inline="en">Direct Vessel: CLOSED</span>
-                <span data-lang-inline="zh">直航船: 全面停止</span>
-              </span>
-            </div>
-            <div style="margin-top:4px;">
-              <span class="status" style="background:#dcfce7;color:#166534;">
-                <span data-lang-inline="ko">KMTC: KLF경유 운영 중</span>
-                <span data-lang-inline="en">KMTC: Serving via KLF</span>
-                <span data-lang-inline="zh">KMTC: 经KLF运营中</span>
-              </span>
-            </div>
-            <div class="note" style="margin-top:5px; color:#c00; font-weight:600;">
-              <span data-lang-inline="ko">B/L POD = KLF 기재 필수<br>KLF양하 → 보세트럭 → JEA 인도</span>
-              <span data-lang-inline="en">B/L POD must show KLF<br>KLF discharge → Bonded truck → JEA delivery</span>
-              <span data-lang-inline="zh">B/L目的港须填KLF<br>KLF卸货→保税卡车→JEA交货</span>
-            </div>
-          </div>
-          <div class="port-card">
-            <div class="port-name">Khor Fakkan</div>
-            <div class="port-code">KLF · UAE</div>
-            <div><span class="status status-congested">
-              <span data-lang-inline="ko">혼잡 운영</span>
-              <span data-lang-inline="en">CONGESTED</span>
-              <span data-lang-inline="zh">拥挤运营</span>
-            </span></div>
-            <div class="note">
-              <span data-lang-inline="ko">외항 35+ 대기 | 3일 내 미픽업 시 SHJ ICD 이송</span>
-              <span data-lang-inline="en">35+ ships waiting | SHJ ICD transfer if unpicked in 3 days</span>
-              <span data-lang-inline="zh">外锚35+艘等待 | 3天内未提货转SHJ ICD</span>
-            </div>
-          </div>
-          <div class="port-card">
-            <div class="port-name">Sharjah</div>
-            <div class="port-code">SHJ · UAE</div>
-            <div><span class="status status-open">
-              <span data-lang-inline="ko">운영 중</span>
-              <span data-lang-inline="en">OPEN</span>
-              <span data-lang-inline="zh">运营中</span>
-            </span></div>
-          </div>
-          <div class="port-card">
-            <div class="port-name">Dammam</div>
-            <div class="port-code">DMM · SA</div>
-            <div><span class="status status-open">
-              <span data-lang-inline="ko">운영 중</span>
-              <span data-lang-inline="en">OPEN</span>
-              <span data-lang-inline="zh">运营中</span>
-            </span></div>
-          </div>
-          <div class="port-card">
-            <div class="port-name">Salalah</div>
-            <div class="port-code">SOH · OM</div>
-            <div><span class="status status-partial">
-              <span data-lang-inline="ko">LOCAL만</span>
-              <span data-lang-inline="en">LOCAL only</span>
-              <span data-lang-inline="zh">仅LOCAL货</span>
-            </span></div>
-            <div class="note">
-              <span data-lang-inline="ko">LOCAL 화물 외 양하 금지</span>
-              <span data-lang-inline="en">Non-local cargo discharge prohibited</span>
-              <span data-lang-inline="zh">禁止卸载非本地货物</span>
-            </div>
-          </div>
-          <div class="port-card">
-            <div class="port-name">Bahrain</div>
-            <div class="port-code">KSP · BH</div>
-            <div><span class="status status-closed">
-              <span data-lang-inline="ko">작업 중단</span>
-              <span data-lang-inline="en">SUSPENDED</span>
-              <span data-lang-inline="zh">作业暂停</span>
-            </span></div>
-          </div>
-          <div class="port-card">
-            <div class="port-name">Qatar</div>
-            <div class="port-code">HMD · QA</div>
-            <div><span class="status status-partial">
-              <span data-lang-inline="ko">부분 운영</span>
-              <span data-lang-inline="en">PARTIAL</span>
-              <span data-lang-inline="zh">部分运营</span>
-            </span></div>
-          </div>
-          <div class="port-card">
-            <div class="port-name">Kuwait</div>
-            <div class="port-code">KWI · KW</div>
-            <div><span class="status status-open">
-              <span data-lang-inline="ko">운영 중</span>
-              <span data-lang-inline="en">OPEN</span>
-              <span data-lang-inline="zh">运营中</span>
-            </span></div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Service Flow Pane -->
@@ -2543,10 +2496,49 @@
     document.getElementById('changelog-render').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  // ── Dashboard alerts ────────────────────────────────────
+  function renderDashboardAlerts(changelog) {
+    var reversed = changelog.slice().reverse();
+    var latest = reversed.slice(0, 5);
+    var langs = ['ko', 'en', 'zh'];
+    var html = langs.map(function(lang) {
+      var items = latest.map(function(e) {
+        return '<div class="dash-alert ' + e.badgeType + '">' +
+          '<div class="dash-alert-date">' + e.date[lang] + '</div>' +
+          '<div class="dash-alert-text"><span class="badge ' + (badgeClass[e.badgeType] || 'badge-updated') + '">' +
+          e.badgeLabel[lang] + '</span> <strong>' + e.title[lang] + '</strong></div></div>';
+      }).join('');
+      return '<div data-lang="' + lang + '">' + items + '</div>';
+    }).join('');
+    var el = document.getElementById('dash-alerts-render');
+    if (el) el.innerHTML = html;
+    var db = document.getElementById('dash-date-badge');
+    if (db && latest[0]) db.textContent = latest[0].dateIso;
+  }
+
+  // ── Port quick lookup ──────────────────────────────────
+  function showPort(code, btn) {
+    document.querySelectorAll('.port-card').forEach(function(c) { c.classList.remove('active'); });
+    document.querySelectorAll('.port-btn').forEach(function(b) { b.classList.remove('active'); });
+    var card = document.getElementById('port-' + code);
+    if (card) { card.classList.add('active'); card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+    if (btn) btn.classList.add('active');
+  }
+
+  // ── Accordion toggle ──────────────────────────────────
+  function toggleAccordion(el) {
+    el.classList.toggle('open');
+    var body = el.nextElementSibling;
+    if (body && body.classList.contains('acc-body')) {
+      body.style.display = el.classList.contains('open') ? 'block' : 'none';
+    }
+  }
+
   function loadChangelog() {
     fetch('/api/policy-content').then(r => r.json()).then(function(data) {
       allChangelog = data.changelog;
       renderChangelogPage(1);
+      renderDashboardAlerts(data.changelog);
       var badge = document.querySelector('.updated-badge span:last-child');
       if (badge) badge.textContent = data.lastUpdated;
     });

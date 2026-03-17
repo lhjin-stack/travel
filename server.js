@@ -234,6 +234,7 @@ app.get('/logout', (req, res) => {
 
 // ── Protected: 메인 정책 페이지 ──────────────────────────
 app.get('/', requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.sendFile(path.join(__dirname, 'weekly-report', 'iran-war-policy.html'));
 });
 
