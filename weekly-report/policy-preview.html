@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[테스트 미리보기] KMTC 정책 변경 이력</title>
+  <style>
+    :root {
+      --primary: #003366;
+      --accent: #c00;
+      --bg: #f5f7fa;
+      --card: #fff;
+      --border: #dde2ea;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', 'Apple SD Gothic Neo', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+
+    .test-banner {
+      background: #ff6b35; color: #fff; text-align: center; padding: 10px;
+      font-weight: 700; font-size: 14px; letter-spacing: 1px;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #002244 0%, #003f7f 100%);
+      color: #fff; padding: 20px 28px 16px;
+    }
+    .header-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .header h1 { font-size: 20px; font-weight: 700; }
+    .header .subtitle { font-size: 12px; opacity: 0.75; margin-top: 4px; }
+    .updated-badge {
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px; padding: 5px 14px; font-size: 12px;
+    }
+    .updated-badge span { font-weight: 700; color: #ffd700; }
+
+    .lang-bar {
+      background: #fff; border-bottom: 1px solid var(--border);
+      padding: 8px 28px; display: flex; align-items: center; gap: 8px;
+    }
+    .lang-bar .label { font-size: 12px; color: var(--muted); margin-right: 4px; }
+    .lang-btn {
+      background: none; border: 1px solid var(--border); border-radius: 6px;
+      padding: 5px 14px; font-size: 13px; cursor: pointer; color: var(--text);
+    }
+    .lang-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .lang-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+
+    .main { padding: 16px 28px 40px; max-width: 1100px; margin: 0 auto; }
+
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden; margin-bottom: 16px;
+    }
+    .card-header {
+      background: #f0f4f9; border-bottom: 1px solid var(--border);
+      padding: 10px 16px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .card-header .title { font-weight: 700; font-size: 13px; color: var(--primary); display: flex; align-items: center; gap: 6px; }
+    .card-header .date { font-size: 11px; color: var(--muted); }
+    .card-body { padding: 12px 16px; }
+
+    .badge {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 11px; font-weight: 700; vertical-align: middle;
+    }
+    .badge-new { background: #fff3cd; border: 1px solid #d97706; color: #92400e; }
+    .badge-updated { background: #fce4ec; border: 1px solid #c0392b; color: #c0392b; }
+    .badge-critical { background: #fef2f2; border: 1.5px solid #dc2626; color: #dc2626; animation: pulse-border 2s infinite; }
+    @keyframes pulse-border { 0%,100%{border-color:#dc2626} 50%{border-color:#f87171} }
+
+    .changelog { list-style: none; }
+    .changelog li {
+      display: flex; gap: 10px; padding: 8px 0;
+      border-bottom: 1px solid #f0f4f9; font-size: 12.5px; line-height: 1.5;
+    }
+    .changelog li:last-child { border-bottom: none; }
+    .changelog .cl-date { color: var(--muted); font-size: 11px; white-space: nowrap; min-width: 70px; padding-top: 1px; }
+    .changelog .cl-content { flex: 1; }
+    .cl-pager {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; padding: 12px 0 2px; font-size: 12px; color: var(--muted);
+    }
+    .cl-page-btn {
+      background: none; border: 1px solid var(--border); border-radius: 5px;
+      padding: 4px 11px; cursor: pointer; font-size: 12px; color: #003366;
+    }
+    .cl-page-btn:hover:not(:disabled) { background: #003366; color: #fff; }
+    .cl-page-btn:disabled { opacity: 0.3; cursor: default; }
+
+    /* NEW entry highlight */
+    .changelog li.new-entry {
+      background: #fffde7; border-left: 3px solid #ff6b35; padding-left: 8px;
+      border-radius: 4px;
+    }
+
+    /* Dashboard alerts */
+    .dash-alerts { display: flex; flex-direction: column; gap: 8px; }
+    .dash-alert { display: flex; gap: 10px; padding: 8px 12px; border-radius: 6px; font-size: 12.5px; align-items: flex-start; }
+    .dash-alert.critical { background: #fef2f2; border: 1px solid #fca5a5; }
+    .dash-alert.new { background: #fff3cd; border: 1px solid #d97706; }
+    .dash-alert.updated { background: #fce4ec; border: 1px solid #e57373; }
+    .dash-alert-date { color: var(--muted); font-size: 11px; white-space: nowrap; min-width: 65px; padding-top: 1px; }
+    .dash-alert-text { flex: 1; }
+
+    [data-lang] { display: none; }
+    [data-lang].active { display: block; }
+    [data-lang-inline] { display: none; }
+    [data-lang-inline].active { display: inline; }
+
+    .footer { text-align: center; font-size: 11px; color: var(--muted); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<div class="test-banner">TEST PREVIEW - 배포 전 미리보기 (로컬 테스트)</div>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <h1>KMTC Middle East Policy Dashboard</h1>
+      <div class="subtitle">미·이란 전쟁 대응 정책 안내 | US-Iran Conflict Response</div>
+    </div>
+    <div class="updated-badge">Last Updated: <span id="last-updated"></span></div>
+  </div>
+</div>
+
+<div class="lang-bar">
+  <span class="label">Language:</span>
+  <button class="lang-btn active" onclick="setLang('ko')">한국어</button>
+  <button class="lang-btn" onclick="setLang('en')">English</button>
+  <button class="lang-btn" onclick="setLang('zh')">中文</button>
+</div>
+
+<div class="main">
+
+  <!-- Dashboard alerts -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">Latest Alerts</div>
+      <div class="date" id="dash-date-badge"></div>
+    </div>
+    <div class="card-body">
+      <div class="dash-alerts" id="dash-alerts-render"></div>
+    </div>
+  </div>
+
+  <!-- Change log -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">
+        <span data-lang-inline="ko" class="active">정책 변경 이력</span>
+        <span data-lang-inline="en">Policy Change Log</span>
+        <span data-lang-inline="zh">政策变更历史</span>
+      </div>
+      <div class="date">
+        <span data-lang-inline="ko" class="active">최신 순 → 오래된 순</span>
+        <span data-lang-inline="en">Latest → Oldest</span>
+        <span data-lang-inline="zh">按时间倒序排列</span>
+      </div>
+    </div>
+    <div id="changelog-render">
+      <div style="padding:20px;text-align:center;color:#999">Loading...</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>KMTC Line — Korea Marine Transport Co., Ltd.</p>
+    <p style="margin-top:4px; color:#c00; font-weight:600;">[TEST PREVIEW] 이 화면은 배포 전 테스트입니다.</p>
+  </div>
+</div>
+
+<script>
+  var currentLang = 'ko';
+  function setLang(lang) {
+    currentLang = lang;
+    document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
+    document.querySelectorAll('.lang-btn').forEach(function(b) {
+      if (b.textContent.includes(lang === 'ko' ? '한국어' : lang === 'en' ? 'English' : '中文')) b.classList.add('active');
+    });
+    document.querySelectorAll('[data-lang]').forEach(function(el) {
+      el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+    });
+    document.querySelectorAll('[data-lang-inline]').forEach(function(el) {
+      el.classList.toggle('active', el.getAttribute('data-lang-inline') === lang);
+    });
+  }
+
+  var badgeClass = { new: 'badge-new', updated: 'badge-updated', critical: 'badge-critical' };
+  var ITEMS_PER_PAGE = 15;
+  var allChangelog = [];
+  var clCurrentPage = 1;
+
+  function renderChangelogPage(page) {
+    var langs = ['ko', 'en', 'zh'];
+    var reversed = allChangelog.slice().reverse();
+    var totalPages = Math.max(1, Math.ceil(reversed.length / ITEMS_PER_PAGE));
+    page = Math.min(Math.max(page, 1), totalPages);
+    clCurrentPage = page;
+    var pageItems = reversed.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+
+    var pagerLabels = {
+      ko: page + ' / ' + totalPages + ' 페이지',
+      en: 'Page ' + page + ' of ' + totalPages,
+      zh: '第 ' + page + ' / ' + totalPages + ' 页'
+    };
+
+    var html = langs.map(function(lang) {
+      var todayStr = new Date().toISOString().slice(0, 10);
+      var items = pageItems.map(function(e) {
+        var isNew = e.dateIso === todayStr;
+        return '<li' + (isNew ? ' class="new-entry"' : '') + '>' +
+          '<div class="cl-date">' + e.date[lang] + '</div>' +
+          '<div class="cl-content">' +
+            '<span class="badge ' + (badgeClass[e.badgeType] || 'badge-updated') + '">' + e.badgeLabel[lang] + '</span> ' +
+            (isNew ? '<span style="background:#ff6b35;color:#fff;font-size:10px;padding:1px 6px;border-radius:3px;margin-right:4px;">NEW</span>' : '') +
+            '<strong>' + e.title[lang] + '</strong> — ' + e.body[lang] +
+            (e.source ? '<div class="cl-date" style="margin-top:3px">📧 ' + e.source + '</div>' : '') +
+          '</div>' +
+        '</li>';
+      }).join('');
+      var pager = totalPages > 1
+        ? '<div class="cl-pager">' +
+            '<button class="cl-page-btn" onclick="clChangePage(' + (page - 1) + ')"' + (page <= 1 ? ' disabled' : '') + '>◀</button>' +
+            '<span>' + pagerLabels[lang] + '</span>' +
+            '<button class="cl-page-btn" onclick="clChangePage(' + (page + 1) + ')"' + (page >= totalPages ? ' disabled' : '') + '>▶</button>' +
+          '</div>'
+        : '';
+      return '<div data-lang="' + lang + '"' + (lang === currentLang ? ' class="active"' : '') + '><ul class="changelog">' + items + '</ul>' + pager + '</div>';
+    }).join('');
+
+    document.getElementById('changelog-render').innerHTML = html;
+  }
+
+  function clChangePage(page) {
+    renderChangelogPage(page);
+    document.getElementById('changelog-render').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderDashboardAlerts(changelog) {
+    var reversed = changelog.slice().reverse();
+    var latest = reversed.slice(0, 3);
+    var langs = ['ko', 'en', 'zh'];
+    var html = langs.map(function(lang) {
+      var items = latest.map(function(e) {
+        return '<div class="dash-alert ' + e.badgeType + '">' +
+          '<div class="dash-alert-date">' + e.date[lang] + '</div>' +
+          '<div class="dash-alert-text"><span class="badge ' + (badgeClass[e.badgeType] || 'badge-updated') + '">' +
+          e.badgeLabel[lang] + '</span> <strong>' + e.title[lang] + '</strong></div></div>';
+      }).join('');
+      return '<div data-lang="' + lang + '"' + (lang === currentLang ? ' class="active"' : '') + '>' + items + '</div>';
+    }).join('');
+    var el = document.getElementById('dash-alerts-render');
+    if (el) el.innerHTML = html;
+    var db = document.getElementById('dash-date-badge');
+    if (db && latest[0]) db.textContent = latest[0].dateIso;
+  }
+
+  // Load local JSON
+  fetch('policy-content.json').then(function(r) { return r.json(); }).then(function(data) {
+    allChangelog = data.changelog;
+    renderChangelogPage(1);
+    renderDashboardAlerts(data.changelog);
+    document.getElementById('last-updated').textContent = data.lastUpdated;
+  }).catch(function(err) {
+    document.getElementById('changelog-render').innerHTML = '<div style="padding:20px;color:#c00">JSON 로드 실패: ' + err.message + '<br>로컬 서버에서 열어주세요 (npx serve weekly-report)</div>';
+  });
+</script>
+</body>
+</html>

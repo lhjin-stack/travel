@@ -668,7 +668,7 @@
     <button class="main-nav-btn active" onclick="switchMainSec('dashboard', this)">📊 <span data-lang-inline="ko">현황</span><span data-lang-inline="en">Status</span><span data-lang-inline="zh">现况</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('routes', this)">🚢 <span data-lang-inline="ko">선박·항로</span><span data-lang-inline="en">Vessels</span><span data-lang-inline="zh">船舶·航线</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('costs', this)">💰 <span data-lang-inline="ko">비용·WRS</span><span data-lang-inline="en">Costs·WRS</span><span data-lang-inline="zh">费用·WRS</span></button>
-    <button class="main-nav-btn" onclick="switchMainSec('eov-guide', this)">📋 <span data-lang-inline="ko">NSA EOV 가이드</span><span data-lang-inline="en">NSA EOV Guide</span><span data-lang-inline="zh">NSA EOV指南</span></button>
+    <button class="main-nav-btn" onclick="switchMainSec('eov-guide', this)" id="nav-eov-guide">📋 <span data-lang-inline="ko">NSA EOV 가이드</span><span data-lang-inline="en">NSA EOV Guide</span><span data-lang-inline="zh">NSA EOV指南</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('notices', this)">📢 <span data-lang-inline="ko">공지·회의</span><span data-lang-inline="en">Notices</span><span data-lang-inline="zh">公告·会议</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('history', this)">🔄 <span data-lang-inline="ko">이력</span><span data-lang-inline="en">Log</span><span data-lang-inline="zh">历史</span></button>
   </div>
@@ -2506,9 +2506,9 @@
   <div class="card">
     <div class="card-header">
       <div class="title">📋
-        <span data-lang-inline="ko">NSA EOV 임시 운영 가이드라인 <span class="badge badge-critical">NEW 3/17</span></span>
-        <span data-lang-inline="en">Interim GCS Operational Guidance – NSA EOV Cases <span class="badge badge-critical">NEW 3/17</span></span>
-        <span data-lang-inline="zh">NSA EOV临时运营指南 <span class="badge badge-critical">NEW 3/17</span></span>
+        <span data-lang-inline="ko">NSA EOV 임시 운영 가이드라인</span>
+        <span data-lang-inline="en">Interim GCS Operational Guidance – NSA EOV Cases</span>
+        <span data-lang-inline="zh">NSA EOV临时运营指南</span>
       </div>
       <div class="date">GCS JHKIM | 2026-03-17</div>
     </div>
@@ -2534,9 +2534,26 @@
             <div class="eov-option-label">Option 1 — NSA 직접 픽업 / Ship-back / COD</div>
             <div class="eov-option-body">NSA 현지 통관 후 픽업, 선적항 반송, 또는 다른 목적지 COD. <strong>Ship-back/COD 시 송하인·수하인 양측 서면 동의 필수.</strong></div>
           </div>
+          <div style="background:#fef2f2;border:1.5px solid #ef4444;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
+            <strong style="color:#991b1b;">📢 후속 처리 <span class="badge badge-critical">NEW 3/18</span></strong>
+            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
+              <li>송하인·수하인 <strong>쉽백 동의 필수 확인</strong></li>
+              <li><strong>수하인 동의서·쉽백 요청서</strong> 등 서류 징구 필수 (추후 분쟁 대비)</li>
+              <li>수입자 <strong>SHIPBACK 동의 여부 리마크 입력</strong></li>
+              <li><span style="color:#c00;font-weight:700;">금주 금요일(3/20)까지</span> 시트 건 전량 확인 완료 필요</li>
+            </ul>
+          </div>
           <div class="eov-option opt2">
             <div class="eov-option-label">Option 2 — NSA → KLF 이송 후 최종 목적지 처리</div>
             <div class="eov-option-body">NSA에서 KLF로 이송 후 최종 목적지별 후속 처리. <strong>현재 가장 실현 가능한 대안.</strong></div>
+          </div>
+          <div style="background:#fffbeb;border:1.5px solid #d97706;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
+            <strong style="color:#92400e;">📢 후속 처리 <span class="badge badge-new">NEW 3/18</span></strong>
+            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
+              <li>비용 지불 여부(Y) <strong>최대한 빠르게 확인 필수</strong> → 미확인 시 <strong>피더 연결 지장</strong></li>
+              <li>Y 표시 건은 <strong>B/L Additional Freight 탭 → OTH 코드 → 피더리지 USD 2,000/TEU</strong> 즉시 입력 (비용 누락 방지)</li>
+              <li>기본 <strong>PPD</strong> 진행, CLT 등 변경 필요 시 각 담당 CM 확인</li>
+            </ul>
           </div>
           <div class="eov-option opt3">
             <div class="eov-option-label">Option 3 — Upper Gulf 별도 연결 (DMM / KWI / UQR)</div>
@@ -2546,6 +2563,28 @@
             <div class="eov-option-label">Option 4 — Red Sea 별도 연결 (JED / SKN / AQJ)</div>
             <div class="eov-option-body">피더 연결 별도 검토. 추가 비용 및 운송 지연 예상.</div>
           </div>
+        </div>
+
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;" data-new-until="2026-03-19">
+          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 비용 구분 정리 <span class="badge badge-critical">NEW 3/18</span></h4>
+          <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+            <tr style="background:#dbeafe;">
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">구분</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">지불 주체</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">성격</th>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">Feederage (피더리지)</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Shipper (송하인)</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">EOV 후 별도 발생 추가 비용</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">WRS</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Consignee (수하인)</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">기 선적 건 KLF-JEA 이송 관련 비용</td>
+            </tr>
+          </table>
+          <p style="font-size:11.5px;color:#6b7280;margin-top:6px;">※ WRS와 Feederage는 별도 비용 — 신규 집하 케이스와 다르게 정리되는 부분</p>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. 화주 안내 필수 사항</h3>
@@ -2577,6 +2616,7 @@
           <li><strong>신규 DG 부킹 접수 불가</strong> (추후 공지 시까지)</li>
           <li>기 ROB DG 화물은 실제 양하항 확정 전까지 최종 처리 방안 확인 불가</li>
         </ul>
+
       </div>
 
       <!-- English -->
@@ -2599,9 +2639,26 @@
             <div class="eov-option-label">Option 1 — Direct Pickup at NSA / Ship-back / COD</div>
             <div class="eov-option-body">Customer may review direct pickup at NSA, ship-back, or COD. <strong>Ship-back/COD requires written consent from both shipper and consignee.</strong></div>
           </div>
+          <div style="background:#fef2f2;border:1.5px solid #ef4444;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
+            <strong style="color:#991b1b;">📢 Follow-up <span class="badge badge-critical">NEW 3/18</span></strong>
+            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
+              <li><strong>Written consent from both shipper and consignee</strong> required for ship-back</li>
+              <li>Collect <strong>consignee consent letter &amp; ship-back request</strong> documents (dispute prevention)</li>
+              <li>Enter <strong>importer SHIPBACK consent status</strong> in remarks</li>
+              <li><span style="color:#c00;font-weight:700;">Deadline: Friday 3/20</span> — all sheet cases must be confirmed</li>
+            </ul>
+          </div>
           <div class="eov-option opt2">
             <div class="eov-option-label">Option 2 — NSA → KLF Transfer, Then Onward Handling</div>
             <div class="eov-option-body">Cargo moved from NSA to KLF, then handled onward per final destination. <strong>Currently the most practical alternative.</strong></div>
+          </div>
+          <div style="background:#fffbeb;border:1.5px solid #d97706;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
+            <strong style="color:#92400e;">📢 Follow-up <span class="badge badge-new">NEW 3/18</span></strong>
+            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
+              <li>Confirm cost acceptance (Y) <strong>ASAP</strong> — unconfirmed cases will <strong>delay feeder connection</strong></li>
+              <li>Once marked Y → enter <strong>B/L Additional Freight tab → OTH code → Feederage USD 2,000/TEU</strong> immediately (prevent cost leakage)</li>
+              <li>Default <strong>PPD</strong>; contact responsible CM for CLT or other changes</li>
+            </ul>
           </div>
           <div class="eov-option opt3">
             <div class="eov-option-label">Option 3 — Upper Gulf (DMM / KWI / UQR)</div>
@@ -2611,6 +2668,28 @@
             <div class="eov-option-label">Option 4 — Red Sea (JED / SKN / AQJ)</div>
             <div class="eov-option-body">Separate feeder connection review. Additional cost and transit delay expected.</div>
           </div>
+        </div>
+
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;" data-new-until="2026-03-19">
+          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 Cost Breakdown <span class="badge badge-critical">NEW 3/18</span></h4>
+          <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+            <tr style="background:#dbeafe;">
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Item</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Payer</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Nature</th>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">Feederage</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Shipper</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">Additional cost arising after EOV</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">WRS</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Consignee</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">KLF-JEA transfer cost for pre-shipped cargo</td>
+            </tr>
+          </table>
+          <p style="font-size:11.5px;color:#6b7280;margin-top:6px;">※ WRS and Feederage are separate charges — handled differently from new cargo cases</p>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. Important Points for Customers</h3>
@@ -2636,6 +2715,7 @@
           <li><strong>New DG bookings cannot be accepted</strong> until further notice</li>
           <li>ROB DG cargo final handling TBD until actual discharge port confirmed</li>
         </ul>
+
       </div>
 
       <!-- Chinese -->
@@ -2658,9 +2738,26 @@
             <div class="eov-option-label">方案1 — NSA直接提货 / 退运 / COD</div>
             <div class="eov-option-body">客户可选择NSA直接提货、退运或COD。<strong>退运/COD需发货人和收货人双方书面同意。</strong></div>
           </div>
+          <div style="background:#fef2f2;border:1.5px solid #ef4444;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
+            <strong style="color:#991b1b;">📢 后续处理 <span class="badge badge-critical">NEW 3/18</span></strong>
+            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
+              <li>发货人和收货人 <strong>退运书面同意必须确认</strong></li>
+              <li>须收集 <strong>收货人同意书·退运申请书</strong> 等文件（为应对后续纠纷）</li>
+              <li>录入进口方 <strong>SHIPBACK同意状态备注</strong></li>
+              <li><span style="color:#c00;font-weight:700;">截止日期：本周五(3/20)</span> 须确认表格内所有案件</li>
+            </ul>
+          </div>
           <div class="eov-option opt2">
             <div class="eov-option-label">方案2 — NSA → KLF转运后继续处理</div>
             <div class="eov-option-body">从NSA转运至KLF后按最终目的地处理。<strong>目前最可行的替代方案。</strong></div>
+          </div>
+          <div style="background:#fffbeb;border:1.5px solid #d97706;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
+            <strong style="color:#92400e;">📢 后续处理 <span class="badge badge-new">NEW 3/18</span></strong>
+            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
+              <li>费用支付意愿(Y) <strong>尽快确认必须</strong> → 未确认将 <strong>影响支线连接</strong></li>
+              <li>标记Y后 → <strong>B/L Additional Freight选项卡 → OTH代码 → 支线费USD 2,000/TEU</strong> 立即录入（防止费用遗漏）</li>
+              <li>默认 <strong>PPD</strong> 处理，CLT等变更需联系负责CM确认</li>
+            </ul>
           </div>
           <div class="eov-option opt3">
             <div class="eov-option-label">方案3 — 上湾别途安排 (DMM / KWI / UQR)</div>
@@ -2670,6 +2767,28 @@
             <div class="eov-option-label">方案4 — 红海别途安排 (JED / SKN / AQJ)</div>
             <div class="eov-option-body">另行审查支线连接。预计产生附加费用及运输延迟。</div>
           </div>
+        </div>
+
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;" data-new-until="2026-03-19">
+          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 费用区分整理 <span class="badge badge-critical">NEW 3/18</span></h4>
+          <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+            <tr style="background:#dbeafe;">
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">项目</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">支付方</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">性质</th>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">Feederage（支线费）</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Shipper（发货人）</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">EOV后另行产生的附加费用</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">WRS</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Consignee（收货人）</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">已装船货物KLF-JEA转运相关费用</td>
+            </tr>
+          </table>
+          <p style="font-size:11.5px;color:#6b7280;margin-top:6px;">※ WRS和支线费为独立费用——与新集货案件的处理方式不同</p>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. 须向客户说明事项</h3>
@@ -2695,6 +2814,7 @@
           <li><strong>新DG订舱暂停接收</strong>（另行通知前）</li>
           <li>已装船ROB DG货物最终处理方案须待实际卸货港确定</li>
         </ul>
+
       </div>
 
     </div>
@@ -2863,9 +2983,9 @@
   </div><!-- end mainsec-history -->
 
   <div class="footer">
-    <div data-lang="ko">본 페이지는 KMTC 내부 이메일 기반으로 작성되었습니다. 최신 공식 지침은 반드시 본사 또는 중동법인에 확인하시기 바랍니다. | 마지막 이메일 수집 기준: 2026년 3월 17일 | lhjin@ekmtc.com</div>
-    <div data-lang="en">This page is compiled from KMTC internal emails. Always verify with HQ or ME Branch for the latest official directives. | Email data collected as of: March 17, 2026 | lhjin@ekmtc.com</div>
-    <div data-lang="zh">本页面基于KMTC内部邮件整理。最新官方指示请务必向总部或中东法人确认。| 邮件数据截至: 2026年3月17日 | lhjin@ekmtc.com</div>
+    <div data-lang="ko">본 페이지는 KMTC 내부 이메일 기반으로 작성되었습니다. 최신 공식 지침은 반드시 본사 또는 중동법인에 확인하시기 바랍니다. | 마지막 이메일 수집 기준: 2026년 3월 18일 | lhjin@ekmtc.com</div>
+    <div data-lang="en">This page is compiled from KMTC internal emails. Always verify with HQ or ME Branch for the latest official directives. | Email data collected as of: March 18, 2026 | lhjin@ekmtc.com</div>
+    <div data-lang="zh">本页面基于KMTC内部邮件整理。最新官方指示请务必向总部或中东法人确认。| 邮件数据截至: 2026年3月18日 | lhjin@ekmtc.com</div>
   </div>
 
 </div><!-- end main -->
@@ -2932,12 +3052,15 @@
       zh: '第 ' + page + ' / ' + totalPages + ' 页'
     };
 
+    var todayStr = new Date().toISOString().slice(0, 10);
     var html = langs.map(function(lang) {
       var items = pageItems.map(function(e) {
-        return '<li>' +
+        var isNew = e.dateIso === todayStr;
+        return '<li' + (isNew ? ' style="background:#fffde7;border-left:3px solid #ff6b35;padding-left:8px;border-radius:4px;"' : '') + '>' +
           '<div class="cl-date">' + e.date[lang] + '</div>' +
           '<div class="cl-content">' +
             '<span class="badge ' + (badgeClass[e.badgeType] || 'badge-updated') + '">' + e.badgeLabel[lang] + '</span> ' +
+            (isNew ? '<span style="background:#ff6b35;color:#fff;font-size:10px;padding:1px 6px;border-radius:3px;margin-right:4px;">NEW</span>' : '') +
             '<strong>' + e.title[lang] + '</strong> — ' + e.body[lang] +
             (e.source ? '<div class="cl-date" style="margin-top:3px">📧 ' + e.source + '</div>' : '') +
           '</div>' +
@@ -3010,6 +3133,23 @@
   }
 
   loadChangelog();
+
+  // ── NEW badge: auto-expire after 1 day ──────────────────
+  (function() {
+    var today = new Date().toISOString().slice(0, 10);
+    // Hide expired [data-new-until] badges
+    document.querySelectorAll('[data-new-until]').forEach(function(el) {
+      if (today > el.getAttribute('data-new-until')) {
+        el.style.display = 'none';
+      }
+    });
+    // Add NEW badge to NSA EOV nav tab if within date range
+    var navEov = document.getElementById('nav-eov-guide');
+    if (navEov && today <= '2026-03-19') {
+      navEov.insertAdjacentHTML('beforeend',
+        ' <span style="background:#ff6b35;color:#fff;font-size:9px;padding:1px 5px;border-radius:3px;animation:pulse-border 2s infinite;vertical-align:middle;">NEW</span>');
+    }
+  })();
 </script>
 </body>
 </html>
