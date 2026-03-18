@@ -612,7 +612,7 @@
       <span data-lang-inline="ko">최종 업데이트</span>
       <span data-lang-inline="en">Last Updated</span>
       <span data-lang-inline="zh">最终更新</span>:
-      <span>2026년 3월 16일</span>
+      <span>2026년 3월 18일</span>
     </div>
   </div>
 </div>
@@ -1980,9 +1980,35 @@
             <div class="cost-name">WRS 면제 기준</div>
             <div class="cost-val">2/28 이전 입항 건<span class="cost-note">예: KMTC MUMBAI 2601W — 2/28 DMM 입항 → 면제</span></div>
           </div>
-          <div class="cost-item">
-            <div class="cost-name">EFS (긴급 연료 할증)</div>
-            <div class="cost-val">📋 내부 협의 중<span class="cost-note">경영진 논의 후 공지 예정 (3/13 기준 미확정)</span></div>
+          <div class="cost-item" style="border-bottom:none;">
+            <div class="cost-name">EFC (긴급 연료 할증) <span class="badge badge-critical" style="font-size:10px;">3/18 확정</span></div>
+            <div class="cost-val" style="color:#c00;">3/28 출항분부터 적용<span class="cost-note">베트남 4/1 적용 | POL 징수</span></div>
+          </div>
+          <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
+            <span class="acc-arrow">▶</span> EFC 요율표 상세 보기 (목적지별 USD)
+          </div>
+          <div class="acc-body" style="display:none;">
+            <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
+              <thead><tr style="background:#003366;color:#fff;text-align:center;">
+                <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
+              </tr></thead>
+              <tbody>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
+                <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+                <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
+                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
+                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
+                <tr><td style="padding:5px 8px;">AFRICA</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:11px;color:#6b7280;line-height:1.5;">
+              * 적용 대상: 중국·한국·일본·미국 <b>제외</b> 전 선적지 (별도 기준 적용)<br>
+              * 한국 수입: 수입영업팀 가이드라인 따름<br>
+              * 현지 사정에 따라 OBT 협의 후 조정 가능<br>
+              * 출처: 해외영업팀 김동현 (kdh@ekmtc.com) — 2026.03.18
+            </div>
           </div>
         </div>
         <div data-lang="en">
@@ -1998,9 +2024,35 @@
             <div class="cost-name">WRS Waiver Criteria</div>
             <div class="cost-val">Berth before Feb 28<span class="cost-note">e.g., KMTC MUMBAI 2601W berthed 2/28 at DMM → waived</span></div>
           </div>
-          <div class="cost-item">
-            <div class="cost-name">EFS (Emergency Fuel Surcharge)</div>
-            <div class="cost-val">📋 Under Discussion<span class="cost-note">Management review in progress. TBA (as of 3/13)</span></div>
+          <div class="cost-item" style="border-bottom:none;">
+            <div class="cost-name">EFC (Emergency Fuel Charge) <span class="badge badge-critical" style="font-size:10px;">CONFIRMED 3/18</span></div>
+            <div class="cost-val" style="color:#c00;">Effective from Mar 28 departures<span class="cost-note">Vietnam: Apr 1 | Payment at POL</span></div>
+          </div>
+          <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
+            <span class="acc-arrow">▶</span> View EFC Rate Table (by Destination, USD)
+          </div>
+          <div class="acc-body" style="display:none;">
+            <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
+              <thead><tr style="background:#003366;color:#fff;text-align:center;">
+                <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
+              </tr></thead>
+              <tbody>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
+                <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+                <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
+                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
+                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
+                <tr><td style="padding:5px 8px;">AFRICA</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:11px;color:#6b7280;line-height:1.5;">
+              * Applicable origins: All except China, Korea, Japan, US (separate criteria)<br>
+              * Korea imports: Follow Import Sales Team guidelines<br>
+              * Adjustable in consultation with OBT per local conditions<br>
+              * Source: OBT DH Kim (kdh@ekmtc.com) — 2026.03.18
+            </div>
           </div>
         </div>
         <div data-lang="zh">
@@ -2016,9 +2068,35 @@
             <div class="cost-name">WRS 豁免基准</div>
             <div class="cost-val">2/28前靠港货物<span class="cost-note">例: KMTC MUMBAI 2601W — 2/28进DMM → 豁免</span></div>
           </div>
-          <div class="cost-item">
-            <div class="cost-name">EFS（紧急燃油附加费）</div>
-            <div class="cost-val">📋 内部协商中<span class="cost-note">管理层讨论后公告（3/13现状：未确定）</span></div>
+          <div class="cost-item" style="border-bottom:none;">
+            <div class="cost-name">EFC（紧急燃油附加费）<span class="badge badge-critical" style="font-size:10px;">3/18确定</span></div>
+            <div class="cost-val" style="color:#c00;">3/28出港货物起适用<span class="cost-note">越南4/1适用 | POL征收</span></div>
+          </div>
+          <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
+            <span class="acc-arrow">▶</span> 查看EFC费率表（按目的地，USD）
+          </div>
+          <div class="acc-body" style="display:none;">
+            <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
+              <thead><tr style="background:#003366;color:#fff;text-align:center;">
+                <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
+              </tr></thead>
+              <tbody>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN（日本）</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
+                <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN（中港台）</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA（东南亚）</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+                <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)（印巴）</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
+                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST（中东）</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
+                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA（红海）</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
+                <tr><td style="padding:5px 8px;">AFRICA（非洲）</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO（墨西哥）</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:11px;color:#6b7280;line-height:1.5;">
+              * 适用起运地：除中国·韩国·日本·美国外全部（另行适用标准）<br>
+              * 韩国进口：按进口营业组指南<br>
+              * 可根据当地情况与OBT协商调整<br>
+              * 来源：海外营业团队 金东铉 (kdh@ekmtc.com) — 2026.03.18
+            </div>
           </div>
         </div>
       </div>
@@ -2183,9 +2261,11 @@
     <div class="tab-pane" id="policy-efs-notice">
       <div class="card-body">
         <div data-lang="ko">
-          <div class="change-row critical">
-            <strong>⚠️ EFS (Emergency Fuel Surcharge)</strong>: 경영진 논의 중. 현재 확정되지 않음.<br>
-            <span class="change-meta">화주 문의 시: "현재 내부 논의 중이며, 결정되면 즉시 안내드리겠습니다." (3/13 기준)</span>
+          <div class="change-row critical" style="background:#fef2f2;border:1.5px solid #dc2626;border-radius:6px;padding:10px 12px;">
+            <strong>🔴 EFC (Emergency Fuel Charge) — 3/18 확정 공지</strong><br>
+            <span style="font-size:13px;">유류비 급등 대응 신규 할증료. <b>3월 28일 출항분부터 적용</b> (베트남 4/1).</span><br>
+            <span style="font-size:12px;color:#555;">적용 대상: 중국·한국·일본·미국 제외 전 선적지 | POL 징수 | 현지 사정에 따라 OBT 협의 조정 가능</span><br>
+            <span class="change-meta">출처: 해외영업팀 김동현 (kdh@ekmtc.com) — Notice of Emergency Fuel Charge (EFC) Implementation</span>
           </div>
           <div class="change-row" style="margin-top:8px;">
             <strong>📌 LSS (Low Sulphur Surcharge) / Q2 2026</strong>: 아직 공지 미발령. Geodis 측에서 Q2 LSS Trade Notice 요청 중.
@@ -2201,9 +2281,11 @@
           </div>
         </div>
         <div data-lang="en">
-          <div class="change-row critical">
-            <strong>⚠️ EFS (Emergency Fuel Surcharge)</strong>: Under management review. Not yet confirmed.<br>
-            <span class="change-meta">Customer inquiry response: "Under internal discussion, will notify once decided." (as of 3/13)</span>
+          <div class="change-row critical" style="background:#fef2f2;border:1.5px solid #dc2626;border-radius:6px;padding:10px 12px;">
+            <strong>🔴 EFC (Emergency Fuel Charge) — Confirmed 3/18</strong><br>
+            <span style="font-size:13px;">New surcharge to offset sharp fuel cost increase. <b>Effective for all cargo departing on or after Mar 28, 2026</b> (Apr 1 for Vietnam).</span><br>
+            <span style="font-size:12px;color:#555;">Applicable origins: All except China, Korea, Japan, US (separate criteria) | Payment at POL | Adjustable via OBT consultation</span><br>
+            <span class="change-meta">Source: OBT DH Kim (kdh@ekmtc.com) — Notice of Emergency Fuel Charge (EFC) Implementation</span>
           </div>
           <div class="change-row" style="margin-top:8px;">
             <strong>📌 LSS (Low Sulphur Surcharge) / Q2 2026</strong>: Not yet announced. Geodis requesting Q2 LSS Trade Notice.
@@ -2217,9 +2299,11 @@
           </div>
         </div>
         <div data-lang="zh">
-          <div class="change-row critical">
-            <strong>⚠️ EFS（紧急燃油附加费）</strong>: 管理层讨论中，尚未确定。<br>
-            <span class="change-meta">货主询价回复参考: "目前正在内部讨论，决定后将立即通知。"（3/13现状）</span>
+          <div class="change-row critical" style="background:#fef2f2;border:1.5px solid #dc2626;border-radius:6px;padding:10px 12px;">
+            <strong>🔴 EFC（紧急燃油附加费）— 3/18确认公告</strong><br>
+            <span style="font-size:13px;">为应对燃油成本急剧上涨的新附加费。<b>2026年3月28日起出港货物适用</b>（越南4/1起）。</span><br>
+            <span style="font-size:12px;color:#555;">适用起运地：除中国·韩国·日本·美国外全部（另行适用标准）| POL征收 | 可与OBT协商调整</span><br>
+            <span class="change-meta">来源：海外营业团队 金东铉 (kdh@ekmtc.com) — Notice of Emergency Fuel Charge (EFC) Implementation</span>
           </div>
           <div class="change-row" style="margin-top:8px;">
             <strong>📌 LSS（低硫附加费）/ 2026年Q2</strong>: 尚未公告。Geodis正在请求Q2 LSS贸易通知。

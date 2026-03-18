@@ -1,6 +1,23 @@
 {
-  "lastUpdated": "2026-03-17",
+  "lastUpdated": "2026-03-18",
   "changelog": [
+    {
+      "dateIso": "2026-03-18",
+      "date": { "ko": "3월 18일", "en": "Mar 18", "zh": "3月18日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "Emergency Fuel Charge (EFC) 신규 부과 확정 — 3월 28일 출항분부터 적용",
+        "en": "Emergency Fuel Charge (EFC) Confirmed — Effective for Departures from Mar 28",
+        "zh": "紧急燃油附加费(EFC)确认征收——3月28日起出港货物适用"
+      },
+      "body": {
+        "ko": "유류비 급등 대응을 위한 신규 할증료 EFC 부과 확정. ▶ 적용 기준: 중국·한국·일본·미국 제외 전 선적지(별도 기준 적용). 한국 수입은 수입영업팀 가이드라인 따름. 베트남은 4/1 적용. ▶ 요율(USD): [JAPAN] 20'D 60/40'D 120/20'RF 90/40'RF 180 | [CHN·HKG·TW] 40/80/60/120 | [SEA] 40/80/60/120 | [ISC] 160/320/240/480 | [ME] 160/320/240/480 | [RED SEA] 200/400/300/600 | [AFRICA] 200/400/300/600 | [MEXICO] 200/400/300/600. ▶ Payment: POL(선적지). 현지 사정에 따라 OBT 협의 후 조정 가능.",
+        "en": "New EFC surcharge confirmed to offset sharp fuel cost increase. ▶ Applicable origins: All except China, Korea, Japan, US (separate criteria). Korea imports per IST guideline. Vietnam effective Apr 1. ▶ Rates (USD): [JAPAN] 20'D 60/40'D 120/20'RF 90/40'RF 180 | [CHN/HKG/TW] 40/80/60/120 | [SEA] 40/80/60/120 | [ISC] 160/320/240/480 | [ME] 160/320/240/480 | [RED SEA] 200/400/300/600 | [AFRICA] 200/400/300/600 | [MEXICO] 200/400/300/600. ▶ Payment: POL. Adjustable in consultation with OBT per local conditions.",
+        "zh": "为应对燃油成本急剧上涨，确认征收新附加费EFC。▶适用起运地：除中国·韩国·日本·美国外全部（另行适用标准）。韩国进口按进口营业组指南。越南4/1起适用。▶费率(USD)：[日本]20'D 60/40'D 120/20'RF 90/40'RF 180｜[中港台]40/80/60/120｜[东南亚]40/80/60/120｜[印巴]160/320/240/480｜[中东]160/320/240/480｜[红海]200/400/300/600｜[非洲]200/400/300/600｜[墨西哥]200/400/300/600。▶付款：起运港(POL)。可根据当地情况与OBT协商调整。"
+      },
+      "source": "해외영업팀 김동현 (kdh@ekmtc.com) | 메일: Notice of Emergency Fuel Charge (EFC) Implementation"
+    },
     {
       "dateIso": "2026-03-17",
       "date": { "ko": "3월 17일", "en": "Mar 17", "zh": "3月17日" },
@@ -364,9 +381,9 @@
       "badgeType": "new",
       "badgeLabel": { "ko": "신규", "en": "NEW", "zh": "新增" },
       "title": {
-        "ko": "EFS(긴급 유류 할증료) 부과 결정 미완 — 당일~익일 확정 예정",
-        "en": "EFS (Emergency Fuel Surcharge) decision pending — expected today or tomorrow",
-        "zh": "EFS（紧急燃油附加费）征收决定待定——预计当日或次日确定"
+        "ko": "EFS(긴급 유류 할증료) 부과 결정 미완 → 3/18 EFC로 확정 (상단 참조)",
+        "en": "EFS (Emergency Fuel Surcharge) decision pending → Confirmed as EFC on 3/18 (see above)",
+        "zh": "EFS（紧急燃油附加费）征收决定待定 → 3/18确认为EFC（见上方）"
       },
       "body": {
         "ko": "화주 KWE(Kintetsu World Express)에서 FAK/NAC 모두 EFS 부과 여부 확인 요청. 해외영업팀 답변: 아직 결정되지 않음, 당일 또는 익일 결정 후 즉시 안내 예정. 부과 확정 시 별도 공지.",
