@@ -612,7 +612,7 @@
       <span data-lang-inline="ko">최종 업데이트</span>
       <span data-lang-inline="en">Last Updated</span>
       <span data-lang-inline="zh">最终更新</span>:
-      <span>2026년 3월 18일</span>
+      <span>2026년 3월 19일</span>
     </div>
   </div>
 </div>
@@ -666,10 +666,8 @@
   <!-- ===== Main Navigation ===== -->
   <div class="main-nav">
     <button class="main-nav-btn active" onclick="switchMainSec('dashboard', this)">📊 <span data-lang-inline="ko">현황</span><span data-lang-inline="en">Status</span><span data-lang-inline="zh">现况</span></button>
-    <button class="main-nav-btn" onclick="switchMainSec('routes', this)">🚢 <span data-lang-inline="ko">선박·항로</span><span data-lang-inline="en">Vessels</span><span data-lang-inline="zh">船舶·航线</span></button>
-    <button class="main-nav-btn" onclick="switchMainSec('costs', this)">💰 <span data-lang-inline="ko">비용·WRS</span><span data-lang-inline="en">Costs·WRS</span><span data-lang-inline="zh">费用·WRS</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('eov-guide', this)" id="nav-eov-guide">📋 <span data-lang-inline="ko">NSA EOV 가이드</span><span data-lang-inline="en">NSA EOV Guide</span><span data-lang-inline="zh">NSA EOV指南</span></button>
-    <button class="main-nav-btn" onclick="switchMainSec('notices', this)">📢 <span data-lang-inline="ko">공지·회의</span><span data-lang-inline="en">Notices</span><span data-lang-inline="zh">公告·会议</span></button>
+    <button class="main-nav-btn" onclick="switchMainSec('costs', this)">💰 <span data-lang-inline="ko">비용(WRS,EFS)</span><span data-lang-inline="en">Costs(WRS,EFS)</span><span data-lang-inline="zh">费用(WRS,EFS)</span></button>
     <button class="main-nav-btn" onclick="switchMainSec('history', this)">🔄 <span data-lang-inline="ko">이력</span><span data-lang-inline="en">Log</span><span data-lang-inline="zh">历史</span></button>
   </div>
 
@@ -695,31 +693,28 @@
     </div>
     <div class="card-body">
       <div data-lang="ko">
+        <div class="general-alert ga-critical">🔴 <strong>[NEW 3/19] 중동향 특수화물(DG/OOG/RF) 접수 전면 중단</strong> — SPECIAL CENTER 공지. 중동 발/착 DG·OOG·RF 전체 임시 접수 중단. 추후 공지 시까지 신규 부킹 불가.</div>
+        <div class="general-alert ga-critical">🔴 <strong>[NEW 3/19] WRS 징수 중단</strong> — KMU 모선 이후 선적건부터는 DEVIATION $800/$1600 + 로컬 운송료 별도로 대체</div>
         <div class="general-alert ga-critical">🔴 <strong>LOI 징구 필수</strong> — 전쟁위험 관련 추가비용 부담 LOI를 화주로부터 반드시 사전 징구. 법무법인 검토 완료 양식 사용. <strong>중국발: WRS 항목 2번 삭제된 개정판 사용 (3/10 개정)</strong></div>
         <div class="general-alert ga-critical">🔴 <strong>KLF 3일 미픽업 → SHJ ICD 강제이송</strong> — 도착 후 3일 이내 미픽업 시 SHJ ICD로 강제 이송. 스토리지 Day 1부터 청구. 화주 즉시 통보 필수.</div>
-        <div class="general-alert ga-warning">🟡 <strong>EOV 화물 비용 변동</strong> — 비용·이송방법은 현지 상황에 따라 변동 가능. 화주에게 반드시 사전 안내 필요.</div>
-        <div class="general-alert ga-warning">🟡 <strong>피더 WRS 별도 부과</strong> — Upper Gulf(SHJ, KWI, UQR, HMA) 및 홍해항 향 피더 사용 시 피더사 WRS 별도 부과. 피더 비용 기하급수적 상승 중.</div>
-        <div class="general-alert ga-info">🔵 <strong>중국발: WRS Included 운임 → 추가부과 불필요</strong> — 중국발 화물의 경우 WRS가 포함된(Included) 운임으로 선적했으면 WRS 별도 추가부과 필요 없음.</div>
+        <div class="general-alert ga-warning">🟡 <strong>EOV 화물 비용</strong> — 비용·이송방법은 현지 상황에 따라 변동 가능. 화주에게 반드시 사전 안내 필요. (NSA EOV 가이드 탭 확인)</div>
         <div class="general-alert ga-info">🔵 <strong>보세운송 세관 해결 완료</strong> — JEA, QIW, ADP, SHJ → KLF 통관 없이 IN-TRANSIT 보세운송 가능 (샤르자 세관 협의 완료).</div>
-        <div class="general-alert ga-critical">🔴 <strong>KLF DG(위험물) 양하 전면 불가</strong> — 장치장 이슈로 KLF DG 양하 불가 (총 179 TEU ROB). 신규 DG 부킹 접수 중단. 당사 KDM 2601W: PKW 출항→KLF향, 차항지 PNC 양하 예상. 기 ROB 화물은 운항선사가 차항지 양하 후 통보 예상. 화주에게 COD / SHIPBACK / EOV 옵션 안내 필요.</div>
       </div>
       <div data-lang="en">
+        <div class="general-alert ga-critical">🔴 <strong>[NEW 3/19] ME Special Cargo (DG/OOG/RF) Booking Fully Suspended</strong> — SPECIAL CENTER notice. All DG/OOG/RF bookings to/from Middle East temporarily suspended. No new bookings until further notice.</div>
+        <div class="general-alert ga-critical">🔴 <strong>[NEW 3/19] WRS Collection Suspended</strong> — From KMU vessel onward: replaced by DEVIATION $800/$1600 + local transport charges separately</div>
         <div class="general-alert ga-critical">🔴 <strong>LOI Collection Mandatory</strong> — Collect LOI for war-risk additional costs from all shippers. Use legally reviewed form. <strong>China-origin: Use revised form with WRS item #2 removed (rev. 3/10)</strong></div>
         <div class="general-alert ga-critical">🔴 <strong>KLF 3-Day Pickup Rule → SHJ ICD Forced Transfer</strong> — If not picked up within 3 days, cargo forcibly transferred to SHJ ICD. Storage charged from Day 1. Immediate consignee notification required.</div>
-        <div class="general-alert ga-warning">🟡 <strong>EOV Cargo Cost Variability</strong> — Costs and routing subject to change per local conditions. Mandatory prior notice to customers.</div>
-        <div class="general-alert ga-warning">🟡 <strong>Separate Feeder WRS</strong> — Feeder WRS charged separately for Upper Gulf (SHJ/KWI/UQR/HMA) and Red Sea. Feeder costs rising exponentially.</div>
-        <div class="general-alert ga-info">🔵 <strong>China-Origin: WRS Included Freight → No Additional WRS</strong> — If China-origin cargo was shipped under WRS-included freight rates, no separate WRS surcharge is required.</div>
+        <div class="general-alert ga-warning">🟡 <strong>EOV Cargo Costs</strong> — Costs and routing subject to change per local conditions. Mandatory prior notice to customers. (See NSA EOV Guide tab)</div>
         <div class="general-alert ga-info">🔵 <strong>Bonded Transport Cleared</strong> — JEA, QIW, ADP, SHJ → IN-TRANSIT bonded haulage via KLF without customs clearance (agreed with Sharjah customs).</div>
-        <div class="general-alert ga-critical">🔴 <strong>KLF DG (Dangerous Goods) Discharge Suspended</strong> — DG discharge at KLF impossible due to storage yard issue (179 TEU ROB total). New DG bookings suspended. KMTC vessel KDM 2601W: departed PKW → KLF, next port PNC discharge expected. ROB cargo to be discharged at next port by carrier. Advise shippers: COD / SHIPBACK / EOV.</div>
       </div>
       <div data-lang="zh">
+        <div class="general-alert ga-critical">🔴 <strong>[NEW 3/19] 中东方向特殊货物(DG/OOG/RF)接收全面暂停</strong> — SPECIAL CENTER公告。中东发/到DG·OOG·RF全部临时暂停接收。另行通知前不可新订舱。</div>
+        <div class="general-alert ga-critical">🔴 <strong>[NEW 3/19] WRS征收暂停</strong> — KMU母船以后装船货物起以DEVIATION $800/$1600 + 当地运输费替代</div>
         <div class="general-alert ga-critical">🔴 <strong>必须征收LOI</strong> — 须向所有货主事前征收战争风险额外费用LOI。使用经律师事务所审查的格式。<strong>中国发货: 使用删除WRS第2项的修订版（3/10修订）</strong></div>
         <div class="general-alert ga-critical">🔴 <strong>KLF 3日未提货 → 强制转移至SHJ ICD</strong> — 到港3日内未提货将强制转运至SHJ ICD。堆存费从第1天起计。须立即通知收货人。</div>
-        <div class="general-alert ga-warning">🟡 <strong>EOV货物费用变动</strong> — 费用及运输方式可能随现地情况变动。须事先通知货主。</div>
-        <div class="general-alert ga-warning">🟡 <strong>支线WRS另收</strong> — 上湾(SHJ/KWI/UQR/HMA)及红海港方向使用支线时另收支线WRS。支线费用急剧上涨中。</div>
-        <div class="general-alert ga-info">🔵 <strong>中国发货：WRS已含运费 → 无需额外收取</strong> — 中国发货若以含WRS的运费装船，则无需另行加收WRS附加费。</div>
+        <div class="general-alert ga-warning">🟡 <strong>EOV货物费用</strong> — 费用及运输方式可能随现地情况变动。须事先通知货主。（请查看NSA EOV指南标签）</div>
         <div class="general-alert ga-info">🔵 <strong>保税运输海关已解决</strong> — JEA、QIW、ADP、SHJ → 经KLF无需清关IN-TRANSIT保税运输（已与沙迦海关协议）。</div>
-        <div class="general-alert ga-critical">🔴 <strong>KLF危险品(DG)卸货全面暂停</strong> — 因堆场问题KLF无法卸载危险品（共179 TEU滞留船上）。新DG订舱暂停接收。KMTC自营船KDM 2601W已从PKW出港驶向KLF，下一港PNC卸货预计。已装船ROB货物预计由船公司在下一港卸后通知。请告知货主：COD / 退运 / EOV。</div>
       </div>
     </div>
   </div>
@@ -732,7 +727,8 @@
     <div class="card-body">
       <div class="port-btns">
         <button class="port-btn" onclick="showPort('JEA',this)">JEA</button>
-        <button class="port-btn" onclick="showPort('DMM',this)">Upper Gulf</button>
+        <button class="port-btn" onclick="showPort('DMM',this)">DMM/KSP</button>
+        <button class="port-btn" onclick="showPort('KWI',this)">KWI/UQR/HMA</button>
         <button class="port-btn" onclick="showPort('SHJ',this)">SHJ/AJM/RAK</button>
         <button class="port-btn" onclick="showPort('RED',this)">AQJ/JED/SKN</button>
         <button class="port-btn" onclick="showPort('NSA',this)">NSA</button>
@@ -754,154 +750,187 @@
             <div class="port-info-val">POD: <strong>KLF</strong> / DLY: <strong>KLF</strong> <span style="color:#c00;font-weight:700;font-size:11px;">(B/L상 KLF만 표기)</span></div>
           </div>
           <div class="port-info-item">
-            <div class="port-info-label">WRS</div>
-            <div class="port-info-val">20': <strong>$2,000</strong> / 40': <strong>$3,500</strong></div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label"><span data-lang-inline="ko">다음 선박</span><span data-lang-inline="en">Next Vessel</span><span data-lang-inline="zh">下一艘船</span></div>
-            <div class="port-info-val">KDM호 KLF ETA 3/23</div>
+            <div class="port-info-label"><span data-lang-inline="ko">비용</span><span data-lang-inline="en">Cost</span><span data-lang-inline="zh">费用</span></div>
+            <div class="port-info-val">DEVIATION $800/$1600 + <span data-lang-inline="ko">로컬 운송료 별도</span><span data-lang-inline="en">local trucking separate</span><span data-lang-inline="zh">当地运输费另计</span></div>
           </div>
           <div class="port-guide">
-            <span data-lang-inline="ko">📋 <strong>부킹 가이드:</strong> 부킹 레그 <strong>KLF에서 종료</strong> (POD: KLF / DLY: KLF) | B/L에는 <strong>KLF만 표기</strong> | KLF → JEA 운송은 도착지에서 별도 보세운송 처리 (CNEE 비용 부담)</span>
-            <span data-lang-inline="en">📋 <strong>Booking Guide:</strong> Booking leg <strong>ends at KLF</strong> (POD: KLF / DLY: KLF) | B/L shows <strong>KLF only</strong> | KLF → JEA transport handled separately as bonded haulage at destination (charged to CNEE)</span>
-            <span data-lang-inline="zh">📋 <strong>订舱指引:</strong> 订舱腿在<strong>KLF终止</strong>（POD: KLF / DLY: KLF）| 提单仅填写<strong>KLF</strong> | KLF→JEA运输由目的地另行保税运输处理（费用向CNEE收取）</span>
+            <div data-lang="ko">
+              📋 <strong>부킹 가이드</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>B/L 기재: POD/DLY 모두 <strong>KLF</strong> (JEA 기재 금지)</li>
+                <li>KLF→JEA: <strong>보세운송 IN-TRANSIT</strong> 처리 (DPW Logistics 계약, CNEE 비용 부담)</li>
+                <li>KLF 통관 희망 시 → 선박 도착 <strong>2일 전</strong> 사전 통보 필수 (미통보 시 JEA 자동 이송)</li>
+              </ul>
+              💰 <strong>비용</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>DVC (Deviation): <strong>$800/20' · $1,600/40'</strong></li>
+                <li>TRC (트럭킹): <strong>$900~1,000/VAN</strong> (2일마다 변동)</li>
+                <li>PRC (DPW Drop-off): <strong>AED 700/20' · AED 1,070/40'</strong></li>
+                <li>LFT (KLF 스토리지): <strong>Day 1부터</strong> 청구</li>
+              </ul>
+            </div>
+            <div data-lang="en">
+              📋 <strong>Booking Guide</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>B/L: POD/DLY both <strong>KLF</strong> (never enter JEA)</li>
+                <li>KLF→JEA: <strong>Bonded haulage IN-TRANSIT</strong> (DPW Logistics, charged to CNEE)</li>
+                <li>KLF clearance → notify <strong>2 days before</strong> vessel arrival (default: auto-transfer to JEA)</li>
+              </ul>
+              💰 <strong>Costs</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>DVC (Deviation): <strong>$800/20' · $1,600/40'</strong></li>
+                <li>TRC (Trucking): <strong>$900~1,000/VAN</strong> (changes every 2 days)</li>
+                <li>PRC (DPW Drop-off): <strong>AED 700/20' · AED 1,070/40'</strong></li>
+                <li>LFT (KLF Storage): charged from <strong>Day 1</strong></li>
+              </ul>
+            </div>
+            <div data-lang="zh">
+              📋 <strong>订舱指引</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>提单：POD/DLY均填 <strong>KLF</strong>（禁填JEA）</li>
+                <li>KLF→JEA：<strong>保税运输IN-TRANSIT</strong>处理（DPW Logistics合同，费用向CNEE收取）</li>
+                <li>KLF清关 → 须在船舶到达<strong>前2天</strong>通知（否则自动转运至JEA）</li>
+              </ul>
+              💰 <strong>费用</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>DVC（偏航费）：<strong>$800/20' · $1,600/40'</strong></li>
+                <li>TRC（卡车费）：<strong>$900~1,000/VAN</strong>（每2天变动）</li>
+                <li>PRC（DPW Drop-off）：<strong>AED 700/20' · AED 1,070/40'</strong></li>
+                <li>LFT（KLF堆存）：<strong>第1天起</strong>计费</li>
+              </ul>
+            </div>
           </div>
           <div class="port-info-note">
-            <span data-lang-inline="ko">⚠️ LOI 징구 필수 | KLF 3일 내 미픽업 시 SHJ ICD 강제이송</span>
-            <span data-lang-inline="en">⚠️ LOI required | Forced transfer to SHJ ICD if not picked up within 3 days</span>
-            <span data-lang-inline="zh">⚠️ 须收取LOI | 3日内未提取强制转移至SHJ ICD</span>
-          </div>
-        </div>
-        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 EOV 처리 방안 상세</span><span data-lang-inline="en">📋 EOV Handling Details</span><span data-lang-inline="zh">📋 EOV处理方案详情</span></div>
-        <div class="acc-body" style="display:none;">
-          <div data-lang="ko">
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">1안 — DPW LOGISTIC 경유 JEA 운송</div>
-                <div class="eov-option-body">화주 요청 시 DPW LOGISTIC과 협의하여 JEA까지 운송, JEA 반출·엠티반납</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">한국발</span> 코파칸 THC + LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + 운송료 + JEA LOCAL(DCF 등) + KLF 스토리지</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">한국외</span> 코파칸 THC + LIFTING ON + WRP (USD 2,000/3,500) + JEA LOCAL(DCF 등) + KLF 스토리지</div>
-                </div>
-              </div>
-              <div class="eov-option opt2">
-                <div class="eov-option-label">2안 — KLF에서 화물 직접 반출</div>
-                <div class="eov-option-body">KLF 양하 전 EOV 선언, KLF에서 화물 직접 반출</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> 코파칸 THC + LIFTING ON + DEVIATION CHARGE (USD 800/1,600) + JEA DROP OFF (AED 900/1,200) + JEA LOCAL(DCF 등)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-lang="en">
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">Option 1 — Haulage to JEA via DPW LOGISTIC</div>
-                <div class="eov-option-body">On customer request, coordinate with DPW LOGISTIC for JEA delivery and empty return</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">Korea</span> KLF THC + LIFTING ON + DEVIATION (USD 800/1,600) + Haulage + JEA LOCAL(DCF etc.) + KLF Storage</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">Non-KR</span> KLF THC + LIFTING ON + WRP (USD 2,000/3,500) + JEA LOCAL(DCF etc.) + KLF Storage</div>
-                </div>
-              </div>
-              <div class="eov-option opt2">
-                <div class="eov-option-label">Option 2 — Cargo release at KLF</div>
-                <div class="eov-option-body">EOV declared before KLF discharge; cargo released at KLF</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> KLF THC + LIFTING ON + DEVIATION (USD 800/1,600) + JEA DROP OFF (AED 900/1,200) + JEA LOCAL</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-lang="zh">
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">方案1 — 经DPW LOGISTIC运至JEA</div>
-                <div class="eov-option-body">应货主要求，与DPW LOGISTIC协商后运至JEA，完成空箱还箱</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label kr">韩国发</span> 科尔法坎THC + 装卸费 + 偏航附加费(USD 800/1,600) + 运费 + JEA LOCAL + KLF堆存</div>
-                  <div class="eov-cost-row"><span class="eov-cost-label intl">非韩国</span> 科尔法坎THC + 装卸费 + WRP(USD 2,000/3,500) + JEA LOCAL + KLF堆存</div>
-                </div>
-              </div>
-              <div class="eov-option opt2">
-                <div class="eov-option-label">方案2 — 在KLF直接提货</div>
-                <div class="eov-option-body">KLF卸货前宣布EOV，在KLF直接提货</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> KLF THC + 装卸费 + 偏航附加费(USD 800/1,600) + JEA DROP OFF(AED 900/1,200) + JEA LOCAL</div>
-                </div>
-              </div>
-            </div>
+            <span data-lang-inline="ko">⚠️ LOI 징구 필수 | KLF 3일 내 미픽업 → SHJ ICD 강제이송 | 양하 후 5-6일 지연(야적장 부족) | ICD 이동 후 추적 불가</span>
+            <span data-lang-inline="en">⚠️ LOI required | 3-day pickup rule → forced SHJ ICD transfer | 5-6 day discharge delay | No tracking after ICD</span>
+            <span data-lang-inline="zh">⚠️ 须收取LOI | 3日内未提取→强制转移SHJ ICD | 卸货后延迟5-6天 | ICD后无法追踪</span>
           </div>
         </div>
       </div>
 
-      <!-- DMM (Upper Gulf) -->
+      <!-- DMM / KSP -->
       <div class="port-card" id="port-DMM">
         <div class="port-card-header">
-          <span class="port-card-name">DMM / KSP / HMA / KWI / UQR (<span data-lang-inline="ko">Upper Gulf</span><span data-lang-inline="en">Upper Gulf</span><span data-lang-inline="zh">上湾</span>)</span>
-          <span class="port-card-status st-closed"><span data-lang-inline="ko">서비스 중단 — 더블 T/S</span><span data-lang-inline="en">Suspended — Double T/S</span><span data-lang-inline="zh">服务中断 — 双中转</span></span>
+          <span class="port-card-name">DMM / KSP (Dammam / King Salman Port)</span>
+          <span class="port-card-status st-limited"><span data-lang-inline="ko">직항 불가 — JED 경유 또는 KLF 경유</span><span data-lang-inline="en">No Direct — Via JED or KLF</span><span data-lang-inline="zh">无法直达——经JED或KLF</span></span>
         </div>
         <div class="port-card-grid">
-          <div class="port-info-item">
-            <div class="port-info-label">ROUTING</div>
-            <div class="port-info-val">POL → <strong>KLF</strong> → (truck) → <strong>JEA</strong> → (feeder) → DMM/KSP/HMA/KWI/UQR</div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label">B/L (ICC)</div>
-            <div class="port-info-val">POD: KLF (TRUCK) - JEA (FEEDER) - DLY</div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label">WRS</div>
-            <div class="port-info-val">20': <strong>$2,000</strong> / 40': <strong>$3,500</strong> + <span data-lang-inline="ko">피더비 별도</span><span data-lang-inline="en">feeder extra</span><span data-lang-inline="zh">支线费另计</span></div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label">STATUS</div>
-            <div class="port-info-val"><span data-lang-inline="ko">AIM Cycle 75 DMM Drop → 피더 연결 검토 중</span><span data-lang-inline="en">AIM Cycle 75 DMM Drop → feeder under review</span><span data-lang-inline="zh">AIM Cycle 75 DMM取消 → 支线连接审查中</span></div>
-          </div>
           <div class="port-guide">
-            <span data-lang-inline="ko">📋 <strong>부킹 가이드:</strong> T/S 신고 후 피더 연결 | 피더사 WRS 별도 부과 | <strong style="color:#c00;">피더 비용 기하급수적 상승</strong> — 수화주 피더 사용·비용 부담 여부 사전 확인 필수</span>
-            <span data-lang-inline="en">📋 <strong>Booking Guide:</strong> T/S declaration then feeder connection | Separate feeder WRS | <strong style="color:#c00;">Feeder costs rising exponentially</strong> — Confirm consignee acceptance first</span>
-            <span data-lang-inline="zh">📋 <strong>订舱指引:</strong> T/S申报后转支线 | 另收支线WRS | <strong style="color:#c00;">支线费用急剧上涨</strong> — 须事先确认收货方是否承担支线费用</span>
+            <div data-lang="ko">
+              📋 <strong>부킹 가이드 — 2가지 루트</strong>
+              <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:6px;padding:8px 12px;margin:8px 0;">
+                <strong style="color:#166534;">루트 1: JED 경유 (권장, 최근 요청 증가)</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>NSA → <strong>JED</strong> (IRX2 이용, 별도 피더비 없음)</li>
+                  <li>JED → DMM/KSP: <strong>화주 비용 트럭킹</strong></li>
+                </ul>
+                💰 <strong>비용</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>수입자: WRS <strong>$2,000/20' · $3,500/40'</strong></li>
+                  <li>JED→DMM/KSP 트럭킹: <strong>수입자 부담</strong></li>
+                  <li>현지 로컬비용: 화주 진행</li>
+                </ul>
+              </div>
+              <div style="background:#f8fafc;border:1px solid #dde2ea;border-radius:6px;padding:8px 12px;margin:8px 0;">
+                <strong style="color:#6b7280;">루트 2: KLF 경유</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>NSA → KLF → JEA → DMM/KSP (더블 T/S)</li>
+                  <li>피더비 별도 발생</li>
+                </ul>
+              </div>
+            </div>
+            <div data-lang="en">
+              📋 <strong>Booking Guide — 2 Routes</strong>
+              <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:6px;padding:8px 12px;margin:8px 0;">
+                <strong style="color:#166534;">Route 1: Via JED (Recommended, increasing requests)</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>NSA → <strong>JED</strong> (via IRX2, no separate feeder charge)</li>
+                  <li>JED → DMM/KSP: <strong>Trucking at cargo interest's cost</strong></li>
+                </ul>
+                💰 <strong>Costs</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>Consignee: WRS <strong>$2,000/20' · $3,500/40'</strong></li>
+                  <li>JED→DMM/KSP trucking: <strong>Consignee's account</strong></li>
+                  <li>Local charges: borne by cargo interest</li>
+                </ul>
+              </div>
+              <div style="background:#f8fafc;border:1px solid #dde2ea;border-radius:6px;padding:8px 12px;margin:8px 0;">
+                <strong style="color:#6b7280;">Route 2: Via KLF</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>NSA → KLF → JEA → DMM/KSP (Double T/S)</li>
+                  <li>Separate feeder charges apply</li>
+                </ul>
+              </div>
+            </div>
+            <div data-lang="zh">
+              📋 <strong>订舱指引 — 两条路线</strong>
+              <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:6px;padding:8px 12px;margin:8px 0;">
+                <strong style="color:#166534;">路线1：经JED（推荐，近期请求增加）</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>NSA → <strong>JED</strong>（利用IRX2，无另行支线费）</li>
+                  <li>JED → DMM/KSP：<strong>货主承担卡车运输</strong></li>
+                </ul>
+                💰 <strong>费用</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>收货人：WRS <strong>$2,000/20' · $3,500/40'</strong></li>
+                  <li>JED→DMM/KSP卡车费：<strong>收货人承担</strong></li>
+                  <li>当地费用：货方自行处理</li>
+                </ul>
+              </div>
+              <div style="background:#f8fafc;border:1px solid #dde2ea;border-radius:6px;padding:8px 12px;margin:8px 0;">
+                <strong style="color:#6b7280;">路线2：经KLF</strong>
+                <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                  <li>NSA → KLF → JEA → DMM/KSP（双中转）</li>
+                  <li>另行产生支线费</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="port-info-note">
-            <span data-lang-inline="ko">⚠️ LOI 필수 | 카고 의사결정 필요 (피더 vs COD) | 비용 확정 전 화주 사전 안내</span>
-            <span data-lang-inline="en">⚠️ LOI required | Cargo decision needed (feeder vs COD) | Advise shipper before cost confirmation</span>
-            <span data-lang-inline="zh">⚠️ 须收取LOI | 需货物决策（支线 vs COD）| 费用确定前须通知货主</span>
+            <span data-lang-inline="ko">⚠️ LOI 필수 | JED 경유 루트 권장 — 화주 비용 부담 사전 안내 필수</span>
+            <span data-lang-inline="en">⚠️ LOI required | JED route recommended — mandatory prior cost notice to shipper</span>
+            <span data-lang-inline="zh">⚠️ 须收取LOI | 推荐JED经由路线 — 须事先通知货主费用事项</span>
           </div>
         </div>
-        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 EOV 처리 방안 상세</span><span data-lang-inline="en">📋 EOV Handling Details</span><span data-lang-inline="zh">📋 EOV处理方案详情</span></div>
-        <div class="acc-body" style="display:none;">
-          <div data-lang="ko">
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">KLF → JEA 이송 후 피더</div>
-                <div class="eov-option-body">FM로 인한 EOV 선언 후 KLF에서 JEA로 이송(화주 비용). KLF(TRUCK)–JEA(T/S)–Upper Gulf 형태. <strong style="color:#c00;">피더 비용 기하급수적 상승</strong>이므로 사전 수화주 확인 필수.</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">비용</span> DEVIATION CHARGE (USD 800/1,600) + (코파칸 JEA 운송료 + 하역료 + LIFTING ON)(AED 6,000/7,000) + 피더료 (USD 2,000~2,500/TEU) + 도착지 로컬</div>
-                </div>
-              </div>
+      </div>
+
+      <!-- KWI / UQR / HMA -->
+      <div class="port-card" id="port-KWI">
+        <div class="port-card-header">
+          <span class="port-card-name">KWI / UQR / HMA (<span data-lang-inline="ko">Upper Gulf 기타</span><span data-lang-inline="en">Other Upper Gulf</span><span data-lang-inline="zh">上湾其他</span>)</span>
+          <span class="port-card-status st-closed"><span data-lang-inline="ko">되도록 Ship-back 권유</span><span data-lang-inline="en">Ship-back Recommended</span><span data-lang-inline="zh">建议退运</span></span>
+        </div>
+        <div class="port-card-grid">
+          <div class="port-guide">
+            <div data-lang="ko">
+              📋 <strong>현황</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>피더 선복·현지 운송·통관 가능성·비용에 따라 <strong>별도 검토</strong></li>
+                <li>현재 피더·운송·통관 상황 <strong>불투명</strong></li>
+                <li style="color:#c00;font-weight:700;">되도록 Ship-back 권유</li>
+              </ul>
+            </div>
+            <div data-lang="en">
+              📋 <strong>Status</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>Reviewed separately per feeder space, local transport, customs feasibility, and cost</li>
+                <li>Feeder/transport/customs situation currently <strong>uncertain</strong></li>
+                <li style="color:#c00;font-weight:700;">Ship-back recommended</li>
+              </ul>
+            </div>
+            <div data-lang="zh">
+              📋 <strong>现况</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>视支线船位、当地运输、清关可行性及费用<strong>另行审查</strong></li>
+                <li>目前支线·运输·清关情况<strong>不明</strong></li>
+                <li style="color:#c00;font-weight:700;">建议退运(Ship-back)</li>
+              </ul>
             </div>
           </div>
-          <div data-lang="en">
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">Transfer KLF → JEA then Feeder</div>
-                <div class="eov-option-body">After FM-triggered EOV, cargo transferred KLF→JEA (at shipper's cost). KLF(TRUCK)–JEA(T/S)–Upper Gulf. <strong style="color:#c00;">Feeder costs risen exponentially</strong> — confirm with consignees first.</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">Cost</span> DEVIATION (USD 800/1,600) + (KLF-JEA haulage + unloading + LIFTING ON)(AED 6,000/7,000) + Feeder (USD 2,000~2,500/TEU) + Dest. Local</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-lang="zh">
-            <div class="eov-options">
-              <div class="eov-option opt1">
-                <div class="eov-option-label">KLF→JEA转运后支线</div>
-                <div class="eov-option-body">FM触发EOV后，货物从KLF转运至JEA（费用由货主承担）。按KLF(TRUCK)–JEA(T/S)–上湾港形式。<strong style="color:#c00;">支线费用急剧上涨</strong>，须事先与收货方确认。</div>
-                <div class="eov-cost">
-                  <div class="eov-cost-row"><span class="eov-cost-label">费用</span> 偏航附加费(USD 800/1,600) + (KLF-JEA运费+卸货费+LIFTING ON)(AED 6,000/7,000) + 支线费(USD 2,000~2,500/TEU) + 目的港本地费</div>
-                </div>
-              </div>
-            </div>
+          <div class="port-info-note" style="background:#fef2f2;border-left-color:#ef4444;">
+            <span data-lang-inline="ko">🔴 LOI 필수 | Ship-back 시 송하인·수하인 서면 동의 필수</span>
+            <span data-lang-inline="en">🔴 LOI required | Ship-back requires written consent from shipper &amp; consignee</span>
+            <span data-lang-inline="zh">🔴 须收取LOI | 退运须发货人和收货人书面同意</span>
           </div>
         </div>
       </div>
@@ -913,35 +942,60 @@
           <span class="port-card-status st-limited"><span data-lang-inline="ko">KLF 경유 트럭</span><span data-lang-inline="en">KLF via Truck</span><span data-lang-inline="zh">经KLF卡车运输</span></span>
         </div>
         <div class="port-card-grid">
-          <div class="port-info-item">
-            <div class="port-info-label">ROUTING</div>
-            <div class="port-info-val">POL → <strong>KLF</strong> → (truck) → SHJ / AJM / RAK / QIW</div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label">B/L (ICC)</div>
-            <div class="port-info-val">POD: <strong>KLF</strong> / DLY: <strong>AJM / RAK / QIW / SHJ</strong></div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label">WRS</div>
-            <div class="port-info-val">20': <strong>$2,000</strong> / 40': <strong>$3,500</strong> + <span data-lang-inline="ko">트럭비 별도</span><span data-lang-inline="en">truck cost</span><span data-lang-inline="zh">卡车费另计</span></div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label"><span data-lang-inline="ko">다음 선박</span><span data-lang-inline="en">Next Vessel</span><span data-lang-inline="zh">下一艘船</span></div>
-            <div class="port-info-val">KDM호 KLF ETA 3/23</div>
-          </div>
           <div class="port-guide">
-            <span data-lang-inline="ko">📋 <strong>부킹 가이드:</strong> JEA와 동일 기준 적용 | 사전 화주 안내 후 요청 시 진행 | <strong>AJM·RAK:</strong> Hutchison Logistic 협의 후 처리 (비용 정산 방식 확인 필요) | 세관 문제 해결 완료 — 보세운송 가능</span>
-            <span data-lang-inline="en">📋 <strong>Booking Guide:</strong> Same basis as JEA | Proceed after customer notice | <strong>AJM/RAK:</strong> via Hutchison Logistic (billing method TBC) | Customs cleared — bonded haulage OK</span>
-            <span data-lang-inline="zh">📋 <strong>订舱指引:</strong> 与JEA相同基准 | 事前通知货主后进行 | <strong>AJM·RAK:</strong> 与Hutchison Logistic协商处理（费用结算待确认）| 海关已解决 — 可保税运输</span>
+            <div data-lang="ko">
+              📋 <strong>부킹 가이드</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>Routing: POL → <strong>KLF</strong> → 트럭 → SHJ/AJM/RAK/QIW</li>
+                <li>B/L: POD: <strong>KLF</strong> / DLY: <strong>최종 목적지</strong></li>
+                <li>JEA와 동일 기준 적용 | 사전 화주 안내 후 요청 시 진행</li>
+                <li><strong>AJM·RAK:</strong> Hutchison Logistic 협의 후 처리 (비용 정산 방식 확인 필요)</li>
+                <li>세관 문제 해결 완료 — 보세운송 가능</li>
+              </ul>
+              💰 <strong>비용</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>WRS: <strong>$2,000/20' · $3,500/40'</strong> + 트럭비 별도</li>
+              </ul>
+            </div>
+            <div data-lang="en">
+              📋 <strong>Booking Guide</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>Routing: POL → <strong>KLF</strong> → truck → SHJ/AJM/RAK/QIW</li>
+                <li>B/L: POD: <strong>KLF</strong> / DLY: <strong>final destination</strong></li>
+                <li>Same basis as JEA | Proceed after customer notice</li>
+                <li><strong>AJM/RAK:</strong> Via Hutchison Logistic (billing method TBC)</li>
+                <li>Customs cleared — bonded haulage available</li>
+              </ul>
+              💰 <strong>Costs</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>WRS: <strong>$2,000/20' · $3,500/40'</strong> + trucking separate</li>
+              </ul>
+            </div>
+            <div data-lang="zh">
+              📋 <strong>订舱指引</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>路线：POL → <strong>KLF</strong> → 卡车 → SHJ/AJM/RAK/QIW</li>
+                <li>提单：POD: <strong>KLF</strong> / DLY: <strong>最终目的地</strong></li>
+                <li>与JEA相同基准 | 事前通知货主后进行</li>
+                <li><strong>AJM·RAK:</strong> 与Hutchison Logistic协商（费用结算待确认）</li>
+                <li>海关已解决 — 可保税运输</li>
+              </ul>
+              💰 <strong>费用</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>WRS: <strong>$2,000/20' · $3,500/40'</strong> + 卡车费另计</li>
+              </ul>
+            </div>
           </div>
           <div class="port-info-note">
-            <span data-lang-inline="ko">⚠️ LOI 필수 | KLF 3일 내 미픽업 시 SHJ ICD 강제이송</span>
-            <span data-lang-inline="en">⚠️ LOI required | Forced transfer to SHJ ICD if not picked up within 3 days</span>
-            <span data-lang-inline="zh">⚠️ 须收取LOI | 3日内未提取强制转移至SHJ ICD</span>
+            <span data-lang-inline="ko">⚠️ LOI 필수 | KLF 3일 내 미픽업 → SHJ ICD 강제이송</span>
+            <span data-lang-inline="en">⚠️ LOI required | 3-day pickup rule → forced SHJ ICD transfer</span>
+            <span data-lang-inline="zh">⚠️ 须收取LOI | 3日内未提取→强制转移SHJ ICD</span>
           </div>
         </div>
-        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 EOV 처리 방안 상세</span><span data-lang-inline="en">📋 EOV Handling Details</span><span data-lang-inline="zh">📋 EOV处理方案详情</span></div>
-        <div class="acc-body" style="display:none;">
+      </div>
+
+      <!-- SHJ EOV accordion removed — hidden -->
+      <div style="display:none!important;">
           <div data-lang="ko">
             <div class="eov-port-title" style="font-size:12px;padding:6px 10px;">🔸 SHJ (Sharjah)</div>
             <div class="eov-leg" style="font-size:11.5px;">기존 JEA T/S SHJ 대신, KLF에서 SHJ ICD 픽업으로 변경. 셀프테이너가 운송 후 당사 청구</div>
@@ -1039,26 +1093,49 @@
           <span class="port-card-status st-closed"><span data-lang-inline="ko">더블 T/S — 적체 경보</span><span data-lang-inline="en">Double T/S — Idling Alert</span><span data-lang-inline="zh">双中转 — 积压警报</span></span>
         </div>
         <div class="port-card-grid">
-          <div class="port-info-item">
-            <div class="port-info-label">ROUTING</div>
-            <div class="port-info-val">POL → <strong>KLF</strong> → (truck) → <strong>JEA</strong> → (feeder JJS/IRX2) → AQJ/JED/SKN</div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label">B/L (ICC)</div>
-            <div class="port-info-val">POD: KLF (TRUCK) - JEA (FEEDER) - DLY</div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label">WRS</div>
-            <div class="port-info-val">20': <strong>$2,000</strong> / 40': <strong>$3,500</strong> + <span data-lang-inline="ko">피더비 별도</span><span data-lang-inline="en">feeder cost</span><span data-lang-inline="zh">支线费另计</span></div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label"><span data-lang-inline="ko">피더</span><span data-lang-inline="en">Feeder</span><span data-lang-inline="zh">支线</span></div>
-            <div class="port-info-val">JJS/W · IRX2/W (JEA T/S)</div>
-          </div>
           <div class="port-guide">
-            <span data-lang-inline="ko">📋 <strong>부킹 가이드:</strong> T/S 신고 후 피더 연결 | 피더사 WRS 별도 부과 | <strong style="color:#c00;">현재 비용 매우 높고 피더 현실적 불가</strong> — 화주에게 상황 반드시 사전 안내</span>
-            <span data-lang-inline="en">📋 <strong>Booking Guide:</strong> T/S declaration then feeder | Separate feeder WRS | <strong style="color:#c00;">Currently very high cost, feeder practically unavailable</strong> — Mandatory prior notice to shipper</span>
-            <span data-lang-inline="zh">📋 <strong>订舱指引:</strong> T/S申报后转支线 | 另收支线WRS | <strong style="color:#c00;">目前费用极高，支线实际不可用</strong> — 须事先通知货主</span>
+            <div data-lang="ko">
+              📋 <strong>부킹 가이드</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>Routing: POL → <strong>KLF</strong> → 트럭 → <strong>JEA</strong> → 피더(JJS/IRX2) → AQJ/JED/SKN</li>
+                <li>B/L: POD: KLF (TRUCK) → JEA (FEEDER) → DLY</li>
+                <li>T/S 신고 후 피더 연결</li>
+              </ul>
+              💰 <strong>비용</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>WRS: <strong>$2,000/20' · $3,500/40'</strong></li>
+                <li>피더사 WRS <strong>별도 부과</strong></li>
+                <li style="color:#c00;font-weight:700;">현재 비용 매우 높고 피더 현실적 불가 — 화주에게 반드시 사전 안내</li>
+              </ul>
+            </div>
+            <div data-lang="en">
+              📋 <strong>Booking Guide</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>Routing: POL → <strong>KLF</strong> → truck → <strong>JEA</strong> → feeder (JJS/IRX2) → AQJ/JED/SKN</li>
+                <li>B/L: POD: KLF (TRUCK) → JEA (FEEDER) → DLY</li>
+                <li>T/S declaration then feeder connection</li>
+              </ul>
+              💰 <strong>Costs</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>WRS: <strong>$2,000/20' · $3,500/40'</strong></li>
+                <li>Separate feeder WRS <strong>charged additionally</strong></li>
+                <li style="color:#c00;font-weight:700;">Currently very high cost, feeder practically unavailable — mandatory prior notice to shipper</li>
+              </ul>
+            </div>
+            <div data-lang="zh">
+              📋 <strong>订舱指引</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>路线：POL → <strong>KLF</strong> → 卡车 → <strong>JEA</strong> → 支线(JJS/IRX2) → AQJ/JED/SKN</li>
+                <li>提单：POD: KLF (TRUCK) → JEA (FEEDER) → DLY</li>
+                <li>T/S申报后转支线</li>
+              </ul>
+              💰 <strong>费用</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>WRS: <strong>$2,000/20' · $3,500/40'</strong></li>
+                <li>支线WRS <strong>另行征收</strong></li>
+                <li style="color:#c00;font-weight:700;">目前费用极高，支线实际不可用——须事先通知货主</li>
+              </ul>
+            </div>
           </div>
           <div class="port-info-note" style="background:#fef2f2;border-left-color:#ef4444;">
             <span data-lang-inline="ko">🔴 JEA·MUN T/S 적체 경보 발령 중 (W11~W15) | LOI 필수 | 더블 T/S로 운송 기간 대폭 연장</span>
@@ -1066,8 +1143,8 @@
             <span data-lang-inline="zh">🔴 JEA/MUN中转积压警报(W11~W15) | 须收取LOI | 运输时间大幅延长</span>
           </div>
         </div>
-        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)" style="background:#fff5f5;color:#991b1b;"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 EOV 처리 방안 상세 <span class="badge badge-critical">고비용 / 피더 제한</span></span><span data-lang-inline="en">📋 EOV Handling Details <span class="badge badge-critical">High Cost / Limited Feeder</span></span><span data-lang-inline="zh">📋 EOV处理方案详情 <span class="badge badge-critical">高费用 / 支线受限</span></span></div>
-        <div class="acc-body" style="display:none;">
+        <div style="display:none!important;">
+        <div>
           <div data-lang="ko">
             <div class="eov-options">
               <div class="eov-option opt1">
@@ -1147,18 +1224,34 @@
           <span class="port-card-status st-limited"><span data-lang-inline="ko">대체 양하항 (EOV)</span><span data-lang-inline="en">Alternate Discharge (EOV)</span><span data-lang-inline="zh">替代卸货港(EOV)</span></span>
         </div>
         <div class="port-card-grid">
-          <div class="port-info-item">
-            <div class="port-info-label">STATUS</div>
-            <div class="port-info-val"><span data-lang-inline="ko">AIM2·VGI 중동향 ROB 전량 NSA 양하 결정</span><span data-lang-inline="en">AIM2/VGI all ME-bound ROB discharged at NSA</span><span data-lang-inline="zh">AIM2·VGI中东向ROB全部NSA卸货</span></div>
-          </div>
-          <div class="port-info-item">
-            <div class="port-info-label"><span data-lang-inline="ko">양하량</span><span data-lang-inline="en">Volume</span><span data-lang-inline="zh">卸货量</span></div>
-            <div class="port-info-val"><strong>2,050 TEU</strong></div>
-          </div>
           <div class="port-guide">
-            <span data-lang-inline="ko">📋 <strong>처리 가이드:</strong> EOV 선언 화물 대체 양하항 | KLF 도착 이후 처리는 각 DLY 포트별 방안과 동일 적용 | EOV 후 B/L 처리 법무 검토 중 (기존 B/L 유지 vs 2차 재계약)</span>
-            <span data-lang-inline="en">📋 <strong>Handling Guide:</strong> EOV-declared alternate discharge port | Post-KLF handling follows same DLY port procedures | B/L post-EOV under legal review (maintain vs re-contract)</span>
-            <span data-lang-inline="zh">📋 <strong>处理指引:</strong> EOV申报货物替代卸货港 | KLF到达后处理与各目的港方案相同 | EOV后提单处理法律审查中（维持原提单 vs 新合同）</span>
+            <div data-lang="ko">
+              📋 <strong>처리 가이드</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>AIM2·VGI 중동향 ROB 전량 NSA 양하 결정 (<strong>2,050 TEU</strong>)</li>
+                <li>EOV 선언 화물 대체 양하항</li>
+                <li>KLF 도착 이후 처리는 각 DLY 포트별 방안과 동일 적용</li>
+                <li>상세 옵션은 <strong style="color:#1e40af;">NSA EOV 가이드 탭</strong> 참조</li>
+              </ul>
+            </div>
+            <div data-lang="en">
+              📋 <strong>Handling Guide</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>AIM2/VGI all ME-bound ROB discharged at NSA (<strong>2,050 TEU</strong>)</li>
+                <li>EOV-declared alternate discharge port</li>
+                <li>Post-KLF handling follows same DLY port procedures</li>
+                <li>See <strong style="color:#1e40af;">NSA EOV Guide tab</strong> for detailed options</li>
+              </ul>
+            </div>
+            <div data-lang="zh">
+              📋 <strong>处理指引</strong>
+              <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
+                <li>AIM2·VGI中东向ROB全部NSA卸货（<strong>2,050 TEU</strong>）</li>
+                <li>EOV申报货物替代卸货港</li>
+                <li>KLF到达后处理与各目的港方案相同</li>
+                <li>详细方案请参考 <strong style="color:#1e40af;">NSA EOV指南选项卡</strong></li>
+              </ul>
+            </div>
           </div>
           <div class="port-info-note">
             <span data-lang-inline="ko">⚠️ LOI 필수 | 화주 사전 합의 필요 | 비용·이송방법 현지 상황에 따라 변동 가능</span>
@@ -1166,8 +1259,8 @@
             <span data-lang-inline="zh">⚠️ 须收取LOI | 须与货主事前协议 | 费用及运输方式可能随现地情况变动</span>
           </div>
         </div>
-        <div class="port-eov-toggle acc-toggle" onclick="toggleAccordion(this)"><span class="acc-arrow">▶</span> <span data-lang-inline="ko">📋 NSA 화물 처리 방안 상세</span><span data-lang-inline="en">📋 NSA Cargo Handling Details</span><span data-lang-inline="zh">📋 NSA货物处理方案详情</span></div>
-        <div class="acc-body" style="display:none;">
+        <div style="display:none!important;">
+        <div>
           <div data-lang="ko">
             <div class="change-row" style="margin-bottom:10px;font-size:12px;">📌 UPPER GULF·홍해항 제외 시, KLF 도착 이후 각 DLY 포트별 처리 방안은 위 KLF 양하 건과 동일 적용.</div>
             <div class="eov-options">
@@ -1266,44 +1359,14 @@
 
     </div>
 
-    <!-- 목적지별 부킹 유의사항 -->
-    <div style="background:#fff7ed;border:1.5px solid #d97706;border-radius:8px;padding:12px 16px;margin-top:12px;">
-      <div data-lang="ko">
-        <strong style="color:#92400e;">📌 부킹 유의사항 (KLF T/S 가이드라인 3/16 적용)</strong>
-        <ul style="font-size:12.5px;line-height:1.7;padding-left:18px;margin-top:6px;">
-          <li><strong>JEA 목적지:</strong> 부킹 레그를 <strong>KLF에서 종료</strong> (POD: KLF / DLY: KLF). B/L상 <strong>POD는 KLF만 표기됩니다.</strong></li>
-          <li><strong>KLF → JEA 운송:</strong> 도착지에서 <strong>별도 보세운송(IN-TRANSIT bonded haulage)</strong>으로 처리 예정이며, <strong>보세운송비는 CNEE에게 청구</strong>됩니다.</li>
-          <li><strong>기타 UAE (AJM/RAK/QIW/SHJ):</strong> POD: KLF / DLY: 최종 목적지. KLF에서 트럭 운송.</li>
-          <li><strong>비UAE 걸프·홍해 (DMM/JED/AQJ/SKN 등):</strong> KLF → (truck) → JEA → (feeder) → 최종 목적지 (더블 T/S).</li>
-        </ul>
-      </div>
-      <div data-lang="en">
-        <strong style="color:#92400e;">📌 Booking Notes (KLF T/S Guideline effective 3/16)</strong>
-        <ul style="font-size:12.5px;line-height:1.7;padding-left:18px;margin-top:6px;">
-          <li><strong>JEA destination:</strong> Booking leg <strong>ends at KLF</strong> (POD: KLF / DLY: KLF). B/L <strong>POD shows KLF only.</strong></li>
-          <li><strong>KLF → JEA transport:</strong> Handled separately as <strong>bonded haulage (IN-TRANSIT)</strong> at destination. <strong>Bonded haulage cost charged to CNEE.</strong></li>
-          <li><strong>Other UAE (AJM/RAK/QIW/SHJ):</strong> POD: KLF / DLY: final destination. Truck from KLF.</li>
-          <li><strong>Non-UAE Gulf &amp; Red Sea (DMM/JED/AQJ/SKN etc.):</strong> KLF → (truck) → JEA → (feeder) → final destination (Double T/S).</li>
-        </ul>
-      </div>
-      <div data-lang="zh">
-        <strong style="color:#92400e;">📌 订舱注意事项（KLF中转指南 3/16生效）</strong>
-        <ul style="font-size:12.5px;line-height:1.7;padding-left:18px;margin-top:6px;">
-          <li><strong>JEA目的地：</strong>订舱腿在<strong>KLF终止</strong>（POD: KLF / DLY: KLF）。提单<strong>POD仅显示KLF。</strong></li>
-          <li><strong>KLF → JEA运输：</strong>由目的地<strong>另行保税运输(IN-TRANSIT bonded haulage)</strong>处理，<strong>保税运输费向CNEE收取。</strong></li>
-          <li><strong>其他UAE (AJM/RAK/QIW/SHJ)：</strong>POD: KLF / DLY: 最终目的地。从KLF卡车运输。</li>
-          <li><strong>非UAE海湾·红海 (DMM/JED/AQJ/SKN等)：</strong>KLF → (卡车) → JEA → (支线) → 最终目的地（双中转）。</li>
-        </ul>
-      </div>
-    </div>
 
     </div>
   </div>
 
   </div><!-- end mainsec-dashboard -->
 
-  <!-- ===== SEC: 항로운영 ===== -->
-  <div class="main-sec" id="mainsec-routes">
+  <!-- ===== SEC: 항로운영 (삭제됨) ===== -->
+  <div class="main-sec" id="mainsec-routes" style="display:none!important;">
 
   <!-- ===== 2-A. 선박 운영 현황 (NEW) ===== -->
   <div class="card">
@@ -1944,560 +2007,254 @@
 
   </div><!-- end mainsec-routes -->
 
-  <!-- ===== SEC: 비용·WRS ===== -->
+  <!-- ===== SEC: 비용(WRS,EFS) ===== -->
   <div class="main-sec" id="mainsec-costs">
 
-  <!-- ===== 3. WRS/WRP 비용 + 추가 비용 항목 (탭) ===== -->
-  <div class="card" data-tab-group="costs">
-    <div class="tab-bar">
-      <button class="tab-btn active" onclick="switchTab(this,'costs','wrs-policy')">
-        💰
-        <span data-lang-inline="ko">WRS / WRP 비용 정책 <span class="badge badge-updated">3/12</span></span>
-        <span data-lang-inline="en">WRS / WRP Surcharge Policy <span class="badge badge-updated">3/12</span></span>
-        <span data-lang-inline="zh">WRS / WRP 附加费政策 <span class="badge badge-updated">3/12</span></span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'costs','add-costs')">
-        📋
-        <span data-lang-inline="ko">추가 발생 비용 항목 <span class="badge badge-new">3/12 신규</span></span>
-        <span data-lang-inline="en">Additional Cost Items <span class="badge badge-new">New 3/12</span></span>
-        <span data-lang-inline="zh">额外发生费用项目 <span class="badge badge-new">3/12新增</span></span>
-      </button>
-    </div>
-
-    <!-- WRS/WRP Pane -->
-    <div class="tab-pane active" id="costs-wrs-policy">
-      <div class="card-body">
-        <div data-lang="ko">
-          <div class="cost-item">
-            <div class="cost-name">WRS/WRP 기준 금액</div>
-            <div class="cost-val">20': $2,000 / 40': $3,500<span class="cost-note">중동법인 기준</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name">WRS 적용 기준일</div>
-            <div class="cost-val">2026.02.28 (개전일)<span class="cost-note">호르무즈 통항 중단 시점 이후 선적분</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name">WRS 면제 기준</div>
-            <div class="cost-val">2/28 이전 입항 건<span class="cost-note">예: KMTC MUMBAI 2601W — 2/28 DMM 입항 → 면제</span></div>
-          </div>
-          <div class="cost-item" style="border-bottom:none;">
-            <div class="cost-name">EFC (긴급 연료 할증) <span class="badge badge-critical" style="font-size:10px;">3/18 확정</span></div>
-            <div class="cost-val" style="color:#c00;">3/28 출항분부터 적용<span class="cost-note">베트남 4/1 적용 | POL 징수</span></div>
-          </div>
-          <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
-            <span class="acc-arrow">▶</span> EFC 요율표 상세 보기 (목적지별 USD)
-          </div>
-          <div class="acc-body" style="display:none;">
-            <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
-              <thead><tr style="background:#003366;color:#fff;text-align:center;">
-                <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
-              </tr></thead>
-              <tbody>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
-                <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
-                <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
-                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
-                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
-                <tr><td style="padding:5px 8px;">AFRICA</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
-              </tbody>
-            </table>
-            <div style="font-size:11px;color:#6b7280;line-height:1.5;">
-              * 적용 대상: 중국·한국·일본·미국 <b>제외</b> 전 선적지 (별도 기준 적용)<br>
-              * 한국 수입: 수입영업팀 가이드라인 따름<br>
-              * 현지 사정에 따라 OBT 협의 후 조정 가능<br>
-              * 출처: 해외영업팀 김동현 (kdh@ekmtc.com) — 2026.03.18
-            </div>
-          </div>
-        </div>
-        <div data-lang="en">
-          <div class="cost-item">
-            <div class="cost-name">WRS/WRP Standard Rate</div>
-            <div class="cost-val">20': $2,000 / 40': $3,500<span class="cost-note">ME Branch standard</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name">WRS Effective Date</div>
-            <div class="cost-val">Feb 28, 2026<span class="cost-note">From cargo shipped after Hormuz suspension</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name">WRS Waiver Criteria</div>
-            <div class="cost-val">Berth before Feb 28<span class="cost-note">e.g., KMTC MUMBAI 2601W berthed 2/28 at DMM → waived</span></div>
-          </div>
-          <div class="cost-item" style="border-bottom:none;">
-            <div class="cost-name">EFC (Emergency Fuel Charge) <span class="badge badge-critical" style="font-size:10px;">CONFIRMED 3/18</span></div>
-            <div class="cost-val" style="color:#c00;">Effective from Mar 28 departures<span class="cost-note">Vietnam: Apr 1 | Payment at POL</span></div>
-          </div>
-          <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
-            <span class="acc-arrow">▶</span> View EFC Rate Table (by Destination, USD)
-          </div>
-          <div class="acc-body" style="display:none;">
-            <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
-              <thead><tr style="background:#003366;color:#fff;text-align:center;">
-                <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
-              </tr></thead>
-              <tbody>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
-                <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
-                <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
-                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
-                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
-                <tr><td style="padding:5px 8px;">AFRICA</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
-              </tbody>
-            </table>
-            <div style="font-size:11px;color:#6b7280;line-height:1.5;">
-              * Applicable origins: All except China, Korea, Japan, US (separate criteria)<br>
-              * Korea imports: Follow Import Sales Team guidelines<br>
-              * Adjustable in consultation with OBT per local conditions<br>
-              * Source: OBT DH Kim (kdh@ekmtc.com) — 2026.03.18
-            </div>
-          </div>
-        </div>
-        <div data-lang="zh">
-          <div class="cost-item">
-            <div class="cost-name">WRS/WRP 基准金额</div>
-            <div class="cost-val">20': $2,000 / 40': $3,500<span class="cost-note">中东法人基准</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name">WRS 适用基准日</div>
-            <div class="cost-val">2026.02.28（开战日）<span class="cost-note">霍尔木兹封锁后装船货物起征</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name">WRS 豁免基准</div>
-            <div class="cost-val">2/28前靠港货物<span class="cost-note">例: KMTC MUMBAI 2601W — 2/28进DMM → 豁免</span></div>
-          </div>
-          <div class="cost-item" style="border-bottom:none;">
-            <div class="cost-name">EFC（紧急燃油附加费）<span class="badge badge-critical" style="font-size:10px;">3/18确定</span></div>
-            <div class="cost-val" style="color:#c00;">3/28出港货物起适用<span class="cost-note">越南4/1适用 | POL征收</span></div>
-          </div>
-          <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
-            <span class="acc-arrow">▶</span> 查看EFC费率表（按目的地，USD）
-          </div>
-          <div class="acc-body" style="display:none;">
-            <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
-              <thead><tr style="background:#003366;color:#fff;text-align:center;">
-                <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
-              </tr></thead>
-              <tbody>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN（日本）</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
-                <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN（中港台）</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA（东南亚）</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
-                <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)（印巴）</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
-                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST（中东）</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
-                <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA（红海）</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
-                <tr><td style="padding:5px 8px;">AFRICA（非洲）</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
-                <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO（墨西哥）</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
-              </tbody>
-            </table>
-            <div style="font-size:11px;color:#6b7280;line-height:1.5;">
-              * 适用起运地：除中国·韩国·日本·美国外全部（另行适用标准）<br>
-              * 韩国进口：按进口营业组指南<br>
-              * 可根据当地情况与OBT协商调整<br>
-              * 来源：海外营业团队 金东铉 (kdh@ekmtc.com) — 2026.03.18
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Additional Costs Pane -->
-    <div class="tab-pane" id="costs-add-costs">
-      <div class="card-body">
-        <div class="change-row" style="margin-bottom:10px;">
-          <div data-lang="ko">⬆️ <strong>KLF 경유 JEA 이송 시 아래 실비용 발생. 데이터분석팀 코드 등록 완료 (3/12)</strong></div>
-          <div data-lang="en">⬆️ <strong>Below actual costs incurred for KLF→JEA bonded haulage. Codes registered by Data Analysis Team (3/12)</strong></div>
-          <div data-lang="zh">⬆️ <strong>KLF经由JEA运输时产生以下实际费用。数据分析团队已完成代码注册（3/12）</strong></div>
-        </div>
-        <div data-lang="ko">
-          <div class="cost-item">
-            <div class="cost-name"><strong>DVC</strong> — Deviation Surcharge</div>
-            <div class="cost-val">$750~800/TEU<span class="cost-note">ESL의 EOV 선언에 따른 청구 비용</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>TRC</strong> — Trucking (보세운송)</div>
-            <div class="cost-val">$900~$1,000/VAN<span class="cost-note">KLF→JEA. 2일마다 변동. 가변적</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>PRC</strong> — Port Receive Charge</div>
-            <div class="cost-val">AED 700(20') / AED 1,070(40')<span class="cost-note">DPW DROP OFF CHARGE. 면제 협의 중</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>LFT</strong> — Lifting Charge (KLF Storage)</div>
-            <div class="cost-val">Day 1부터 청구<span class="cost-note">KLF 체화 즉시 시작. 조기 픽업 필수</span></div>
-          </div>
-        </div>
-        <div data-lang="en">
-          <div class="cost-item">
-            <div class="cost-name"><strong>DVC</strong> — Deviation Surcharge</div>
-            <div class="cost-val">$750~800/TEU<span class="cost-note">Charged by ESL upon End of Voyage declaration</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>TRC</strong> — Trucking (Bonded Haulage)</div>
-            <div class="cost-val">$900~$1,000/VAN<span class="cost-note">KLF→JEA. Changes every 2 days. Variable</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>PRC</strong> — Port Receive Charge</div>
-            <div class="cost-val">AED 700(20') / AED 1,070(40')<span class="cost-note">DPW Drop-off Charge. Waiver under negotiation</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>LFT</strong> — Lifting Charge (KLF Storage)</div>
-            <div class="cost-val">From Day 1<span class="cost-note">Starts immediately upon KLF discharge. Early pickup required</span></div>
-          </div>
-        </div>
-        <div data-lang="zh">
-          <div class="cost-item">
-            <div class="cost-name"><strong>DVC</strong> — 绕航附加费</div>
-            <div class="cost-val">$750~800/TEU<span class="cost-note">ESL宣布EOV后向KMTC收取</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>TRC</strong> — 卡车费（保税运输）</div>
-            <div class="cost-val">$900~$1,000/VAN<span class="cost-note">KLF→JEA。每2天变动，费用浮动</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>PRC</strong> — 港口收取费</div>
-            <div class="cost-val">AED 700(20') / AED 1,070(40')<span class="cost-note">DPW Drop-off费用，正在协商豁免</span></div>
-          </div>
-          <div class="cost-item">
-            <div class="cost-name"><strong>LFT</strong> — 装卸费（KLF堆存）</div>
-            <div class="cost-val">从第1天起征<span class="cost-note">KLF卸货即开始计费，请及时提货</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ===== 3-B. SPCME 특별배선 채산 분석 ===== -->
+  <!-- Card 1: EFS Rate Table (existing EFC card, kept as-is) -->
   <div class="card">
     <div class="card-header">
-      <div class="title">🚢 SPCME 특별배선 BSA · 선복료 · 예상 채산 <span class="badge badge-new">3/16 신규</span></div>
+      <div class="title">⛽ EFS (<span data-lang-inline="ko">긴급 연료 할증</span><span data-lang-inline="en">Emergency Fuel Surcharge</span><span data-lang-inline="zh">紧急燃油附加费</span>) <span class="badge badge-critical">3/18 <span data-lang-inline="ko">확정</span><span data-lang-inline="en">CONFIRMED</span><span data-lang-inline="zh">确定</span></span></div>
     </div>
     <div class="card-body">
-      <div class="mtg-note">
-        📌 AIM·AIM2 Suspension 이후 각 선사별 <strong>Ad-Hoc(SPCME) 운영 및 선복 판매 형태</strong>로 전환. 매 항차 영업부서 사전 수요 확인 要. Rotation은 항차마다 상이, AIM+AIM2 POL 커버하면서 KLF 기항 구조.<br>
-        ⚠️ GFS 모선 이후 약 <strong>2주간 항차 없음</strong> (KLF 대기로 인한 스케줄 지연). KLF 대기 Bunching 가능성 → 유관팀과 BSA 사전 협의 필요.
-      </div>
-      <table class="vsl-table">
-        <thead>
-          <tr><th>항로</th><th>선사</th><th>모선</th><th>PNC 예상 ETA</th><th>당사 BSA(예상)</th><th>선복료(/TEU)</th><th>예상 채산(RV)<br>*운임 $2,500 가정</th><th>비고</th></tr>
-        </thead>
-        <tbody>
-          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL NHAVA SHEVA</td><td>2026-03-17</td><td>60 TEU</td><td>$1,400</td><td style="color:#166534;font-weight:700;">$66,000</td><td></td></tr>
-          <tr class="vsl-active"><td>SPCME</td><td>GFS</td><td>GFS GALAXY</td><td>2026-03-18</td><td>300 TEU</td><td>$2,000</td><td style="color:#166534;font-weight:700;">$150,000</td><td></td></tr>
-          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL SANA</td><td>2026-03-31</td><td>300 TEU</td><td>$2,000</td><td style="color:#166534;font-weight:700;">$150,000</td><td></td></tr>
-          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL BUSAN</td><td>2026-04-12</td><td>300 TEU</td><td>$2,200</td><td style="color:#d97706;font-weight:700;">$90,000</td><td>확정 스케줄 아님, FE-ME 수요 있을 경우 ESL 투입 예상</td></tr>
-          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL DANA</td><td>2026-04-15</td><td>300 TEU</td><td>$2,200</td><td style="color:#d97706;font-weight:700;">$90,000</td><td></td></tr>
-          <tr class="vsl-active"><td>SPCME</td><td>ESL</td><td>ESL WASL</td><td>2026-04-20</td><td>300 TEU</td><td>$2,200</td><td style="color:#d97706;font-weight:700;">$90,000</td><td></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- ===== 4. WRS 면제 기준 + EFS/기타 공지 (탭) ===== -->
-  <div class="card" data-tab-group="policy">
-    <div class="tab-bar">
-      <button class="tab-btn active" onclick="switchTab(this,'policy','wrs-waiver')">
-        ⚖️
-        <span data-lang-inline="ko">WRS 면제 / 할인 기준</span>
-        <span data-lang-inline="en">WRS Waiver / Discount</span>
-        <span data-lang-inline="zh">WRS 豁免/折扣基准</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'policy','efs-notice')">
-        📢
-        <span data-lang-inline="ko">EFS / LSS 및 기타 공지</span>
-        <span data-lang-inline="en">EFS / LSS &amp; Other Notices</span>
-        <span data-lang-inline="zh">EFS / LSS 及其他公告</span>
-      </button>
-    </div>
-
-    <!-- WRS Waiver Pane -->
-    <div class="tab-pane active" id="policy-wrs-waiver">
-      <div class="card-body">
-        <div data-lang="ko">
-          <div class="change-row">⚡ 화주들의 WRS 면제 요청이 쇄도 중이나, <strong>현재 원칙은 예외 없이 Full Tariff 징수</strong> (단, 아래 명확한 예외 사유 존재)</div>
-          <table class="policy-table" style="margin-top:10px;">
-            <thead><tr><th>구분</th><th>면제/할인 여부</th></tr></thead>
-            <tbody>
-              <tr class="highlight"><td>2/28 <strong>이전</strong> 입항(접안 완료) 선박 선적 화물</td><td>✅ WRS 면제 가능</td></tr>
-              <tr class="critical"><td>3/1 이후 접안 선박 선적 화물</td><td>❌ WRS 부과 원칙 (Full Tariff)</td></tr>
-              <tr class="critical"><td>HELLA 02606W 3/5 DMM 도착분</td><td>❌ 면제 불가 (Not Acceptable)</td></tr>
-              <tr><td>화주 "전쟁 영향 없다" 주장</td><td>⚠️ 피더 WRS 적용 시점 기준으로 개별 판단</td></tr>
-              <tr><td>동일 항차 공동운항사 면제 주장</td><td>⚠️ 당사 독자 판단. 일관 적용 원칙 유지</td></tr>
-            </tbody>
-          </table>
+      <div data-lang="ko">
+        <div class="cost-item" style="border-bottom:none;">
+          <div class="cost-name">EFC (긴급 연료 할증) <span class="badge badge-critical" style="font-size:10px;">3/18 확정</span></div>
+          <div class="cost-val" style="color:#c00;">3/28 출항분부터 적용<span class="cost-note">베트남 4/1 적용 | POL 징수</span></div>
         </div>
-        <div data-lang="en">
-          <div class="change-row">⚡ Waiver requests flooding in from customers, but <strong>current policy: Full Tariff, no exceptions</strong> (except clear criteria below)</div>
-          <table class="policy-table" style="margin-top:10px;">
-            <thead><tr><th>Case</th><th>Waiver/Discount</th></tr></thead>
-            <tbody>
-              <tr class="highlight"><td>Cargo on vessels that berthed <strong>before</strong> 2/28</td><td>✅ WRS Waiver possible</td></tr>
-              <tr class="critical"><td>Cargo on vessels berthing after 3/1</td><td>❌ WRS applies (Full Tariff)</td></tr>
-              <tr class="critical"><td>HELLA 02606W arrived DMM 3/5</td><td>❌ Not acceptable</td></tr>
-              <tr><td>Customer claims "not affected by war"</td><td>⚠️ Judge individually per feeder WRS timeline</td></tr>
-              <tr><td>Slot-charter partner waived</td><td>⚠️ KMTC's own decision. Maintain consistent application</td></tr>
-            </tbody>
-          </table>
+        <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
+          <span class="acc-arrow">▶</span> EFC 요율표 상세 보기 (목적지별 USD)
         </div>
-        <div data-lang="zh">
-          <div class="change-row">⚡ 货主豁免申请激增，但<strong>当前原则：不设例外，全额征收</strong>（以下明确例外情况除外）</div>
-          <table class="policy-table" style="margin-top:10px;">
-            <thead><tr><th>情况</th><th>豁免/折扣</th></tr></thead>
+        <div class="acc-body" style="display:none;">
+          <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
+            <thead><tr style="background:#003366;color:#fff;text-align:center;">
+              <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
+            </tr></thead>
             <tbody>
-              <tr class="highlight"><td><strong>2/28前</strong>已靠港船舶的货物</td><td>✅ 可豁免WRS</td></tr>
-              <tr class="critical"><td>3/1后靠港船舶货物</td><td>❌ 须征WRS（全额）</td></tr>
-              <tr class="critical"><td>HELLA 02606W 3/5到DMM货物</td><td>❌ 不可豁免</td></tr>
-              <tr><td>货主主张"未受战争影响"</td><td>⚠️ 参照支线WRS适用时间点逐票判断</td></tr>
-              <tr><td>同航次共同运营商已豁免</td><td>⚠️ KMTC独立判断，坚持一致适用原则</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
+              <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+              <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
+              <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
+              <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
+              <tr><td style="padding:5px 8px;">AFRICA</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
             </tbody>
           </table>
+          <div style="font-size:11px;color:#6b7280;line-height:1.5;">
+            * 적용 대상: 중국·한국·일본·미국 <b>제외</b> 전 선적지 (별도 기준 적용)<br>
+            * 한국 수입: 수입영업팀 가이드라인 따름<br>
+            * 현지 사정에 따라 OBT 협의 후 조정 가능<br>
+            * 출처: 해외영업팀 김동현 (kdh@ekmtc.com) — 2026.03.18
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- EFS / LSS Notice Pane -->
-    <div class="tab-pane" id="policy-efs-notice">
-      <div class="card-body">
-        <div data-lang="ko">
-          <div class="change-row critical" style="background:#fef2f2;border:1.5px solid #dc2626;border-radius:6px;padding:10px 12px;">
-            <strong>🔴 EFC (Emergency Fuel Charge) — 3/18 확정 공지</strong><br>
-            <span style="font-size:13px;">유류비 급등 대응 신규 할증료. <b>3월 28일 출항분부터 적용</b> (베트남 4/1).</span><br>
-            <span style="font-size:12px;color:#555;">적용 대상: 중국·한국·일본·미국 제외 전 선적지 | POL 징수 | 현지 사정에 따라 OBT 협의 조정 가능</span><br>
-            <span class="change-meta">출처: 해외영업팀 김동현 (kdh@ekmtc.com) — Notice of Emergency Fuel Charge (EFC) Implementation</span>
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>📌 LSS (Low Sulphur Surcharge) / Q2 2026</strong>: 아직 공지 미발령. Geodis 측에서 Q2 LSS Trade Notice 요청 중.
-            <span class="change-meta">발신: Reon WONG / Geodis (3/10 문의)</span>
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>🌐 Customer Advisory</strong>: 추후 분쟁 회피를 위해 CUSTOMER ADVISORY 작성 후 화주 배포 필요. (중동법인 요청)
-            <span class="change-meta">선복운영팀에서 초안 준비 중</span>
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>🏴 Middle East Surcharge 안내 문구</strong>: Geodis 등 포워더 이메일에 자동 문구 포함됨<br>
-            <em style="font-size:11px; color:#666;">"Current Middle East conditions may necessitate additional surcharges and impact transit schedules. All such costs are for the shipper's account."</em>
+      <div data-lang="en">
+        <div class="cost-item" style="border-bottom:none;">
+          <div class="cost-name">EFC (Emergency Fuel Charge) <span class="badge badge-critical" style="font-size:10px;">CONFIRMED 3/18</span></div>
+          <div class="cost-val" style="color:#c00;">Effective from Mar 28 departures<span class="cost-note">Vietnam: Apr 1 | Payment at POL</span></div>
+        </div>
+        <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
+          <span class="acc-arrow">▶</span> View EFC Rate Table (by Destination, USD)
+        </div>
+        <div class="acc-body" style="display:none;">
+          <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
+            <thead><tr style="background:#003366;color:#fff;text-align:center;">
+              <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
+            </tr></thead>
+            <tbody>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
+              <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+              <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
+              <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
+              <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
+              <tr><td style="padding:5px 8px;">AFRICA</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:11px;color:#6b7280;line-height:1.5;">
+            * Applicable origins: All except China, Korea, Japan, US (separate criteria)<br>
+            * Korea imports: Follow Import Sales Team guidelines<br>
+            * Adjustable in consultation with OBT per local conditions<br>
+            * Source: OBT DH Kim (kdh@ekmtc.com) — 2026.03.18
           </div>
         </div>
-        <div data-lang="en">
-          <div class="change-row critical" style="background:#fef2f2;border:1.5px solid #dc2626;border-radius:6px;padding:10px 12px;">
-            <strong>🔴 EFC (Emergency Fuel Charge) — Confirmed 3/18</strong><br>
-            <span style="font-size:13px;">New surcharge to offset sharp fuel cost increase. <b>Effective for all cargo departing on or after Mar 28, 2026</b> (Apr 1 for Vietnam).</span><br>
-            <span style="font-size:12px;color:#555;">Applicable origins: All except China, Korea, Japan, US (separate criteria) | Payment at POL | Adjustable via OBT consultation</span><br>
-            <span class="change-meta">Source: OBT DH Kim (kdh@ekmtc.com) — Notice of Emergency Fuel Charge (EFC) Implementation</span>
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>📌 LSS (Low Sulphur Surcharge) / Q2 2026</strong>: Not yet announced. Geodis requesting Q2 LSS Trade Notice.
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>🌐 Customer Advisory</strong>: Official Customer Advisory being prepared and will be distributed to prevent future disputes. (ME Branch request)
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>🏴 ME Surcharge Notice</strong>: Standard notice included in forwarder emails:<br>
-            <em style="font-size:11px; color:#666;">"Current Middle East conditions may necessitate additional surcharges and impact transit schedules. All such costs are for the shipper's account."</em>
-          </div>
+      </div>
+      <div data-lang="zh">
+        <div class="cost-item" style="border-bottom:none;">
+          <div class="cost-name">EFC（紧急燃油附加费）<span class="badge badge-critical" style="font-size:10px;">3/18确定</span></div>
+          <div class="cost-val" style="color:#c00;">3/28出港货物起适用<span class="cost-note">越南4/1适用 | POL征收</span></div>
         </div>
-        <div data-lang="zh">
-          <div class="change-row critical" style="background:#fef2f2;border:1.5px solid #dc2626;border-radius:6px;padding:10px 12px;">
-            <strong>🔴 EFC（紧急燃油附加费）— 3/18确认公告</strong><br>
-            <span style="font-size:13px;">为应对燃油成本急剧上涨的新附加费。<b>2026年3月28日起出港货物适用</b>（越南4/1起）。</span><br>
-            <span style="font-size:12px;color:#555;">适用起运地：除中国·韩国·日本·美国外全部（另行适用标准）| POL征收 | 可与OBT协商调整</span><br>
-            <span class="change-meta">来源：海外营业团队 金东铉 (kdh@ekmtc.com) — Notice of Emergency Fuel Charge (EFC) Implementation</span>
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>📌 LSS（低硫附加费）/ 2026年Q2</strong>: 尚未公告。Geodis正在请求Q2 LSS贸易通知。
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>🌐 客户公告</strong>: 为防止未来纠纷，正在准备并将向货主分发正式客户公告。（中东法人请求）
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            <strong>🏴 中东附加费标准通知文</strong>:<br>
-            <em style="font-size:11px; color:#666;">"Current Middle East conditions may necessitate additional surcharges and impact transit schedules. All such costs are for the shipper's account."</em>
+        <div class="acc-toggle" onclick="toggleAccordion(this)" style="padding:6px 0 4px;font-size:12px;color:var(--primary);font-weight:600;">
+          <span class="acc-arrow">▶</span> 查看EFC费率表（按目的地，USD）
+        </div>
+        <div class="acc-body" style="display:none;">
+          <table style="width:100%;border-collapse:collapse;font-size:12px;margin:6px 0 10px;">
+            <thead><tr style="background:#003366;color:#fff;text-align:center;">
+              <th style="padding:6px 8px;text-align:left;">Destination (POD)</th><th style="padding:6px 8px;">20' DRY</th><th style="padding:6px 8px;">40' DRY</th><th style="padding:6px 8px;">20' RF/FR/OT</th><th style="padding:6px 8px;">40' RF/FR/OT</th>
+            </tr></thead>
+            <tbody>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">JAPAN</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td><td style="text-align:center;">90</td><td style="text-align:center;">180</td></tr>
+              <tr><td style="padding:5px 8px;">CHINA, HONGKONG, TAIWAN</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">SOUTH EAST ASIA</td><td style="text-align:center;">40</td><td style="text-align:center;">80</td><td style="text-align:center;">60</td><td style="text-align:center;">120</td></tr>
+              <tr><td style="padding:5px 8px;">INDIA, PAKISTAN (ISC)</td><td style="text-align:center;">160</td><td style="text-align:center;">320</td><td style="text-align:center;">240</td><td style="text-align:center;">480</td></tr>
+              <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">MIDDLE EAST</td><td style="text-align:center;color:#c00;">160</td><td style="text-align:center;color:#c00;">320</td><td style="text-align:center;color:#c00;">240</td><td style="text-align:center;color:#c00;">480</td></tr>
+              <tr style="background:#fff5f5;font-weight:600;"><td style="padding:5px 8px;color:#c00;">RED SEA</td><td style="text-align:center;color:#c00;">200</td><td style="text-align:center;color:#c00;">400</td><td style="text-align:center;color:#c00;">300</td><td style="text-align:center;color:#c00;">600</td></tr>
+              <tr><td style="padding:5px 8px;">AFRICA</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:5px 8px;">MEXICO</td><td style="text-align:center;">200</td><td style="text-align:center;">400</td><td style="text-align:center;">300</td><td style="text-align:center;">600</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:11px;color:#6b7280;line-height:1.5;">
+            * 适用起运地：除中国·韩国·日本·美国外全部（另行适用标准）<br>
+            * 韩国进口：按进口营业组指南<br>
+            * 可根据当地情况与OBT协商调整<br>
+            * 来源：海外营业团队 金东铉 (kdh@ekmtc.com) — 2026.03.18
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Card 2: WRS 비용 청구 구조 (Final Leg 기준) - NEW 3/19 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">💰 <span data-lang-inline="ko">WRS 비용 청구 구조 (Final Leg 기준)</span><span data-lang-inline="en">WRS Charge Structure (Final Leg Basis)</span><span data-lang-inline="zh">WRS费用征收结构（Final Leg基准）</span> <span class="badge badge-critical">NEW 3/19</span></div>
+    </div>
+    <div class="card-body">
+      <div data-lang="ko">
+        <div class="change-row" style="margin-bottom:10px;"><strong>개전일 이전:</strong> 비용 면제</div>
+        <div class="change-row critical" style="margin-bottom:10px;">
+          <strong>기선적 건 (KMU 이전 모선):</strong><br>
+          WRS 징수되지 않은 건 → <strong>Deviation $800/1,600 + 로컬 운송료(트럭킹)</strong> 별도 청구<br>
+          중국/동남아발도 한국발과 동일하게 적용 (WRS 청구 X, Deviation+트럭킹)
+        </div>
+        <div class="change-row" style="margin-bottom:10px;">
+          <strong>신규 선적 건 (KMU 이후 모선):</strong><br>
+          운임에 이미 반영되었으므로 → <strong>트럭킹 비용만 청구</strong>
+        </div>
+      </div>
+      <div data-lang="en">
+        <div class="change-row" style="margin-bottom:10px;"><strong>Pre-war shipments:</strong> Cost exempt</div>
+        <div class="change-row critical" style="margin-bottom:10px;">
+          <strong>Pre-shipped cargo (vessels before KMU):</strong><br>
+          For cases where WRS was not collected → <strong>Deviation $800/1,600 + local trucking charges</strong> separately<br>
+          China/SEA origin same as Korea origin (no WRS, Deviation + trucking only)
+        </div>
+        <div class="change-row" style="margin-bottom:10px;">
+          <strong>New shipments (KMU vessel onward):</strong><br>
+          Already reflected in freight rates → <strong>Trucking charges only</strong>
+        </div>
+      </div>
+      <div data-lang="zh">
+        <div class="change-row" style="margin-bottom:10px;"><strong>开战日以前：</strong>费用免除</div>
+        <div class="change-row critical" style="margin-bottom:10px;">
+          <strong>已装船货物（KMU之前母船）：</strong><br>
+          未征收WRS的案件 → <strong>Deviation $800/1,600 + 当地运输费（卡车）</strong>另行征收<br>
+          中国/东南亚发货与韩国发货同样适用（不征WRS，仅Deviation+卡车费）
+        </div>
+        <div class="change-row" style="margin-bottom:10px;">
+          <strong>新装船货物（KMU以后母船）：</strong><br>
+          已计入运费 → <strong>仅征收卡车运输费</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3: NSA EOV 목적지별 비용 정리표 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">📋 <span data-lang-inline="ko">NSA EOV 목적지별 비용 정리표</span><span data-lang-inline="en">NSA EOV Cost Summary by Destination</span><span data-lang-inline="zh">NSA EOV按目的地费用汇总表</span> <span class="badge badge-critical">NEW 3/19</span></div>
+    </div>
+    <div class="card-body">
+      <div data-lang="ko">
+        <table class="policy-table">
+          <thead><tr><th>경로</th><th>수출자(Shipper) 부담</th><th>수입자(Consignee) 부담</th><th>비고</th></tr></thead>
+          <tbody>
+            <tr class="highlight"><td><strong>NSA → KLF (JEA, AUH)</strong></td><td>$2,000 / $4,000</td><td>$2,000 / $3,500 + 도착지 로컬차지</td><td>가장 일반적</td></tr>
+            <tr><td><strong>NSA → JED / AQJ / SKN</strong></td><td>없음</td><td>$2,000 / $3,500 + 도착지 로컬차지</td><td>IRX2 이용, 별도 피더비 없음</td></tr>
+            <tr><td><strong>NSA → DMM / KSP</strong></td><td>없음</td><td>$2,000 / $3,500 (JED까지) + JED→DMM/KSP 트럭킹 (수입자 부담)</td><td>JED 경유 트럭킹 루트</td></tr>
+            <tr class="highlight"><td><strong>SOH</strong></td><td>미정</td><td>미정</td><td>비용 이슈 多, DVC $800/1,600만 청구</td></tr>
+            <tr class="critical"><td><strong>KWI / UQR</strong></td><td>-</td><td>-</td><td>되도록 Ship-back 권유</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-lang="en">
+        <table class="policy-table">
+          <thead><tr><th>Route</th><th>Shipper Cost</th><th>Consignee Cost</th><th>Remarks</th></tr></thead>
+          <tbody>
+            <tr class="highlight"><td><strong>NSA → KLF (JEA, AUH)</strong></td><td>$2,000 / $4,000</td><td>$2,000 / $3,500 + destination local</td><td>Most common</td></tr>
+            <tr><td><strong>NSA → JED / AQJ / SKN</strong></td><td>None</td><td>$2,000 / $3,500 + destination local</td><td>Via IRX2, no separate feeder charge</td></tr>
+            <tr><td><strong>NSA → DMM / KSP</strong></td><td>None</td><td>$2,000 / $3,500 (to JED) + JED→DMM/KSP trucking (consignee)</td><td>JED via trucking route</td></tr>
+            <tr class="highlight"><td><strong>SOH</strong></td><td>TBD</td><td>TBD</td><td>Cost issues, DVC $800/1,600 only</td></tr>
+            <tr class="critical"><td><strong>KWI / UQR</strong></td><td>-</td><td>-</td><td>Ship-back recommended</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-lang="zh">
+        <table class="policy-table">
+          <thead><tr><th>路线</th><th>出口方(Shipper)负担</th><th>进口方(Consignee)负担</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr class="highlight"><td><strong>NSA → KLF (JEA, AUH)</strong></td><td>$2,000 / $4,000</td><td>$2,000 / $3,500 + 目的地本地费</td><td>最常见</td></tr>
+            <tr><td><strong>NSA → JED / AQJ / SKN</strong></td><td>无</td><td>$2,000 / $3,500 + 目的地本地费</td><td>利用IRX2，无另行支线费</td></tr>
+            <tr><td><strong>NSA → DMM / KSP</strong></td><td>无</td><td>$2,000 / $3,500（至JED）+ JED→DMM/KSP卡车运输（收货方承担）</td><td>JED经由卡车路线</td></tr>
+            <tr class="highlight"><td><strong>SOH</strong></td><td>待定</td><td>待定</td><td>费用问题多，仅征DVC $800/1,600</td></tr>
+            <tr class="critical"><td><strong>KWI / UQR</strong></td><td>-</td><td>-</td><td>建议退运</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4: WRS 면제/할인 기준 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="title">⚖️ <span data-lang-inline="ko">WRS 면제 / 할인 기준</span><span data-lang-inline="en">WRS Waiver / Discount Criteria</span><span data-lang-inline="zh">WRS 豁免/折扣基准</span></div>
+    </div>
+    <div class="card-body">
+      <div data-lang="ko">
+        <div class="change-row">⚡ 화주들의 WRS 면제 요청이 쇄도 중이나, <strong>현재 원칙은 예외 없이 Full Tariff 징수</strong> (단, 아래 명확한 예외 사유 존재)</div>
+        <table class="policy-table" style="margin-top:10px;">
+          <thead><tr><th>구분</th><th>면제/할인 여부</th></tr></thead>
+          <tbody>
+            <tr class="highlight"><td>2/28 <strong>이전</strong> 입항(접안 완료) 선박 선적 화물</td><td>✅ WRS 면제 가능</td></tr>
+            <tr class="critical"><td>3/1 이후 접안 선박 선적 화물</td><td>❌ WRS 부과 원칙 (Full Tariff)</td></tr>
+            <tr class="critical"><td>HELLA 02606W 3/5 DMM 도착분</td><td>❌ 면제 불가 (Not Acceptable)</td></tr>
+            <tr><td>화주 "전쟁 영향 없다" 주장</td><td>⚠️ 피더 WRS 적용 시점 기준으로 개별 판단</td></tr>
+            <tr><td>동일 항차 공동운항사 면제 주장</td><td>⚠️ 당사 독자 판단. 일관 적용 원칙 유지</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-lang="en">
+        <div class="change-row">⚡ Waiver requests flooding in from customers, but <strong>current policy: Full Tariff, no exceptions</strong> (except clear criteria below)</div>
+        <table class="policy-table" style="margin-top:10px;">
+          <thead><tr><th>Case</th><th>Waiver/Discount</th></tr></thead>
+          <tbody>
+            <tr class="highlight"><td>Cargo on vessels that berthed <strong>before</strong> 2/28</td><td>✅ WRS Waiver possible</td></tr>
+            <tr class="critical"><td>Cargo on vessels berthing after 3/1</td><td>❌ WRS applies (Full Tariff)</td></tr>
+            <tr class="critical"><td>HELLA 02606W arrived DMM 3/5</td><td>❌ Not acceptable</td></tr>
+            <tr><td>Customer claims "not affected by war"</td><td>⚠️ Judge individually per feeder WRS timeline</td></tr>
+            <tr><td>Slot-charter partner waived</td><td>⚠️ KMTC's own decision. Maintain consistent application</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-lang="zh">
+        <div class="change-row">⚡ 货主豁免申请激增，但<strong>当前原则：不设例外，全额征收</strong>（以下明确例外情况除外）</div>
+        <table class="policy-table" style="margin-top:10px;">
+          <thead><tr><th>情况</th><th>豁免/折扣</th></tr></thead>
+          <tbody>
+            <tr class="highlight"><td><strong>2/28前</strong>已靠港船舶的货物</td><td>✅ 可豁免WRS</td></tr>
+            <tr class="critical"><td>3/1后靠港船舶货物</td><td>❌ 须征WRS（全额）</td></tr>
+            <tr class="critical"><td>HELLA 02606W 3/5到DMM货物</td><td>❌ 不可豁免</td></tr>
+            <tr><td>货主主张"未受战争影响"</td><td>⚠️ 参照支线WRS适用时间点逐票判断</td></tr>
+            <tr><td>同航次共同运营商已豁免</td><td>⚠️ KMTC独立判断，坚持一致适用原则</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
   </div><!-- end mainsec-costs -->
 
-  <!-- ===== SEC: 공지·회의 ===== -->
-  <div class="main-sec" id="mainsec-notices">
-
-  <!-- 팀장회의 결정사항 -->
-  <div class="card">
-    <div class="card-header">
-      <div class="title">🏢 <span data-lang-inline="ko">팀장회의 결정사항</span><span data-lang-inline="en">Team Leaders' Meeting Decisions</span><span data-lang-inline="zh">组长会议决定事项</span> <span class="badge badge-updated">2026-03-16</span></div>
-    </div>
-    <div class="card-body">
-      <!-- ── KO ── -->
-      <div data-lang="ko">
-        <div class="mtg-section">
-          <div class="mtg-title">1. 중동항로 공동사 협의 &amp; 모선 운영 방안</div>
-          <table class="policy-table">
-            <thead><tr><th width="10%">항로</th><th width="15%">공동운항사</th><th width="20%">기존/변경 Rotation</th><th width="30%">운영 협의 결정</th><th width="25%">당사 모선 방안</th></tr></thead>
-            <tbody>
-              <tr class="highlight">
-                <td><strong>AIM</strong></td><td>KMTC, ESL, GFS, HMM</td>
-                <td><small>RVSD: PNC-TAO-XMN-DCB-PKW-<strong style="color:#c00;">KLF</strong></small></td>
-                <td>JEA·DMM Drop 운영(Cycle 75) → HMM 모선부터 Suspension → 이후 Ad-Hoc 개념 운영</td>
-                <td>KDM호 KLF 기항 예정(ETA 3/23) / 선박 배치 계획 수립 예정(3월 중순)</td>
-              </tr>
-              <tr class="highlight">
-                <td><strong>AIM2</strong></td><td>KMTC, ESL, ONE</td>
-                <td><small>RVSD: SHA-NBO-SHK-SIN-<strong style="color:#c00;">NSA-KLF</strong>-PKW</small></td>
-                <td>16 Cycle 항차 모두 수행 후 Suspension / ONE 중동권역 불기항 선언, ROB IN NSA 양하</td>
-                <td>KMU호 KLF 기항 예정(ETA 4/5) / 선박 배치 계획 수립 예정(3월 중순)</td>
-              </tr>
-              <tr>
-                <td><strong>VGI</strong></td><td>KMTC, RCL, GFS, ESL</td>
-                <td><small>RVSD: CMP-LCH-PKW-<strong style="color:#c00;">NSA-MUN</strong>-PKW</small></td>
-                <td>5개 항차 모두 ME Skip 동의 (기존 ME ROB → NSA 양하)</td>
-                <td>KMB호 VGI 항로 계속 수행 예정</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="mtg-section">
-          <div class="mtg-title">2. 항로/Cycle 기준 화물 처리 방안 핵심 포인트</div>
-          <div class="mtg-note">
-            📊 <strong>전체 잔존 화물 현황:</strong> 중동향 원래 목적지 BSA 합계 <strong>4,545 TEU</strong> / NSA 대체 양하 <strong>2,050 TEU</strong><br>
-            🔴 AIM (75 Cycle) Last Vessel = KMTC DAMMAM 2601W (KLF ETA 3/23)<br>
-            🔴 AIM2 (16 Cycle) Last Vessel = KMTC MUNDRA 2602W (KLF ETA 4/5, NSA Ad-Hoc 경유)<br>
-            🟡 VGI: ARAYA BHUM·ZHONG GU SHEN YANG·APOLLON D 모두 NSA 양하 처리 중
-          </div>
-        </div>
-        <div class="mtg-section">
-          <div class="mtg-title">3. SPCME (Ad-Hoc) 운영 방향 &amp; NSA ROB 화물 처리</div>
-          <div class="change-row">
-            📌 <strong>NSA 양하된 ROB 화물 처리 방안:</strong><br>
-            <span style="display:inline-block; margin-top:4px;">① 피더 선복 구매 → KLF/JEA로 피더 이송 후 상기 DLY 포트별 처리 방안 적용</span><br>
-            <span style="display:inline-block; margin-top:2px;">② 당사 Ad-Hoc Rescue 항차 검토 (Vessel from AIS5) → 매 항차 영업부서 사전 수요 확인 要</span>
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            📌 <strong>SPCME 특별배선 채산 (운임 $2,500 가정):</strong> ESL Nhava Sheva $66K · GFS Galaxy $150K · ESL Sana $150K · ESL Busan/Dana/Wasl 각 $90K<br>
-            <span class="change-meta">→ 상세 내용은 [비용·WRS] 탭 → SPCME 특별배선 채산 섹션 참조</span>
-          </div>
-        </div>
-      </div><!-- end data-lang ko -->
-
-      <!-- ── EN ── -->
-      <div data-lang="en">
-        <div class="mtg-section">
-          <div class="mtg-title">1. ME Route Consortium Discussion &amp; Vessel Operation Plan</div>
-          <table class="policy-table">
-            <thead><tr><th width="10%">Route</th><th width="15%">Partners</th><th width="20%">Old/New Rotation</th><th width="30%">Agreed Operation</th><th width="25%">Our Vessel Plan</th></tr></thead>
-            <tbody>
-              <tr class="highlight">
-                <td><strong>AIM</strong></td><td>KMTC, ESL, GFS, HMM</td>
-                <td><small>RVSD: PNC-TAO-XMN-DCB-PKW-<strong style="color:#c00;">KLF</strong></small></td>
-                <td>JEA·DMM Drop (Cycle 75) → Suspension from HMM vessel → Ad-Hoc operation thereafter</td>
-                <td>KDM to call KLF (ETA 3/23) / Vessel deployment plan to be set mid-Mar</td>
-              </tr>
-              <tr class="highlight">
-                <td><strong>AIM2</strong></td><td>KMTC, ESL, ONE</td>
-                <td><small>RVSD: SHA-NBO-SHK-SIN-<strong style="color:#c00;">NSA-KLF</strong>-PKW</small></td>
-                <td>Suspension after all Cycle 16 voyages / ONE declared no ME calling, ROB IN NSA discharge</td>
-                <td>KMU to call KLF (ETA 4/5) / Vessel deployment plan to be set mid-Mar</td>
-              </tr>
-              <tr>
-                <td><strong>VGI</strong></td><td>KMTC, RCL, GFS, ESL</td>
-                <td><small>RVSD: CMP-LCH-PKW-<strong style="color:#c00;">NSA-MUN</strong>-PKW</small></td>
-                <td>All 5 voyages agreed to ME Skip (existing ME ROB → NSA discharge)</td>
-                <td>KMB to continue on VGI route</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="mtg-section">
-          <div class="mtg-title">2. Key Points: Cargo Handling by Route/Cycle</div>
-          <div class="mtg-note">
-            📊 <strong>Total Remaining Cargo:</strong> ME-bound original BSA total <strong>4,545 TEU</strong> / NSA alternate discharge <strong>2,050 TEU</strong><br>
-            🔴 AIM (Cycle 75) Last Vessel = KMTC DAMMAM 2601W (KLF ETA 3/23)<br>
-            🔴 AIM2 (Cycle 16) Last Vessel = KMTC MUNDRA 2602W (KLF ETA 4/5, via NSA Ad-Hoc)<br>
-            🟡 VGI: ARAYA BHUM · ZHONG GU SHEN YANG · APOLLON D — all processing NSA discharge
-          </div>
-        </div>
-        <div class="mtg-section">
-          <div class="mtg-title">3. SPCME (Ad-Hoc) Operation Direction &amp; NSA ROB Cargo Handling</div>
-          <div class="change-row">
-            📌 <strong>NSA-discharged ROB cargo handling options:</strong><br>
-            <span style="display:inline-block; margin-top:4px;">① Purchase feeder space → forward to KLF/JEA, then apply DLY port-specific handling</span><br>
-            <span style="display:inline-block; margin-top:2px;">② Consider company Ad-Hoc Rescue voyage (Vessel from AIS5) → must confirm demand with sales team each voyage</span>
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            📌 <strong>SPCME Special Deployment Profitability (assuming freight $2,500):</strong> ESL Nhava Sheva $66K · GFS Galaxy $150K · ESL Sana $150K · ESL Busan/Dana/Wasl $90K each<br>
-            <span class="change-meta">→ See [Costs·WRS] tab → SPCME Special Deployment section for details</span>
-          </div>
-        </div>
-      </div><!-- end data-lang en -->
-
-      <!-- ── ZH ── -->
-      <div data-lang="zh">
-        <div class="mtg-section">
-          <div class="mtg-title">1. 中东航线共同运营方协商 &amp; 船舶运营方案</div>
-          <table class="policy-table">
-            <thead><tr><th width="10%">航线</th><th width="15%">共同运营方</th><th width="20%">原/变更Rotation</th><th width="30%">运营协议决定</th><th width="25%">本司船舶方案</th></tr></thead>
-            <tbody>
-              <tr class="highlight">
-                <td><strong>AIM</strong></td><td>KMTC, ESL, GFS, HMM</td>
-                <td><small>RVSD: PNC-TAO-XMN-DCB-PKW-<strong style="color:#c00;">KLF</strong></small></td>
-                <td>JEA·DMM停靠（Cycle 75）→ 从HMM母船起Suspension → 此后以Ad-Hoc方式运营</td>
-                <td>KDM预定挂靠KLF（ETA 3/23）/ 船舶部署计划3月中旬制定</td>
-              </tr>
-              <tr class="highlight">
-                <td><strong>AIM2</strong></td><td>KMTC, ESL, ONE</td>
-                <td><small>RVSD: SHA-NBO-SHK-SIN-<strong style="color:#c00;">NSA-KLF</strong>-PKW</small></td>
-                <td>完成全部16 Cycle航次后Suspension / ONE宣布不挂靠中东地区，ROB IN NSA卸货</td>
-                <td>KMU预定挂靠KLF（ETA 4/5）/ 船舶部署计划3月中旬制定</td>
-              </tr>
-              <tr>
-                <td><strong>VGI</strong></td><td>KMTC, RCL, GFS, ESL</td>
-                <td><small>RVSD: CMP-LCH-PKW-<strong style="color:#c00;">NSA-MUN</strong>-PKW</small></td>
-                <td>全部5个航次同意ME Skip（原ME ROB → NSA卸货）</td>
-                <td>KMB预定继续执行VGI航线</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="mtg-section">
-          <div class="mtg-title">2. 按航线/Cycle划分货物处理方案要点</div>
-          <div class="mtg-note">
-            📊 <strong>全部剩余货物现况：</strong>中东方向原目的地BSA合计 <strong>4,545 TEU</strong> / NSA替代卸货 <strong>2,050 TEU</strong><br>
-            🔴 AIM（75 Cycle）末班船 = KMTC DAMMAM 2601W（KLF ETA 3/23）<br>
-            🔴 AIM2（16 Cycle）末班船 = KMTC MUNDRA 2602W（KLF ETA 4/5，经NSA Ad-Hoc）<br>
-            🟡 VGI：ARAYA BHUM · ZHONG GU SHEN YANG · APOLLON D 均在NSA卸货处理中
-          </div>
-        </div>
-        <div class="mtg-section">
-          <div class="mtg-title">3. SPCME（Ad-Hoc）运营方向 &amp; NSA ROB货物处理</div>
-          <div class="change-row">
-            📌 <strong>NSA卸货ROB货物处理方案：</strong><br>
-            <span style="display:inline-block; margin-top:4px;">① 购买支线舱位 → 转运至KLF/JEA后按上述DLY港口处理方案执行</span><br>
-            <span style="display:inline-block; margin-top:2px;">② 研究本司Ad-Hoc救援航次（Vessel from AIS5）→ 每航次须事前向营业部门确认需求</span>
-          </div>
-          <div class="change-row" style="margin-top:8px;">
-            📌 <strong>SPCME特别配船盈亏（假设运价$2,500）：</strong>ESL Nhava Sheva $66K · GFS Galaxy $150K · ESL Sana $150K · ESL Busan/Dana/Wasl 各$90K<br>
-            <span class="change-meta">→ 详细内容请参阅[费用·WRS]标签 → SPCME特别配船盈亏章节</span>
-          </div>
-        </div>
-      </div><!-- end data-lang zh -->
-    </div>
-  </div>
-
-  <!-- EFS/LSS 카드는 기존 policy 카드에서 EFS 탭만 여기로 래핑 -->
-  <div class="card">
-    <div class="card-header">
-      <div class="title">📢 EFS / LSS <span data-lang-inline="ko">및 기타 공지</span><span data-lang-inline="en">&amp; Other Notices</span><span data-lang-inline="zh">及其他公告</span></div>
-    </div>
-    <div id="notices-efs-inject" class="card-body">
-      <!-- JS로 policy-efs-notice 내용 복제 삽입 -->
-    </div>
-  </div>
-
-  </div><!-- end mainsec-notices -->
 
   <!-- ===== SEC: NSA EOV 가이드 ===== -->
   <div class="main-sec" id="mainsec-eov-guide">
@@ -2532,66 +2289,71 @@
         <div class="eov-options" style="margin-bottom:14px;">
           <div class="eov-option opt1">
             <div class="eov-option-label">Option 1 — NSA 직접 픽업 / Ship-back / COD</div>
-            <div class="eov-option-body">NSA 현지 통관 후 픽업, 선적항 반송, 또는 다른 목적지 COD. <strong>Ship-back/COD 시 송하인·수하인 양측 서면 동의 필수.</strong></div>
-          </div>
-          <div style="background:#fef2f2;border:1.5px solid #ef4444;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
-            <strong style="color:#991b1b;">📢 후속 처리 <span class="badge badge-critical">NEW 3/18</span></strong>
-            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
-              <li>송하인·수하인 <strong>쉽백 동의 필수 확인</strong></li>
-              <li><strong>수하인 동의서·쉽백 요청서</strong> 등 서류 징구 필수 (추후 분쟁 대비)</li>
-              <li>수입자 <strong>SHIPBACK 동의 여부 리마크 입력</strong></li>
-              <li><span style="color:#c00;font-weight:700;">금주 금요일(3/20)까지</span> 시트 건 전량 확인 완료 필요</li>
-            </ul>
+            <div class="eov-option-body">NSA 현지 통관 후 픽업, 선적항 반송, 또는 다른 목적지 COD. <strong>Ship-back/COD 시 송하인·수하인 양측 서면 동의 및 요청서 서류 징구 필수.</strong> COD의 경우 <strong>화물포기각서</strong> 별도 징구 필요. 발생하는 모든 비용 화주측에서 지불 필요. 서류 징수 완료 후 시트 내 리마크 입력.</div>
           </div>
           <div class="eov-option opt2">
             <div class="eov-option-label">Option 2 — NSA → KLF 이송 후 최종 목적지 처리</div>
-            <div class="eov-option-body">NSA에서 KLF로 이송 후 최종 목적지별 후속 처리. <strong>현재 가장 실현 가능한 대안.</strong></div>
-          </div>
-          <div style="background:#fffbeb;border:1.5px solid #d97706;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
-            <strong style="color:#92400e;">📢 후속 처리 <span class="badge badge-new">NEW 3/18</span></strong>
-            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
-              <li>비용 지불 여부(Y) <strong>최대한 빠르게 확인 필수</strong> → 미확인 시 <strong>피더 연결 지장</strong></li>
-              <li>Y 표시 건은 <strong>B/L Additional Freight 탭 → OTH 코드 → 피더리지 USD 2,000/TEU</strong> 즉시 입력 (비용 누락 방지)</li>
-              <li>기본 <strong>PPD</strong> 진행, CLT 등 변경 필요 시 각 담당 CM 확인</li>
-            </ul>
+            <div class="eov-option-body">NSA에서 KLF로 이송 후 최종 목적지별 후속 처리. <strong>현재 가장 실현 가능한 대안.</strong> 피더리지 비용 지불 여부(Y) 최대한 빠르게 확인 필수(미확인 시 피더 연결 지장). Y 표시 건은 B/L Additional Freight 탭 → OTH 코드 → 피더리지 USD 2,000/TEU 즉시 입력, 기본 PPD 청구 진행.</div>
           </div>
           <div class="eov-option opt3">
             <div class="eov-option-label">Option 3 — Upper Gulf 별도 연결 (DMM / KWI / UQR)</div>
-            <div class="eov-option-body">피더 선복·현지 운송·통관 가능성·비용에 따라 별도 검토.</div>
+            <div class="eov-option-body">피더 선복·현지 운송·통관 가능성·비용에 따라 별도 검토. <strong>DMM/KSP는 JED 경유 루트 권장.</strong> <strong>KWI/UQR은 되도록 Ship-back 권유.</strong></div>
           </div>
           <div class="eov-option opt4">
             <div class="eov-option-label">Option 4 — Red Sea 별도 연결 (JED / SKN / AQJ)</div>
-            <div class="eov-option-body">피더 연결 별도 검토. 추가 비용 및 운송 지연 예상.</div>
+            <div class="eov-option-body"><strong>[NEW 3/19] IRX2 이용 시 별도 피더비 없음.</strong> 수입자 WRS $2,000/$3,500 + 도착지 로컬차지.</div>
           </div>
         </div>
 
-        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;" data-new-until="2026-03-19">
-          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 비용 구분 정리 <span class="badge badge-critical">NEW 3/18</span></h4>
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;">
+          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 NSA EOV 목적지별 비용 총정리 <span class="badge badge-critical">NEW 3/19</span></h4>
           <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
             <tr style="background:#dbeafe;">
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">구분</th>
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">지불 주체</th>
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">성격</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">경로</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">수출자(Shipper) 부담</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">수입자(Consignee) 부담</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">비고</th>
             </tr>
             <tr>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">Feederage (피더리지)</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Shipper (송하인)</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;">EOV 후 별도 발생 추가 비용</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → KLF (JEA, AUH)</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">피더리지 $2,000 / $4,000</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">DEVIATION $800/$1600 + 도착지 로컬차지 + 로컬 운송비</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">가장 일반적</td>
             </tr>
             <tr>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">WRS</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Consignee (수하인)</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;">기 선적 건 KLF-JEA 이송 관련 비용</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → JED / AQJ / SKN</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">없음</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">$2,000 / $3,500 + 도착지 로컬차지</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">IRX2 이용, 별도 피더비 없음</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → DMM / KSP</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">없음</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">$2,000 / $3,500 (JED까지) + JED→목적지 트럭킹</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">JED 경유, 트럭킹은 수입자 비용</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">SOH</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">미정</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">DVC $800/$1,600만 청구 (WRS 대신)</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">도착지 비용 이슈 多</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">KWI / UQR</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">-</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">-</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">되도록 Ship-back 권유</td>
             </tr>
           </table>
-          <p style="font-size:11.5px;color:#6b7280;margin-top:6px;">※ WRS와 Feederage는 별도 비용 — 신규 집하 케이스와 다르게 정리되는 부분</p>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. 화주 안내 필수 사항</h3>
         <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li><strong>당사는 EOV선언 하였으므로, EOV이후 처리에 대한 의무는 없음.</strong></li>
           <li>NSA 양하 이후 발생 비용(양하·보관·통관·운송 등)은 <strong>원칙적으로 화주 부담</strong></li>
           <li>추가 비용은 <strong>반드시 본사 재확인 후</strong> 화주에게 안내</li>
           <li>Ship-back/COD 시 <strong>송하인+수하인 서면 동의 필수</strong> (소유권·결제·서류 분쟁 방지)</li>
+          <li><strong>COD 시 화물포기각서 별도 징구 필요</strong> (Ship-back과 구분)</li>
           <li>최종 목적지 D/O 발급 원활화를 위해 <strong>Surrender B/L 또는 Sea Waybill 권장</strong></li>
           <li>OBL 사용 시 대체 양하지에서 <strong>화물 인도 지연 가능성</strong></li>
         </ul>
@@ -2608,13 +2370,12 @@
         </div>
         <p style="font-size:12px;color:#6b7280;margin-top:6px;">※ B/L 처리 방안 별도 안내 예정 / 화주 통지 템플릿 별도 배포 예정</p>
 
-        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ KLF DG(위험물) 양하 불가 안내 (3/17 추가)</h3>
+        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ 중동향 특수화물 접수 중단 (3/19 SPECIAL CENTER)</h3>
         <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
-          <li>KLF 장치장 이슈로 <strong>DG 양하 전면 불가</strong></li>
-          <li>중동향 DG 화물 옵션: <strong>COD / Ship-back / EOV(대체항 양하, 화주 자체 후속 처리)</strong></li>
-          <li>선례: JESN 02605W — ESL이 KLF 대신 <strong>NSA에서 DG 7 TEU 양하</strong></li>
-          <li><strong>신규 DG 부킹 접수 불가</strong> (추후 공지 시까지)</li>
-          <li>기 ROB DG 화물은 실제 양하항 확정 전까지 최종 처리 방안 확인 불가</li>
+          <li><strong>DG(위험물) / OOG(규격외) / RF(냉동)</strong> — 중동 발/착 전체 임시 접수 중단</li>
+          <li>KLF 장치장 이슈 + 전쟁 상황으로 추후 공지 시까지 신규 부킹 불가</li>
+          <li>기 ROB DG 화물은 운항선사 차항지 양하 후 통보 예상</li>
+          <li>화주에게 COD / Ship-back / EOV 옵션 안내 필요</li>
         </ul>
 
       </div>
@@ -2637,66 +2398,71 @@
         <div class="eov-options" style="margin-bottom:14px;">
           <div class="eov-option opt1">
             <div class="eov-option-label">Option 1 — Direct Pickup at NSA / Ship-back / COD</div>
-            <div class="eov-option-body">Customer may review direct pickup at NSA, ship-back, or COD. <strong>Ship-back/COD requires written consent from both shipper and consignee.</strong></div>
-          </div>
-          <div style="background:#fef2f2;border:1.5px solid #ef4444;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
-            <strong style="color:#991b1b;">📢 Follow-up <span class="badge badge-critical">NEW 3/18</span></strong>
-            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
-              <li><strong>Written consent from both shipper and consignee</strong> required for ship-back</li>
-              <li>Collect <strong>consignee consent letter &amp; ship-back request</strong> documents (dispute prevention)</li>
-              <li>Enter <strong>importer SHIPBACK consent status</strong> in remarks</li>
-              <li><span style="color:#c00;font-weight:700;">Deadline: Friday 3/20</span> — all sheet cases must be confirmed</li>
-            </ul>
+            <div class="eov-option-body">Customer may review direct pickup at NSA, ship-back, or COD. <strong>Ship-back/COD requires written consent and request documents from both shipper and consignee.</strong> For COD, a separate <strong>cargo abandonment letter</strong> is required. All costs to be borne by cargo interest. Enter remarks in sheet after document collection.</div>
           </div>
           <div class="eov-option opt2">
             <div class="eov-option-label">Option 2 — NSA → KLF Transfer, Then Onward Handling</div>
-            <div class="eov-option-body">Cargo moved from NSA to KLF, then handled onward per final destination. <strong>Currently the most practical alternative.</strong></div>
-          </div>
-          <div style="background:#fffbeb;border:1.5px solid #d97706;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
-            <strong style="color:#92400e;">📢 Follow-up <span class="badge badge-new">NEW 3/18</span></strong>
-            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
-              <li>Confirm cost acceptance (Y) <strong>ASAP</strong> — unconfirmed cases will <strong>delay feeder connection</strong></li>
-              <li>Once marked Y → enter <strong>B/L Additional Freight tab → OTH code → Feederage USD 2,000/TEU</strong> immediately (prevent cost leakage)</li>
-              <li>Default <strong>PPD</strong>; contact responsible CM for CLT or other changes</li>
-            </ul>
+            <div class="eov-option-body">Cargo moved from NSA to KLF, then handled onward per final destination. <strong>Currently the most practical alternative.</strong> Confirm cost acceptance (Y) ASAP — unconfirmed cases will delay feeder connection. Once marked Y → enter B/L Additional Freight tab → OTH code → Feederage USD 2,000/TEU immediately, default PPD.</div>
           </div>
           <div class="eov-option opt3">
             <div class="eov-option-label">Option 3 — Upper Gulf (DMM / KWI / UQR)</div>
-            <div class="eov-option-body">Reviewed separately. Depends on feeder space, local transport, customs feasibility, and cost.</div>
+            <div class="eov-option-body">Reviewed separately. Depends on feeder space, local transport, customs feasibility, and cost. <strong>DMM/KSP: JED via route recommended.</strong> <strong>KWI/UQR: Ship-back recommended.</strong></div>
           </div>
           <div class="eov-option opt4">
             <div class="eov-option-label">Option 4 — Red Sea (JED / SKN / AQJ)</div>
-            <div class="eov-option-body">Separate feeder connection review. Additional cost and transit delay expected.</div>
+            <div class="eov-option-body"><strong>[NEW 3/19] No separate feeder charge when using IRX2.</strong> Consignee WRS $2,000/$3,500 + destination local charges.</div>
           </div>
         </div>
 
-        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;" data-new-until="2026-03-19">
-          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 Cost Breakdown <span class="badge badge-critical">NEW 3/18</span></h4>
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;">
+          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 NSA EOV Cost Summary by Destination <span class="badge badge-critical">NEW 3/19</span></h4>
           <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
             <tr style="background:#dbeafe;">
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Item</th>
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Payer</th>
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Nature</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Route</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Shipper Cost</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Consignee Cost</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">Remarks</th>
             </tr>
             <tr>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">Feederage</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Shipper</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;">Additional cost arising after EOV</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → KLF (JEA, AUH)</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">Feederage $2,000 / $4,000</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">DEVIATION $800/$1600 + dest. local + local trucking</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">Most common</td>
             </tr>
             <tr>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">WRS</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Consignee</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;">KLF-JEA transfer cost for pre-shipped cargo</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → JED / AQJ / SKN</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">None</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">$2,000 / $3,500 + dest. local</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">Via IRX2, no feeder charge</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → DMM / KSP</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">None</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">$2,000 / $3,500 (to JED) + JED→dest. trucking</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">Via JED, trucking at consignee cost</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">SOH</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">TBD</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">DVC $800/$1,600 only (instead of WRS)</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">Multiple cost issues</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">KWI / UQR</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">-</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">-</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Ship-back recommended</td>
             </tr>
           </table>
-          <p style="font-size:11.5px;color:#6b7280;margin-top:6px;">※ WRS and Feederage are separate charges — handled differently from new cargo cases</p>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. Important Points for Customers</h3>
         <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li><strong>KMTC has declared EOV; there is no obligation for post-EOV handling.</strong></li>
           <li>Charges after NSA discharge (discharge, storage, customs, transport) are <strong>in principle for cargo interest's account</strong></li>
           <li>Additional charges must be <strong>reconfirmed with HQ</strong> before customer notice</li>
           <li>Ship-back/COD requires <strong>written consent from both shipper and consignee</strong></li>
+          <li><strong>COD requires a separate cargo abandonment letter</strong> (distinct from Ship-back)</li>
           <li>Recommend <strong>Surrender B/L or Sea Waybill</strong> for smoother D/O issuance</li>
           <li>OBL may cause <strong>delay in release procedures</strong> at alternative discharge point</li>
         </ul>
@@ -2707,13 +2473,12 @@
         </div>
         <p style="font-size:12px;color:#6b7280;margin-top:6px;">※ B/L handling guidance to follow / Customer notice template to be circulated</p>
 
-        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ KLF DG Discharge Not Possible (Updated 3/17)</h3>
+        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ ME Special Cargo Booking Suspended (3/19 SPECIAL CENTER)</h3>
         <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
-          <li>KLF DG discharge <strong>fully suspended</strong> due to storage yard issue</li>
-          <li>ME-bound DG options: <strong>COD / Ship-back / EOV (alternative discharge, cargo interest arranges onward)</strong></li>
-          <li>Precedent: JESN 02605W — ESL discharged <strong>7 TEU DG at NSA</strong> instead of KLF</li>
-          <li><strong>New DG bookings cannot be accepted</strong> until further notice</li>
-          <li>ROB DG cargo final handling TBD until actual discharge port confirmed</li>
+          <li><strong>DG (Dangerous Goods) / OOG (Out of Gauge) / RF (Reefer)</strong> — All ME-bound/origin bookings temporarily suspended</li>
+          <li>KLF storage yard issue + war situation — no new bookings until further notice</li>
+          <li>Existing ROB DG cargo expected to be discharged at next port by carrier</li>
+          <li>Advise customers: COD / Ship-back / EOV options</li>
         </ul>
 
       </div>
@@ -2736,66 +2501,71 @@
         <div class="eov-options" style="margin-bottom:14px;">
           <div class="eov-option opt1">
             <div class="eov-option-label">方案1 — NSA直接提货 / 退运 / COD</div>
-            <div class="eov-option-body">客户可选择NSA直接提货、退运或COD。<strong>退运/COD需发货人和收货人双方书面同意。</strong></div>
-          </div>
-          <div style="background:#fef2f2;border:1.5px solid #ef4444;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
-            <strong style="color:#991b1b;">📢 后续处理 <span class="badge badge-critical">NEW 3/18</span></strong>
-            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
-              <li>发货人和收货人 <strong>退运书面同意必须确认</strong></li>
-              <li>须收集 <strong>收货人同意书·退运申请书</strong> 等文件（为应对后续纠纷）</li>
-              <li>录入进口方 <strong>SHIPBACK同意状态备注</strong></li>
-              <li><span style="color:#c00;font-weight:700;">截止日期：本周五(3/20)</span> 须确认表格内所有案件</li>
-            </ul>
+            <div class="eov-option-body">客户可选择NSA直接提货、退运或COD。<strong>退运/COD需发货人和收货人双方书面同意及申请文件。</strong>COD情况需另行征收<strong>货物放弃声明书</strong>。所有费用由货方承担。文件征收完毕后在表格内录入备注。</div>
           </div>
           <div class="eov-option opt2">
             <div class="eov-option-label">方案2 — NSA → KLF转运后继续处理</div>
-            <div class="eov-option-body">从NSA转运至KLF后按最终目的地处理。<strong>目前最可行的替代方案。</strong></div>
-          </div>
-          <div style="background:#fffbeb;border:1.5px solid #d97706;border-radius:0 0 8px 8px;padding:10px 14px;margin:-8px 0 10px 0;font-size:12.5px;" data-new-until="2026-03-19">
-            <strong style="color:#92400e;">📢 后续处理 <span class="badge badge-new">NEW 3/18</span></strong>
-            <ul style="line-height:1.7;padding-left:20px;margin-top:4px;">
-              <li>费用支付意愿(Y) <strong>尽快确认必须</strong> → 未确认将 <strong>影响支线连接</strong></li>
-              <li>标记Y后 → <strong>B/L Additional Freight选项卡 → OTH代码 → 支线费USD 2,000/TEU</strong> 立即录入（防止费用遗漏）</li>
-              <li>默认 <strong>PPD</strong> 处理，CLT等变更需联系负责CM确认</li>
-            </ul>
+            <div class="eov-option-body">从NSA转运至KLF后按最终目的地处理。<strong>目前最可行的替代方案。</strong>费用支付意愿(Y)尽快确认必须（未确认将影响支线连接）。标记Y后→B/L Additional Freight选项卡→OTH代码→支线费USD 2,000/TEU立即录入，默认PPD。</div>
           </div>
           <div class="eov-option opt3">
             <div class="eov-option-label">方案3 — 上湾别途安排 (DMM / KWI / UQR)</div>
-            <div class="eov-option-body">视支线船位、当地运输、清关可行性及费用另行审查。</div>
+            <div class="eov-option-body">视支线船位、当地运输、清关可行性及费用另行审查。<strong>DMM/KSP推荐JED经由路线。</strong><strong>KWI/UQR建议退运。</strong></div>
           </div>
           <div class="eov-option opt4">
             <div class="eov-option-label">方案4 — 红海别途安排 (JED / SKN / AQJ)</div>
-            <div class="eov-option-body">另行审查支线连接。预计产生附加费用及运输延迟。</div>
+            <div class="eov-option-body"><strong>[NEW 3/19] 利用IRX2时无另行支线费。</strong>向收货人征收WRS $2,000/$3,500 + 目的地本地费。</div>
           </div>
         </div>
 
-        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;" data-new-until="2026-03-19">
-          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 费用区分整理 <span class="badge badge-critical">NEW 3/18</span></h4>
+        <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;">
+          <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 NSA EOV按目的地费用总汇 <span class="badge badge-critical">NEW 3/19</span></h4>
           <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
             <tr style="background:#dbeafe;">
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">项目</th>
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">支付方</th>
-              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">性质</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">路线</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">出口方(Shipper)负担</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">进口方(Consignee)负担</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid #93c5fd;">备注</th>
             </tr>
             <tr>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">Feederage（支线费）</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Shipper（发货人）</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;">EOV后另行产生的附加费用</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → KLF (JEA, AUH)</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">支线费 $2,000 / $4,000</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">DEVIATION $800/$1600 + 目的地本地费 + 当地运输费</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">最常见</td>
             </tr>
             <tr>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">WRS</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">Consignee（收货人）</td>
-              <td style="padding:6px 10px;border:1px solid #93c5fd;">已装船货物KLF-JEA转运相关费用</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → JED / AQJ / SKN</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">无</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">$2,000 / $3,500 + 目的地本地费</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">利用IRX2，无另行支线费</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">NSA → DMM / KSP</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">无</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">$2,000 / $3,500（至JED）+ JED→目的地卡车运输</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">经JED，卡车运输由收货方承担</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">SOH</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">待定</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">仅征DVC $800/$1,600（替代WRS）</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">目的地费用问题多</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;font-weight:700;">KWI / UQR</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">-</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;">-</td>
+              <td style="padding:6px 10px;border:1px solid #93c5fd;color:#c00;font-weight:700;">建议退运</td>
             </tr>
           </table>
-          <p style="font-size:11.5px;color:#6b7280;margin-top:6px;">※ WRS和支线费为独立费用——与新集货案件的处理方式不同</p>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. 须向客户说明事项</h3>
         <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
+          <li><strong>本司已宣布EOV，对EOV后的处理不承担义务。</strong></li>
           <li>NSA卸货后产生的费用（卸货、仓储、清关、运输等）<strong>原则上由货方承担</strong></li>
           <li>附加费用须<strong>先与总部确认</strong>后再通知客户</li>
           <li>退运/COD需<strong>发货人和收货人双方书面同意</strong></li>
+          <li><strong>COD需另行征收货物放弃声明书</strong>（与退运区分）</li>
           <li>建议使用<strong>电放提单或海运单</strong>以便D/O签发</li>
           <li>使用正本提单可能导致替代卸货港<strong>放货延迟</strong></li>
         </ul>
@@ -2806,13 +2576,12 @@
         </div>
         <p style="font-size:12px;color:#6b7280;margin-top:6px;">※ 提单处理方案另行通知 / 客户通知模板即将下发</p>
 
-        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ KLF危险品卸货不可（3/17更新）</h3>
+        <h3 style="font-size:14px;color:#c00;margin:20px 0 8px;">⚠ 中东方向特殊货物接收暂停 (3/19 SPECIAL CENTER)</h3>
         <ul style="font-size:12.5px;line-height:1.7;padding-left:20px;">
-          <li>因堆场问题KLF <strong>DG卸货全面暂停</strong></li>
-          <li>中东方向DG选项：<strong>COD / 退运 / EOV（替代港卸货，货方自行安排后续）</strong></li>
-          <li>先例：JESN 02605W — ESL在KLF未卸，改在<strong>NSA卸载DG 7 TEU</strong></li>
-          <li><strong>新DG订舱暂停接收</strong>（另行通知前）</li>
-          <li>已装船ROB DG货物最终处理方案须待实际卸货港确定</li>
+          <li><strong>DG(危险品) / OOG(超规格) / RF(冷藏)</strong> — 中东发/到全部临时暂停接收</li>
+          <li>KLF堆场问题 + 战争状况，另行通知前不可新订舱</li>
+          <li>已装船ROB DG货物预计由船公司在下一港卸后通知</li>
+          <li>请告知客户：COD / 退运 / EOV 选项</li>
         </ul>
 
       </div>
@@ -2983,9 +2752,9 @@
   </div><!-- end mainsec-history -->
 
   <div class="footer">
-    <div data-lang="ko">본 페이지는 KMTC 내부 이메일 기반으로 작성되었습니다. 최신 공식 지침은 반드시 본사 또는 중동법인에 확인하시기 바랍니다. | 마지막 이메일 수집 기준: 2026년 3월 18일 | lhjin@ekmtc.com</div>
-    <div data-lang="en">This page is compiled from KMTC internal emails. Always verify with HQ or ME Branch for the latest official directives. | Email data collected as of: March 18, 2026 | lhjin@ekmtc.com</div>
-    <div data-lang="zh">本页面基于KMTC内部邮件整理。最新官方指示请务必向总部或中东法人确认。| 邮件数据截至: 2026年3月18日 | lhjin@ekmtc.com</div>
+    <div data-lang="ko">본 페이지는 KMTC 내부 이메일 기반으로 작성되었습니다. 최신 공식 지침은 반드시 본사 또는 중동법인에 확인하시기 바랍니다. | 마지막 이메일 수집 기준: 2026년 3월 19일 | lhjin@ekmtc.com</div>
+    <div data-lang="en">This page is compiled from KMTC internal emails. Always verify with HQ or ME Branch for the latest official directives. | Email data collected as of: March 19, 2026 | lhjin@ekmtc.com</div>
+    <div data-lang="zh">本页面基于KMTC内部邮件整理。最新官方指示请务必向总部或中东法人确认。| 邮件数据截至: 2026年3月19日 | lhjin@ekmtc.com</div>
   </div>
 
 </div><!-- end main -->
@@ -2997,15 +2766,6 @@
     document.querySelectorAll('.main-nav-btn').forEach(function(b) { b.classList.remove('active'); });
     document.getElementById('mainsec-' + secId).classList.add('active');
     btn.classList.add('active');
-    // EFS 내용 복제 (공지 탭)
-    if (secId === 'notices') {
-      var src = document.getElementById('policy-efs-notice');
-      var dst = document.getElementById('notices-efs-inject');
-      if (src && dst && !dst.dataset.loaded) {
-        dst.innerHTML = src.innerHTML;
-        dst.dataset.loaded = '1';
-      }
-    }
   }
 
   var currentLang = 'ko';
