@@ -1,6 +1,23 @@
 {
-  "lastUpdated": "2026-03-18",
+  "lastUpdated": "2026-03-20",
   "changelog": [
+    {
+      "dateIso": "2026-03-20",
+      "date": { "ko": "3월 20일", "en": "Mar 20", "zh": "3月20日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "NSA → POL Ship-back 규정 안내 및 CSLA 세관 협의 진행",
+        "en": "NSA → POL Ship-back Regulations & CSLA Customs Engagement Update",
+        "zh": "NSA→POL退运规定通知及CSLA海关协商进展"
+      },
+      "body": {
+        "ko": "▶ Ship-back 기본규정: NSA 도착 선박으로만 가능(ROB ship-back). 다른 선박 선적 시 Re-export 처리(3~4개월 소요, 세관 서류 多, 선사 비용 부담+세관 페널티 가능). ▶ CSLA 협의: 인도 선사협의회(CSLA) 웹 미팅 결과 타 선사들도 동일 문제 확인. CSLA에서 POL ship-back 대상 리스트 취합 후 세관 협조 요청 예정. 빠르면 3/23(월) 또는 3/24(화) 세관 협의 결과 확인 가능.",
+        "en": "▶ Ship-back rules: Only possible on the same vessel that arrived at NSA (ROB ship-back). Loading on different vessel = Re-export (3-4 months, extensive customs docs, carrier liability + possible penalty). ▶ CSLA engagement: Web meeting confirmed other carriers face same issue. CSLA to compile POL ship-back cases and request customs cooperation. Result expected Mon 3/23 or Tue 3/24.",
+        "zh": "▶ 退运基本规定：仅限抵达NSA的同一船舶(ROB ship-back)。装至其他船舶按Re-export处理(约3~4个月、海关文件繁多、船公司承担费用+可能海关罚款)。▶ CSLA协商：印度船公司协会(CSLA)网络会议确认其他船公司也面临相同问题。CSLA将汇总POL退运清单后向海关请求协助。最快3/23(周一)或3/24(周二)可确认结果。"
+      },
+      "source": "중동 현지 운영팀 / CSLA 미팅 결과 | NSA Ship-back 규정 및 세관 협의 진행 안내"
+    },
     {
       "dateIso": "2026-03-18",
       "date": { "ko": "3월 18일", "en": "Mar 18", "zh": "3月18日" },
