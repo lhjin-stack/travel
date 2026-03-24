@@ -1,6 +1,40 @@
 {
-  "lastUpdated": "2026-03-20",
+  "lastUpdated": "2026-03-24",
   "changelog": [
+    {
+      "dateIso": "2026-03-23",
+      "date": { "ko": "3월 23일", "en": "Mar 23", "zh": "3月23日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "AIM/AIM2/VGI 중동향 미수취 부킹 전량 취소 — Private Operation(Slot Purchase) 전환",
+        "en": "AIM/AIM2/VGI ME Unpicked Bookings Cancelled — Shifted to Private Operation (Slot Purchase)",
+        "zh": "AIM/AIM2/VGI中东向未提箱订舱全部取消——转为私营运营(舱位购买)模式"
+      },
+      "body": {
+        "ko": "중동 상황으로 AIM·AIM2·VGI 중동 화물이 정상 서비스 대신 Slot Purchase 기반 Private Operation으로 전환. 고운임 화물만 선별 선적 중. 미확정 선복의 미수취(P/U Not Yet) 부킹 553건 전량 취소 요청. 스케줄 확정 후 재부킹 예정.",
+        "en": "Due to ME situation, AIM/AIM2/VGI ME cargoes shifted from normal service to private operation (slot purchase). Only high-freight cargoes selected. All 553 unpicked bookings to be cancelled; re-booking after schedule confirmation.",
+        "zh": "因中东局势，AIM·AIM2·VGI中东货物从正常服务转为Slot Purchase私营运营模式。仅选择高运费货物装载。553票未提箱订舱全部取消，待船期确认后重新订舱。"
+      },
+      "source": "곽윤철 선복운영팀 (yckwak@ekmtc.com) | (SCT) [AIM/AIM2/VGI] Request to Cancel Unpicked Bookings (P/U Status : Not yet)"
+    },
+    {
+      "dateIso": "2026-03-21",
+      "date": { "ko": "3월 21일", "en": "Mar 21", "zh": "3月21日" },
+      "badgeType": "critical",
+      "badgeLabel": { "ko": "긴급", "en": "URGENT", "zh": "紧急" },
+      "title": {
+        "ko": "홍해향 JEA 대기 화물 634 TEU 처리 방안 — GFS 선박 호르무즈 통항, WRP 적용",
+        "en": "Red Sea Cargo 634 TEU at JEA — GFS Vessel Hormuz Transit Plan with War Risk Premium",
+        "zh": "红海方向JEA滞留货物634TEU处理方案——GFS船舶霍尔木兹通航及战争风险附加费"
+      },
+      "body": {
+        "ko": "JEA 대기 홍해향 화물 634 TEU. GFS(아부다비 51%·이란계 49% 지분)가 이란측과 합의, 3000TEU급 선박으로 호르무즈 통항 후 MUN 기항 예정. JEA ETD 3/25. 당사 가용 600~700 TEU. ▶ War Risk Premium: US$3,000/20' · US$5,000/40' (JEA→MUN 피더 + MUN→홍해 IRX2 WRS). 화주 비용 동의 시만 선적, 미동의 화물은 JEA 장치 후 전쟁 종료 시 이송.",
+        "en": "634 TEU Red Sea cargo waiting at JEA. GFS (Abu Dhabi 51%, Iranian-owned 49%) agreed with Iran for 3000TEU vessel Hormuz transit to Mundra. JEA ETD Mar 25. KMTC space: 600-700 TEU. ▶ WRP: US$3,000/20' · US$5,000/40' (JEA→MUN feeder + MUN→Red Sea IRX2 WRS). Only cargo with shipper/consignee WRP acceptance to be loaded; rest stays at JEA until situation normalizes.",
+        "zh": "JEA滞留红海方向货物634TEU。GFS(阿布扎比51%·伊朗系49%股份)与伊朗达成协议，3000TEU级船舶通过霍尔木兹海峡后挂靠蒙德拉。JEA ETD 3/25。我司可用600~700TEU。▶ 战争风险附加费：US$3,000/20' · US$5,000/40'（JEA→MUN支线+MUN→红海IRX2 WRS）。仅装载同意支付WRP的货物，未同意者留存JEA待局势恢复后转运。"
+      },
+      "source": "이광희 중동법인장 (leekh@ekmtc.com) | [중동법인] 홍해향 JEA 대기 화물 처리 방안 관련"
+    },
     {
       "dateIso": "2026-03-20",
       "date": { "ko": "3월 20일", "en": "Mar 20", "zh": "3月20日" },
