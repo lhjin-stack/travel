@@ -2,6 +2,23 @@
   "lastUpdated": "2026-03-24",
   "changelog": [
     {
+      "dateIso": "2026-03-24",
+      "date": { "ko": "3월 24일", "en": "Mar 24", "zh": "3月24日" },
+      "badgeType": "updated",
+      "badgeLabel": { "ko": "변경", "en": "UPDATED", "zh": "更新" },
+      "title": {
+        "ko": "NSA EOV 목적지별 비용 총정리 — 기출항 5개·신규 2개 CASE (GFS 통항 불가 반영)",
+        "en": "NSA EOV Cost Breakdown by Destination — 5 Existing + 2 New Cases (GFS Transit Blocked)",
+        "zh": "NSA EOV各目的地费用总整理——既有5案+新规2案（GFS通航不可反映）"
+      },
+      "body": {
+        "ko": "■ 기출항 화물 [CASE 1] JEA — EOV→KLF 양하: 보세운송 $1,200/VAN + PRC $250/$330 + THC·LIFT ON-OFF·스토리지(수하인) + DEV $800/TEU(수하인). [CASE 2] JEA — EOV→NSA 양하: 피더리지 $2,000/TEU(송하인, 자사선 운송도 징수) + 보세운송 $1,200/VAN + PRC 등 실비(수하인) + DEV $800/TEU(수하인). 타 선사도 인근 포트 양하 건 DEV 징수 중. [CASE 3] SOH — EOV→NSA 양하: 피더리지 $2,000/TEU(송하인) + DEV $800/TEU(수하인). SOH도 현재 WR ZONE 포함, 타 선사 DEV 징수 중, 피더 연결은 별도. [CASE 4] 홍해 — EOV→NSA 양하: NSA→MUN T/S(AIS/AIS3) $2,000/$4,000(송하인) + IRX2 Slotage $780/TEU(Guarantee) + WRS $1,000/TEU(Used) + BAF $140/TEU(송하인). [CASE 5] 홍해 — 전쟁 전 JEA 도착(EOV X): JEA→MUN GFS 피더 $3,000/$5,000(송하인) + IRX2 동일 — ⚠️ GFS 호르무즈 통항 불가 최종 확인(3/24), 동 건 잠정 펜딩. ■ 신규 화물 [CASE 6] JEA: 운임 + WRS $2,000/$3,500(송하인, 중국발은 WRS 운임 포함 징수) + KLF→JEA 보세운송 $1,200/VAN + PRC 등(수하인). [CASE 7] 홍해: 운임 + WRS $2,000/$3,500(송하인, 중국발 WRS 포함 시 최소 $3,500/$5,500 준수 필수, 미준수 시 선적 불가).",
+        "en": "■ Existing Shipments [CASE 1] JEA — EOV→KLF discharge: Bonded trucking $1,200/VAN + PRC $250/$330 + THC/LIFT/Storage (CNEE) + DEV $800/TEU (CNEE). [CASE 2] JEA — EOV→NSA discharge: Feederage $2,000/TEU (Shipper; charged even on own vessels) + Bonded trucking $1,200/VAN + PRC etc. (CNEE) + DEV $800/TEU (CNEE). Other carriers also charging DEV on nearby port discharge. [CASE 3] SOH — EOV→NSA discharge: Feederage $2,000/TEU (Shipper) + DEV $800/TEU (CNEE). SOH in WR ZONE; other carriers charging DEV; feeder connection separate. [CASE 4] Red Sea — EOV→NSA discharge: NSA→MUN T/S (AIS/AIS3) $2,000/$4,000 (Shipper) + IRX2 Slotage $780/TEU (Guarantee) + WRS $1,000/TEU (Used) + BAF $140/TEU (Shipper). [CASE 5] Red Sea — Pre-war JEA arrival (No EOV): JEA→MUN GFS feeder $3,000/$5,000 (Shipper) + IRX2 same — ⚠️ GFS Hormuz transit BLOCKED (confirmed 3/24), plan PENDING. ■ New Shipments [CASE 6] JEA: Freight + WRS $2,000/$3,500 (Shipper; China-origin WRS included in freight) + KLF→JEA bonded trucking $1,200/VAN + PRC etc. (CNEE). [CASE 7] Red Sea: Freight + WRS $2,000/$3,500 (Shipper; China-origin min $3,500/$5,500 with WRS, non-compliance = no loading).",
+        "zh": "■ 既有货物 [CASE 1] JEA——EOV→KLF卸货：保税运输$1,200/VAN + PRC $250/$330 + THC·装卸·仓储(收货人) + DEV $800/TEU(收货人)。[CASE 2] JEA——EOV→NSA卸货：支线费$2,000/TEU(发货人，自营船也须征收) + 保税运输$1,200/VAN + PRC等实费(收货人) + DEV $800/TEU(收货人)。其他船公司也对邻近港卸货征收DEV。[CASE 3] SOH——EOV→NSA卸货：支线费$2,000/TEU(发货人) + DEV $800/TEU(收货人)。SOH目前在WR ZONE内，其他船公司也征收DEV，支线另计。[CASE 4] 红海——EOV→NSA卸货：NSA→MUN中转(AIS/AIS3) $2,000/$4,000(发货人) + IRX2 Slotage $780/TEU(Guarantee) + WRS $1,000/TEU(Used) + BAF $140/TEU(发货人)。[CASE 5] 红海——战前JEA到达(无EOV)：JEA→MUN GFS支线$3,000/$5,000(发货人) + IRX2同上——⚠️ GFS霍尔木兹通航不可最终确认(3/24)，该案暂时搁置。■ 新规货物 [CASE 6] JEA：运费 + WRS $2,000/$3,500(发货人，中国出发WRS含于运费) + KLF→JEA保税运输$1,200/VAN + PRC等(收货人)。[CASE 7] 红海：运费 + WRS $2,000/$3,500(发货人，中国出发含WRS最低$3,500/$5,500，不达标不予装载)。"
+      },
+      "source": "NSA EOV 비용 청구 경우의 수 Google Sheet (03.23 시트) | 3/24 GFS 통항 불가 업데이트 반영"
+    },
+    {
       "dateIso": "2026-03-23",
       "date": { "ko": "3월 23일", "en": "Mar 23", "zh": "3月23日" },
       "badgeType": "critical",
@@ -29,9 +46,9 @@
         "zh": "红海方向JEA滞留货物634TEU处理方案——GFS船舶霍尔木兹通航及战争风险附加费"
       },
       "body": {
-        "ko": "JEA 대기 홍해향 화물 634 TEU. GFS(아부다비 51%·이란계 49% 지분)가 이란측과 합의, 3000TEU급 선박으로 호르무즈 통항 후 MUN 기항 예정. JEA ETD 3/25. 당사 가용 600~700 TEU. ▶ War Risk Premium: US$3,000/20' · US$5,000/40' (JEA→MUN 피더 + MUN→홍해 IRX2 WRS). 화주 비용 동의 시만 선적, 미동의 화물은 JEA 장치 후 전쟁 종료 시 이송.",
-        "en": "634 TEU Red Sea cargo waiting at JEA. GFS (Abu Dhabi 51%, Iranian-owned 49%) agreed with Iran for 3000TEU vessel Hormuz transit to Mundra. JEA ETD Mar 25. KMTC space: 600-700 TEU. ▶ WRP: US$3,000/20' · US$5,000/40' (JEA→MUN feeder + MUN→Red Sea IRX2 WRS). Only cargo with shipper/consignee WRP acceptance to be loaded; rest stays at JEA until situation normalizes.",
-        "zh": "JEA滞留红海方向货物634TEU。GFS(阿布扎比51%·伊朗系49%股份)与伊朗达成协议，3000TEU级船舶通过霍尔木兹海峡后挂靠蒙德拉。JEA ETD 3/25。我司可用600~700TEU。▶ 战争风险附加费：US$3,000/20' · US$5,000/40'（JEA→MUN支线+MUN→红海IRX2 WRS）。仅装载同意支付WRP的货物，未同意者留存JEA待局势恢复后转运。"
+        "ko": "JEA 대기 홍해향 화물 634 TEU. GFS(아부다비 51%·이란계 49% 지분)가 이란측과 합의, 3000TEU급 선박으로 호르무즈 통항 후 MUN 기항 예정이었으나, ⚠️ 3/24 GFS 호르무즈 통항 불가 최종 확인 → 동 건 잠정 펜딩. 당초 JEA ETD 3/25, 당사 가용 600~700 TEU. ▶ War Risk Premium: US$3,000/20' · US$5,000/40' (JEA→MUN 피더 + MUN→홍해 IRX2 WRS). 화주 비용 동의 시만 선적 예정이었으나 현재 중단.",
+        "en": "634 TEU Red Sea cargo waiting at JEA. GFS (Abu Dhabi 51%, Iranian-owned 49%) had agreed with Iran for 3000TEU vessel Hormuz transit to Mundra, but ⚠️ GFS Hormuz transit confirmed BLOCKED (3/24) — plan now PENDING. Originally JEA ETD Mar 25, KMTC space 600-700 TEU. ▶ WRP: US$3,000/20' · US$5,000/40' (JEA→MUN feeder + MUN→Red Sea IRX2 WRS). Loading was conditional on WRP acceptance; now suspended.",
+        "zh": "JEA滞留红海方向货物634TEU。GFS(阿布扎比51%·伊朗系49%股份)曾与伊朗达成协议计划3000TEU级船舶通过霍尔木兹海峡挂靠蒙德拉，但⚠️ 3/24最终确认GFS霍尔木兹通航不可→该方案暂时搁置。原定JEA ETD 3/25，我司可用600~700TEU。▶ 战争风险附加费：US$3,000/20' · US$5,000/40'（JEA→MUN支线+MUN→红海IRX2 WRS）。原仅装载同意支付WRP的货物，现已中止。"
       },
       "source": "이광희 중동법인장 (leekh@ekmtc.com) | [중동법인] 홍해향 JEA 대기 화물 처리 방안 관련"
     },
