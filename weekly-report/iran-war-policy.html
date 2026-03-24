@@ -1101,11 +1101,11 @@
                 <li>B/L: POD: KLF (TRUCK) → JEA (FEEDER) → DLY</li>
                 <li>T/S 신고 후 피더 연결</li>
               </ul>
-              💰 <strong>비용</strong>
+              💰 <strong>비용 <span class="badge badge-updated" style="font-size:10px;">3/24</span></strong>
               <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
-                <li>DEVIATION: <strong>$800/20' · $1,600/40'</strong> + 도착지 로컬차지</li>
-                <li>피더사 WRS <strong>별도 부과</strong></li>
-                <li style="color:#c00;font-weight:700;">현재 비용 매우 높고 피더 현실적 불가 — 화주에게 반드시 사전 안내</li>
+                <li><strong>기출항(CASE 4)</strong>: 송하인 — NSA→MUN T/S <strong>$2,000/$4,000</strong> + IRX2 Slotage $780 + WRS $1,000 + BAF $140/TEU</li>
+                <li><strong>신규(CASE 7)</strong>: 송하인 — 운임 + WRS <strong>$2,000/$3,500</strong> (중국발 최소 $3,500/$5,500)</li>
+                <li style="color:#c00;font-weight:700;">⚠ CASE 5 (JEA→GFS 피더) 호르무즈 통항 불가 확인(3/24) — 잠정 펜딩</li>
               </ul>
             </div>
             <div data-lang="en">
@@ -1115,11 +1115,11 @@
                 <li>B/L: POD: KLF (TRUCK) → JEA (FEEDER) → DLY</li>
                 <li>T/S declaration then feeder connection</li>
               </ul>
-              💰 <strong>Costs</strong>
+              💰 <strong>Costs <span class="badge badge-updated" style="font-size:10px;">3/24</span></strong>
               <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
-                <li>DEVIATION: <strong>$800/20' · $1,600/40'</strong> + destination local</li>
-                <li>Separate feeder WRS <strong>charged additionally</strong></li>
-                <li style="color:#c00;font-weight:700;">Currently very high cost, feeder practically unavailable — mandatory prior notice to shipper</li>
+                <li><strong>Existing (CASE 4)</strong>: Shipper — NSA→MUN T/S <strong>$2,000/$4,000</strong> + IRX2 Slotage $780 + WRS $1,000 + BAF $140/TEU</li>
+                <li><strong>New (CASE 7)</strong>: Shipper — Freight + WRS <strong>$2,000/$3,500</strong> (CN min $3,500/$5,500)</li>
+                <li style="color:#c00;font-weight:700;">⚠ CASE 5 (JEA→GFS feeder) Hormuz transit BLOCKED (3/24) — PENDING</li>
               </ul>
             </div>
             <div data-lang="zh">
@@ -1129,11 +1129,11 @@
                 <li>提单：POD: KLF (TRUCK) → JEA (FEEDER) → DLY</li>
                 <li>T/S申报后转支线</li>
               </ul>
-              💰 <strong>费用</strong>
+              💰 <strong>费用 <span class="badge badge-updated" style="font-size:10px;">3/24</span></strong>
               <ul style="margin:4px 0 0;padding-left:18px;line-height:1.8;">
-                <li>DEVIATION: <strong>$800/20' · $1,600/40'</strong> + 目的地本地费</li>
-                <li>支线WRS <strong>另行征收</strong></li>
-                <li style="color:#c00;font-weight:700;">目前费用极高，支线实际不可用——须事先通知货主</li>
+                <li><strong>既有(CASE 4)</strong>: 发货人 — NSA→MUN中转 <strong>$2,000/$4,000</strong> + IRX2 Slotage $780 + WRS $1,000 + BAF $140/TEU</li>
+                <li><strong>新规(CASE 7)</strong>: 发货人 — 运费 + WRS <strong>$2,000/$3,500</strong> (中国发最低$3,500/$5,500)</li>
+                <li style="color:#c00;font-weight:700;">⚠ CASE 5 (JEA→GFS支线) 霍尔木兹通航不可确认(3/24) — 暂时搁置</li>
               </ul>
             </div>
           </div>
@@ -2163,44 +2163,59 @@
   <!-- Card 3: NSA EOV 목적지별 비용 정리표 -->
   <div class="card">
     <div class="card-header">
-      <div class="title">📋 <span data-lang-inline="ko">NSA EOV 목적지별 비용 정리표</span><span data-lang-inline="en">NSA EOV Cost Summary by Destination</span><span data-lang-inline="zh">NSA EOV按目的地费用汇总表</span> <span class="badge badge-critical">NEW 3/19</span></div>
+      <div class="title">📋 <span data-lang-inline="ko">NSA EOV 목적지별 비용 총정리 (7 CASE)</span><span data-lang-inline="en">NSA EOV Cost Breakdown — 7 Cases</span><span data-lang-inline="zh">NSA EOV各目的地费用总整理（7案）</span> <span class="badge badge-updated">UPDATED 3/24</span></div>
     </div>
     <div class="card-body">
       <div data-lang="ko">
-        <table class="policy-table">
-          <thead><tr><th>경로</th><th>수출자(Shipper) 부담</th><th>수입자(Consignee) 부담</th><th>비고</th></tr></thead>
+        <p style="font-size:11.5px;color:#64748b;margin:0 0 8px;">기출항 = EOV 대상 기 선적 화물 · 신규 = 전쟁 이후 신규 부킹</p>
+        <div style="overflow-x:auto;">
+        <table class="policy-table" style="min-width:740px;">
+          <thead><tr><th style="width:4%;">C</th><th style="width:9%;">도착지</th><th style="width:12%;">구분</th><th style="width:30%;">송하인 부담</th><th style="width:30%;">수하인 부담</th><th style="width:15%;">비고</th></tr></thead>
           <tbody>
-            <tr class="highlight"><td><strong>NSA → KLF (JEA, AUH)</strong></td><td>피더리지 $2,000 / $4,000</td><td>DEVIATION $800/$1,600 + 도착지 로컬차지 + 로컬 운송비</td><td>가장 일반적</td></tr>
-            <tr><td><strong>NSA → JED / AQJ / SKN</strong></td><td>없음</td><td>DEVIATION $800/$1,600 + 도착지 로컬차지</td><td>IRX2 이용, 별도 피더비 없음</td></tr>
-            <tr><td><strong>NSA → DMM / KSP</strong></td><td>없음</td><td>DEVIATION $800/$1,600 + JED→DMM/KSP 트럭킹 (수입자 부담)</td><td>JED 경유 트럭킹 루트</td></tr>
-            <tr class="highlight"><td><strong>SOH</strong></td><td>미정</td><td>DVC $800/$1,600만 청구</td><td>비용 이슈 多</td></tr>
-            <tr class="critical"><td><strong>KWI / UQR</strong></td><td>-</td><td>-</td><td>되도록 Ship-back 권유</td></tr>
+            <tr><td><strong>1</strong></td><td><strong>JEA</strong></td><td>기출항·EOV→KLF</td><td>-</td><td style="color:#c00;">보세운송 $1,200/VAN<br>PRC $250/$330<br>THC·LIFT·스토리지<br>DEV $800/TEU</td><td>가장 일반적</td></tr>
+            <tr class="highlight"><td><strong>2</strong></td><td><strong>JEA</strong></td><td>기출항·EOV→NSA</td><td>피더리지 $2,000/TEU<br><span style="font-size:11px;color:#666;">(자사선도 징수)</span></td><td style="color:#c00;">보세운송 $1,200/VAN<br>PRC 등 실비<br>DEV $800/TEU</td><td>타 선사도 DEV 징수 중</td></tr>
+            <tr><td><strong>3</strong></td><td><strong>SOH</strong></td><td>기출항·EOV→NSA</td><td>피더리지 $2,000/TEU</td><td style="color:#c00;">DEV $800/TEU</td><td>SOH도 WR ZONE<br>피더 연결 별도</td></tr>
+            <tr class="highlight"><td><strong>4</strong></td><td><strong>홍해</strong><br><span style="font-size:10.5px;">JED/AQJ/SKN</span></td><td>기출항·EOV→NSA</td><td>T/S $2,000/$4,000<br>IRX2 Slotage $780<br>WRS $1,000<br>BAF $140/TEU</td><td>-</td><td>AIS/AIS3 경유</td></tr>
+            <tr class="critical"><td><strong>5</strong></td><td><strong>홍해</strong></td><td>기출항·JEA도착<br>(EOV X)</td><td>GFS 피더 $3,000/$5,000<br>+ IRX2 동일</td><td>-</td><td style="color:#c00;">⚠ GFS 통항 불가(3/24)<br>잠정 펜딩</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>6</strong></td><td><strong>JEA</strong></td><td>신규</td><td>운임 + WRS $2,000/$3,500<br><span style="font-size:11px;color:#666;">(중국발: WRS 운임 포함)</span></td><td style="color:#c00;">보세운송 $1,200/VAN<br>PRC $250/$330<br>THC·LIFT·스토리지</td><td>KLF 양하→JEA</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>7</strong></td><td><strong>홍해</strong></td><td>신규</td><td>운임 + WRS $2,000/$3,500<br><span style="font-size:11px;color:#c00;">(중국발 최소 $3,500/$5,500<br>미준수 시 선적 불가)</span></td><td>-</td><td>MUN/홍해 IRX2</td></tr>
           </tbody>
         </table>
+        </div>
       </div>
       <div data-lang="en">
-        <table class="policy-table">
-          <thead><tr><th>Route</th><th>Shipper Cost</th><th>Consignee Cost</th><th>Remarks</th></tr></thead>
+        <p style="font-size:11.5px;color:#64748b;margin:0 0 8px;">Existing = Pre-shipped EOV cargo · New = Post-war new bookings</p>
+        <div style="overflow-x:auto;">
+        <table class="policy-table" style="min-width:740px;">
+          <thead><tr><th style="width:4%;">C</th><th style="width:9%;">Dest.</th><th style="width:12%;">Type</th><th style="width:30%;">Shipper</th><th style="width:30%;">Consignee</th><th style="width:15%;">Remarks</th></tr></thead>
           <tbody>
-            <tr class="highlight"><td><strong>NSA → KLF (JEA, AUH)</strong></td><td>Feederage $2,000 / $4,000</td><td>DEVIATION $800/$1,600 + destination local + local trucking</td><td>Most common</td></tr>
-            <tr><td><strong>NSA → JED / AQJ / SKN</strong></td><td>None</td><td>DEVIATION $800/$1,600 + destination local</td><td>Via IRX2, no separate feeder charge</td></tr>
-            <tr><td><strong>NSA → DMM / KSP</strong></td><td>None</td><td>DEVIATION $800/$1,600 + JED→DMM/KSP trucking (consignee)</td><td>JED via trucking route</td></tr>
-            <tr class="highlight"><td><strong>SOH</strong></td><td>TBD</td><td>DVC $800/$1,600 only</td><td>Cost issues</td></tr>
-            <tr class="critical"><td><strong>KWI / UQR</strong></td><td>-</td><td>-</td><td>Ship-back recommended</td></tr>
+            <tr><td><strong>1</strong></td><td><strong>JEA</strong></td><td>Existing<br>EOV→KLF</td><td>-</td><td style="color:#c00;">Bonded $1,200/VAN<br>PRC $250/$330<br>THC/LIFT/Storage<br>DEV $800/TEU</td><td>Most common</td></tr>
+            <tr class="highlight"><td><strong>2</strong></td><td><strong>JEA</strong></td><td>Existing<br>EOV→NSA</td><td>Feederage $2,000/TEU<br><span style="font-size:11px;color:#666;">(own vessels too)</span></td><td style="color:#c00;">Bonded $1,200/VAN<br>PRC etc.<br>DEV $800/TEU</td><td>Other carriers also charging DEV</td></tr>
+            <tr><td><strong>3</strong></td><td><strong>SOH</strong></td><td>Existing<br>EOV→NSA</td><td>Feederage $2,000/TEU</td><td style="color:#c00;">DEV $800/TEU</td><td>SOH in WR ZONE<br>Feeder separate</td></tr>
+            <tr class="highlight"><td><strong>4</strong></td><td><strong>Red Sea</strong><br><span style="font-size:10.5px;">JED/AQJ/SKN</span></td><td>Existing<br>EOV→NSA</td><td>T/S $2,000/$4,000<br>IRX2 Slotage $780<br>WRS $1,000<br>BAF $140/TEU</td><td>-</td><td>Via AIS/AIS3</td></tr>
+            <tr class="critical"><td><strong>5</strong></td><td><strong>Red Sea</strong></td><td>Existing<br>Pre-war JEA<br>(No EOV)</td><td>GFS feeder $3,000/$5,000<br>+ IRX2 same</td><td>-</td><td style="color:#c00;">⚠ GFS Hormuz BLOCKED (3/24)<br>PENDING</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>6</strong></td><td><strong>JEA</strong></td><td>New</td><td>Freight + WRS $2,000/$3,500<br><span style="font-size:11px;color:#666;">(CN: WRS in freight)</span></td><td style="color:#c00;">Bonded $1,200/VAN<br>PRC $250/$330<br>THC/LIFT/Storage</td><td>KLF disch.→JEA</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>7</strong></td><td><strong>Red Sea</strong></td><td>New</td><td>Freight + WRS $2,000/$3,500<br><span style="font-size:11px;color:#c00;">(CN min $3,500/$5,500<br>else no loading)</span></td><td>-</td><td>MUN/Red Sea IRX2</td></tr>
           </tbody>
         </table>
+        </div>
       </div>
       <div data-lang="zh">
-        <table class="policy-table">
-          <thead><tr><th>路线</th><th>出口方(Shipper)负担</th><th>进口方(Consignee)负担</th><th>备注</th></tr></thead>
+        <p style="font-size:11.5px;color:#64748b;margin:0 0 8px;">既有 = EOV对象已装船货物 · 新规 = 战后新订舱</p>
+        <div style="overflow-x:auto;">
+        <table class="policy-table" style="min-width:740px;">
+          <thead><tr><th style="width:4%;">C</th><th style="width:9%;">目的地</th><th style="width:12%;">区分</th><th style="width:30%;">发货人</th><th style="width:30%;">收货人</th><th style="width:15%;">备注</th></tr></thead>
           <tbody>
-            <tr class="highlight"><td><strong>NSA → KLF (JEA, AUH)</strong></td><td>支线费 $2,000 / $4,000</td><td>DEVIATION $800/$1,600 + 目的地本地费 + 当地运输费</td><td>最常见</td></tr>
-            <tr><td><strong>NSA → JED / AQJ / SKN</strong></td><td>无</td><td>DEVIATION $800/$1,600 + 目的地本地费</td><td>利用IRX2，无另行支线费</td></tr>
-            <tr><td><strong>NSA → DMM / KSP</strong></td><td>无</td><td>DEVIATION $800/$1,600 + JED→DMM/KSP卡车运输（收货方承担）</td><td>JED经由卡车路线</td></tr>
-            <tr class="highlight"><td><strong>SOH</strong></td><td>待定</td><td>仅征DVC $800/$1,600</td><td>费用问题多</td></tr>
-            <tr class="critical"><td><strong>KWI / UQR</strong></td><td>-</td><td>-</td><td>建议退运</td></tr>
+            <tr><td><strong>1</strong></td><td><strong>JEA</strong></td><td>既有·EOV→KLF</td><td>-</td><td style="color:#c00;">保税 $1,200/VAN<br>PRC $250/$330<br>THC·装卸·仓储<br>DEV $800/TEU</td><td>最常见</td></tr>
+            <tr class="highlight"><td><strong>2</strong></td><td><strong>JEA</strong></td><td>既有·EOV→NSA</td><td>支线费 $2,000/TEU<br><span style="font-size:11px;color:#666;">(自营船也征)</span></td><td style="color:#c00;">保税 $1,200/VAN<br>PRC等实费<br>DEV $800/TEU</td><td>其他船公司也征DEV</td></tr>
+            <tr><td><strong>3</strong></td><td><strong>SOH</strong></td><td>既有·EOV→NSA</td><td>支线费 $2,000/TEU</td><td style="color:#c00;">DEV $800/TEU</td><td>SOH在WR ZONE<br>支线另计</td></tr>
+            <tr class="highlight"><td><strong>4</strong></td><td><strong>红海</strong><br><span style="font-size:10.5px;">JED/AQJ/SKN</span></td><td>既有·EOV→NSA</td><td>中转 $2,000/$4,000<br>IRX2 Slotage $780<br>WRS $1,000<br>BAF $140/TEU</td><td>-</td><td>经AIS/AIS3</td></tr>
+            <tr class="critical"><td><strong>5</strong></td><td><strong>红海</strong></td><td>既有·战前JEA<br>(无EOV)</td><td>GFS支线 $3,000/$5,000<br>+ IRX2同上</td><td>-</td><td style="color:#c00;">⚠ GFS通航不可(3/24)<br>暂时搁置</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>6</strong></td><td><strong>JEA</strong></td><td>新规</td><td>运费 + WRS $2,000/$3,500<br><span style="font-size:11px;color:#666;">(中国发: WRS含运费)</span></td><td style="color:#c00;">保税 $1,200/VAN<br>PRC $250/$330<br>THC·装卸·仓储</td><td>KLF卸→JEA</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>7</strong></td><td><strong>红海</strong></td><td>新规</td><td>运费 + WRS $2,000/$3,500<br><span style="font-size:11px;color:#c00;">(中国发最低$3,500/$5,500<br>不达标不装载)</span></td><td>-</td><td>MUN/红海IRX2</td></tr>
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   </div>
@@ -2354,14 +2369,15 @@
         <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;">
           <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 NSA EOV 목적지별 비용 총정리 <span class="badge badge-updated">UPDATED 3/24</span></h4>
           <p style="font-size:11.5px;color:#64748b;margin-bottom:10px;">※ 기출항 = EOV 대상 기 선적 화물 / 신규 = 전쟁 이후 신규 부킹</p>
-          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <div style="overflow-x:auto;">
+          <table style="width:100%;min-width:820px;border-collapse:collapse;font-size:12px;">
             <tr style="background:#dbeafe;">
-              <th style="padding:6px 8px;text-align:center;border:1px solid #93c5fd;">CASE</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">도착지</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">구분</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">송하인(Shipper) 부담</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">수하인(Consignee) 부담</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">비고</th>
+              <th style="padding:6px 8px;text-align:center;border:1px solid #93c5fd;width:4%;">C</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:8%;">도착지</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:11%;">구분</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:30%;">송하인(Shipper) 부담</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:30%;">수하인(Consignee) 부담</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:17%;">비고</th>
             </tr>
             <tr>
               <td style="padding:6px 8px;border:1px solid #93c5fd;text-align:center;font-weight:700;">1</td>
@@ -2420,6 +2436,7 @@
               <td style="padding:6px 8px;border:1px solid #93c5fd;">MUN/홍해 IRX2 이용</td>
             </tr>
           </table>
+          </div>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. 화주 안내 필수 사항</h3>
@@ -2538,14 +2555,15 @@
         <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;">
           <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 NSA EOV Cost Summary by Destination <span class="badge badge-updated">UPDATED 3/24</span></h4>
           <p style="font-size:11.5px;color:#64748b;margin-bottom:10px;">※ Existing = Pre-shipped EOV cargo / New = Post-war new bookings</p>
-          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <div style="overflow-x:auto;">
+          <table style="width:100%;min-width:820px;border-collapse:collapse;font-size:12px;">
             <tr style="background:#dbeafe;">
-              <th style="padding:6px 8px;text-align:center;border:1px solid #93c5fd;">CASE</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">Dest.</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">Type</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">Shipper Cost</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">Consignee Cost</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">Remarks</th>
+              <th style="padding:6px 8px;text-align:center;border:1px solid #93c5fd;width:4%;">C</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:8%;">Dest.</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:11%;">Type</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:30%;">Shipper Cost</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:30%;">Consignee Cost</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:17%;">Remarks</th>
             </tr>
             <tr>
               <td style="padding:6px 8px;border:1px solid #93c5fd;text-align:center;font-weight:700;">1</td>
@@ -2604,6 +2622,7 @@
               <td style="padding:6px 8px;border:1px solid #93c5fd;">MUN/Red Sea via IRX2</td>
             </tr>
           </table>
+          </div>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. Important Points for Customers</h3>
@@ -2716,14 +2735,15 @@
         <div style="background:#eff6ff;border:1.5px solid #2563eb;border-radius:8px;padding:14px;margin-bottom:14px;">
           <h4 style="font-size:13px;color:#1e40af;margin-bottom:8px;">💰 NSA EOV按目的地费用总汇 <span class="badge badge-updated">UPDATED 3/24</span></h4>
           <p style="font-size:11.5px;color:#64748b;margin-bottom:10px;">※ 既有 = EOV对象已装船货物 / 新规 = 战后新订舱</p>
-          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <div style="overflow-x:auto;">
+          <table style="width:100%;min-width:820px;border-collapse:collapse;font-size:12px;">
             <tr style="background:#dbeafe;">
-              <th style="padding:6px 8px;text-align:center;border:1px solid #93c5fd;">CASE</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">目的地</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">区分</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">发货人(Shipper)负担</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">收货人(Consignee)负担</th>
-              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;">备注</th>
+              <th style="padding:6px 8px;text-align:center;border:1px solid #93c5fd;width:4%;">C</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:8%;">目的地</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:11%;">区分</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:30%;">发货人负担</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:30%;">收货人负担</th>
+              <th style="padding:6px 8px;text-align:left;border:1px solid #93c5fd;width:17%;">备注</th>
             </tr>
             <tr>
               <td style="padding:6px 8px;border:1px solid #93c5fd;text-align:center;font-weight:700;">1</td>
@@ -2782,6 +2802,7 @@
               <td style="padding:6px 8px;border:1px solid #93c5fd;">MUN/红海经IRX2</td>
             </tr>
           </table>
+          </div>
         </div>
 
         <h3 style="font-size:14px;color:#003366;margin:16px 0 8px;">3. 须向客户说明事项</h3>
