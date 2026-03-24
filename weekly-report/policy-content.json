@@ -4,8 +4,8 @@
     {
       "dateIso": "2026-03-24",
       "date": { "ko": "3월 24일", "en": "Mar 24", "zh": "3月24日" },
-      "badgeType": "updated",
-      "badgeLabel": { "ko": "변경", "en": "UPDATED", "zh": "更新" },
+      "badgeType": "new",
+      "badgeLabel": { "ko": "신규", "en": "NEW", "zh": "新规" },
       "title": {
         "ko": "NSA EOV 목적지별 비용 총정리 — 기출항 5개·신규 2개 CASE (GFS 통항 불가 반영)",
         "en": "NSA EOV Cost Breakdown by Destination — 5 Existing + 2 New Cases (GFS Transit Blocked)",
